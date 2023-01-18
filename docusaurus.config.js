@@ -4,21 +4,28 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+const ORGANIZATION_NAME = "ts-factory";
+const PROJECT_NAME = "bublik-release";
+const DEPLOYMENT_BRANCH = "gh-pages";
+const BASE_URL = `/${PROJECT_NAME}/`;
+const URL = `https://${ORGANIZATION_NAME}.github.io`;
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
-  url: "https://github.com",
-  baseUrl: "/bublik-release/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "ts-factory", // Usually your GitHub org/user name.
-  projectName: "bublik-release", // Usually your repo name.
-  deploymentBranch: "gh-pages",
+  url: URL,
+  baseUrl: BASE_URL,
+  projectName: PROJECT_NAME, // Usually your repo name.
+  organizationName: ORGANIZATION_NAME, // Usually your GitHub org/user name.
+  deploymentBranch: DEPLOYMENT_BRANCH,
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
