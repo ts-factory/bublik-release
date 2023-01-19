@@ -47,7 +47,7 @@ const config = {
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: `${GITHUB_REPO_URL}/blob/main/`,
+          editUrl: `${GITHUB_REPO_URL}/edit/main/`,
         },
         theme: { customCss: require.resolve('./src/css/custom.css') },
       }),
