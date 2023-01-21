@@ -4,9 +4,6 @@ authors: [ol-limonikas]
 tags: [release]
 ---
 
-import { BrowserWindow } from '../../src/components';
-import myImageUrl from './img/run-diff-page.png';
-
 We are happy to announce **Bublik 0.1.1.**
 
 We've added experimantal support for comparing two runs, new datepicker component with better accessability and keyboard navigation, new page mode for history where you can see values change over time and more.
@@ -23,25 +20,29 @@ This feature is experimental and may not work as expected
 
 :::``
 
+### Run Diff
+
 In this release we've added experimantal support for comparing two runs
 
-<BrowserWindow>
-  <img src={require('./img/run-diff-page.png').default} alt="Run diff page" />
-</BrowserWindow>
+<img src={require('./img/run-diff-page.png').default} alt="Run diff page" />
+
+### Access diff from runs page
 
 You can now click on two run rows on runs page and select `Compare` button to compare them
 
-<BrowserWindow>
-  <img src={require('./img/runs-to-diff.png').default} alt="Runs selection" />
-</BrowserWindow>
+<img src={require('./img/runs-to-diff.png').default} alt="Runs selection" />
+
+### Access diff from run page
 
 You can access this page via `Run` -> `Compare` button
 
-<BrowserWindow>
-  <img src={require('./img/compare-button.png').default} alt="Compare button" />
-</BrowserWindow>
+<img src={require('./img/compare-button.png').default} alt="Compare button" />
+
+---
 
 ## History
+
+### Filter Reset
 
 You can now reset client side filters in history page
 
@@ -51,37 +52,37 @@ Sometimes client side filters _(click search)_ may not work as expected. In this
 
 :::
 
-<BrowserWindow>
-  <img
-    src={require('./img/history-reset-filters.png').default}
-    alt="History charts"
-  />
-</BrowserWindow>
+<img
+  src={require('./img/history-reset-filters.png').default}
+  alt="History charts"
+/>
 
-<BrowserWindow>
-  <img src={require('./img/history-charts.png').default} alt="History charts" />
-</BrowserWindow>
+### Measurements
 
 We've also added a new page mode for history where you can see values change over time
 
-<BrowserWindow>
-  <img src={require('./img/history-charts.png').default} alt="History charts" />
-</BrowserWindow>
+<img src={require('./img/history-charts.png').default} alt="History charts" />
+
+#### Measurement Info
 
 You can click on chart point to bring up modal with additional information as well as ability to jump directly to log/measurements/run
 
-<BrowserWindow>
-  <img
-    src={require('./img/history-chart-modal.png').default}
-    alt="History charts"
-  />
-</BrowserWindow>
+<img
+  src={require('./img/history-chart-modal.png').default}
+  alt="History charts"
+/>
 
-## New Datepicker
+---
+
+## New Datepickers
 
 We've added new datepicker component with better accessability and keyboard navigation
 
+### Datepicker
+
 <img src={require('./img/datepicker.png').default} alt="History charts" />
+
+### Daterange picker
 
 <img
   src={require('./img/date-range-picker.png').default}
@@ -127,6 +128,8 @@ We've added new datepicker component with better accessability and keyboard navi
 - feat(runs): add skeleton when no results found
 - chore(runs): add border around table rows
 - fix: badge rendering as button when no `onClick` handler passed
+
+---
 
 ### Backend
 
