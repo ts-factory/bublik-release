@@ -28,3 +28,11 @@
   --ifm-color-primary-lightest: #e9edff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.medium-zoom-overlay {
+  z-index: var(--ifm-z-index-overlay);
+}
+
+.medium-zoom-image--opened {
+  z-index: var(--ifm-z-index-overlay);
+}

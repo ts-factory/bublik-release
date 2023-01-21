@@ -72,7 +72,15 @@ const config = {
         ],
       },
       prism: { theme: lightCodeTheme, darkTheme: darkCodeTheme },
+      zoom: {
+        selector: '.markdown img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
+      },
     }),
+  plugins: ['docusaurus-plugin-image-zoom'],
 };
 
 module.exports = config;
