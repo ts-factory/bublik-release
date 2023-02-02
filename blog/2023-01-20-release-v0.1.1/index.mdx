@@ -2,11 +2,12 @@
 title: Release v0.1.1
 authors: [ol-limonikas]
 tags: [release]
+slug: release-v0.1.1
 ---
 
 We are happy to announce **Bublik 0.1.1.**
 
-We've added experimantal support for comparing two runs, new datepicker component with better accessability and keyboard navigation, new page mode for history where you can see values change over time and more.
+We've added experimental support for comparing two runs, new datepicker component with better accessibility and keyboard navigation, new page mode for history where you can see values change over time and more.
 
 <!--truncate-->
 
@@ -22,21 +23,21 @@ This feature is experimental and may not work as expected
 
 ### Diff view
 
-In this release we've added experimantal support for comparing two runs
+In this release we've added experimental support for comparing two runs
 
-<img src={require('./img/run-diff-page.png').default} alt="Run diff page" />
+![Run diff page](./img/run-diff-page.png)
 
 ### Access diff from runs page
 
 You can now click on two run rows on runs page and select `Compare` button to compare them
 
-<img src={require('./img/runs-to-diff.png').default} alt="Runs selection" />
+![Runs selection](./img/runs-to-diff.png)
 
 ### Access diff from run page
 
 You can access this page via `Run` -> `Compare` button
 
-<img src={require('./img/compare-button.png').default} alt="Compare button" />
+![Compare button](./img/compare-button.png)
 
 ---
 
@@ -52,42 +53,36 @@ Sometimes client side filters _(click search)_ may not work as expected. In this
 
 :::
 
-<img
-  src={require('./img/history-reset-filters.png').default}
-  alt="History charts"
-/>
+![History reset filters](./img/history-reset-filters.png)
 
 ### Measurements
 
 We've also added a new page mode for history where you can see values change over time
 
-<img src={require('./img/history-charts.png').default} alt="History charts" />
+
+![History charts](./img/history-charts.png)
 
 #### Measurement Info
 
 You can click on chart point to bring up modal with additional information as well as ability to jump directly to log/measurements/run
 
-<img
-  src={require('./img/history-chart-modal.png').default}
-  alt="History charts"
-/>
+![History charts modal](./img/history-chart-modal.png)
 
 ---
 
-## New Datepickers
+## New Date pickers
 
-We've added new datepicker component with better accessability and keyboard navigation
+We've added new datepicker component with better accessibility and keyboard navigation
 
 ### Datepicker
 
-<img src={require('./img/datepicker.png').default} alt="History charts" />
 
-### Daterange picker
+![Datepicker](./img/datepicker.png)
 
-<img
-  src={require('./img/date-range-picker.png').default}
-  alt="History charts"
-/>
+
+### Date-range picker
+
+![Date range picker](./img/date-range-picker.png)
 
 ---
 
@@ -97,8 +92,8 @@ We've added new datepicker component with better accessability and keyboard navi
 
 #### 🚀 New Feature
 
-- feat: add new datepicker component with better accessability
-- feat: add new datepicker range component with better accessability
+- feat: add new datepicker component with better accessibility
+- feat: add new datepicker range component with better accessibility
 - feat(run): add URL state handling for run table
 - feat(run): add ability to compare runs via form in run
 - feat(run): add skeleton loading for run details state
@@ -151,8 +146,8 @@ We've added new datepicker component with better accessability and keyboard navi
 - hash: the default hashing algorithm was changed to avoid creating duplicates in DB
 - metas: add check for STATUS meta in `meta_data.json`
 - metas: update metas even if the run is not completed
-- cache: updat ecache after new meta categorization process
-- celery: add option to specify number of task after compliting which the worker will be reloaded
+- cache: update cache after new meta categorization process
+- celery: add option to specify number of task after completing which the worker will be reloaded
 - run_diff: add execution sequence to the data provided to UI to show run_diff
 - result_summary: return only summary values not the whole results
 
