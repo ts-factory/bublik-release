@@ -61,9 +61,11 @@ Added features, bugs and more!
 #### 🐛 Bug Fix
 
 - runs import without logs
-- fix parsing and supporting result keys
 
 #### ✏️ Other
 
 - add facility, severity, timestamp and Error message to the import statuses table
 - add filtration by Celery task ID, Error message, Log URI to the import statuses table
+- change the format of storing the expected result keys
+- move key parsing from the import stage to the statistics generation stage
+- add support for "ref://type/tail" keys to key parsing
