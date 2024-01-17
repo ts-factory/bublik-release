@@ -11,6 +11,54 @@ We are happy to announce **Bublik v0.2.1**.
 
 # Highlights
 
+### Authentication Module
+At the moment, the Bublik authentication module exists separately from the rest of the Bublik functionality. If you want to test its work, you can contact the developer of the Bublik.
+
+Please note!
+The authentication module in the Bublik has nothing to do with authentication on the server. Thus, you cannot access the system using your server credentials. To access the system, you need to be registered directly in the Bublik authentication module.
+
+#### User
+
+
+
+![Login form](./img/auth.png)
+
+Registration
+Users who are not project administrators are registered in the system by the administrator. After user registration, a verification link will be sent to the email address specified during registration. The user will be able to log in only after confirming the email address by clicking on the link from the incoming email.
+
+Profile page
+
+![Profile page](./img/profile.png)
+
+Features
+- update your first and last name;
+- change the password from your profile;
+- reset the password via email.
+
+#### Administrator
+
+Admin management table
+
+![Admin](./img/admin-users.png)
+
+Registration
+If you are the administrator of the project and want to be registered in the system, please contact the administrator of the Bublik.
+
+Features
+- update your first and last name;
+- change the password from your profile;
+- reset the password via email;
+- view the list of users;
+- create a user;
+- change the user's first name, last name and password;
+- deactivate the user.
+
+
+:::note
+Only one user can be registered to one email address.
+In this release we've added authentication with access to profile and user management for admins
+:::
+
 ### Runs
 
 We've added new mode for runs page which contains various charts to get an easy overview of filtered runs
@@ -20,24 +68,6 @@ Some charts are clickable
 :::
 
 ![Runs charts](./img/runs-charts.png)
-
-### Authentication
-
-In this release we've added authentication with access to profile and user management for admins
-
-![Login form](./img/auth.png)
-
-### Profile
-
-Added initial profile page
-
-![Profile page](./img/profile.png)
-
-### Admin
-
-Admin management table
-
-![Admin](./img/admin-users.png)
 
 ### History expressions
 
@@ -73,8 +103,8 @@ Integrated import logs
 
 #### 🐛 Bug Fix
 
-- **dashboard** failing recurcively on dashboard fetch error
-- **dashboard** not refetching dashboard when run is marked as compromised
+- **dashboard** failing recursively on dashboard fetch error
+- **dashboard** not fetching dashboard when run is marked as compromised
 - **history** changing date in form and closing not picking correct date
 - **history** changing mode when no page exists returns 404
 
