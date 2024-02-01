@@ -1,0 +1,81 @@
+---
+title: Release v0.2.2
+authors: [okt-limonikas]
+tags: [release]
+slug: release-v0.2.2
+---
+
+We are happy to announce **Bublik v0.2.2**.
+
+<!--truncate-->
+
+# Highlights
+
+## Improved history speed
+
+We have improved the speed of the history page by optimizing the backend SQL queries.
+
+## Improved import logs
+
+Now you can see logs of the import process in real-time while the import is running.
+
+![Import logs](./img/import-log.png)
+
+:::info
+Logs updated every 5 seconds.
+:::
+
+## Changelog
+
+### Frontend
+
+#### 🔧 Continuous Integration | CI
+
+- **release,ci:** fix formatting and pass env through global config ([03b1dab](https://github.com/ts-factory/bublik-ui/commit/03b1dab85d780bc0fd71b2277fd451c6a8a780bc))
+
+#### 💅 Polish
+
+- **import:** fix import table overflowing horizontally ([b66d49c](https://github.com/ts-factory/bublik-ui/commit/b66d49ce41918861f9425452610e9a213e8eca17))
+- **ui:** [toaster] add colors for different states ([2955b94](https://github.com/ts-factory/bublik-ui/commit/2955b94a3611e6129b20fe19da71326fb25d9b6e))
+
+#### 🚀 New Feature
+
+- **import:** add live import logs via polling for changes ([75ab1b1](https://github.com/ts-factory/bublik-ui/commit/75ab1b1a51e548b86c4e4235b61de54f48516bd0))
+- **run:** add tip for ctrl+click on run page ([5ca2912](https://github.com/ts-factory/bublik-ui/commit/5ca29124d42b79c8a76c662ee0dcad1a7fc2329c))
+
+#### 📦 Chores
+
+- **auth:** allow access to dev section for unauthenticated users ([b7f83f2](https://github.com/ts-factory/bublik-ui/commit/b7f83f26546526ce9d458c1860af967de82e35de))
+- **nx:** upgrade nx and it's packages to latest versions ([ad45ca6](https://github.com/ts-factory/bublik-ui/commit/ad45ca634506812fdbcd8999f39852cd64f3f484))
+- **storybook:** cleanup unused imports/types ([e1039f2](https://github.com/ts-factory/bublik-ui/commit/e1039f25d7dbaa75f2070909cd7f7134ca8e33e0))
+
+#### 🐛 Bug Fix
+
+- **build:** adjust release config to allow releases from branches other than `main` ([22a6f6b](https://github.com/ts-factory/bublik-ui/commit/22a6f6be3555e509f16ed7c1b0999dd2d98501d5))
+- **import:** [import-form] allow empty URL ([33347a3](https://github.com/ts-factory/bublik-ui/commit/33347a30152a6faafb6b5fe9ee6d16a0485faef1))
+- **log:** fix json log overflow scrolling not working ([537677c](https://github.com/ts-factory/bublik-ui/commit/537677cf6729cacb226645fc9fb905430bf2a535))
+
+### Backend
+
+#### 🐛 Bug Fix
+
+- **importruns** fix error on measurement results processing during live import
+- **run stats** fix error in calculating detailed run statistics
+- **import** incorrect call to the do_nothing() function
+- **meta categorization** fix "IndexError: list index out of range" on meta categorization request
+- **meta categorization** improve unclear logs message: no priority was specified, defaulting to 4
+- **deploy** fix logs ticket service should not be restarted if Kerberos keytab is not configured
+- **deploy** Revive and improve initial deploy script to simplify first time setup
+- **importruns** fix importruns failed mails sending and log URL
+
+#### 🚀 Performance
+
+- **history** speed up history page by optimizing SQL queries
+
+#### 💅 Polish
+
+- **deploy** improve deploy usability
+
+#### 📦 Chores
+
+**deploy, auth** cleanup in auth, deploy
