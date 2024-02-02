@@ -57,25 +57,38 @@ Logs updated every 5 seconds.
 
 ### Backend
 
+#### 🔨 Issue Fix
+
+- Error on measurement results processing during live import [#2](https://github.com/ts-factory/bublik/issues/2)
+- Error in calculating detailed run statistics [#3](https://github.com/ts-factory/bublik/issues/3)
+- Live import: incorrect call to the do\_nothing() function [#5](https://github.com/ts-factory/bublik/issues/5)
+- "IndexError: list index out of range" on meta categorization request [#8](https://github.com/ts-factory/bublik/issues/8)
+- Unclear logs message: no priority was specified, defaulting to 4 [#9](https://github.com/ts-factory/bublik/issues/9)
+- Logs ticket service should not be restarted if Kerberos keytab is not configured [#12](https://github.com/ts-factory/bublik/issues/12)
+- Revive and improve initial deploy script to simplify first time setup [#13](https://github.com/ts-factory/bublik/issues/13)
+
+
 #### 🐛 Bug Fix
 
-- **importruns** fix error on measurement results processing during live import
-- **run stats** fix error in calculating detailed run statistics
-- **import** incorrect call to the do_nothing() function
-- **meta categorization** fix "IndexError: list index out of range" on meta categorization request
-- **meta categorization** improve unclear logs message: no priority was specified, defaulting to 4
-- **deploy** fix logs ticket service should not be restarted if Kerberos keytab is not configured
-- **deploy** Revive and improve initial deploy script to simplify first time setup
-- **importruns** fix importruns failed mails sending and log URL
+- **importruns:** fix sending failed mails ([bdc1ec0](https://github.com/ts-factory/bublik/commit/bdc1ec0c38e9f8fe4e852520e0e9614e7c48aa70))
+- **importruns:** fix import log link ([0f177f4](https://github.com/ts-factory/bublik/commit/0f177f49f5d2967f51d88259dc584081c18ca6cc))
 
-#### 🚀 Performance
+#### ⚡ Performance
 
-- **history** speed up history page by optimizing SQL queries
+- **history:** speed up history by optimizing DB queries ([1a767ec](https://github.com/ts-factory/bublik/commit/1a767ecb51d00774506979d2b5f01a01c0ca8601))
 
-#### 💅 Polish
+#### 🚀 New Feature
 
-- **deploy** improve deploy usability
+- **deploy:** add services stop option ([09082fd](https://github.com/ts-factory/bublik/commit/09082fd5abed4eee556736b4102ad85f28b7b02b))
+- **deploy:** make services restart by default ([87f6501](https://github.com/ts-factory/bublik/commit/87f6501557fd6804b5c0fe42b0e5cf53db0f7e84))
+- **deploy:** add the option to quietly restart services ([409066e](https://github.com/ts-factory/bublik/commit/409066e9d1f3fe0c8e646d3c43ea8cbac569317a))
+
+#### 💾 DB Changes
+
+- **models:** speed up history by speed up meta filtering ([4f94f7c](https://github.com/ts-factory/bublik/commit/4f94f7c84654b833d5497611357a177342bfc0d6))
 
 #### 📦 Chores
 
-**deploy, auth** cleanup in auth, deploy
+- **auth:** unify response messages ([a8aeda6](https://github.com/ts-factory/bublik/commit/a8aeda68ac45df5b6c2dcaf61618fa0a3374bc2c))
+- **cleanup:** unify quotes in error messages ([6d832cb](https://github.com/ts-factory/bublik/commit/6d832cbeb711bc9095b7f0340ade64279e2b3024))
+- **deploy:** remove an extra duplicate function ([a681cab](https://github.com/ts-factory/bublik/commit/a681cab70bf9c3dd670039e8a41dbd93914d43ee))
