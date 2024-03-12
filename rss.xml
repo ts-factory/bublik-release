@@ -4,10 +4,21 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Fri, 23 Feb 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 12 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v0.2.4]]></title>
+            <link>https://ts-factory.github.io/bublik-release/release-v0.2.4</link>
+            <guid>https://ts-factory.github.io/bublik-release/release-v0.2.4</guid>
+            <pubDate>Tue, 12 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are happy to announce Bublik v0.2.4.]]></description>
+            <content:encoded><![CDATA[<p>We are happy to announce <strong>Bublik v0.2.4</strong>.</p><p>The release, a small incremental update, prioritizes performance improvements by optimizing tree representation.
+This involves refining the structure of the tree to enhance efficiency,
+making operations within the backend system more streamlined and faster.</p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="backend">Backend<a href="#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-performance">⚡ Performance<a href="#-performance" class="hash-link" aria-label="Direct link to ⚡ Performance" title="Direct link to ⚡ Performance">​</a></h4><ul><li>tree: optimize tree representation (<a href="https://github.com/ts-factory/bublik/commit/0cd05c64bb275ec949d0aeddd0f89a46a7735be4" target="_blank" rel="noopener noreferrer">0cd05c6</a>)</li></ul>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v0.2.3]]></title>
             <link>https://ts-factory.github.io/bublik-release/release-v0.2.3</link>
