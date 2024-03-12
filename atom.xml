@@ -13,7 +13,7 @@
         <link href="https://ts-factory.github.io/bublik-release/release-v0.2.4"/>
         <updated>2024-03-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[We are happy to announce Bublik v0.2.4.]]></summary>
-        <content type="html"><![CDATA[<p>We are happy to announce <strong>Bublik v0.2.4</strong>.</p><p>The release, a small incremental update, prioritizes performance improvements by optimizing tree representation.
+        <content type="html"><![CDATA[<p>We are happy to announce <strong>Bublik v0.2.4</strong>.</p><p>The release, a small incremental update, prioritizes performance improvements by optimizing log tree representation.
 This involves refining the structure of the tree to enhance efficiency,
 making operations within the backend system more streamlined and faster.</p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="backend">Backend<a href="#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-performance">⚡ Performance<a href="#-performance" class="hash-link" aria-label="Direct link to ⚡ Performance" title="Direct link to ⚡ Performance">​</a></h4><ul><li>tree: optimize tree representation (<a href="https://github.com/ts-factory/bublik/commit/0cd05c64bb275ec949d0aeddd0f89a46a7735be4" target="_blank" rel="noopener noreferrer">0cd05c6</a>)</li></ul>]]></content>
         <author>
