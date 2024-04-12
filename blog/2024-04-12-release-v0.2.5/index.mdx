@@ -1,0 +1,54 @@
+---
+title: Release v0.2.5
+authors: [okt-limonikas]
+tags: [release]
+slug: release-v0.2.5
+---
+
+We are happy to announce **Bublik v0.2.5**.
+
+<!--truncate-->
+
+This update brings numerous enhancements to both the frontend and backend of Bublik. On the frontend, fixes were made to address issues like page overflow in the log section and adapting search parameters to API changes in history. Bugs such as app crashes due to toast messages on email confirmation page and various issues in the history section were resolved. Also we changed default logs to experimental ones by default. You can toggle those off in user settings if you have issues with experimental or use button above "Legacy" to disable experimental logs. Backend improvements include fixing issues with detailed run statistics and completing various chores to streamline operations. These changes aim to improve overall performance and functionality.
+
+## Changelog
+
+### Frontend
+
+#### 💅 Polish
+
+- **log:** fix horizontal page overflow ([803c05c](https://github.com/ts-factory/bublik-ui/commit/803c05c27c99c1e88d34ef28d0048e9e26deea3e))
+
+#### ♻ Code Refactoring
+
+- **history:** adapt search params to api changes ([91ae184](https://github.com/ts-factory/bublik-ui/commit/91ae184af0c0916cc074795f4c28b2c4379ef1a0))
+
+#### 📦 Chores
+
+- **log:** change default log mode to experimental ([d851f04](https://github.com/ts-factory/bublik-ui/commit/d851f0412fc47c38455c103d709b7ba7f5592f0c))
+
+#### 🐛 Bug Fix
+
+- **auth:** prevent app crash caused by toast messages ([ce1211f](https://github.com/ts-factory/bublik-ui/commit/ce1211ff30bffadfc4d246d0bb012a6714c51d2e))
+- **history:** [checkbox] prevent double select ([ab1d2ed](https://github.com/ts-factory/bublik-ui/commit/ab1d2ed3e5818a7fab759efe5aae4780ed22b148))
+- **history:** [form] missing default values ([ed7a34a](https://github.com/ts-factory/bublik-ui/commit/ed7a34ae00d474530a0ca1172de7a51f71437fd8))
+- **history:** not display dates in legend ([41a2a5a](https://github.com/ts-factory/bublik-ui/commit/41a2a5a156ecd3eefe1c385060635478cf74ad8a))
+- **history:** skipping fetching data on direct navigation ([bc721e1](https://github.com/ts-factory/bublik-ui/commit/bc721e1994a1fa34289051633616f00ba9462979))
+- **log:** scroll to saved line ([41cf356](https://github.com/ts-factory/bublik-ui/commit/41cf3567a58cf15dd654fb6c7f4b24b92a6f2c9d))
+
+### Backend
+
+#### 🔨 Issue Fix
+
+- Negative values in detailed run statistics [#20](https://github.com/ts-factory/bublik/issues/20)
+- Strange percentages in run statistics [#22](https://github.com/ts-factory/bublik/issues/22)
+
+#### 📦 Chores
+
+- **history:** unify names of query params containing metas ([3c7e056](https://github.com/ts-factory/bublik/commit/3c7e0564730bc34c887a49d2eee66ac0affb84c4))
+- **history:** support filtering by metas with type label ([bbd72e6](https://github.com/ts-factory/bublik/commit/bbd72e6c46e4101f7459f16837283c40437e1c08))
+- **history:** structure the use of metas and their exprs ([9f400c0](https://github.com/ts-factory/bublik/commit/9f400c042bc701ef199641d82935cc921129d96b))
+- **history:** structure the getting of query params ([94c853b](https://github.com/ts-factory/bublik/commit/94c853be40d970be17e995b6f9caa2251cbd0166))
+- **history:** fix query param and variable names ([84f5342](https://github.com/ts-factory/bublik/commit/84f5342c51eabe8ad3e4831410e3336c67ec5044))
+- **history:** add comments and division into blocks ([b00caac](https://github.com/ts-factory/bublik/commit/b00caac3015021ddadd7b7da7e46c536b21a59b6))
+- **history:** make the order of getting data more logical ([09f06e7](https://github.com/ts-factory/bublik/commit/09f06e7f2ab15f75d2bbd20d56ddb991e1f98cd5))
