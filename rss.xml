@@ -4,10 +4,23 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Fri, 12 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 12 May 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v0.2.6]]></title>
+            <link>https://ts-factory.github.io/bublik-release/release-v0.2.6</link>
+            <guid>https://ts-factory.github.io/bublik-release/release-v0.2.6</guid>
+            <pubDate>Sun, 12 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are happy to announce Bublik v0.2.6.]]></description>
+            <content:encoded><![CDATA[<p>We are happy to announce <strong>Bublik v0.2.6</strong>.</p><p>This release introduces a series of small, incremental changes aimed at enhancing user experience and addressing various issues.
+It includes fixes for parameter-related crashes and fixes issue with parameter diff on run page.
+Additionally, constraints for minimum and maximum values have been added to charts.
+Now when clicking on test in log tree log frame will be scrolled to the top to reset, We also added stacked chart mode for measurements page.
+Overall, these updates contribute to a smoother and more refined user interface.</p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="frontend">Frontend<a href="#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-chores">📦 Chores<a href="#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4><ul><li>fix run library test config (<a href="https://github.com/ts-factory/bublik-ui/commit/4f3df15d2c95896a609e6c0bc4d79aefc77d335e" target="_blank" rel="noopener noreferrer">4f3df15</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-polish">💅 Polish<a href="#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish">​</a></h4><ul><li><strong>log:</strong> <!-- -->[chart]<!-- --> add constraints for min/max values (<a href="https://github.com/ts-factory/bublik-ui/commit/88b52621ab4324d1313dc3ee1f5d5d67e98fb98c" target="_blank" rel="noopener noreferrer">88b5262</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-bug-fix">🐛 Bug Fix<a href="#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4><ul><li><strong>charts:</strong> correct tooltip message for zoom button (<a href="https://github.com/ts-factory/bublik-ui/commit/aeaa1ea162e43c6a037dca948f9a9522b65a26e3" target="_blank" rel="noopener noreferrer">aeaa1ea</a>)</li><li><strong>run:</strong> result parameters diff crashing on some results (<a href="https://github.com/ts-factory/bublik-ui/commit/d196c74f093fa8dbe8c6adbce99de907bac9b34b" target="_blank" rel="noopener noreferrer">d196c74</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-build-system">👷‍ Build System<a href="#-build-system" class="hash-link" aria-label="Direct link to 👷‍ Build System" title="Direct link to 👷‍ Build System">​</a></h4><ul><li>enable sourcemaps (<a href="https://github.com/ts-factory/bublik-ui/commit/976756ce1bda98d6d5c2549a5c7f724c5534d268" target="_blank" rel="noopener noreferrer">976756c</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-new-feature">🚀 New Feature<a href="#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4><ul><li><strong>log:</strong> scroll to top of log on test click (<a href="https://github.com/ts-factory/bublik-ui/commit/e6cfda2d8f940f52452630fd7fb270ee7de97c42" target="_blank" rel="noopener noreferrer">e6cfda2</a>)</li><li><strong>measurements:</strong> add stacked chart mode (<a href="https://github.com/ts-factory/bublik-ui/commit/5ad0f20e614435ac30c19ae1542e1bc2bee1c7d4" target="_blank" rel="noopener noreferrer">5ad0f20</a>)</li></ul><h3 class="anchor anchorWithStickyNavbar_KJXE" id="backend">Backend<a href="#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v0.2.5]]></title>
             <link>https://ts-factory.github.io/bublik-release/release-v0.2.5</link>
