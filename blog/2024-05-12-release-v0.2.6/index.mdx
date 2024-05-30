@@ -17,6 +17,11 @@ Overall, these updates contribute to a smoother and more refined user interface.
 
 Backend improvements include fixing issues with importruns.
 
+> **Note!**
+> After upgrading to this version, it is necessary to clean up the databases of projects using live import:
+> it is necessary to find and re-import runs for which TestIterationResult objects with the same `exec_seqno` exist in the database. 
+
+
 ## Changelog
 
 ### Frontend
