@@ -16,6 +16,8 @@ Added navigation shortcuts for quick access to pages, enhancing user experience.
 
 ### Run Reports
 
+Now you can use Bublik for run reports building. To build a run report, an appropriate configuration is required. Information about the run report configuration format and its location can be found in [doc/wiki/reports.md](https://github.com/ts-factory/bublik/blob/main/doc/wiki/reports.md). An example of the run report configuration can be found in [doc/wiki/report_config.json](https://github.com/ts-factory/bublik/blob/main/doc/wiki/report_config.json).
+
 You can find available reports on run page
 
 ![Report Button](./img/report-1.png)
@@ -89,3 +91,16 @@ Also you can copy short link to current page from command menu
 * **reports:** added table and chart components ([4e4d3a7](https://github.com/ts-factory/bublik-ui/commit/4e4d3a75d17c8c03f6b898265b65d4d4333fc42a))
 * **reports:** added warnings popover ([46d983d](https://github.com/ts-factory/bublik-ui/commit/46d983dad714768c6f6676d1b4d1dba4c22c8dcd))
 * **reports:** made revision links clickable ([41d50d8](https://github.com/ts-factory/bublik-ui/commit/41d50d8dbb44d47e1daf735d64ad0beedfe264e9))
+
+### Backend
+
+#### 🔨 Issue Fix
+
+- Support Debian 12 [#17](https://github.com/ts-factory/bublik/issues/17)
+- Add URL shortner [#26](https://github.com/ts-factory/bublik/issues/26)
+- Add run reports support [#32](https://github.com/ts-factory/bublik/issues/32)
+
+#### 📦 Chores
+
+- **cleanup:** remove unnecessary logging ([32dadc6](https://github.com/ts-factory/bublik/commit/32dadc6cc862f3a7b38b8be4efa5cd9d90bb4a34))
+- **cleanup:** remove unnecessary manage.py call ([4faeba9](https://github.com/ts-factory/bublik/commit/4faeba97b3763ed8ef1291ba2127e81be5f4a036))
