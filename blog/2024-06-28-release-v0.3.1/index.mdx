@@ -1,0 +1,41 @@
+---
+title: Release v0.3.1
+authors: [okt-limonikas]
+tags: [release]
+slug: release-v0.3.1
+---
+
+We are happy to announce **Bublik v0.3.1**.
+
+<!--truncate-->
+
+In the latest release of our app, we've introduced several new features and improvements. Notably, we've enhanced the history search form with a new `labels` field.
+The reports section now supports formatters to display "%" signs, handles API errors more gracefully, and added table titles. We've also fixed various bugs, including default values in the history search form. Additionally, we polished the UI with background overlays in the command menu.
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **history:** added labels field to history global search form ([5fc9e7b](https://github.com/ts-factory/bublik-ui/commit/5fc9e7b0418843fefa78ae7c744d1fb341b8f441))
+- **history:** added scroll to top of the page on page change ([634934f](https://github.com/ts-factory/bublik-ui/commit/634934fce95fc155a0955056f984fe15ba67945f))
+- **reports:** added formatters support to show "%" sign ([5e55703](https://github.com/ts-factory/bublik-ui/commit/5e55703929e931e864c5ac0806770bf8c77cef3f))
+- **reports:** added handling for API errors for report page ([323d7ba](https://github.com/ts-factory/bublik-ui/commit/323d7bafbdcde44a074132dbc27034b5dc356b70))
+- **reports:** added table title from Y axis label ([c5d3498](https://github.com/ts-factory/bublik-ui/commit/c5d3498f51f1d5b2184eaef231af3bf27a71bed2))
+
+#### 🐛 Bug Fix
+
+- **history:** fixed missing default values for history global search form ([f096099](https://github.com/ts-factory/bublik-ui/commit/f09609984044c74193441d909ef6334aff83b385))
+- **history:** made field names consistent in search form ([6f569af](https://github.com/ts-factory/bublik-ui/commit/6f569afd25428e4640b2d13b37790fa131def6d6))
+- **log:** added option to contain label inside canvas container ([5c07946](https://github.com/ts-factory/bublik-ui/commit/5c079461bb1a8c04168f19b7bab6009f96197ccc))
+- **reports:** fixed axis label overflow inside canvas container ([79b5416](https://github.com/ts-factory/bublik-ui/commit/79b541646f429c2d14bfb7b62e3854a0180643bb))
+- **reports:** fixed unstable key for report header list item ([a6ac058](https://github.com/ts-factory/bublik-ui/commit/a6ac058b7e85caf3f7704027a895b74c0a425289))
+- **run:** fixed copying revision metadata without key ([eefdf45](https://github.com/ts-factory/bublik-ui/commit/eefdf45f9d8eeb2b206a1678048db72d835b5482))
+- **runs:** [form] fixed crash when opening tags input ([90e3df6](https://github.com/ts-factory/bublik-ui/commit/90e3df62602eb510344649eb9e8f0f0bd0e101c9))
+- **ui:** [combobox] fixed selection change callback type ([9d16f19](https://github.com/ts-factory/bublik-ui/commit/9d16f197c3078560c944739fef630646fd551773))
+
+#### 💅 Polish
+
+- **command:** added background overlay to command menu ([08bf23e](https://github.com/ts-factory/bublik-ui/commit/08bf23e6b43d0c1c45d7cf2921c852eabd9b9767))
+- **run:** [reports] added gap between exit icon and report label ([de2dd4d](https://github.com/ts-factory/bublik-ui/commit/de2dd4dd698e8864bc250a7ea0ec6ca60668ecf5))
