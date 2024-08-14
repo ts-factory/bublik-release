@@ -13,11 +13,17 @@ In this release, we've introduced several new features and improvements.
 We've added conclusion reason hover cards to the dashboard, run details, and runs page, enhancing user information.
 A new report data zoom functionality for plots has been implemented, along with a preview log modal for the run page.
 We've also made various UI enhancements, including improved table column width distribution in reports and the addition of an align property to the hover-card component.
-Bug fixes include resolving issues with broken links, error displays.
+Bug fixes include resolving issues with broken links, error displays. Also the Bublik is now compatible with Ubuntu 24.04. The bugs related to importing from the source have also been solved.
 
 ## Highlights
 
-### Report iterations
+### Specifying Measurements In Report Configuration
+We have added the ability to specify several sets of measurement parameters in the configuration to make reporting more flexible. The list of possible measurement parameters has also expanded — it is now possible to specify a tool. An example of the run report configuration can be found in [doc/wiki/report\_config.json](https://github.com/ts-factory/bublik/blob/main/doc/wiki/report_config.json).
+
+> **Note!**
+> Due to the above changes, **the configuration format has been changed**. See the example at the link above.
+
+### Not Processed Iterations In Reports
 
 ![Report iterations](./img/iterations.png)
 
@@ -72,4 +78,41 @@ We've also added log preview to the run page so you have a quick glance of the l
 - **run:** added conclusion reason hover card to run details ([d7a6288](https://github.com/ts-factory/bublik-ui/commit/d7a628818f7ae6e0387618b8fc4d3a279679a879))
 - **run:** added preview log modal ([5c4056c](https://github.com/ts-factory/bublik-ui/commit/5c4056c3e8565000d4c3d1f7fd308ed8a0c51d6a))
 - **runs:** added conclusion reason hover card to runs page ([b3215c9](https://github.com/ts-factory/bublik-ui/commit/b3215c91692a0eab9182b42c1132f1838297c37a))
-- **ui:** added conclusion hover card component to ui lib ([1183ee4](https://github.com/ts-factory/bublik-ui/commit/1183ee4427e8c5b20a15dfb9806fea82cf1caea8))nm
+- **ui:** added conclusion hover card component to ui lib ([1183ee4](https://github.com/ts-factory/bublik-ui/commit/1183ee4427e8c5b20a15dfb9806fea82cf1caea8))
+
+### Backend
+
+#### 🔨 Issue Fix
+
+- Error in calculating detailed run statistics [#3](https://github.com/ts-factory/bublik/issues/3)
+- Error when trying to copy a short URL [#44](https://github.com/ts-factory/bublik/issues/44)
+- Importruns: source page parsing error [#48](https://github.com/ts-factory/bublik/issues/48)
+
+#### 🐛 Bug Fix
+
+- **requirements:** update packages versions to pick up bug fixes ([dd6ff53](https://github.com/ts-factory/bublik/commit/dd6ff534bfa24fa7e0f95b5260b17514b28203ad))
+- **flower:** fix no workers in flower after start ([e0dd52d](https://github.com/ts-factory/bublik/commit/e0dd52d297f1ddf7329edaaa7b7692880c78f0ae))
+- **report:** fix empty percentage base value handling ([2dbcbbf](https://github.com/ts-factory/bublik/commit/2dbcbbf720f755183e8d19a672e48ca3aedec6d9))
+- **report:** fix invalid iterations handling ([d94c351](https://github.com/ts-factory/bublik/commit/d94c3514156e839acd0c6d5e4e073aba6783cbd4))
+
+#### 🚀 New Feature
+
+- **requirements:** fix incompatibility with Ubuntu 24.04 ([76dd9fa](https://github.com/ts-factory/bublik/commit/76dd9fa31e1ec8e63dc1f6ac5d8b0e1858adef38))
+- **readme:** update info about supported OS versions ([34e0d1d](https://github.com/ts-factory/bublik/commit/34e0d1dfd90693b29249047d688da15ec7459d7d))
+- **run stats:** make the conclusion clearer ([04622c0](https://github.com/ts-factory/bublik/commit/04622c0ea19c9768370508687fb23997f0da84c2))
+- **report:** expand possibilities of measurement setting ([2ebe8e1](https://github.com/ts-factory/bublik/commit/2ebe8e19470b52d64f3bac0257381a6e7504a265))
+
+#### 📦 Chores
+
+- **deploy:** make deploy more flexible ([b11ce2e](https://github.com/ts-factory/bublik/commit/b11ce2edeb013bc8c97319ffff8c451c8e3aac65))
+- **report:** update report content structure ([8cf967d](https://github.com/ts-factory/bublik/commit/8cf967d975785aa4acd719f65aa40fdc01d5e09f))
+- **report:** ensure the uniqueness of IDs throughout the report ([ac097e7](https://github.com/ts-factory/bublik/commit/ac097e74a6e4242001ece3a856c27e558b0d7b43))
+
+
+#### ♻ Code Refactoring
+
+- **settings:** fix import of settings ([7743293](https://github.com/ts-factory/bublik/commit/7743293551c47ea12f34c8bb915ab15d15b0fd59))
+- **auth:** remove dup of getting user by access token ([b1a59c4](https://github.com/ts-factory/bublik/commit/b1a59c4e04b29208facbe690c951b6ce3236f9e2))
+- **auth:** decompose admin verification for readability ([3c30fd3](https://github.com/ts-factory/bublik/commit/3c30fd3e8512c987262d174c9e4aa7143cd93e28))
+- **auth:** unify authentication and admin verification ([da5d908](https://github.com/ts-factory/bublik/commit/da5d908aa6d88c1bc3d2681e051d8fabec33a180))
+- **auth:** move auth funcs for consistency ([eac0014](https://github.com/ts-factory/bublik/commit/eac00148745a52295569217c709d8c6818d5bf17))
