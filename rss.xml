@@ -4,10 +4,21 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Fri, 16 Aug 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 17 Aug 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v0.3.5]]></title>
+            <link>https://ts-factory.github.io/bublik-release/release-v0.3.5</link>
+            <guid>https://ts-factory.github.io/bublik-release/release-v0.3.5</guid>
+            <pubDate>Sat, 17 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are happy to announce Bublik v0.3.5.]]></description>
+            <content:encoded><![CDATA[<p>We are happy to announce <strong>Bublik v0.3.5</strong>.</p><p>In this minor release we've reverted a change to show full run details by default.
+We now hide conclusion reason in run details in short mode.
+We also added common args for not processed points table to the report page.</p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="frontend">Frontend<a href="#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-new-feature">🚀 New Feature<a href="#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4><ul><li><strong>report:</strong> added common args for not processed points table (<a href="https://github.com/ts-factory/bublik-ui/commit/720da5fe217372c117fff70ca8629c2d2b7a8e48" target="_blank" rel="noopener noreferrer">720da5f</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-code-refactoring">♻ Code Refactoring<a href="#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring">​</a></h4><ul><li><strong>run,log:</strong> omit conclusion reason from run details in short mode (<a href="https://github.com/ts-factory/bublik-ui/commit/fd2817d603b01c81a24f14aa08e8515dc9c91559" target="_blank" rel="noopener noreferrer">fd2817d</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-chores">📦 Chores<a href="#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4><ul><li><strong>run,log:</strong> renamed label from "Reason" to "Conclusion Reason" (<a href="https://github.com/ts-factory/bublik-ui/commit/b106bb3009db56e54db40ee7ef80c35b0950c901" target="_blank" rel="noopener noreferrer">b106bb3</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-polish">💅 Polish<a href="#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish">​</a></h4><ul><li><strong>run,log:</strong> <!-- -->[details]<!-- --> fixed column alignment between term and description (<a href="https://github.com/ts-factory/bublik-ui/commit/8a4780c93c675a07cc22142edf2bee814f8e310c" target="_blank" rel="noopener noreferrer">8a4780c</a>)</li></ul><h4 class="anchor anchorWithStickyNavbar_KJXE" id="-reverts">🔄 Reverts<a href="#-reverts" class="hash-link" aria-label="Direct link to 🔄 Reverts" title="Direct link to 🔄 Reverts">​</a></h4><p>Revert "chore(log,run): changed option to show full run details by default" (<a href="https://github.com/ts-factory/bublik-ui/commit/264849e9635746dea6a9bd541b73830875e75c6a" target="_blank" rel="noopener noreferrer">264849e</a>)</p>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v0.3.4]]></title>
             <link>https://ts-factory.github.io/bublik-release/release-v0.3.4</link>
