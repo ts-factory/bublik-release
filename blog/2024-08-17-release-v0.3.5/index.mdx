@@ -1,0 +1,38 @@
+---
+title: Release v0.3.5
+authors: [okt-limonikas]
+tags: [release]
+slug: release-v0.3.5
+---
+
+We are happy to announce **Bublik v0.3.5**.
+
+<!--truncate-->
+
+In this minor release we've reverted a change to show full run details by default.
+We now hide conclusion reason in run details in short mode.
+We also added common args for not processed points table to the report page.
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **report:** added common args for not processed points table ([720da5f](https://github.com/ts-factory/bublik-ui/commit/720da5fe217372c117fff70ca8629c2d2b7a8e48))
+
+#### ♻ Code Refactoring
+
+- **run,log:** omit conclusion reason from run details in short mode ([fd2817d](https://github.com/ts-factory/bublik-ui/commit/fd2817d603b01c81a24f14aa08e8515dc9c91559))
+
+#### 📦 Chores
+
+- **run,log:** renamed label from "Reason" to "Conclusion Reason" ([b106bb3](https://github.com/ts-factory/bublik-ui/commit/b106bb3009db56e54db40ee7ef80c35b0950c901))
+
+#### 💅 Polish
+
+- **run,log:** [details] fixed column alignment between term and description ([8a4780c](https://github.com/ts-factory/bublik-ui/commit/8a4780c93c675a07cc22142edf2bee814f8e310c))
+
+#### 🔄 Reverts
+
+Revert "chore(log,run): changed option to show full run details by default" ([264849e](https://github.com/ts-factory/bublik-ui/commit/264849e9635746dea6a9bd541b73830875e75c6a))
