@@ -4,10 +4,20 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Mon, 09 Sep 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 10 Sep 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v0.3.7]]></title>
+            <link>https://ts-factory.github.io/bublik-release/release-v0.3.7</link>
+            <guid>https://ts-factory.github.io/bublik-release/release-v0.3.7</guid>
+            <pubDate>Tue, 10 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are happy to announce Bublik v0.3.7.]]></description>
+            <content:encoded><![CDATA[<p>We are happy to announce <strong>Bublik v0.3.7</strong>.</p><p>In this release we've fixed small bug with markdown preview overflowing modal.
+Also we've added more meta information for creating new bugs on log page such as hash, CMD, link to full log and link to saved location if you clicked on log line number.</p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="frontend">Frontend<a href="#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3><h3 class="anchor anchorWithStickyNavbar_KJXE" id="-bug-fix">🐛 Bug Fix<a href="#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h3><ul><li><strong>run,log:</strong> fix text overflow in new bug preview modal (<a href="https://github.com/ts-factory/bublik-ui/commit/bb556e4284dad76f006a631dd64195d1eeb18b47" target="_blank" rel="noopener noreferrer">bb556e4</a>)</li></ul><h3 class="anchor anchorWithStickyNavbar_KJXE" id="-new-feature">🚀 New Feature<a href="#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h3><ul><li><strong>log:</strong> added new field to markdown from te-log-meta (<a href="https://github.com/ts-factory/bublik-ui/commit/cb3692f3c72f148540623f9bc176c0d9dc28fa14" target="_blank" rel="noopener noreferrer">cb3692f</a>)</li></ul>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v0.3.6]]></title>
             <link>https://ts-factory.github.io/bublik-release/release-v0.3.6</link>

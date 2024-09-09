@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ts-factory.github.io/bublik-release/</id>
     <title>Bublik Blog</title>
-    <updated>2024-09-09T00:00:00.000Z</updated>
+    <updated>2024-09-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ts-factory.github.io/bublik-release/"/>
     <subtitle>Bublik Blog</subtitle>
     <icon>https://ts-factory.github.io/bublik-release/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Release v0.3.7]]></title>
+        <id>https://ts-factory.github.io/bublik-release/release-v0.3.7</id>
+        <link href="https://ts-factory.github.io/bublik-release/release-v0.3.7"/>
+        <updated>2024-09-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are happy to announce Bublik v0.3.7.]]></summary>
+        <content type="html"><![CDATA[<p>We are happy to announce <strong>Bublik v0.3.7</strong>.</p><p>In this release we've fixed small bug with markdown preview overflowing modal.
+Also we've added more meta information for creating new bugs on log page such as hash, CMD, link to full log and link to saved location if you clicked on log line number.</p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="frontend">Frontend<a href="#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3><h3 class="anchor anchorWithStickyNavbar_KJXE" id="-bug-fix">🐛 Bug Fix<a href="#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h3><ul><li><strong>run,log:</strong> fix text overflow in new bug preview modal (<a href="https://github.com/ts-factory/bublik-ui/commit/bb556e4284dad76f006a631dd64195d1eeb18b47" target="_blank" rel="noopener noreferrer">bb556e4</a>)</li></ul><h3 class="anchor anchorWithStickyNavbar_KJXE" id="-new-feature">🚀 New Feature<a href="#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h3><ul><li><strong>log:</strong> added new field to markdown from te-log-meta (<a href="https://github.com/ts-factory/bublik-ui/commit/cb3692f3c72f148540623f9bc176c0d9dc28fa14" target="_blank" rel="noopener noreferrer">cb3692f</a>)</li></ul>]]></content>
+        <author>
+            <name>Kostromin Danil</name>
+            <uri>https://github.com/okt-limonikas</uri>
+        </author>
+        <category label="release" term="release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Release v0.3.6]]></title>
         <id>https://ts-factory.github.io/bublik-release/release-v0.3.6</id>
