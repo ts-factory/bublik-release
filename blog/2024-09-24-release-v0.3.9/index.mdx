@@ -1,0 +1,74 @@
+---
+title: Release v0.3.9
+authors: [okt-limonikas]
+tags: [release]
+slug: release-v0.3.9
+---
+
+We are happy to announce **Bublik v0.3.9**.
+
+In this release we've added UI for creating and editing notes for tests on the run page. We've also fixed some small styling issues on the run page.
+
+<!--truncate-->
+
+### Key Features:
+
+1. **UI for Creating and Editing Test Notes**:  
+   Adds an interface for creating and editing test run notes, improving documentation and tracking.
+2. **Borders for Notes and Objectives**:  
+   Enhances the visual clarity of the `Notes` and `Objective` columns by adding borders.
+
+### Fixes and Minor Enhancements:
+
+1. **Sorting UI Adjustments**:  
+   Resolves an issue where sorting controls appeared on non-sortable columns.
+2. **Number Alignment Fix**:  
+   Corrects the alignment of "0" in table columns.
+
+## Highlights
+
+### Table with notes
+
+![Table](./img/table.png)
+
+### Editing Note
+
+![Edit](./img/edit.png)
+
+### All Notes Popover
+
+![all](./img/all.png)
+
+### Editing Note Inside Popover
+
+![edit-all](./img/edit-all.png)
+
+### Confirmation Dialog For Edit
+
+![Alert](./img/alert.png)
+
+## Changelog
+
+### Frontend
+
+#### 📦 Chores
+
+- **runs:** [table] removed unnecessary import ([c3dc7ca](https://github.com/ts-factory/bublik-ui/commit/c3dc7ca92d142458fb8f29635aea5d8733675595))
+
+#### 🐛 Bug Fix
+
+- **run:** [table] display sorting ui only for sortable columns ([97827d0](https://github.com/ts-factory/bublik-ui/commit/97827d09cd4e1c6ad6f004ed97b8c028d0d36aa2))
+
+#### 🚀 New Feature
+
+- **run:** [table] added UI for creating/editing test notes ([6e3b470](https://github.com/ts-factory/bublik-ui/commit/6e3b470711d9a4955e791b59c098b83f7a327ff5))
+- **run:** added endpoints to handle note CRUD for test ([6e34438](https://github.com/ts-factory/bublik-ui/commit/6e34438bd09e0ce4f9eb0fe0b2e6789fabdf6f9e))
+- **ui:** [button] added variant for destruction-secondary styles ([8c75174](https://github.com/ts-factory/bublik-ui/commit/8c7517476ddba8fb011c2cb2dffab2244b562561))
+- **ui:** added file plus icon ([1e5eae0](https://github.com/ts-factory/bublik-ui/commit/1e5eae03ef81b028db446971eaac43dab8c2a973))
+
+### 💅 Polish
+
+- **run:** [table] added borders for and columns ([f5d94ee](https://github.com/ts-factory/bublik-ui/commit/f5d94ee075784bf55eb3a506573935c6321de29b))
+- **run:** [table] fixed number alignment for 0 ([23023e6](https://github.com/ts-factory/bublik-ui/commit/23023e640533952a85ec703df8a670f3cdd848ca)), closes [#130](https://github.com/ts-factory/bublik-ui/issues/130)
+- **run:** [table] lower opacity to indicate pending state ([dfa74f9](https://github.com/ts-factory/bublik-ui/commit/dfa74f923d9bfc41af8bc5308c6607de93db2a2e))
+- **ui:** [alert] added dialog overlay by default to alert dialog ([e7e860e](https://github.com/ts-factory/bublik-ui/commit/e7e860e6a3ec6399c25d235225aad563fd84050e))
