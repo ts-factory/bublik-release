@@ -4,10 +4,19 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Fri, 04 Oct 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Oct 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v0.5.0]]></title>
+            <link>https://ts-factory.github.io/bublik-release/release-v0.5.0</link>
+            <guid>https://ts-factory.github.io/bublik-release/release-v0.5.0</guid>
+            <pubDate>Wed, 16 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are happy to announce Bublik v0.5.0.]]></description>
+            <content:encoded><![CDATA[<p>We are happy to announce <strong>Bublik v0.5.0</strong>.</p><p>In this we release we've added <strong>sticky stacked headers</strong> for reports and fixed some bugs for configs also added config font size settings</p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="highlights">Highlights<a href="#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="sticky-stacked-headers">Sticky Stacked Headers<a href="#sticky-stacked-headers" class="hash-link" aria-label="Direct link to Sticky Stacked Headers" title="Direct link to Sticky Stacked Headers">​</a></h3><video controls="" width="100%" height="100%"><source src="/bublik-release/assets/medias/output-004704c040f50b9cf224910ad132cef7.mp4"></video><h3 class="anchor anchorWithStickyNavbar_KJXE" id="config-font-size">Config Font Size<a href="#config-font-size" class="hash-link" aria-label="Direct link to Config Font Size" title="Direct link to Config Font Size">​</a></h3><p><img loading="lazy" alt="Font Size" src="/bublik-release/assets/images/font-size-8a4a08bc734fca90daa6de6813ebc8dc.png" width="3344" height="1982" class="img_YtLM"></p><h3 class="anchor anchorWithStickyNavbar_KJXE" id="config-exists">Config Exists<a href="#config-exists" class="hash-link" aria-label="Direct link to Config Exists" title="Direct link to Config Exists">​</a></h3><p><img loading="lazy" alt="Config Exists" src="/bublik-release/assets/images/exists_config-5ac47154ee9cc4a94ea7660f91d2f508.png" width="3380" height="2002" class="img_YtLM"></p><h2 class="anchor anchorWithStickyNavbar_KJXE" id="admin-section">Admin Section<a href="#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section">​</a></h2><h2 class="anchor anchorWithStickyNavbar_KJXE" id="changelog">Changelog<a href="#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2><h3 class="anchor anchorWithStickyNavbar_KJXE" id="frontend">Frontend<a href="#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v0.4.3]]></title>
             <link>https://ts-factory.github.io/bublik-release/release-v0.4.3</link>
