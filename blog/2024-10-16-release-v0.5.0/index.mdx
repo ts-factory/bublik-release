@@ -6,6 +6,7 @@ slug: release-v0.5.0
 ---
 
 import video from './video/output.mp4';
+import Admonition from '@theme/Admonition';
 
 We are happy to announce **Bublik v0.5.0**.
 
@@ -39,7 +40,11 @@ In this release we've added **sticky stacked headers** for reports and fixed som
 
 ### Change Dashboard Headers Order
 
+![Change Dashboard Headers Order](./img/config-header.png)
+
 ### Add Report Argument Labels
+
+![Args](./img/seq.png)
 
 ## Admin Section
 
@@ -47,16 +52,28 @@ In this release we've added **sticky stacked headers** for reports and fixed som
 
 Deployment: `./scripts/deploy --steps django_settings run_services`
 
-:::danger
-When upgrading to this version, you need to reformat all configurations. Follow these steps:
-1. Activate the virtual environment: `source .env/bin/activate`
-2. Call the configuration reformatting command: `python manage.py reformat_configs`
-:::
+<Admonition type="danger" icon="💡" title="Upgrade">
+  When upgrading to this version, you need to reformat all configurations.{' '}
+  <br />
+  <br />
+  <b>Follow these steps:</b>
+  <ul>
+    <li>
+      Activate the virtual environment: <code>source .env/bin/activate</code>
+    </li>
+    <li>
+      Call the configuration reformatting command:{' '}
+      <code>python manage.py reformat_configs</code>
+    </li>
+  </ul>
+</Admonition>
 
 ### Important Info
 
 :::warning
+
 Configurations whose automatic formatting has failed will not be supported by Bublik. Either reformat them manually or delete.
+
 :::
 
 ## Changelog
@@ -95,6 +112,7 @@ Configurations whose automatic formatting has failed will not be supported by Bu
 ### Backend
 
 #### 🚀 New Feature
+
 - **management:** add ability to reformat configs ([38b8435](https://github.com/ts-factory/bublik/commit/38b843519a76a9e8384b02270134cd6422f35e8b))
 - **management:** update reformat configs command ([000c27f](https://github.com/ts-factory/bublik/commit/000c27f0d5b8a26fff9a4fad669fa257cb6dfb2d))
 - **dashboard:** make it possible to sort columns ([e837f0e](https://github.com/ts-factory/bublik/commit/e837f0ebbb9b04450f4d79c7c8ffc35a5950e1db))
@@ -102,13 +120,16 @@ Configurations whose automatic formatting has failed will not be supported by Bu
 - **config:** format the main config during migration ([74f10a7](https://github.com/ts-factory/bublik/commit/74f10a7110fb80ef713b0343a1cb005204a7dea3))
 
 #### 💅 Polish
+
 - **report:** make measurement chart label more readable ([546ad90](https://github.com/ts-factory/bublik/commit/546ad9053ba2465bbef9c7d6c6b8b2870e25a9a7))
 - **report:** make headers more readable ([063a325](https://github.com/ts-factory/bublik/commit/063a325b39c9675c3c03018bf2d6c9d6aaed5729))
 
 #### 📦 Chores
+
 - **settings:** increase the access token lifetime ([4dbf1b0](https://github.com/ts-factory/bublik/commit/4dbf1b0bbfb3978ba59193470989d3ca32e02eee))
 
 #### ♻ Code Refactoring
+
 - **cleanup:** apply linter to report services ([6610fac](https://github.com/ts-factory/bublik/commit/6610fac7223627cae4863847fa3c696c6173684a))
 - **report:** apply linter to report components ([06ba32c](https://github.com/ts-factory/bublik/commit/06ba32c087974e61baab2c29d89fe871d32c37d5))
 - **config:** refactor the main config migration ([0dc8df5](https://github.com/ts-factory/bublik/commit/0dc8df50390f15857c39b7b79d8195d490bce88f))
