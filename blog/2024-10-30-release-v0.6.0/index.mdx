@@ -7,7 +7,7 @@ slug: release-v0.6.0
 
 We are happy to announce **Bublik v0.6.0**.
 
-This release introduces an experimental multiple runs stats page, enabling users to view multiple runs on the same page.
+This release introduces an experimental multiple runs stats page, enabling users to view multiple runs on the same page. We have also expanded the headings in the reports and made them more understandable.
 
 **Highlights**
 - Multiple Runs Page: Explore and multiple merged results on a single page.
@@ -48,6 +48,14 @@ Small redesign to match new log preview style
 
 ![New Bug Drawer](./img/new-bug-drawer.png)
 
+### Updated Report Headers
+
+## Admin Section
+
+### Update Steps
+
+Deployment: `./scripts/deploy --steps run_services`
+
 ## Changelog
 
 ### Frontend
@@ -87,3 +95,20 @@ Small redesign to match new log preview style
 
 * **log:** [new-bug] fixed typo for successful copy message ([30bbc34](https://github.com/ts-factory/bublik-ui/commit/30bbc3421a4b838020581247fd6cd087f43783f5))
 * **report:** fixed formatting ([6271f19](https://github.com/ts-factory/bublik-ui/commit/6271f19ac205e6579551a2e72ecc79f507f7ebfc))
+
+### Backend
+
+#### 🐛 Bug Fix
+
+* **importruns:** fix iteration date parsing ([14c983e](https://github.com/ts-factory/bublik/commit/14c983e61bd72e1ac789ff47aef1ba40381872be))
+
+#### 💅 Polish
+
+* **report:** make iteration headers clearer ([9fd1b82](https://github.com/ts-factory/bublik/commit/9fd1b820fd7a28769b1c68dadf9a7c35a4080b84))
+* **report:** make y-axis labels more informative ([969ce93](https://github.com/ts-factory/bublik/commit/969ce9365ddae8a7ea3669d123886f01b864dd11))
+* **report:** make measurement chart label more informative ([475553d](https://github.com/ts-factory/bublik/commit/475553d111b8c38396f79516ff32b459b7858120))
+
+#### ♻ Code Refactoring
+
+* **cleanup:** fix typo ([15d640d](https://github.com/ts-factory/bublik/commit/15d640d659f36a3dea014487e92cf1ee16225bd2))
+* **cleanup:** apply linter to report components ([1da72cb](https://github.com/ts-factory/bublik/commit/1da72cb2c015a00c951c42062c0ec7912a424b93))
