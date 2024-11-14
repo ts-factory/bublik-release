@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbublik_release=self.webpackChunkbublik_release||[]).push([[8255],{9494:e=>{e.exports=JSON.parse('{"label":"release","permalink":"/bublik-release/tags/release","allTagsPath":"/bublik-release/tags","count":26}')}}]);
