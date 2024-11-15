@@ -10,7 +10,7 @@ We are excited to announce **Bublik v0.7.0**!
 This release brings several improvements and new features, including better pagination, enhanced configuration handling,
 and new options for viewing run results.
 The log functionality has been refined, with the addition of scroll-to-top behavior.
-We’ve also introduced a more flexible report system with detailed configuration and run information.
+We’ve also introduced a more flexible report system with detailed configuration and run information and fixed getting valid configurations, as well as incorrect links to the run source.
 
 <!--truncate-->
 
@@ -80,4 +80,28 @@ Deployment: `./scripts/deploy --steps run_services`
 * **log:** simplified logic for redirect to legacy ([e390fe7](https://github.com/ts-factory/bublik-ui/commit/e390fe72920a267a2dd4af132c7a79a4f93752ec))
 * **run:** [results] renamed badly named variables ([724a688](https://github.com/ts-factory/bublik-ui/commit/724a6884044cc8f2599370dbcf8d9d3651176b53))
 
+### Backend
+
+#### 🐛 Bug Fix
+- **bugfix:** fix passing arguments in response ([52dbe74](https://github.com/ts-factory/bublik/commit/52dbe74cc168c82095f4cf99157832fd48d6d49e))
+- **urls:** fix run source link building ([a8a406e](https://github.com/ts-factory/bublik/commit/a8a406e2f4b99069b4d0ed939055ba22b7d23bd7))
+- **report:** fix getting the applicable configs ([6b45fcc](https://github.com/ts-factory/bublik/commit/6b45fcc9a8c7a3c7af5d09455c8208ccc85553c3))
+
+#### 🚀 New Feature
+- **results:** add endpoint to get result verdicts and artifacts ([beabf15](https://github.com/ts-factory/bublik/commit/beabf15767af4b068d7e84deb1e4467fdea641de))
+- **config:** make it possible to rename configs ([375b701](https://github.com/ts-factory/bublik/commit/375b701a493d0fc1dce4f7db245ca8f53cea5046))
+- **importruns:** import information about requirements ([afe99a2](https://github.com/ts-factory/bublik/commit/afe99a2310360a3fa7559fab119c4a2b55048e27))
+- **importruns:** store test iter reqs in the database ([1fb0fc9](https://github.com/ts-factory/bublik/commit/1fb0fc938d704e67f46ff00f91975d6890734af9))
+- **run stats:** make result details more informative ([b418ea9](https://github.com/ts-factory/bublik/commit/b418ea996be429f707349b904eace16d0b87b0b9))
+- **run stats:** make result details more informative ([74a66c6](https://github.com/ts-factory/bublik/commit/74a66c6d3c4a9323e3a103b26c26d593e2b933b0))
+- **report:** update the data to display ([67cfc96](https://github.com/ts-factory/bublik/commit/67cfc967a0029c44ddf668b1f8ccede1e1c8a0ba))
+
+#### 📦 Chores
+- **config:** unify configuration updates ([945f0d8](https://github.com/ts-factory/bublik/commit/945f0d8616eef8a01cc87280ae8b93788308a655))
+
+#### ♻ Code Refactoring
+- **config:** refactor retrieval of all versions ([7bcfd73](https://github.com/ts-factory/bublik/commit/7bcfd733ad882d2cd40ab9f2b476d2c94cde04fa))
+- **config:** refactor activation ([ff3d394](https://github.com/ts-factory/bublik/commit/ff3d394acca2ac74a1df3f3f03a3ff6201dbf5b6))
+- **config:** refactor deletion ([5345b00](https://github.com/ts-factory/bublik/commit/5345b00ef6d35088cfbbb62bea5a8ee02b91d471))
+- **cleanup:** remove unused class import ([dfc9ff2](https://github.com/ts-factory/bublik/commit/dfc9ff2cb49ce1a434e4a51e8e02122482957dc0))
 
