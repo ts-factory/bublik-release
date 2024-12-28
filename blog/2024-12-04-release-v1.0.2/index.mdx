@@ -1,11 +1,11 @@
 ---
-title: Release v1.0.0
+title: Release v1.0.2
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v1.0.0
+slug: release-v1.0.2
 ---
 
-🎉 **We are thrilled to announce Bublik v1.0.0!** 🎉
+🎉 **We are thrilled to announce Bublik v1.0.2!** 🎉
 
 This release brings mainly internal changes with some enhancements to report and measurements views.
 
@@ -45,6 +45,7 @@ Press `Ctrl` to scroll inside table or zoom chart
 ![Measurement Results](./img/measurements.png)
 
 ## Admin Section
+
 :::tip
 Before starting the update, create a database backup to ensure data safety in case of any unexpected issues during the process.
 :::
@@ -52,12 +53,14 @@ Before starting the update, create a database backup to ensure data safety in ca
 ### Backend Update
 
 #### Base Steps
+
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout release-v1.0.0`
+3. `git checkout release-v1.0.2`
 4. `./scripts/deploy --steps pip_requirements migrate_db django_settings run_services`
 
 #### Additional Steps
+
 :::tip
 Since data migration can take a long time, stop side services to avoid potential disruptions or conflicts during the migration process: `./scripts/deploy --steps run_side_servers` + `stop`. Restart them once the process is complete: `./scripts/deploy --steps run_side_servers` + `start`.
 :::
@@ -67,20 +70,22 @@ During the update, use `tmux` or `screen` to keep your session running in the ba
 :::
 
 1. Activate the virtual environment: `source .env/bin/activate`
-3. Call the configuration reformatting command: `python manage.py reformat_configs`
-:::warning
-Configurations whose automatic formatting has failed will not be supported by Bublik. Either reformat them manually or delete.
-:::
-4. Call the database cleanup command: `python manage.py cleanup_db`
+2. Call the configuration reformatting command: `python manage.py reformat_configs`
+   :::warning
+   Configurations whose automatic formatting has failed will not be supported by Bublik. Either reformat them manually or delete.
+   :::
+3. Call the database cleanup command: `python manage.py cleanup_db`
 
 ### Frontend Update
+
 1. Trigger the workflow in your frontend repository.
 2. Synchronize the mirrors.
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout release-v1.0.0`
+5. `git checkout release-v1.0.2`
 
 ### Additional
+
 :::danger
 It is necessary to re-import runs that was imported when Bublik was using versions v0.6.0 to v0.7.1 to avoid potential errors in statistical calculations and charts in history.
 :::
@@ -214,6 +219,7 @@ It is necessary to re-import runs that was imported when Bublik was using versio
 - **measurements:** fix incorrect naming of iteration result IDs ([fa3afc0](https://github.com/ts-factory/bublik/commit/fa3afc0b77608a61ce6149a14551547ae6276d84))
 
 #### 🧹 Cleanup
+
 - **requirements:** ensure consistent sorting in dependencies ([6da2665](https://github.com/ts-factory/bublik/commit/6da26655331b8e49c22bdab27124794dbefb3989))
 - **cleanup:** add typing of class variables ([98144d6](https://github.com/ts-factory/bublik/commit/98144d69c5bd03cff99801bb8fec81725466259f))
 - **cleanup(report):** clarify comments and remove unused logging ([3a3a24f](https://github.com/ts-factory/bublik/commit/3a3a24f7d7c7eb0d984078107b88bdadecdbad97))
