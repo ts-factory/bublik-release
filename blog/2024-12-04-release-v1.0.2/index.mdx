@@ -56,7 +56,7 @@ Before starting the update, create a database backup to ensure data safety in ca
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout release-v1.0.2`
+3. `git checkout v1.0.2`
 4. `./scripts/deploy --steps pip_requirements migrate_db django_settings run_services`
 
 #### Additional Steps
@@ -82,7 +82,7 @@ During the update, use `tmux` or `screen` to keep your session running in the ba
 2. Synchronize the mirrors.
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout release-v1.0.2`
+5. `git checkout v1.0.2`
 
 ### Additional
 
@@ -184,6 +184,11 @@ It is necessary to re-import runs that was imported when Bublik was using versio
 - **report:** fix chart data preparation ([28485ab](https://github.com/ts-factory/bublik/commit/28485ab0897af6e8c63948b913747821ddba07db))
 - **report:** fix result merging by measurements ([1749bcb](https://github.com/ts-factory/bublik/commit/1749bcbd23be89584afe54da7c92b9c35d9917b3))
 - **results:** fix measurement chart rendering without views ([c6862be](https://github.com/ts-factory/bublik/commit/c6862be8926db1052bb223d6bccce28b51448cdd))
+- **importruns:** fix measurement results processing ([49be0d6](https://github.com/ts-factory/bublik/commit/49be0d6903f8765fec9b5bf845e7436b58d58bd4))
+- **settings:** fix dynamic settings retrieval ([719912f](https://github.com/ts-factory/bublik/commit/719912f45720c3dbf5d69fc534f984fe7b41bee2))
+- **management:** fix creation of invalid mmrls during migration ([f87e59f](https://github.com/ts-factory/bublik/commit/f87e59f1c0194ba94b0f2b27015977ed8eb7b1b4))
+- **management:** fix memory overload error during migration ([fec86cd](https://github.com/ts-factory/bublik/commit/fec86cdda5757038086ea157de8e5a742696dd12))
+- **run stats:** fix test comments addition to detailed statistics ([38c43cd](https://github.com/ts-factory/bublik/commit/38c43cd2394cbae9b61180a61c809f6d93996636))
 
 #### ⚡ Performance
 
@@ -212,6 +217,7 @@ It is necessary to re-import runs that was imported when Bublik was using versio
 - **refactor(report):** update unprocessed iters processing ([c870104](https://github.com/ts-factory/bublik/commit/c870104f2e6c08f99e27e3ea48597f7eeee80a0e))
 - **management:** ensure data integrity during mmr migration ([8e40382](https://github.com/ts-factory/bublik/commit/8e40382913085c2503fbf717810fe37c8e35a483))
 - **measurements:** unify result merging by measurements ([8088ac9](https://github.com/ts-factory/bublik/commit/8088ac9e346f07e8eba281b609ef35575197c150))
+- **management:** reduce cleanup transaction time and contention ([0816fd6](https://github.com/ts-factory/bublik/commit/0816fd68fb44797ca65817bf01370a4d5ac09d34))
 
 #### 💅 Polish
 
@@ -227,3 +233,5 @@ It is necessary to re-import runs that was imported when Bublik was using versio
 - **cleanup(measurements):** improve code quality ([24ae37a](https://github.com/ts-factory/bublik/commit/24ae37a51f9439c464ecb5a4e3a122c8e2a3874a))
 - **cleanup:** improve measurement models maintainability ([554dbac](https://github.com/ts-factory/bublik/commit/554dbacb1e30f973400305b5c89a679aa9084aa9))
 - **cleanup:** improve report components readability ([eae822f](https://github.com/ts-factory/bublik/commit/eae822ff9cd2af5e447f00cdb2cb04fcc1054fec))
+- **cleanup:** improve readability of retrieved test comments ([dc25cb8](https://github.com/ts-factory/bublik/commit/dc25cb859ac0bab8228951bdcf66612683da1821))
+
