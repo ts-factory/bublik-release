@@ -10,9 +10,7 @@ const PROJECT_NAME = 'bublik-release';
 const GITHUB_REPO_URL = `https://github.com/${ORGANIZATION_NAME}/${PROJECT_NAME}`;
 
 const BASE_URL = `${process.env['BASE_URL'] ?? `/${PROJECT_NAME}/`}`;
-const URL = `${
-  process.env['URL'] ?? `https://${ORGANIZATION_NAME}/${PROJECT_NAME}`
-}`;
+const URL = `${process.env['URL'] ?? `https://${ORGANIZATION_NAME}.github.io`}`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
