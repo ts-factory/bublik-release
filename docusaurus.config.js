@@ -4,12 +4,15 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const DEPLOYMENT_BRANCH = 'gh-pages';
 const ORGANIZATION_NAME = 'ts-factory';
 const PROJECT_NAME = 'bublik-release';
-const DEPLOYMENT_BRANCH = 'gh-pages';
-const BASE_URL = `/${PROJECT_NAME}/`;
-const URL = `https://${ORGANIZATION_NAME}.github.io`;
 const GITHUB_REPO_URL = `https://github.com/${ORGANIZATION_NAME}/${PROJECT_NAME}`;
+
+const BASE_URL = `${process.env['BASE_URL'] ?? `/${PROJECT_NAME}/`}`;
+const URL = `${
+  process.env['URL'] ?? `https://${ORGANIZATION_NAME}/${PROJECT_NAME}`
+}`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
