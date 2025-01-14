@@ -4,6 +4,15 @@ title: Build UI
 
 # Build UI
 
+<!--toc:start-->
+  - [Prerequisites](#prerequisites)
+  - [Verify Installation](#verify-installation)
+  - [Building the Frontend](#building-the-frontend)
+    - [Parameter Descriptions:](#parameter-descriptions)
+  - [Running Locally with Docker](#running-locally-with-docker)
+  - [Notes and Caveats](#notes-and-caveats)
+<!--toc:end-->
+
 ## Prerequisites
 
 Before starting, ensure your environment is properly set up:

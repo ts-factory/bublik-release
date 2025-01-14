@@ -7,6 +7,20 @@ slug: /
 
 # Introduction
 
+<!--toc:start-->
+- [Introduction](#introduction)
+  - [Core Components](#core-components)
+    - [Test Environment (TE)](#test-environment-te)
+    - [Results Management](#results-management)
+    - [DPDK Testing Support](#dpdk-testing-support)
+    - [Network Driver Testing](#network-driver-testing)
+  - [Key Features](#key-features)
+    - [Test Development](#test-development)
+    - [Test Execution](#test-execution)
+    - [Results Analysis](#results-analysis)
+  - [Getting Started](#getting-started)
+<!--toc:end-->
+
 TS Factory provides a complete ecosystem for implementing, running, and analyzing tests. Our platform combines the power of the Test Environment (TE) framework with efficient results management systems to deliver a seamless testing experience.
 
 ## Core Components
@@ -63,16 +77,21 @@ TS Factory provides a complete ecosystem for implementing, running, and analyzin
 
 ## Getting Started
 
-1. [Project Configuration](/docs/03-configuration/index.md)
+1. [Deploy](./02-deployment/index.md)
 
    - Set up your testing environment
    - Configure dashboard and reporting
 
-2. [Report Configuration](/docs/03-configuration/02-report-config.md)
+2. [Project Configuration](./03-configuration/01-project-config/index.md)
 
    - Configure test result presentation
    - Customize analysis views
 
-3. [Test Development](https://github.com/ts-factory/test-environment)
+3. [Report Configuration](./03-configuration/02-report-config/index.md)
+
+   - Configure test result presentation
+   - Customize analysis views
+
+4. [Test Development](https://github.com/ts-factory/test-environment)
    - Learn about Test Environment
    - Write your first test

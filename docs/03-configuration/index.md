@@ -2,6 +2,16 @@
 title: Configuration
 ---
 
+<!--toc:start-->
+- [Project Configuration](#project-configuration)
+  - [Key Features](#key-features)
+  - [Main Configuration Areas](#main-configuration-areas)
+- [Report Configuration](#report-configuration)
+  - [Key Features](#key-features)
+  - [Main Configuration Areas](#main-configuration-areas)
+- [Configuration Files](#configuration-files)
+<!--toc:end-->
+
 ## Project Configuration
 
 The [Project Configuration](./01-project-config.md) documentation covers the fundamental setup of your Bublik instance, including:

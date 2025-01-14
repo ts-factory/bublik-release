@@ -2,6 +2,11 @@
 title: Deployment
 ---
 
+<!--toc:start-->
+- [Frontend](#frontend)
+- [Backend](#backend)
+<!--toc:end-->
+
 This project consists of both **frontend** and **backend** components, each requiring separate build steps and configurations:
 
 ### Frontend

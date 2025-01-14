@@ -4,6 +4,16 @@ title: Build Documentation
 
 # Build Documentation
 
+<!--toc:start-->
+
+  - [Prerequisites](#prerequisites)
+  - [Verify Installation](#verify-installation)
+  - [Local Development](#local-development)
+  - [Build](#build)
+  - [Parameter Descriptions](#parameter-descriptions)
+
+  <!--toc:end-->
+
 ## Prerequisites
 
 Before starting, ensure your environment is properly set up:
@@ -32,14 +42,14 @@ Run the following commands to confirm the setup:
 
 ## Local Development
 
-1. `pnpm install` - to install dependecies
+1. `pnpm install` - to install dependencies
 2. `pnpm start` - to start development server
 
 This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Build
 
-1. `BASE_URL="/prefix/docs/" URL="http://<hostname>/docs" pnpm build`
+1. `BASE_URL="/prefix/docs/" URL="<protocol:-http>://<hostname:-localhost>" pnpm build`
 
 ### Parameter Descriptions:
 
