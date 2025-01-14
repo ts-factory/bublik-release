@@ -11,6 +11,8 @@ const GITHUB_REPO_URL = `https://github.com/${ORGANIZATION_NAME}/${PROJECT_NAME}
 const BASE_URL = `${process.env['BASE_URL'] ?? `/${PROJECT_NAME}/`}`;
 const URL = `${process.env['URL'] ?? `https://${ORGANIZATION_NAME}.github.io`}`;
 
+import localSearch from '@easyops-cn/docusaurus-search-local';
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Bublik',
@@ -90,7 +92,27 @@ const config = {
       },
     }),
   plugins: ['docusaurus-plugin-image-zoom'],
-  themes: ['@easyops-cn/docusaurus-search-local'],
+  themes: [
+    [
+      localSearch,
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        docsDir: './docs',
+        indexDocs: true,
+        docsRouteBasePath: '/',
+        blogRouteBasePath: '/blog',
+
+        // For Docs using Chinese, it is recomended to set:
+        // language: ["en", "zh"],
+
+        // If you're using `noIndex: true`, set `forceIgnoreNoIndex` to enable local index:
+        // forceIgnoreNoIndex: true,
+      }),
+    ],
+  ],
 };
 
 module.exports = config;
