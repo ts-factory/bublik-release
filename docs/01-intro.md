@@ -8,17 +8,17 @@ slug: /
 # Introduction
 
 <!--toc:start-->
-- [Introduction](#introduction)
-  - [Core Components](#core-components)
-    - [Test Environment (TE)](#test-environment-te)
-    - [Results Management](#results-management)
-    - [DPDK Testing Support](#dpdk-testing-support)
-    - [Network Driver Testing](#network-driver-testing)
-  - [Key Features](#key-features)
-    - [Test Development](#test-development)
-    - [Test Execution](#test-execution)
-    - [Results Analysis](#results-analysis)
-  - [Getting Started](#getting-started)
+
+- [Core Components](#core-components)
+  - [Test Environment (TE)](#test-environment-te)
+  - [Results Management](#results-management)
+  - [DPDK Testing Support](#dpdk-testing-support)
+  - [Network Driver Testing](#network-driver-testing)
+- [Key Features](#key-features)
+  - [Test Development](#test-development)
+  - [Test Execution](#test-execution)
+  - [Results Analysis](#results-analysis)
+- [Getting Started](#getting-started)
 <!--toc:end-->
 
 TS Factory provides a complete ecosystem for implementing, running, and analyzing tests. Our platform combines the power of the Test Environment (TE) framework with efficient results management systems to deliver a seamless testing experience.

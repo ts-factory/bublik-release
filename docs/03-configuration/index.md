@@ -3,6 +3,7 @@ title: Configuration
 ---
 
 <!--toc:start-->
+
 - [Project Configuration](#project-configuration)
   - [Key Features](#key-features)
   - [Main Configuration Areas](#main-configuration-areas)
@@ -14,7 +15,7 @@ title: Configuration
 
 ## Project Configuration
 
-The [Project Configuration](./01-project-config.md) documentation covers the fundamental setup of your Bublik instance, including:
+The [Project Configuration](./01-project-config/index.md) documentation covers the fundamental setup of your Bublik instance, including:
 
 ### Key Features
 
@@ -32,7 +33,7 @@ The [Project Configuration](./01-project-config.md) documentation covers the fun
 
 ## Report Configuration
 
-The [Report Configuration](./02-report-config.md) documentation details how to create and manage test reports, including:
+The [Report Configuration](./02-report-config/index.md) documentation details how to create and manage test reports, including:
 
 ### Key Features
 

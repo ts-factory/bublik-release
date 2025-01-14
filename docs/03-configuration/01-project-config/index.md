@@ -5,25 +5,26 @@ title: Project
 # Project Configuration
 
 <!--toc:start-->
-  - [Update config from UI](#update-config-from-ui)
-  - [Per-project Conception](#per-project-conception)
-  - [Configuration Areas](#configuration-areas)
-    - [Dashboard Configuration](#dashboard-configuration)
-      - [DASHBOARD_HEADER](#dashboardheader)
-      - [DASHBOARD_PAYLOAD](#dashboardpayload)
-      - [DASHBOARD_ROWS_STYLE](#dashboardrowsstyle)
-      - [DASHBOARD_DATE](#dashboarddate)
-      - [DASHBOARD_RUNS_SORT](#dashboardrunssort)
-      - [DASHBOARD_DEFAULT_MODE](#dashboarddefaultmode)
-    - [Metadata Configuration](#metadata-configuration)
-      - [Metadata on Pages](#metadata-on-pages)
-      - [Special Categories](#special-categories)
-    - [Run Configuration](#run-configuration)
-      - [Run Completion File](#run-completion-file)
-      - [Run Uniqueness](#run-uniqueness)
-  - [Applying Changes](#applying-changes)
-    - [Configuration Updates](#configuration-updates)
-    - [CSRF Configuration](#csrf-configuration)
+
+- [Update config from UI](#update-config-from-ui)
+- [Format](#format)
+  - [Example Configuration](#example-configuration)
+- [Per-project Conception](#per-project-conception)
+- [Configuration Areas](#configuration-areas)
+  - [Dashboard Configuration](#dashboard-configuration)
+    - [DASHBOARD_HEADER](#dashboard_header)
+    - [DASHBOARD_PAYLOAD](#dashboard_payload)
+    - [DASHBOARD_ROWS_STYLE](#dashboard_rows_style)
+    - [DASHBOARD_DATE](#dashboard_date)
+    - [DASHBOARD_RUNS_SORT](#dashboard_runs_sort)
+    - [DASHBOARD_DEFAULT_MODE](#dashboard_default_mode)
+  - [Metadata Configuration](#metadata-configuration)
+    - [Metadata on Pages](#metadata-on-pages)
+    - [Special Categories](#special-categories)
+  - [Run Configuration](#run-configuration)
+    - [Run Completion File](#run-completion-file)
+    - [Run Uniqueness](#run-uniqueness)
+- [Applying Changes](#applying-changes) - [Configuration Updates](#configuration-updates) - [CSRF Configuration](#csrf-configuration)
 <!--toc:end-->
 
 ## Update config from UI
@@ -35,205 +36,202 @@ You can find the active schema definition at: [URL](https://github.com/ts-factor
 <details>
 <summary>JSON Schema</summary>
 
-  ```json
+```json
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "properties": {
-        "PROJECT": {
-            "description": "Identifies project matching PROJECT meta in metadata.json",
-            "type": "string"
-        },
-        "UI_VERSION": {
-            "description": "Default UI version",
-            "type": "number"
-        },
-        "EMAIL_PROJECT_WATCHERS": {
-            "description": "List of emails to notify about importruns failures",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        },
-        "DASHBOARD_HEADER": {
-            "description": "Sets columns on dashboard",
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "key": {
-                        "type": "string"
-                    },
-                    "label": {
-                        "type": "string"
-                    }
-                },
-                "additionalProperties": false
-            }
-        },
-        "DASHBOARD_PAYLOAD": {
-            "description": "Sets link available by click on column values",
-            "type": "object",
-            "additionalProperties": {
-                "type": "string",
-                "items": {
-                    "type": "string"
-                }
-            }
-        },
-        "DASHBOARD_DATE": {
-            "description": "Represents the name of the meta pointing to which date the run is related to",
-            "type": "string"
-        },
-        "DASHBOARD_RUNS_SORT": {
-            "description": "Represents a list of DASHBOARD_HEADER keys and extra 'start' key which defines run start",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        },
-        "DASHBOARD_DEFAULT_MODE": {
-            "description": "Sets the mode (one_day_one_column/one_day_two_columns/two_days_two_columns) which dashboard follows when opens",
-            "type": "string"
-        },
-        "METADATA_ON_PAGES": {
-            "description": "Represents a list of meta category names that manages columns in the history and runs page",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        },
-        "SPECIAL_CATEGORIES": {
-            "description": "Represents a list of meta category names that defines extra data to show in Info block on run and log pages",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        },
-        "RUN_STATUS_META": {
-            "description": "Represents meta name in meta_data.json that defines run status",
-            "type": "string"
-        },
-        "RUN_STATUS_BY_NOK_BORDERS": {
-            "description": "Represents 2 float numbers (left and right borders) that sets borders for defining run status by rate of unexpected results",
-            "type": "array",
-            "items": {
-                "type": "number"
-            },
-            "uniqueItems": true,
-            "minItems": 2,
-            "maxItems": 2
-        },
-        "RUN_COMPLETE_FILE": {
-            "description": "Represents file available via run source link that indicates that run testing was completed",
-            "type": "string"
-        },
-        "RUN_KEY_METAS": {
-            "description": "Represents meta name in meta_data.json that allows Bublik to distinguish one run from another",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        },
-        "FILES_TO_GENERATE_METADATA": {
-            "description": "Represents a list of files available via run source link and allows Bublik to generate meta_data.json based on them",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        },
-        "CSRF_TRUSTED_ORIGINS": {
-            "description": "Domens which Bublik server trusts accepting requests coming from",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        },
-        "HISTORY_SEARCH_EXAMPLE": {
-            "description": "An example of history search for performance checking",
-            "type": "object",
-            "properties": {
-                "testName": {
-                    "type": "string"
-                },
-                "startDate": {
-                    "type": "string"
-                },
-                "finishDate": {
-                    "type": "string"
-                },
-                "runData": {
-                    "type": "string"
-                },
-                "tags": {
-                    "type": "string"
-                },
-                "labels": {
-                    "type": "string"
-                },
-                "revisions": {
-                    "type": "string"
-                },
-                "branches": {
-                    "type": "string"
-                },
-                "testArgs": {
-                    "type": "string"
-                },
-                "verdict": {
-                    "type": "string"
-                },
-                "tagExpr": {
-                    "type": "string"
-                },
-                "labelExpr": {
-                    "type": "string"
-                },
-                "revisionExpr": {
-                    "type": "string"
-                },
-                "branchExpr": {
-                    "type": "string"
-                },
-                "testArgExpr": {
-                    "type": "string"
-                },
-                "verdictExpr": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "testName",
-                "startDate",
-                "finishDate"
-            ]
-        },
-        "NOT_PERMISSION_REQUIRED_ACTIONS": {
-            "description": "Actions that should not require administrator rights in this project",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "uniqueItems": true
-        }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "PROJECT": {
+      "description": "Identifies project matching PROJECT meta in metadata.json",
+      "type": "string"
     },
-    "required": [
-        "PROJECT",
-        "RUN_STATUS_META",
-        "RUN_KEY_METAS",
-        "DASHBOARD_HEADER",
-        "RUN_COMPLETE_FILE"
-    ],
-    "additionalProperties": false
+    "UI_VERSION": {
+      "description": "Default UI version",
+      "type": "number"
+    },
+    "EMAIL_PROJECT_WATCHERS": {
+      "description": "List of emails to notify about importruns failures",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "DASHBOARD_HEADER": {
+      "description": "Sets columns on dashboard",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "DASHBOARD_PAYLOAD": {
+      "description": "Sets link available by click on column values",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "DASHBOARD_DATE": {
+      "description": "Represents the name of the meta pointing to which date the run is related to",
+      "type": "string"
+    },
+    "DASHBOARD_RUNS_SORT": {
+      "description": "Represents a list of DASHBOARD_HEADER keys and extra 'start' key which defines run start",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "DASHBOARD_DEFAULT_MODE": {
+      "description": "Sets the mode (one_day_one_column/one_day_two_columns/two_days_two_columns) which dashboard follows when opens",
+      "type": "string"
+    },
+    "METADATA_ON_PAGES": {
+      "description": "Represents a list of meta category names that manages columns in the history and runs page",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "SPECIAL_CATEGORIES": {
+      "description": "Represents a list of meta category names that defines extra data to show in Info block on run and log pages",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "RUN_STATUS_META": {
+      "description": "Represents meta name in meta_data.json that defines run status",
+      "type": "string"
+    },
+    "RUN_STATUS_BY_NOK_BORDERS": {
+      "description": "Represents 2 float numbers (left and right borders) that sets borders for defining run status by rate of unexpected results",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "uniqueItems": true,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "RUN_COMPLETE_FILE": {
+      "description": "Represents file available via run source link that indicates that run testing was completed",
+      "type": "string"
+    },
+    "RUN_KEY_METAS": {
+      "description": "Represents meta name in meta_data.json that allows Bublik to distinguish one run from another",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "FILES_TO_GENERATE_METADATA": {
+      "description": "Represents a list of files available via run source link and allows Bublik to generate meta_data.json based on them",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "CSRF_TRUSTED_ORIGINS": {
+      "description": "Domens which Bublik server trusts accepting requests coming from",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "HISTORY_SEARCH_EXAMPLE": {
+      "description": "An example of history search for performance checking",
+      "type": "object",
+      "properties": {
+        "testName": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string"
+        },
+        "finishDate": {
+          "type": "string"
+        },
+        "runData": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "string"
+        },
+        "labels": {
+          "type": "string"
+        },
+        "revisions": {
+          "type": "string"
+        },
+        "branches": {
+          "type": "string"
+        },
+        "testArgs": {
+          "type": "string"
+        },
+        "verdict": {
+          "type": "string"
+        },
+        "tagExpr": {
+          "type": "string"
+        },
+        "labelExpr": {
+          "type": "string"
+        },
+        "revisionExpr": {
+          "type": "string"
+        },
+        "branchExpr": {
+          "type": "string"
+        },
+        "testArgExpr": {
+          "type": "string"
+        },
+        "verdictExpr": {
+          "type": "string"
+        }
+      },
+      "required": ["testName", "startDate", "finishDate"]
+    },
+    "NOT_PERMISSION_REQUIRED_ACTIONS": {
+      "description": "Actions that should not require administrator rights in this project",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "PROJECT",
+    "RUN_STATUS_META",
+    "RUN_KEY_METAS",
+    "DASHBOARD_HEADER",
+    "RUN_COMPLETE_FILE"
+  ],
+  "additionalProperties": false
 }
 ```
+
 </details>
 
 ### Example Configuration
@@ -298,7 +296,6 @@ You can find the active schema definition at: [URL](https://github.com/ts-factor
   "RUN_STATUS_BY_NOK_BORDERS": [20, 80]
 }
 ```
-
 
 ## Per-project Conception
 

@@ -10,47 +10,47 @@ Please check back later for updates.
 :::
 
 <!--toc:start-->
-- [Deploy from Scratch](#deploy-from-scratch)
-  - [Prerequisites](#prerequisites)
-  - [Building Test Environment](#building-test-environment)
-    - [1. Clone the Repository](#1-clone-the-repository)
-    - [2. Set Up Python Virtual Environment](#2-set-up-python-virtual-environment)
-    - [3. Install Meson Build System](#3-install-meson-build-system)
-    - [4. Build the Test Environment](#4-build-the-test-environment)
-    - [5. Update System PATH](#5-update-system-path)
-  - [Database Setup](#database-setup)
-  - [Cache Setup](#cache-setup)
-  - [Flower & Celery Setup](#flower-celery-setup)
-  - [Kerberos Setup](#kerberos-setup)
-  - [UI Setup](#ui-setup)
-    - [Prerequisites](#prerequisites)
-    - [Build UI](#build-ui)
-      - [1. Clone repo](#1-clone-repo)
-      - [2. Install Dependencies](#2-install-dependencies)
-      - [3. Build UI](#3-build-ui)
-      - [4. You can find output at `dist/apps/bublik`](#4-you-can-find-output-at-distappsbublik)
-  - [UI Docs Setup](#ui-docs-setup)
-    - [Prerequisites](#prerequisites)
-    - [Build Docs](#build-docs)
-      - [1. Clone repo](#1-clone-repo)
-      - [2. Install Dependencies](#2-install-dependencies)
-      - [3. Build Docs](#3-build-docs)
-      - [4. You can find output at `./build`](#4-you-can-find-output-at-build)
-  - [Backend Setup](#backend-setup)
-    - [1. Clone the Backend Repository](#1-clone-the-backend-repository)
-    - [2. Set Up Python Virtual Environment](#2-set-up-python-virtual-environment)
-    - [3. Install Python Dependencies](#3-install-python-dependencies)
-    - [4. After Deployment](#4-after-deployment)
-  - [Post-Deployment Steps](#post-deployment-steps)
-  - [Troubleshooting](#troubleshooting)
-  - [Status](#status)
-  - [Contributing](#contributing)
-<!--toc:end-->
 
+- [Prerequisites](#prerequisites)
+- [Building Test Environment](#building-test-environment)
+  - [1. Clone the Repository](#1-clone-the-repository)
+  - [2. Set Up Python Virtual Environment](#2-set-up-python-virtual-environment)
+  - [3. Install Meson Build System](#3-install-meson-build-system)
+  - [4. Build the Test Environment](#4-build-the-test-environment)
+  - [5. Update System PATH](#5-update-system-path)
+- [Database Setup](#database-setup)
+- [Cache Setup](#cache-setup)
+- [Flower & Celery Setup](#flower--celery-setup)
+- [Kerberos Setup](#kerberos-setup)
+- [UI Setup](#ui-setup)
+  - [Prerequisites](#prerequisites)
+  - [Build UI](#build-ui)
+    - [1. Clone repo](#1-clone-repo)
+    - [2. Install Dependencies](#2-install-dependencies)
+    - [3. Build UI](#3-build-ui)
+    - [4. You can find output at `dist/apps/bublik`](#4-you-can-find-output-at-distappsbublik)
+- [UI Docs Setup](#ui-docs-setup)
+  - [Prerequisites](#prerequisites)
+  - [Build Docs](#build-docs)
+    - [1. Clone repo](#1-clone-repo)
+    - [2. Install Dependencies](#2-install-dependencies)
+    - [3. Build Docs](#3-build-docs)
+    - [4. You can find output at `./build`](#4-you-can-find-output-at-build)
+- [Backend Setup](#backend-setup)
+  - [1. Clone the Backend Repository](#1-clone-the-backend-repository)
+  - [2. Set Up Python Virtual Environment](#2-set-up-python-virtual-environment)
+  - [3. Install Python Dependencies](#3-install-python-dependencies)
+  - [4. After Deployment](#4-after-deployment)
+- [Post-Deployment Steps](#post-deployment-steps)
+- [Troubleshooting](#troubleshooting)
+- [Status](#status)
+- [Contributing](#contributing)
+<!--toc:end-->
 
 ## Prerequisites
 
 Before beginning the deployment process, ensure you have:
+
 - Root/sudo access to your system
 - Git installed
 - Internet connection for downloading packages
@@ -107,6 +107,7 @@ sudo apt-get update \
 ## Building Test Environment
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/ts-factory/test-environment.git
 cd ./test-environment
@@ -185,6 +186,7 @@ cd ./bublik-ui
 ```
 
 #### 2. Install Dependencies
+
 ```bash
 pnpm install --frozen-lockfile
 ```
@@ -210,12 +212,14 @@ BASE_URL="/v2" nx run bublik:build --base="/v2" --sourcemap="true"
 ### Build Docs
 
 #### 1. Clone repo
+
 ```bash
 git clone https://github.com/ts-factory/bublik-release
 cd ./bublik-release
 ```
 
 #### 2. Install Dependencies
+
 ```bash
 pnpm install --frozen-lockfile
 ```
@@ -223,6 +227,7 @@ pnpm install --frozen-lockfile
 #### 3. Build Docs
 
 Refer to [documentation for UI for more information](./05-frontend/02-build-docs.md)
+
 ```bash
 BASE_URL="/docs/" URL="http://localhost" pnpm build
 ```
@@ -232,22 +237,24 @@ BASE_URL="/docs/" URL="http://localhost" pnpm build
 ## Backend Setup
 
 ### 1. Clone the Backend Repository
+
 ```bash
 git clone https://github.com/ts-factory/bublik.git
 cd bublik
 ```
 
 ### 2. Set Up Python Virtual Environment
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
 ### 3. Install Python Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
-
 
 ### 4. After Deployment
 
@@ -266,6 +273,7 @@ After successful deployment:
 ## Troubleshooting
 
 If you encounter issues during deployment:
+
 - Check system logs for errors
 - Ensure all prerequisites are properly installed
 - Verify system requirements are met
@@ -277,6 +285,7 @@ If you encounter issues during deployment:
 This documentation is currently under development. <br />
 Please check back regularly for updates and additional information.
 :::
+
 ## Contributing
 
 We welcome contributions to improve this documentation. Please submit pull requests or open issues in the repository.
