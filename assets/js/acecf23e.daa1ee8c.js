@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbublik_release=self.webpackChunkbublik_release||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/bublik-release/blog","blogTitle":"Bublik Blog","authorsListPath":"/bublik-release/blog/authors"}')}}]);
