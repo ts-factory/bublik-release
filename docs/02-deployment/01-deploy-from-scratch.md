@@ -99,6 +99,8 @@ sudo apt-get update \
   libkrb5-dev \
   libffi-dev \
   unzip \
+  python-is-python3 \
+  python3.12-dev \
   && cpan -T JSON
 ```
 
