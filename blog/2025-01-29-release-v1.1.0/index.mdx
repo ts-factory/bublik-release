@@ -66,10 +66,6 @@ Before starting the update, create a database backup to ensure data safety in ca
 #### Additional Steps
 
 :::tip
-Since data migration can take a long time, stop side services to avoid potential disruptions or conflicts during the migration process: `./scripts/deploy --steps run_side_servers` + `stop`. Restart them once the process is complete: `./scripts/deploy --steps run_side_servers` + `start`.
-:::
-
-:::tip
 During the update, use `tmux` or `screen` to keep your session running in the background, ensuring it won’t be interrupted if the connection is lost.
 :::
 
