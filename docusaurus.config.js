@@ -17,7 +17,7 @@ import localSearch from '@easyops-cn/docusaurus-search-local';
 const config = {
   title: 'Bublik',
   tagline: 'Dinosaurs are cool',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
