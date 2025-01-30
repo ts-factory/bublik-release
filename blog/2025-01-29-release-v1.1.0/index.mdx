@@ -87,24 +87,21 @@ Static documentation has been added to enhance user experience and provide compr
 
 #### Installation Steps
 
-1. Clone the Bublik Documentation repository:
+1. Clone the Bublik Documentation Deps repository:
 
    ```bash
-   git clone https://github.com/ts-factory/bublik-release.git
-   cd bublik-release
+   git clone https://github.com/ts-factory/bublik-docs.git
    ```
 
-2. Build the documentation following the [official build instructions](https://ts-factory.github.io/bublik-release/deployment/frontend/build-docs). The build process will generate all necessary documentation files.
+2. Select needed folder from `./dist/<built_docs>`
 
-3. Once built, the documentation will be available in the `build` directory. Note the full path to this directory as you'll need it in the next step.
-
-4. Update your Bublik configuration by adding the documentation path to `settings.py`:
+3. Update your Bublik configuration by adding the documentation path to `settings.py`:
 
    ```python
-   BUBLIK_UI_DOCS_DIR = "/path/to/your/build/directory"
+   BUBLIK_UI_DOCS_DIR = "/path/to/your/build/directory/dist/ts-factory"
    ```
 
-5. Verify the configuration by checking the path in settings, run commands inside bublik django cloned repo:
+4. Verify the configuration by checking the path in settings, run commands inside bublik django cloned repo:
 
    ```bash
    cat ./bublik/settings.py | grep BUBLIK_UI_DOCS_DIR
