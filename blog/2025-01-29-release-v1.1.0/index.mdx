@@ -77,6 +77,41 @@ During the update, use `tmux` or `screen` to keep your session running in the ba
 4. `git remote update`
 5. `git checkout v1.1.0`
 
+### Documentation
+
+:::warning
+This documentation is a work in progress. While we ensure all current information is accurate, we're actively expanding and refining the content.
+:::
+
+Static documentation has been added to enhance user experience and provide comprehensive guidance for Bublik instance deployment and usage. This documentation can be hosted alongside your Bublik instance for easy reference.
+
+#### Installation Steps
+
+1. Clone the Bublik Documentation repository:
+
+   ```bash
+   git clone https://github.com/ts-factory/bublik-release.git
+   cd bublik-release
+   ```
+
+2. Build the documentation following the [official build instructions](https://ts-factory.github.io/bublik-release/deployment/frontend/build-docs). The build process will generate all necessary documentation files.
+
+3. Once built, the documentation will be available in the `build` directory. Note the full path to this directory as you'll need it in the next step.
+
+4. Update your Bublik configuration by adding the documentation path to `settings.py`:
+
+   ```python
+   BUBLIK_UI_DOCS_DIR = "/path/to/your/build/directory"
+   ```
+
+5. Verify the configuration by checking the path in settings, run commands inside bublik django cloned repo:
+
+   ```bash
+   cat ./bublik/settings.py | grep BUBLIK_UI_DOCS_DIR
+   ```
+
+After completing these steps, the documentation will be accessible through your Bublik instance, providing users with immediate access to guides, API references, and usage instructions.
+
 ---
 
 ## Changelog

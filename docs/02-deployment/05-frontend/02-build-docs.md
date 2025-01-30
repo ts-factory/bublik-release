@@ -49,9 +49,10 @@ This command starts a local development server and opens up a browser window. Mo
 
 ## Build
 
-1. `BASE_URL="/prefix/docs/" URL="<protocol:-http>://<hostname:-localhost>" pnpm build`
+1. `pnpm install` - to install dependencies for building
+2. `BASE_URL="/prefix/docs/" URL="http://localhost" pnpm build`
 
-### Parameter Descriptions:
+### Parameter Descriptions
 
 - **`BASE_URL`**  
   Specifies the base path for the application (e.g., `/prefix/v2`).
@@ -62,3 +63,11 @@ This command starts a local development server and opens up a browser window. Mo
 - **`URL`**  
    The directory where static files will be output.
   This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Example Command
+
+```bash
+BASE_URL="/prefix/docs/" URL="http://example.com" pnpm build
+```
+
+For documentation hosted at `http://example.com/prefix/docs`
