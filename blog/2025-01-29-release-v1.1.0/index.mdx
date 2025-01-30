@@ -56,18 +56,10 @@ Before starting the update, create a database backup to ensure data safety in ca
 
 ### Backend Update
 
-#### Base Steps
-
 1. `cd bublik`
 2. `git remote update`
 3. `git checkout v1.1.0`
-4. `./scripts/deploy --steps pip_requirements migrate_db django_settings run_services`
-
-#### Additional Steps
-
-:::tip
-During the update, use `tmux` or `screen` to keep your session running in the background, ensuring it won’t be interrupted if the connection is lost.
-:::
+4. `./scripts/deploy --steps pip_requirements django_settings run_services`
 
 ### Frontend Update
 
@@ -174,3 +166,17 @@ After completing these steps, the documentation will be accessible through your 
 ---
 
 ### Backend
+
+#### 🐛 Bug Fix
+- **requirements:** fix debug toolbar after Django version upgrade ([f55b9a3](https://github.com/ts-factory/bublik/commit/f55b9a3e522e4e2b839010f9ecfd7cf608ab155a))
+- **report:** fix x-axis argument values retrieval ([78a0046](https://github.com/ts-factory/bublik/commit/78a0046263da611de95ea17038abefd1d43d9d52))
+- **report:** fix chart wagnings retrieval ([b0ad30c](https://github.com/ts-factory/bublik/commit/b0ad30cb647b7259f665c7a8fa532ac0a0f79dba))
+- **report:** fix argument type conversion ([020277f](https://github.com/ts-factory/bublik/commit/020277fd6d3f187435e09a45433d98e8598d1d14))
+- **report:** fix common arguments detection ([fafaf62](https://github.com/ts-factory/bublik/commit/a0e47fafaf626af1349105909949a2505319e24a)), closes [#110](https://github.com/ts-factory/bublik/issues/110)
+
+#### 🚀 New Feature
+- **docs:** serve static files for documentation ([8eef190](https://github.com/ts-factory/bublik/commit/8eef1901508b74b441a4efecaf59574438915b73))
+- **settings:** enhance email configuration flexibility ([e3b6b42](https://github.com/ts-factory/bublik/commit/e3b6b42a584026b988e53fa49b77bfd5ebf2757a)), closes [#116](https://github.com/ts-factory/bublik/issues/116)
+
+#### 🧹 Cleanup
+- **chore:** sort exports from api_v2 module ([d65fefc](https://github.com/ts-factory/bublik/commit/d65fefc09743664ab3e34743d7a8ed74df68da1d))
