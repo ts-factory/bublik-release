@@ -1,0 +1,75 @@
+---
+title: Release v1.2.0
+authors: [okt-limonikas, ol-nata]
+tags: [release]
+slug: release-v1.2.0
+---
+
+🎉 **Exciting Updates in the Latest Release!** 🎉
+
+This release introduces key improvements, including enhanced report visualization, bug fixes, and optimizations for a smoother experience.
+
+## 🔍 What's New?
+
+### 🚀 New Feature
+
+- **Report Charts**: Failed results are now highlighted in red with a diamond symbol, making it easier to identify issues at a glance.
+
+### 🐛 Bug Fixes
+
+- **Run Table**: Fixed an issue where column visibility was not properly retained in the URL state.
+
+### 📦 Chores & Maintenance
+
+- Removed a redundant config migration check to streamline configuration handling.
+
+These updates enhance usability, improve reliability, and ensure a more seamless experience. 🚀
+
+<!--truncate-->
+
+## Highlights
+
+### Report Charts
+
+![Report Charts](./img/report-chart.png)
+
+## Admin Section
+
+### Backend Update
+
+1. `cd bublik`
+2. `git remote update`
+3. `git checkout v1.2.0`
+4. `./scripts/deploy --steps pip_requirements django_settings run_services`
+
+### Frontend Update
+
+1. Trigger the workflow in your frontend repository.
+2. Synchronize the mirrors.
+3. `cd bublik-ui`
+4. `git remote update`
+5. `git checkout v1.2.0`
+
+---
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **report:** [chart] highlight failed results with red and symbol ([cf91f2c](https://github.com/ts-factory/bublik-ui/commit/cf91f2c8e9b97e4201e37f2aa6a2d5b7b9922d5a))
+
+#### 🐛 Bug Fix
+
+- **docker:** disable check for prettier ([17a31ad](https://github.com/ts-factory/bublik-ui/commit/17a31adcb949c6e81fbf91c0f3acdbde2104f37c))
+- **docker:** fix corepack keyid mismatch issue ([31d4dc2](https://github.com/ts-factory/bublik-ui/commit/31d4dc203c031eea0d3588cde9df9d3b45a7101b))
+- **run:** [table] missing column visibility url state ([a63a725](https://github.com/ts-factory/bublik-ui/commit/a63a725f7bc1a97700e6b5d44ddae3a3f948e980))
+
+#### 📦 Chores
+
+- **config:** remove redundant config migration check ([e03016d](https://github.com/ts-factory/bublik-ui/commit/e03016d53b6a868b50fb26e52678526a9a70a200))
+
+---
+
+### Backend
