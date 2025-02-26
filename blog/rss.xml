@@ -22,6 +22,8 @@
 <li><strong>Report Charts</strong>: Failed results are now highlighted in red with a diamond symbol, making it easier to identify issues at a glance.</li>
 <li><strong>Config Management</strong>: Now, the configuration manager allows you to manage all configurations, including references, meta, and tags.</li>
 <li><strong>Initial Deployment</strong>: Now, Bublik can be deployed without specifying a configuration and creating a configuration directory.</li>
+<li><strong>References Config</strong>: The new configuration structure allows specifying multiple log databases.</li>
+<li><strong>External Links</strong>: Now, the latest URI from the corresponding log database in the references configuration is used for generating links.</li>
 </ul>
 <h3 class="anchor anchorWithStickyNavbar_P3Ke" id="-bug-fixes">🐛 Bug Fixes<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.2.0#-bug-fixes" class="hash-link" aria-label="Direct link to 🐛 Bug Fixes" title="Direct link to 🐛 Bug Fixes">​</a></h3>
 <ul>
