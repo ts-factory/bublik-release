@@ -1,8 +1,8 @@
 ---
-title: Release v1.2.0
+title: Release v1.3.0
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v1.2.0
+slug: release-v1.3.0
 ---
 
 🎉 **Exciting Updates in the Latest Release!** 🎉
@@ -18,11 +18,13 @@ This release introduces key improvements, including enhanced report visualizatio
 - **Initial Deployment**: Now, Bublik can be deployed without specifying a configuration and creating a configuration directory.
 - **References Config**: The new configuration structure allows specifying multiple log databases.
 - **External Links**: Now, the latest URI from the corresponding log database in the references configuration is used for generating links.
+- **Log Preview**: Added button to preview log on the history page just like on the run page
 
 ### 🐛 Bug Fixes
 
 - **Run Table**: Fixed an issue where column visibility was not properly retained in the URL state.
 - **Middleware**: A global issue has been resolved that occurred when attempting to retrieve dynamic settings from a missing main project configuration.
+- **Parameter Value Formatting**: improve parameter value formatting for different types of parameters (indentation for JSON-like structures and code)
 
 ### 📦 Chores & Maintenance
 
@@ -35,6 +37,14 @@ These updates enhance usability, improve reliability, and ensure a more seamless
 
 ## Highlights
 
+### History Log Preview
+
+![History Log Preview](./img/history-log-preview.png)
+
+### New Config Types
+
+![New Config Types](./img/config-new-types.png)
+
 ### Report Charts
 
 ![Report Charts](./img/report-chart.png)
@@ -45,7 +55,7 @@ These updates enhance usability, improve reliability, and ensure a more seamless
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v1.2.0`
+3. `git checkout v1.3.0`
 4. `./scripts/deploy --steps migrate_db per_project_conf django_settings run_services`
 
 ### Frontend Update
@@ -54,7 +64,7 @@ These updates enhance usability, improve reliability, and ensure a more seamless
 2. Synchronize the mirrors.
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v1.2.0`
+5. `git checkout v1.3.0`
 
 ---
 
@@ -65,32 +75,48 @@ These updates enhance usability, improve reliability, and ensure a more seamless
 #### 🚀 New Feature
 
 - **report:** [chart] highlight failed results with red and symbol ([cf91f2c](https://github.com/ts-factory/bublik-ui/commit/cf91f2c8e9b97e4201e37f2aa6a2d5b7b9922d5a))
+- **build:** add check that json logs is buildable to CI ([7f5ffa8](https://github.com/ts-factory/bublik-ui/commit/7f5ffa8c5d5d7cf9f32536f8b3d6d1c109ab2c91))
+- **config:** add ability to create configs for references, meta, tags ([d1b5d23](https://github.com/ts-factory/bublik-ui/commit/d1b5d23af5f01ccc652ef5bc799f396e3070bbcc))
+- **history:** add shortcut to view log on linear history ([1ee797b](https://github.com/ts-factory/bublik-ui/commit/1ee797bf113a55cef4fd8f9371896a4ece72aa4f))
+- **log:** add application for local json logs ([6608e67](https://github.com/ts-factory/bublik-ui/commit/6608e67946e01dcf947f0df2bd9d80086fe32264))
+- **run:** [table] add help dialog with usage information ([33690f7](https://github.com/ts-factory/bublik-ui/commit/33690f7887a499a5132b46e452e674cbcd3dbc12))
 
 #### 🐛 Bug Fix
 
 - **docker:** disable check for prettier ([17a31ad](https://github.com/ts-factory/bublik-ui/commit/17a31adcb949c6e81fbf91c0f3acdbde2104f37c))
 - **docker:** fix corepack keyid mismatch issue ([31d4dc2](https://github.com/ts-factory/bublik-ui/commit/31d4dc203c031eea0d3588cde9df9d3b45a7101b))
 - **run:** [table] missing column visibility url state ([a63a725](https://github.com/ts-factory/bublik-ui/commit/a63a725f7bc1a97700e6b5d44ddae3a3f948e980))
+- **log:** don't camelize keys to improve compatability ([9c64f2e](https://github.com/ts-factory/bublik-ui/commit/9c64f2ec3dad33ca3e407b24a3bcc37239d995bf))
+- **log:** improve parameter value formatting in log meta block ([a6c2399](https://github.com/ts-factory/bublik-ui/commit/a6c2399c2003a821a6c7dd65701ed7a05b461e7d))
+- **run:** display missing link to result ([c7275ea](https://github.com/ts-factory/bublik-ui/commit/c7275eaaea3ca008bbc72070324f3048bbc8e23b))
+- **types:** fix typescript issues for tanstack react table ([1b8d911](https://github.com/ts-factory/bublik-ui/commit/1b8d911064afdba01d0c8ee228f0a891221b15eb))
 
 #### 📦 Chores
 
 - **config:** remove redundant config migration check ([e03016d](https://github.com/ts-factory/bublik-ui/commit/e03016d53b6a868b50fb26e52678526a9a70a200))
+- **log:** [preview] change order of links ([d37b6c9](https://github.com/ts-factory/bublik-ui/commit/d37b6c9499697ab190fcd7935a0b2ebb70c7e713))
+- remove redundant import ([2de7d60](https://github.com/ts-factory/bublik-ui/commit/2de7d60338f92d9e537a6ae94084eeb9a21bfa57))
+- **result:** rename links from "measure" to "result" ([d27d2b3](https://github.com/ts-factory/bublik-ui/commit/d27d2b3c789c9f8270bc9111fc1a6230a283a87f))
+- **types:** remove `test_name` from linear history data type ([3eb226e](https://github.com/ts-factory/bublik-ui/commit/3eb226ecffe606d3e344d248cc771ee79b2c50b5))
+- **ui:** move help dialog to shared lib ([ccaef6b](https://github.com/ts-factory/bublik-ui/commit/ccaef6b27ba879e4fab1cdee2466446e776c40ec))
 
 ---
 
 ### Backend
 
 #### 🐛 Bug Fix
+
 - **deploy:** fix DB deploy ([a830c78](https://github.com/ts-factory/bublik/commit/a830c784b6d93745d1dc77c2e6db9ee6a6c28c91)), closes [#135](https://github.com/ts-factory/bublik/issues/135)
 - **importruns:** fix objectives parsing ([aa1bb21](https://github.com/ts-factory/bublik/commit/aa1bb215665bcf9ede0a29477b0c3b647623f49e))
 - **middleware:** fix the retrieval of dynamic settings ([482af58](https://github.com/ts-factory/bublik/commit/482af58943a0673e4144d97feb6e1907835d39c8))
-- **references:** fix default value for issues ([89b8dd6]https://github.com/ts-factory/bublik/commit/89b8dd60b50441a58d3ba3556c4f1b59b1edb9d7)
-
+- **references:** fix default value for issues ([89b8dd6]<https://github.com/ts-factory/bublik/commit/89b8dd60b50441a58d3ba3556c4f1b59b1edb9d7>)
 
 #### ⚡ Performance
+
 - **middleware:** improve performance ([ddd23f2](https://github.com/ts-factory/bublik/commit/ddd23f2f4a67207c2923e3ba0076d6cf778166d5))
 
 #### 🚀 New Feature
+
 - **report:** enhance point metadata with result type ([ec89a6f](https://github.com/ts-factory/bublik/commit/ec89a6f7969009cc5d9a3d8809f4f4203e933ab6)), closes [#108](https://github.com/ts-factory/bublik/issues/108)
 - **management:** add reformatting step to align config with schema ([dc1ae03](https://github.com/ts-factory/bublik/commit/dc1ae033ed92e662b36d928d5b65c498344d8d37))
 - **auth:** add system user support ([0e157b7](https://github.com/ts-factory/bublik/commit/0e157b788d81502700ca2e86580c8691a8de57bc))
@@ -109,6 +135,7 @@ These updates enhance usability, improve reliability, and ensure a more seamless
 - **urls:** make external links configurable ([f166395](https://github.com/ts-factory/bublik/commit/f1663959735b8780828bb2254c98f58f43f2afeb)
 
 #### ♻️ Code Refactoring
+
 - **config:** improve maintainability of config management ([458304a](https://github.com/ts-factory/bublik/commit/458304a65a1531d3b29272644d91ca6ff0d422a4))
 - **config:** simplify config retrieval function names ([d61b2b0](https://github.com/ts-factory/bublik/commit/d61b2b0522c1a25ab21fee9f93f55eeee0c4224c))
 - **config:** improve global config retrieval reusability ([04d33fa](https://github.com/ts-factory/bublik/commit/04d33fa6280e11cbb48daa74e1def1fdb0a86571))
@@ -125,6 +152,7 @@ These updates enhance usability, improve reliability, and ensure a more seamless
 - **config:** align attr retrieval with meta and tags configs source ([bb19465](https://github.com/ts-factory/bublik/commit/bb1946529cb2fc39f2081f241308490588ba076b)), closes [#118](https://github.com/ts-factory/bublik/issues/118)
 
 #### 🧹 Cleanup
+
 - **cleanup:** improve code style and maintainability ([8cbfc58](https://github.com/ts-factory/bublik/commit/8cbfc58d01d1e7ff5790b22279fd1fcf39c727a5))
 - **settings:** remove retrieval of unused modules ([3880756](https://github.com/ts-factory/bublik/commit/3880756b15436efbb241cae0c9032206f97637d2))
 - **management:** make function name more accurate ([488d9bb](https://github.com/ts-factory/bublik/commit/488d9bbb99024247dfe2f8412c182b9d5e806983))
