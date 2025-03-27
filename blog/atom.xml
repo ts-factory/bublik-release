@@ -2,11 +2,116 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ts-factory.github.io/bublik-release/blog</id>
     <title>Bublik Blog</title>
-    <updated>2025-02-27T00:00:00.000Z</updated>
+    <updated>2025-03-27T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ts-factory.github.io/bublik-release/blog"/>
     <subtitle>Bublik Blog</subtitle>
     <icon>https://ts-factory.github.io/bublik-release/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Release v1.5.0]]></title>
+        <id>https://ts-factory.github.io/bublik-release/blog/release-v1.5.0</id>
+        <link href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0"/>
+        <updated>2025-03-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This release introduces key improvements, including enhanced run page filtering capabilities, requirements filtering.]]></summary>
+        <content type="html"><![CDATA[<p>This release introduces key improvements, including enhanced run page filtering capabilities, requirements filtering.
+It also includes UI polish and various code refactoring changes.</p>
+<h2 class="anchor anchorWithStickyNavbar_P3Ke" id="-whats-new">🔍 What's New?<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#-whats-new" class="hash-link" aria-label="Direct link to 🔍 What's New?" title="Direct link to 🔍 What's New?">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h3>
+<ul>
+<li><strong>Requirements Filter</strong>: Added new filtering capabilities for run requirements</li>
+<li><strong>Log Artifacts</strong>: Added log artifacts dropdown menu to log page and log preview</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_P3Ke" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="new-run-page-filtering">New Run Page Filtering<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#new-run-page-filtering" class="hash-link" aria-label="Direct link to New Run Page Filtering" title="Direct link to New Run Page Filtering">​</a></h3>
+<p>We've added new filtering capabilities for run requirements and columns for results table.</p>
+<p><img decoding="async" loading="lazy" alt="New Run Page Filtering" src="https://ts-factory.github.io/bublik-release/assets/images/run-filters-49842d616c4c9b53573d962dc84ed8ac.png" width="3424" height="2124" class="img_Hu0e"></p>
+<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="log-artifacts">Log Artifacts<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#log-artifacts" class="hash-link" aria-label="Direct link to Log Artifacts" title="Direct link to Log Artifacts">​</a></h3>
+<p>We've enhanced the log viewing experience by adding a new dropdown menu for artifacts on both the log page and log preview. <br>
+This feature allows you to easily access and manage custom test artifacts. <br>
+For the start we provide a way to just open the artifacts in the browser, but in the future we will support multiple artifact types and ways to view them.</p>
+<p><img decoding="async" loading="lazy" alt="Log Artifacts" src="https://ts-factory.github.io/bublik-release/assets/images/artifacts-fdce448d8896919a0daa24f090fce2b8.png" width="3424" height="2124" class="img_Hu0e"></p>
+<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="adding-artifacts">Adding Artifacts<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#adding-artifacts" class="hash-link" aria-label="Direct link to Adding Artifacts" title="Direct link to Adding Artifacts">​</a></h4>
+<p>To include artifacts in your logs:</p>
+<ol>
+<li>Create an <code>artifacts.json</code> file</li>
+<li>Place it at <code>/json/node_&lt;id&gt;/artifacts.json</code> in your log structure</li>
+<li>Format it according to our <a href="https://github.com/okt-limonikas/bublik-log-viewer/blob/main/internal/command/schemas/artifact.json" target="_blank" rel="noopener noreferrer">schema</a></li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="validating-artifacts">Validating Artifacts<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#validating-artifacts" class="hash-link" aria-label="Direct link to Validating Artifacts" title="Direct link to Validating Artifacts">​</a></h4>
+<p>You can validate your <code>artifacts.json</code> file using the <a href="https://github.com/okt-limonikas/bublik-log-viewer" target="_blank" rel="noopener noreferrer">Bublik Log Viewer tool</a>:</p>
+<div class="language-bash codeBlockContainer_C8_D theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_Nq2r"><pre tabindex="0" class="prism-code language-bash codeBlock_revC thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_l4x6"><span class="token-line" style="color:#393A34"><span class="token plain">blv validate --type artifacts &lt;path/to/artifacts.json_or_folder&gt;</span><br></span></code></pre><div class="buttonGroup_UslY"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_oKGn" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_azKk"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Q6_C"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Read more about artifacts in our <a href="https://ts-factory.github.io/bublik-release/configuration/artifacts">documentation</a>.</p>
+<h2 class="anchor anchorWithStickyNavbar_P3Ke" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update">​</a></h3>
+<ol>
+<li><code>cd bublik</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v1.5.0</code></li>
+<li><code>./scripts/deploy --steps migrate_db per_project_conf django_settings run_services</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update">​</a></h3>
+<ol>
+<li>Trigger the workflow in your frontend repository.</li>
+<li>Synchronize the mirrors.</li>
+<li><code>cd bublik-ui</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v1.5.0</code></li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_P3Ke" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
+<ul>
+<li>add query delimiter to global config (<a href="https://github.com/ts-factory/bublik-ui/commit/d7d8fae798ce279687f3e83f9c287237aeca3bd9" target="_blank" rel="noopener noreferrer">d7d8fae</a>)</li>
+<li><strong>run:</strong> add global url requirements filter provider (<a href="https://github.com/ts-factory/bublik-ui/commit/22b120125d7edab39156cceb18f6f15a9b35aff3" target="_blank" rel="noopener noreferrer">22b1201</a>)</li>
+<li><strong>run:</strong> add requirements filter (<a href="https://github.com/ts-factory/bublik-ui/commit/c54fcabe677b98a54b29730c83e0638d91dc451c" target="_blank" rel="noopener noreferrer">c54fcab</a>)</li>
+<li><strong>run:</strong> re-enable parameters diff mode (<a href="https://github.com/ts-factory/bublik-ui/commit/9c7da003f45cd61ef1ca7204ed024c6813a29f42" target="_blank" rel="noopener noreferrer">9c7da00</a>)</li>
+<li><strong>config:</strong> get available config types from rest api (<a href="https://github.com/ts-factory/bublik-ui/commit/86ccf095eacfe66c3d55fb42c98bb1af3dca7ac4" target="_blank" rel="noopener noreferrer">86ccf09</a>)</li>
+<li><strong>history:</strong> [measurements] mark results with <code>has_error</code> with green/red marks (<a href="https://github.com/ts-factory/bublik-ui/commit/a3321ef9ed7a16e881d6b1e71b21d27ef9b65ea6" target="_blank" rel="noopener noreferrer">a3321ef</a>)</li>
+<li><strong>log:</strong> add artifacts dropdown menu to log page and log preview (<a href="https://github.com/ts-factory/bublik-ui/commit/2e7a4eeb3b99b429ab1891d38f6a91e4c3edb40c" target="_blank" rel="noopener noreferrer">2e7a4ee</a>)</li>
+<li><strong>log:</strong> add endpoint to fetch <code>artifacts.json</code> (<a href="https://github.com/ts-factory/bublik-ui/commit/0565219a8e5f4b3226755196b2d7edfdf830808e" target="_blank" rel="noopener noreferrer">0565219</a>)</li>
+<li><strong>log:</strong> add log-artifacts dropdown menu component (<a href="https://github.com/ts-factory/bublik-ui/commit/3353a0683594e6462fef1183bb6ad2621c0c6ade" target="_blank" rel="noopener noreferrer">3353a06</a>)</li>
+<li><strong>ui:</strong> add icon for download (<a href="https://github.com/ts-factory/bublik-ui/commit/3b38881a10de1a8c29ae2308d9fbe790db76fa4a" target="_blank" rel="noopener noreferrer">3b38881</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
+<ul>
+<li><strong>history:</strong> [linear] reset filters on "Preview" button click (<a href="https://github.com/ts-factory/bublik-ui/commit/ed2304b1a26224b68ee74ed98f351ebb8fa769d4" target="_blank" rel="noopener noreferrer">ed2304b</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish">​</a></h4>
+<ul>
+<li><strong>run:</strong> adjust offsets for results table toolbar (<a href="https://github.com/ts-factory/bublik-ui/commit/65c95c184cc576261e1ee76bb6f69331ef49908c" target="_blank" rel="noopener noreferrer">65c95c1</a>)</li>
+<li><strong>run:</strong> change button style to show result filters toolbar (<a href="https://github.com/ts-factory/bublik-ui/commit/a3f0a78912d02f06b4f424eb2962c42a4fd0fb4a" target="_blank" rel="noopener noreferrer">a3f0a78</a>)</li>
+<li><strong>measurements:</strong> remove red and green colors from theme for lines (<a href="https://github.com/ts-factory/bublik-ui/commit/ffc8aa94c2e456632b37513cfc167aac865c535f" target="_blank" rel="noopener noreferrer">ffc8aa9</a>)</li>
+<li><strong>report:</strong> chart use empty circle for results without <code>has_error</code> (<a href="https://github.com/ts-factory/bublik-ui/commit/5ad1d2b191a4069942e31a08c88ae1e925202099" target="_blank" rel="noopener noreferrer">5ad1d2b</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring">​</a></h4>
+<ul>
+<li><strong>api:</strong> change API for fetching runs (<a href="https://github.com/ts-factory/bublik-ui/commit/12851cc07cbc5a7a5f59605eff186f8a5909b7ae" target="_blank" rel="noopener noreferrer">12851cc</a>)</li>
+<li><strong>run:</strong> add <code>abnormal</code> to unexpected columns for expansion (<a href="https://github.com/ts-factory/bublik-ui/commit/a4ffac048a07cf22aa9da6b09e8d97bcfdebb452" target="_blank" rel="noopener noreferrer">a4ffac0</a>)</li>
+<li><strong>run:</strong> add migration for url query expanded state (<a href="https://github.com/ts-factory/bublik-ui/commit/0b9f3b6ff77a1e7442cb9fce415cf8ee47aeb7a4" target="_blank" rel="noopener noreferrer">0b9f3b6</a>)</li>
+<li><strong>run:</strong> adjust getting row id (<a href="https://github.com/ts-factory/bublik-ui/commit/9fbd4a3f3160e50c8e1ad622183829758dbb9b4d" target="_blank" rel="noopener noreferrer">9fbd4a3</a>)</li>
+<li><strong>run:</strong> show filter options based on filtered data (<a href="https://github.com/ts-factory/bublik-ui/commit/c3c66b11aaea1a164357c8eb17661098a1e336a5" target="_blank" rel="noopener noreferrer">c3c66b1</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
+<ul>
+<li><strong>run:</strong> fix types and some style changes (<a href="https://github.com/ts-factory/bublik-ui/commit/04e7977b4cc91afd5935475fefc9d35a4e83f889" target="_blank" rel="noopener noreferrer">04e7977</a>)</li>
+<li><strong>types:</strong> adjust incorrect types (<a href="https://github.com/ts-factory/bublik-ui/commit/81b167faeb88e2b1efc91b5d8952fdbbb983d807" target="_blank" rel="noopener noreferrer">81b167f</a>)</li>
+<li><strong>ui:</strong> extract data table faceted filter to shared lib (<a href="https://github.com/ts-factory/bublik-ui/commit/0e977a482d87bbbb6b56783f24852ae5cfebf887" target="_blank" rel="noopener noreferrer">0e977a4</a>)</li>
+<li><strong>log:</strong> change button label for viewing legacy log (<a href="https://github.com/ts-factory/bublik-ui/commit/057e3dbf890cde3f701979a52053cf621265f7f3" target="_blank" rel="noopener noreferrer">057e3db</a>)</li>
+<li><strong>log:</strong> generate log-artifacts library (<a href="https://github.com/ts-factory/bublik-ui/commit/9ace68a2b8ebc4f85c40498123540b9e23d10370" target="_blank" rel="noopener noreferrer">9ace68a</a>)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.5.0#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3>]]></content>
+        <author>
+            <name>Kostromin Danil</name>
+            <uri>https://github.com/okt-limonikas</uri>
+        </author>
+        <author>
+            <name>Rybchenko Natalia</name>
+            <uri>https://github.com/ol-nata</uri>
+        </author>
+        <category label="release" term="release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Release v1.3.0]]></title>
         <id>https://ts-factory.github.io/bublik-release/blog/release-v1.3.0</id>
@@ -1652,28 +1757,6 @@ it is necessary to find and re-import runs for which TestIterationResult objects
 <li><strong>history:</strong> fix query param and variable names (<a href="https://github.com/ts-factory/bublik/commit/84f5342c51eabe8ad3e4831410e3336c67ec5044" target="_blank" rel="noopener noreferrer">84f5342</a>)</li>
 <li><strong>history:</strong> add comments and division into blocks (<a href="https://github.com/ts-factory/bublik/commit/b00caac3015021ddadd7b7da7e46c536b21a59b6" target="_blank" rel="noopener noreferrer">b00caac</a>)</li>
 <li><strong>history:</strong> make the order of getting data more logical (<a href="https://github.com/ts-factory/bublik/commit/09f06e7f2ab15f75d2bbd20d56ddb991e1f98cd5" target="_blank" rel="noopener noreferrer">09f06e7</a>)</li>
-</ul>]]></content>
-        <author>
-            <name>Kostromin Danil</name>
-            <uri>https://github.com/okt-limonikas</uri>
-        </author>
-        <category label="release" term="release"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Release v0.2.4]]></title>
-        <id>https://ts-factory.github.io/bublik-release/blog/release-v0.2.4</id>
-        <link href="https://ts-factory.github.io/bublik-release/blog/release-v0.2.4"/>
-        <updated>2024-03-12T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[We are happy to announce Bublik v0.2.4.]]></summary>
-        <content type="html"><![CDATA[<p>We are happy to announce <strong>Bublik v0.2.4</strong>.</p>
-<p>The release, a small incremental update, prioritizes performance improvements by optimizing log tree representation.
-This involves refining the structure of the tree to enhance efficiency,
-making operations within the backend system more streamlined and faster.</p>
-<h2 class="anchor anchorWithStickyNavbar_P3Ke" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.2.4#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_P3Ke" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.2.4#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_P3Ke" id="-performance">⚡ Performance<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.2.4#-performance" class="hash-link" aria-label="Direct link to ⚡ Performance" title="Direct link to ⚡ Performance">​</a></h4>
-<ul>
-<li><strong>tree:</strong> optimize tree representation (<a href="https://github.com/ts-factory/bublik/commit/0cd05c64bb275ec949d0aeddd0f89a46a7735be4" target="_blank" rel="noopener noreferrer">0cd05c6</a>)</li>
 </ul>]]></content>
         <author>
             <name>Kostromin Danil</name>
