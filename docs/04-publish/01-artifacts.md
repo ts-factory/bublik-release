@@ -1,28 +1,56 @@
 ---
-title: Artifacts
+title: Log Artifacts
 ---
 
 # Log Artifacts
 
-Bublik supports displaying test artifacts through a dropdown menu on both the log page and log preview. This feature enables easy access to additional test-related files and resources.
+- [Log Artifacts](#log-artifacts)
+  - [Directory structure](#directory-structure)
+    - [Artifacts description](#artifacts-description)
+      - [Formal description](#formal-description)
+      - [Fields Description](#fields-description)
+      - [Example Configuration](#example-configuration)
+    - [Path Resolution](#path-resolution)
+  - [Current Limitations](#current-limitations)
 
-## Configuration
+
+Artefact is an arbitrary "item" associated with the test result. This page describes the canonical way of publishing artefacts.
+
+Bublik displays test artifacts through a dropdown menu on both the log page and
+log preview. This feature enables easy access to additional test-related files
+and resources.
+
+
+## Directory structure
+
+In the session folder one should create:
+
+- `artifacts/` folder which will contain all artifacts,
+- For each result one should create `artifacts/node_<id>/` folder which in turn
+  will contain description for artifacts associated with the result.
+
+`ID` must be similar to the one used for `node_<id>.html` or `node_<id>.json`.
 
 To enable artifacts in your logs, you need to:
 
-1. Create an `artifacts.json` file
-2. Place it at `/json/node_<id>/artifacts.json` in your log structure
-3. Format it according to the schema specification
+- Create an `artifacts.json` file and place it at `/artifacts/node_<id>/artifacts.json` in your log structure
+  - Example full path: <br /> `<bublik_url>/logs/dpdk-ethdev-ts/2025/03/03/balin-x710-p0-cbs-speed-stack-03:00:37/artifacts/node_id2/artifacts.json`
 
-### File Location
+### Artifacts description
 
-The `artifacts.json` file must be located at: `/json/node_<id>/artifacts.json`
+Key idea is that we have a "source" of the artifact: path or URI. And a way for
+UI to present it.
 
-Where `<id>` is your node identifier.
+This implies that it can be:
 
-Example full path: <br /> `<bublik_url>/logs/dpdk-ethdev-ts/2025/03/03/balin-x710-p0-cbs-speed-stack-03:00:37/json/node_id2/artifacts.json`
+- a file in the results artifact folder, say `.txt` that will be displayed in
+  raw format (or just downloaded)
+- same `.txt` file that will be processed by UI,
+- a file that will be on a completely different server,
+- (in the future) a meta-file that will be returned as a result of a REST API
+  call.
 
-### Schema
+#### Formal description
 
 The `artifacts.json` file must conform to the following schema: [URL](https://github.com/okt-limonikas/bublik-log-viewer/blob/main/internal/command/schemas/artifact.json)
 
@@ -38,7 +66,7 @@ The `artifacts.json` file must conform to the following schema: [URL](https://gi
   - `path`: Relative path to the artifact file (use this or `uri`)
   - `uri`: Absolute URL to the artifact file (use this or `path`)
 
-### Example Configuration
+#### Example Configuration
 
 Here's an example of a valid `artifacts.json` file:
 
@@ -74,7 +102,7 @@ Here's an example of a valid `artifacts.json` file:
 }
 ```
 
-## Path Resolution
+### Path Resolution
 
 Artifacts support both relative and absolute paths:
 
