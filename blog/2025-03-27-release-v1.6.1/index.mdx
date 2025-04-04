@@ -1,8 +1,8 @@
 ---
-title: Release v1.6.0
+title: Release v1.6.1
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v1.6.0
+slug: release-v1.6.1
 ---
 
 This release introduces key improvements, including enhanced run page filtering capabilities, requirements filtering.
@@ -57,7 +57,7 @@ Read more about artifacts in our [documentation](/publish/artifacts).
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v1.6.0`
+3. `git checkout v1.6.1`
 4. `./scripts/deploy --steps pip_requirements django_settings run_services`
 
 ### Frontend Update
@@ -66,7 +66,7 @@ Read more about artifacts in our [documentation](/publish/artifacts).
 2. Synchronize the mirrors.
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v1.6.0`
+5. `git checkout v1.6.1`
 
 ---
 
@@ -90,6 +90,7 @@ Read more about artifacts in our [documentation](/publish/artifacts).
 #### 🐛 Bug Fix
 
 - **history:** [linear] reset filters on "Preview" button click ([ed2304b](https://github.com/ts-factory/bublik-ui/commit/ed2304b1a26224b68ee74ed98f351ebb8fa769d4))
+- **import:** don't modify response from API ([aa96896](https://github.com/ts-factory/bublik-ui/commit/aa968966c797c11def219b0c14b8b14b184023e9))
 
 #### 💅 Polish
 
@@ -129,6 +130,7 @@ Read more about artifacts in our [documentation](/publish/artifacts).
 - **importruns:** fix the date format mismatch ([04fa978](https://github.com/ts-factory/bublik/commit/04fa978da81f4c9e43df9d9f72b2d4f315d50bf8))
 - **deploy:** fix requirements install ([a7a7ce1](https://github.com/ts-factory/bublik/commit/a7a7ce102fd8ee40a8cbb2b70824a864f623b3b5))
 - **deploy:** fix logilab-astng install ([3f611c5](https://github.com/ts-factory/bublik/commit/3f611c5d04331c88206c6fadc645cb644762f07f))
+- **event:** fix event list sorting ([5361db0](https://github.com/ts-factory/bublik/commit/5361db0dbcafdb22e977ab999d5850f174a97378))
 
 #### 🚀 New Feature
 
