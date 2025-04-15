@@ -90,4 +90,4 @@ Historically we have **log** that is located in `html/node_id5.html` or
 The idea is that we have `/artifacts/node_<id>/` folder that contains details on
 the artefacts associated with the result.
 
-See [Artifacts publishing](./01-artifacts.md)
+See [Artifacts publishing](./01-attachments.md)

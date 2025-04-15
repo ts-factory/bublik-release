@@ -1,12 +1,12 @@
 ---
-title: Log Artifacts
+title: Log Attachments
 ---
 
-# Log Artifacts
+# Log Attachments
 
-- [Log Artifacts](#log-artifacts)
+- [Log Attachments](#log-attachments)
   - [Directory structure](#directory-structure)
-    - [Artifacts description](#artifacts-description)
+    - [Attachments description](#attachments-description)
       - [Formal description](#formal-description)
       - [Fields Description](#fields-description)
       - [Example Configuration](#example-configuration)
@@ -16,7 +16,7 @@ title: Log Artifacts
 
 Artefact is an arbitrary "item" associated with the test result. This page describes the canonical way of publishing artefacts.
 
-Bublik displays test artifacts through a dropdown menu on both the log page and
+Bublik displays test attachments through a dropdown menu on both the log page and
 log preview. This feature enables easy access to additional test-related files
 and resources.
 
@@ -25,18 +25,18 @@ and resources.
 
 In the session folder one should create:
 
-- `artifacts/` folder which will contain all artifacts,
-- For each result one should create `artifacts/node_<id>/` folder which in turn
-  will contain description for artifacts associated with the result.
+- `attachments/` folder which will contain all attachments,
+- For each result one should create `attachments/node_<id>/` folder which in turn
+  will contain description for attachments associated with the result.
 
 `ID` must be similar to the one used for `node_<id>.html` or `node_<id>.json`.
 
-To enable artifacts in your logs, you need to:
+To enable attachments in your logs, you need to:
 
-- Create an `artifacts.json` file and place it at `/artifacts/node_<id>/artifacts.json` in your log structure
-  - Example full path: <br /> `<bublik_url>/logs/dpdk-ethdev-ts/2025/03/03/balin-x710-p0-cbs-speed-stack-03:00:37/artifacts/node_id2/artifacts.json`
+- Create an `attachments.json` file and place it at `/attachments/node_<id>/attachments.json` in your log structure
+  - Example full path: <br /> `<bublik_url>/logs/dpdk-ethdev-ts/2025/03/03/balin-x710-p0-cbs-speed-stack-03:00:37/attachments/node_id2/attachments.json`
 
-### Artifacts description
+### Attachments description
 
 Key idea is that we have a "source" of the artifact: path or URI. And a way for
 UI to present it.
@@ -52,12 +52,12 @@ This implies that it can be:
 
 #### Formal description
 
-The `artifacts.json` file must conform to the following schema: [URL](https://github.com/okt-limonikas/bublik-log-viewer/blob/main/internal/command/schemas/artifact.json)
+The `attachments.json` file must conform to the following schema: [URL](https://github.com/okt-limonikas/bublik-log-viewer/blob/main/internal/command/schemas/artifact.json)
 
 #### Fields Description
 
 - `version`: Schema version
-- `artifacts`: Array of artifact objects with the following properties:
+- `attachments`: Array of artifact objects with the following properties:
   - `type`: Type of the artifact (currently supports "text")
   - `view_type`: How the artifact should be displayed (currently supports "inline")
   - `name`: Display name for the artifact
@@ -68,17 +68,17 @@ The `artifacts.json` file must conform to the following schema: [URL](https://gi
 
 #### Example Configuration
 
-Here's an example of a valid `artifacts.json` file:
+Here's an example of a valid `attachments.json` file:
 
 ```json
 {
   "version": 1,
-  "artifacts": [
+  "attachments": [
     {
       "type": "text",
       "view_type": "inline",
-      "name": "Relative artifacts",
-      "description": "Relative artifacts",
+      "name": "Relative attachments",
+      "description": "Relative attachments",
       "download_enabled": false,
       "path": "./relative.txt"
     },
@@ -93,8 +93,8 @@ Here's an example of a valid `artifacts.json` file:
     {
       "type": "text",
       "view_type": "inline",
-      "name": "Absolute artifacts",
-      "description": "Absolute artifacts",
+      "name": "Absolute attachments",
+      "description": "Absolute attachments",
       "download_enabled": true,
       "uri": "<bublik_url>/logs/dpdk-ethdev-ts/2025/03/03/balin-x710-p0-cbs-speed-stack-03:00:37/json/node_id2/absolute.txt"
     }
@@ -104,7 +104,7 @@ Here's an example of a valid `artifacts.json` file:
 
 ### Path Resolution
 
-Artifacts support both relative and absolute paths:
+Attachments support both relative and absolute paths:
 
 - Relative paths (using `path`):
   - `./file.txt` - File in the current directory
@@ -115,6 +115,6 @@ Artifacts support both relative and absolute paths:
 
 ## Current Limitations
 
-- Only text-type artifacts are currently supported
-- Artifacts can only be viewed inline in the browser
+- Only text-type attachments are currently supported
+- Attachments can only be viewed inline in the browser
 - Future updates will add support for more artifact types and viewing options
