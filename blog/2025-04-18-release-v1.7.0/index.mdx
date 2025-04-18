@@ -1,0 +1,78 @@
+---
+title: Release v1.7.0
+authors: [okt-limonikas, ol-nata]
+tags: [release]
+slug: release-v1.7.0
+---
+
+This release introduces numerous improvements to URL handling, deployment configurations, and log management. <br />
+Key updates include fixes for URL syntax and construction, and improved deployment processes with integrated documentation support. <br />
+A notable addition is the new Docker-based deployment option, offering a streamlined way to set up Bublik instances.
+
+## 🔍 What's New?
+
+### 🚀 New Feature
+
+#### Docker Deploy
+
+We've implemented Docker container support for simplified **Bublik** deployment and setup.<br />
+For detailed instructions on setting up a Bublik instance with Docker, please refer to our [documentation](/docker/setup)
+
+<!--truncate-->
+
+## Admin Section
+
+### Backend Update
+
+1. `cd bublik`
+2. `git remote update`
+3. `git checkout v1.7.0`
+4. `./scripts/deploy --steps general_conf`
+5. Update the value of `BUBLIK_DOCS_DIST` in `bublik/general.conf` to match the name of the distribution you are using, if necessary
+6. `./scripts/deploy --steps django_settings run_services`
+
+### Frontend Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-ui`
+4. `git remote update`
+5. `git checkout v1.7.0`
+
+### Documentation Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-docs`
+4. `git remote update`
+5. `git checkout v1.7.0`
+
+---
+
+## Changelog
+
+### Frontend
+
+### ♻ Code Refactoring
+
+* **logs:** rename 'Artifacts' to 'Attachments' ([07d5667](https://github.com/ts-factory/bublik-ui/commit/07d566768c125b8d4976d9e7cb54b5a7779721c8))
+
+---
+
+### Backend
+
+#### 🐛 Bug Fix
+ - **urls:** fix syntax warning ([342e605](https://github.com/ts-factory/bublik/commit/342e605c96953070c369ce90171c2781cb825763))
+ - **urls:** fix absolute URL construction ([a54eee4](https://github.com/ts-factory/bublik/commit/a54eee44b32d39ead53758128ddad96808007152))
+ - **urls:** fix URL prefix construction ([c648492](https://github.com/ts-factory/bublik/commit/c648492dcfe8a1d5af7e2d27ff1fa4bff9d63a91))
+ - **log:** add proxy logic for JSON logs to fix CORS issues ([32e35dc](https://github.com/ts-factory/bublik/commit/32e35dcf4871f97bd19f7220879d898d2e1eb488))
+
+#### 🚀 New Feature
+ - **log:** add proxy endpoint to resolve CORS issues with remote logs ([add49cf](https://github.com/ts-factory/bublik/commit/add49cfbcf6c9b3f836547ec1560e6a2824be05f))
+
+#### 📦 Chores
+ - **deploy:** specify path to the static docs ([391ddb4](https://github.com/ts-factory/bublik/commit/391ddb4ff38f8465fc1f117c06d8f24d3d3f4537))
+ - **importruns:** normalize response data dict keys ([2f8e1fe](https://github.com/ts-factory/bublik/commit/2f8e1fe8991c5a789f0e50c1a165d90433497ad7))
+ - **log:** rename 'artifacts' to 'attachments' in log API ([e17b52d](https://github.com/ts-factory/bublik/commit/e17b52d0f8372a2b6da9ebd3eac5f41382d8c5e9))
+ - **deploy:** fix Bublik UI static location ([4f4b3e0](https://github.com/ts-factory/bublik/commit/4f4b3e0a95cb86a6bb32f57a7ff3066f45336f03))
+ - **deploy:** integrate Bublik docs into initial deployment ([9d94b96](https://github.com/ts-factory/bublik/commit/9d94b960ed7b22f5e769e8eea4045086a699057b))
