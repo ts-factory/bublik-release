@@ -2,7 +2,12 @@
 title: Setup
 ---
 
-# Bublik Docker Installation Guide
+# Setup Guide
+
+:::warning
+This deployment method is intended for development and testing environments only. <br />
+For production deployments, please refer to the official installation guides.
+:::
 
 ## Prerequisites
 
