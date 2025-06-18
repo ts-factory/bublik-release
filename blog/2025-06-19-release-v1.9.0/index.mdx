@@ -1,0 +1,63 @@
+---
+title: Release v1.9.0
+authors: [okt-limonikas, ol-nata]
+tags: [release]
+slug: release-v1.9.0
+---
+
+Bublik v1.9.0 is a small release that fixes a longstanding issue with database migrations.
+
+<!--truncate-->
+
+## Admin Section
+
+### Backend Update
+
+1. Navigate to the backend directory: `cd bublik`
+2. Fetch updates from all remote repositories: `git remote update`
+3. Check out the latest stable release before the new one: `git checkout v1.8.0`
+4. Ensure all migrations are created and applied: `./scripts/deploy --steps migrate_db`
+5. ⚠️ Backup the database to ensure rollback is possible in case of issues.
+6. ⚠️ Backup the migrations folder (bublik/data/migrations/), in case they are needed for rollback or comparison.
+7. Delete all migration files from the migrations folder (except _**init**.py_): `find . -path "*/bublik/data/migrations/*.py" -not -name "__init__.py" -delete`
+8. Check out this release: `git checkout v1.9.0`.
+9. Activate the virtual environment: `source .env/bin/activate`
+10. Delete all migration records from the database: `python3 manage.py dbshell -- -c 'TRUNCATE "django_migrations";'`.
+11. Apply migrations without executing SQL (mark as applied): `python3 manage.py migrate --fake`
+12. Restart the services: `./scripts/deploy --steps run_services
+
+### Frontend Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-ui`
+4. `git remote update`
+5. `git checkout v1.9.0`
+
+### Documentation Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-docs`
+4. `git remote update`
+5. `git checkout v1.9.0`
+
+### Docker Instance Updatee
+
+1. `task backup:create`
+2. `task pull`
+3. `task up`
+4. `task migrations:transition_1.8.0_to_1.9.0`
+5. `task up`
+
+---
+
+## Changelog
+
+---
+
+### Backend
+
+#### 📦 Chores
+
+- **database:** track and commit database migrations in Git ([c0a4699](https://github.com/ts-factory/bublik/commit/c0a469906fd20b7675f4e1142849f41f59f3135c))
