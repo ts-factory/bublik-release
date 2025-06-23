@@ -24,12 +24,12 @@
 <li>Ensure all migrations are created and applied: <code>./scripts/deploy --steps migrate_db</code></li>
 <li>⚠️ Backup the database to ensure rollback is possible in case of issues.</li>
 <li>⚠️ Backup the migrations folder (bublik/data/migrations/), in case they are needed for rollback or comparison.</li>
-<li>Delete all migration files from the migrations folder (except <em><strong>init</strong>.py</em>): <code>find . -path "*/bublik/data/migrations/*.py" -not -name "__init__.py" -delete</code></li>
+<li>Delete all migration files from the migrations folder (except &nbsp;<em>__init__.py</em>): <code>find . -path "*/bublik/data/migrations/*.py" -not -name "__init__.py" -delete</code></li>
 <li>Check out this release: <code>git checkout v1.9.0</code>.</li>
 <li>Activate the virtual environment: <code>source .env/bin/activate</code></li>
 <li>Delete all migration records from the database: <code>python3 manage.py dbshell -- -c 'TRUNCATE "django_migrations";'</code>.</li>
 <li>Apply migrations without executing SQL (mark as applied): <code>python3 manage.py migrate --fake</code></li>
-<li>Restart the services: `./scripts/deploy --steps run_services</li>
+<li>Restart the services: <code>./scripts/deploy --steps run_services</code></li>
 </ol>
 <h3 class="anchor anchorWithStickyNavbar_P3Ke" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update">​</a></h3>
 <ol>
