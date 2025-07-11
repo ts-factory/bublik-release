@@ -1,11 +1,11 @@
 ---
-title: Release v1.10.0
+title: Release v1.10.1
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v1.10.0
+slug: release-v1.10.1
 ---
 
-In this release we've added new "Series Charts" mode to history and some UI imporvements for import events page
+In this release, we've introduced a new "Series Charts" mode in the history section, enhanced the UI on the import events page, added support for multiple expected results, and included a new button to limit Y-axis values to their minimum and maximum range.
 
 <!--truncate-->
 
@@ -13,7 +13,8 @@ In this release we've added new "Series Charts" mode to history and some UI impo
 
 ### History Series Charts Mode
 
-New mode to view measurements per result
+The new mode lets you view serial measurements for all iterations matching your search query.
+You can select charts and switch to stacked mode to display them on the same axises for easier comparison.
 
 ![Series Charts](./img/series-charts.webp)
 
@@ -22,6 +23,18 @@ New mode to view measurements per result
 Added "RECIEVED" and "STARTED" import event types support
 
 ![Import](./img/import.webp)
+
+### Multiple Expected
+
+Added support for multiple expected results
+
+![Multiple Expected](./img/results.webp)
+
+### Limit axis y values
+
+Added toggle button to limit axis y values for charts
+
+![Limit axis y values](./img/limit.webp)
 
 ## Admin Section
 
@@ -35,7 +48,7 @@ This version is compatible with TE versions 1.45 and 1.47, but **incompatible wi
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v1.10.0`
+3. `git checkout v1.10.1`
 4. `./scripts/deploy --steps run_services`
 
 ### Frontend Update
@@ -44,7 +57,7 @@ This version is compatible with TE versions 1.45 and 1.47, but **incompatible wi
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v1.10.0`
+5. `git checkout v1.10.1`
 
 ### Documentation Update
 
@@ -52,7 +65,7 @@ This version is compatible with TE versions 1.45 and 1.47, but **incompatible wi
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v1.10.0`
+5. `git checkout v1.10.1`
 
 ### Docker Instance Updatee
 
