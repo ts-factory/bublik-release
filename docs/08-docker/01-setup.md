@@ -153,6 +153,47 @@ BUBLIK_FQDN=http://192.168.1.122
 BUBLIK_FQDN=http://localhost
 ```
 
+### Setup Proxy Port
+
+Bublik's web interface is accessible through a configurable proxy port that determines how you'll connect to the application.
+
+### Default Configuration
+
+By default, Bublik listens on port `80`. This means you can access the application at:
+
+- `http://localhost` (if running locally)
+- `http://your-server-ip` (if running on a remote server)
+
+### Customizing the Port
+
+To change the default port, modify the `BUBLIK_DOCKER_PROXY_PORT` variable in your `.env` file:
+
+```bash
+# Example: Change to port 8080
+BUBLIK_DOCKER_PROXY_PORT=8080
+```
+
+After changing the port, you'll access Bublik at:
+
+- `http://localhost:8080` (if running locally)
+- `http://your-server-ip:8080` (if running on a remote server)
+
+### Important Notes
+
+- **References Config** If you update this port on already deployed instance you should also update references config at `<bublik_instance_url>/v2/admin/config`
+- **Port conflicts**: Ensure the chosen port is not already in use by other services
+- **SSH tunneling**: If using SSH tunnels, the tunnel port must match `BUBLIK_DOCKER_PROXY_PORT`
+- **Restart required**: Changes to the proxy port require restarting the Docker containers
+
+### Applying Changes
+
+After modifying the `.env` file, restart the services:
+
+```bash
+task down
+task up
+```
+
 ### Setup Storage Location
 
 By default, **Bublik** stores all runtime and application data in the `./data` directory, relative to the cloned repository. However, you can store this data anywhere on your system - for example, in `/srv/bublik-data` or any other location of your choice.
@@ -233,3 +274,36 @@ You will be prompted if you want to create initial project configs as a starting
 You can just create initial configs as a starting point
 
 Now you instance should be available at the specified `BUBLIK_FQDN`
+
+## 6. Accessing Instance
+
+To access your Bublik instance, you need to set up an SSH tunnel that matches your configuration:
+
+### SSH Tunnel Setup
+
+Use the following command to create an SSH tunnel:
+
+```bash
+ssh -fNL 80:localhost:80 bublik-vm
+```
+
+:::important
+The port number in the SSH tunnel command (`80` in this example) must match the `BUBLIK_DOCKER_PROXY_PORT` value in your `.env` file.
+:::
+
+### Port Configuration
+
+:::caution
+Do not use different ports for the SSH tunnel and Docker proxy configuration, as this will prevent proper access to the Bublik interface and log files
+:::
+
+- **SSH tunnel port**: The first `80` in `-fNL 80:localhost:80`
+- **Environment variable**: `BUBLIK_DOCKER_PROXY_PORT=80` in `.env`
+
+### Troubleshooting
+
+If you encounter connection issues:
+
+1. **Verify port matching**: Ensure the SSH tunnel port matches `BUBLIK_DOCKER_PROXY_PORT`
+2. **Check .env file**: Confirm the environment variable is set correctly
+3. **Test connection**: Try accessing `http://localhost:80` in your browser
