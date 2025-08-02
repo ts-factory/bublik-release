@@ -13,6 +13,27 @@ const URL = `${process.env['URL'] ?? `https://${ORGANIZATION_NAME}.github.io`}`;
 
 import localSearch from '@easyops-cn/docusaurus-search-local';
 
+async function fixWsSocketPathDockerPlugin(context, opts) {
+  return {
+    name: 'docusaurus-bublik-dev-server-plugin',
+    configureWebpack(config, isServer, utils, content) {
+      if (!isServer && process.env.NODE_ENV === 'development') {
+        const urlPrefix = process.env.BASE_URL || '';
+
+        if (!config.devServer) config.devServer = {};
+
+        config.devServer = {
+          ...config.devServer,
+          client: {
+            ...config.devServer.client,
+            webSocketURL: { pathname: `${urlPrefix}/ws` },
+          },
+        };
+      }
+    },
+  };
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Bublik',
@@ -91,7 +112,7 @@ const config = {
         },
       },
     }),
-  plugins: ['docusaurus-plugin-image-zoom'],
+  plugins: ['docusaurus-plugin-image-zoom', fixWsSocketPathDockerPlugin],
   themes: [
     [
       localSearch,
