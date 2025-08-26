@@ -1,0 +1,83 @@
+---
+title: Release v2.1.0
+authors: [okt-limonikas, ol-nata]
+tags: [release]
+slug: release-v2.1.0
+---
+
+This is small incremental release mainly focused on fixing bugs and added new small feature
+
+<!--truncate-->
+
+## Highlights
+
+### New Link To History
+
+![New History Link](./img/history-link-1.webp)
+
+## Admin Section
+
+### Backend Update
+
+1. `cd bublik`
+2. `git remote update`
+3. `git checkout v2.1.0`
+4. `./scripts/deploy --steps run_services`
+
+### Frontend Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-ui`
+4. `git remote update`
+5. `git checkout v2.1.0`
+
+### Documentation Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-docs`
+4. `git remote update`
+5. `git checkout v2.1.0`
+
+### Docker Instance Update
+
+1. `task backup:create`
+2. `task pull`
+3. `task up`
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **run:** add link to history for test filtered by run id and test name ([53d2c52](https://github.com/ts-factory/bublik-ui/commit/53d2c52fdd3cae8a77e2c195fc9b7ff080982a67)), closes [#372](https://github.com/ts-factory/bublik-ui/issues/372)
+
+#### 🐛 Bug Fix
+
+- **config:** [update-project-form] show meaningful validation errors ([ea98698](https://github.com/ts-factory/bublik-ui/commit/ea98698096c5a743a860ec0be83b0f5228121b70)), closes [#374](https://github.com/ts-factory/bublik-ui/issues/374)
+- **config:** make description field optional in config forms and API ([cf653d9](https://github.com/ts-factory/bublik-ui/commit/cf653d9fa3ac07104daecf50f92df549186d0813)), closes [#377](https://github.com/ts-factory/bublik-ui/issues/377)
+- **run:** reset `open` state for history search form on back navigation ([7de1533](https://github.com/ts-factory/bublik-ui/commit/7de1533b40ca875ccf9213b884c66a003914a4e6)), closes [#383](https://github.com/ts-factory/bublik-ui/issues/383)
+
+#### 📦 Chores
+
+- **projects:** [config] update default project label ([6b6adef](https://github.com/ts-factory/bublik-ui/commit/6b6adef40630ef500d99f90dcce81524c5bde66b)), closes [#375](https://github.com/ts-factory/bublik-ui/issues/375)
+- **run:** remove forgotten `console.log` ([71173e7](https://github.com/ts-factory/bublik-ui/commit/71173e77acbb21ad33ec6a3f1c7c22d44f1f9268))
+
+---
+
+### Backend
+
+#### 🐛 Bug Fix
+
+- **auth:** fix invalid refresh flow from early access token validation ([d84bd31](https://github.com/ts-factory/bublik/commit/d84bd31a09bfca834e98a26a126ec94630dc7e34))
+
+#### 🚀 New Feature
+
+- **history:** add the ability to filter by run IDs ([e9ab083](https://github.com/ts-factory/bublik/commit/e9ab083106d40ac73c4bba5374ee2429009baeb3)), closes [#195](https://github.com/ts-factory/bublik/issues/195)
+
+#### 🧹 Cleanup
+
+- **history:** fix variable shadowing in test results pagination ([0caf3ee](https://github.com/ts-factory/bublik/commit/0caf3eeba3b7b80075be2ed05ab4c99f3065c219))
+- **auth:** organize imports and exports as required by ruff ([07617dc](https://github.com/ts-factory/bublik/commit/07617dc039e772b5ef96a892b0718d14b7522b3b))
