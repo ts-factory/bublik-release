@@ -1,8 +1,8 @@
 ---
-title: Release v2.0.1
+title: Release v2.0.2
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.0.1
+slug: release-v2.0.2
 ---
 
 import {
@@ -241,7 +241,7 @@ During the update, use `tmux` or `screen` to keep your session running in the ba
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.0.1`
+3. `git checkout v2.0.2`
 4. `./scripts/deploy --steps migrate_db`
 5. Activate the virtual environment: `source .env/bin/activate`
 6. Migrate configuration tags to meta: `python manage.py migrate_tags_config_to_meta`
@@ -263,7 +263,7 @@ Since assigning projects by meta can take a long time, it is recommended to spec
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.0.1`
+5. `git checkout v2.0.2`
 
 ### Documentation Update
 
@@ -271,7 +271,7 @@ Since assigning projects by meta can take a long time, it is recommended to spec
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.0.1`
+5. `git checkout v2.0.2`
 
 ### Docker Instance Update
 
@@ -283,6 +283,15 @@ Since assigning projects by meta can take a long time, it is recommended to spec
 6. `python manage.py reformat_configs`
 7. `python manage.py assign_project_by_meta -m <meta_name>` (meta name to split runs into projects; default: `PROJECT`)
 8. `python manage.py initialize_configs`
+
+:::tip
+After the update, the default dashboard appearance may differ from what you are used to, due to differences between project-specific and default configurations.  
+To restore the default dashboard to its previous look, go to the configuration manager and adjust the dashboard settings (`DASHBOARD_DATE`, `DASHBOARD_HEADER`, `DASHBOARD_PAYLOAD`, `DASHBOARD_RUNS_SORT`, `DASHBOARD_DEFAULT_MODE`) in the default configuration to match your project configuration.
+:::
+
+:::tip
+For readability and to avoid duplication, you can remove attributes from project configurations if their values match those in the corresponding default configurations.
+:::
 
 ---
 
@@ -385,10 +394,12 @@ Since assigning projects by meta can take a long time, it is recommended to spec
 - **importruns:** fix metadata error msg ([b37cfcc](https://github.com/ts-factory/bublik/commit/b37cfcc004d9397db83ca48fa3a646e3306006c4))
 - **management:** fix config validation after reformatting ([3f13f3d](https://github.com/ts-factory/bublik/commit/3f13f3d7c787121234e8456af40ea95ff3a6224f))
 - **urls:** fix run source URL construction ([46bd745](https://github.com/ts-factory/bublik/commit/46bd745f91d26d0ce4337e9a8a9886192429f833))
+- **importruns:** fix missing project link on reimport ([95a8bf7](https://github.com/ts-factory/bublik/commit/95a8bf714a6131fcfeb8b75a8b60b3e9209bf816))
+- **management:** fix meta validation on project assignment ([f3c1325](https://github.com/ts-factory/bublik/commit/f3c1325520430e4207c4df48d666235a981d0c02))
+- **management:** fix initial run detection for project assignment ([91bb153](https://github.com/ts-factory/bublik/commit/91bb1530f35dc680b9403b0495e3fd1e33ef0728))
 
 #### 🚀 New Feature
 
-- **deploy:** add stop option for side services management ([918cb04](https://github.com/ts-factory/bublik/commit/918cb043ecdd0fb58bfde06c253972343f9c8018))
 - **metatest:** enforce per-test comment uniqueness at the model level ([fa5b0e6](https://github.com/ts-factory/bublik/commit/fa5b0e6a1f5f8af1dcc0041bf77609b05eed3617))
 - **management:** enable merging of meta and tags configs to reduce complexity ([8ec0ea9](https://github.com/ts-factory/bublik/commit/8ec0ea9d6c1bcc0dcd370636a17b17edfedc540e))
 - **management:** simplify configs by merging tags into meta during their migration ([f44d3be](https://github.com/ts-factory/bublik/commit/f44d3bec40cfcae03ba8d86f457805ebf7f2fdc7))
@@ -419,6 +430,7 @@ Since assigning projects by meta can take a long time, it is recommended to spec
 - **management:** update config reformatting labels with project ([b54b56a](https://github.com/ts-factory/bublik/commit/b54b56a70fe330a2c3f2cf5febc5bb8854f1cc3b))
 - **urls:** update short URLs with project ([ec076d7](https://github.com/ts-factory/bublik/commit/ec076d779c48ad6f3303ed3d48a4de408e3a1c9b))
 - **management:** enable run reassignment based on meta values ([1da5485](https://github.com/ts-factory/bublik/commit/1da54856be6fb977d84299fc8b41830e54c923a1))
+- **deploy:** add stop option for side services management ([918cb04](https://github.com/ts-factory/bublik/commit/918cb043ecdd0fb58bfde06c253972343f9c8018))
 
 #### ♻️ Code Refactoring
 
