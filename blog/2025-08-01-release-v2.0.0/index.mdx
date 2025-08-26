@@ -284,6 +284,15 @@ Since assigning projects by meta can take a long time, it is recommended to spec
 7. `python manage.py assign_project_by_meta -m <meta_name>` (meta name to split runs into projects; default: `PROJECT`)
 8. `python manage.py initialize_configs`
 
+:::tip
+After the update, the default dashboard appearance may differ from what you are used to, due to differences between project-specific and default configurations.  
+To restore the default dashboard to its previous look, go to the configuration manager and adjust the dashboard settings (`DASHBOARD_DATE`, `DASHBOARD_HEADER`, `DASHBOARD_PAYLOAD`, `DASHBOARD_RUNS_SORT`, `DASHBOARD_DEFAULT_MODE`) in the default configuration to match your project configuration.
+:::
+
+:::tip
+For readability and to avoid duplication, you can remove attributes from project configurations if their values match those in the corresponding default configurations.
+:::
+
 ---
 
 ## Changelog
