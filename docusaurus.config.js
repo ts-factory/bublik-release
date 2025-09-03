@@ -103,7 +103,11 @@ const config = {
           { to: '/blog', label: 'Blog', position: 'left' },
         ],
       },
-      prism: { theme: themes.github, darkTheme: themes.dracula },
+      prism: {
+        theme: themes.github,
+        darkTheme: themes.oneDark,
+        additionalLanguages: ['bash'],
+      },
       zoom: {
         selector: '.markdown img',
         background: {
