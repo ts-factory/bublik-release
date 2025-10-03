@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbublik_release=self.webpackChunkbublik_release||[]).push([[1496],{7101:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/bublik-release/blog","page":1,"postsPerPage":10,"totalPages":4,"totalCount":37,"nextPage":"/bublik-release/blog/page/2","blogDescription":"The personal blog of Bublik","blogTitle":"Bublik Blog"}}')}}]);

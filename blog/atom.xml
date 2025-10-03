@@ -2,11 +2,179 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ts-factory.github.io/bublik-release/blog</id>
     <title>Bublik Blog</title>
-    <updated>2025-08-26T00:00:00.000Z</updated>
+    <updated>2025-10-02T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ts-factory.github.io/bublik-release/blog"/>
     <subtitle>Bublik Blog</subtitle>
     <icon>https://ts-factory.github.io/bublik-release/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Release v2.2.0]]></title>
+        <id>https://ts-factory.github.io/bublik-release/blog/release-v2.2.0</id>
+        <link href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0"/>
+        <updated>2025-10-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We're excited to announce the release of Bublik v2.2.0!]]></summary>
+        <content type="html"><![CDATA[<p>We're excited to announce the release of Bublik v2.2.0! <br>
+This update brings several improvements to configuration management, enhanced UI polish, and important bug fixes.</p>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="ui-improvements">UI Improvements<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#ui-improvements" class="hash-link" aria-label="Direct link to UI Improvements" title="Direct link to UI Improvements">​</a></h3>
+<ul>
+<li>Refined the settings dropdown with improved icon sizing and styling</li>
+<li>Updated the "Expose" button icon in test results for better clarity</li>
+<li>Made default history links bold for easier identification</li>
+<li>Fixed button disabled state colors for better visual consistency</li>
+<li>Dimmed placeholder text in input fields for improved readability</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="configuration-management-enhancements">Configuration Management Enhancements<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#configuration-management-enhancements" class="hash-link" aria-label="Direct link to Configuration Management Enhancements" title="Direct link to Configuration Management Enhancements">​</a></h3>
+<p>Added a new button to view configuration schemas, making it easier to understand config structure
+Improved config filtering to show only currently selected projects and configurations
+Better error handling and validation feedback in config creation and update forms</p>
+<p>Button to view config schema:</p>
+<p><img decoding="async" loading="lazy" alt="Config Schema Button" src="https://ts-factory.github.io/bublik-release/assets/images/config-1-788332e490aee5f6a369776627615052.webp" width="3350" height="2084" class="img_oIyv"></p>
+<p>Schema View:</p>
+<p><img decoding="async" loading="lazy" alt="Config Schema" src="https://ts-factory.github.io/bublik-release/assets/images/config-2-d9319ec21606a5ad811eb531f3b8c615.webp" width="3410" height="2119" class="img_oIyv"></p>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="new-link-to-history">New Link To History<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#new-link-to-history" class="hash-link" aria-label="Direct link to New Link To History" title="Direct link to New Link To History">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="New History Link" src="https://ts-factory.github.io/bublik-release/assets/images/run-link-3ed1e9d9d4451593e71efd432097977c.webp" width="1212" height="1099" class="img_oIyv"></p>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="user-experience-updates">User Experience Updates<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#user-experience-updates" class="hash-link" aria-label="Direct link to User Experience Updates" title="Direct link to User Experience Updates">​</a></h3>
+<p>Changed default links to point directly to history pages
+Adjusted admin-only actions visibility based on user permissions
+Improved project card display in config list view</p>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update">​</a></h3>
+<ol>
+<li><code>cd bublik</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v2.2.0</code></li>
+<li><code>./scripts/deploy --steps pip_requirements django_settings migrate_db per_project_conf run_services</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update">​</a></h3>
+<ol>
+<li>Trigger the workflow in your frontend repository</li>
+<li>Synchronize the mirrors</li>
+<li><code>cd bublik-ui</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v2.2.0</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update">​</a></h3>
+<ol>
+<li>Trigger the workflow in your frontend repository</li>
+<li>Synchronize the mirrors</li>
+<li><code>cd bublik-docs</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v2.2.0</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update">​</a></h3>
+<ol>
+<li>Add following variables to your <code>.env</code> file:</li>
+</ol>
+<div class="language-text codeBlockContainer_I4qe theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_gVNO"><pre tabindex="0" class="prism-code language-text codeBlock_esVv thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_z1D1"><span class="token-line" style="color:#393A34"><span class="token plain">BUBLIK_DOCKER_DJANGO_HOST_PROXY=127.0.0.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BUBLIK_DOCKER_TE_LOG_SERVER_HOST=127.0.0.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BUBLIK_DOCKER_DOCS_HOST=127.0.0.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">FLOWER_HOST=127.0.0.1</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">BUBLIK_DOCKER_BUBLIK_UI_HOST=127.0.0.1</span><br></span></code></pre></div></div>
+<blockquote>
+<p><strong>Note</strong> it's also recommended to change all references from <code>localhost</code> to <code>127.0.0.1</code></p>
+</blockquote>
+<ol start="2">
+<li><code>task backup:create</code></li>
+<li>Open your <code>.env</code> file and change <code>IMAGE_TAG</code> to <code>2.2.0</code></li>
+<li><code>task pull</code></li>
+<li><code>task up</code></li>
+<li><code>task shell</code> - to enter django container</li>
+<li><code>python manage.py reformat_configs</code></li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
+<ul>
+<li><strong>config:</strong> add button to view config schema (<a href="https://github.com/ts-factory/bublik-ui/commit/eed4e0b0b060cf379a348759b0d406c3fbbb0a5c" target="_blank" rel="noopener noreferrer">eed4e0b</a>)</li>
+<li><strong>config:</strong> show only projects/configs that are currently selected (<a href="https://github.com/ts-factory/bublik-ui/commit/9dd52b14868dd3af23bdf39b27c5cdc4668ae7b1" target="_blank" rel="noopener noreferrer">9dd52b1</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish">​</a></h4>
+<ul>
+<li><strong>config:</strong> [settings] improve sizing of icon and styling of dropdown (<a href="https://github.com/ts-factory/bublik-ui/commit/c0c26f6b668391cfc10a8b2958d4975dd5cc3b07" target="_blank" rel="noopener noreferrer">c0c26f6</a>)</li>
+<li><strong>run:</strong> [results] change <code>Expose</code> button icon (<a href="https://github.com/ts-factory/bublik-ui/commit/c131cb5341e176a2197156109f45cd036860084d" target="_blank" rel="noopener noreferrer">c131cb5</a>)</li>
+<li><strong>run:</strong> [results] make default history link bold (<a href="https://github.com/ts-factory/bublik-ui/commit/2106fa52a21ef196aac0d0fc9bbf1148e623de2a" target="_blank" rel="noopener noreferrer">2106fa5</a>)</li>
+<li><strong>ui:</strong> [button] fix disabled state color (<a href="https://github.com/ts-factory/bublik-ui/commit/9858ac1450960537634262ed3b9b40ebf507ebaa" target="_blank" rel="noopener noreferrer">9858ac1</a>)</li>
+<li><strong>ui:</strong> make placeholder text color dimmer for inputs (<a href="https://github.com/ts-factory/bublik-ui/commit/8b9d38dfb70ef5874c9da0023a1427e6ca2314cb" target="_blank" rel="noopener noreferrer">8b9d38d</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
+<ul>
+<li><strong>config:</strong> [update] display validation error in case of error (<a href="https://github.com/ts-factory/bublik-ui/commit/e4cdcce2ef269ceeaebc2f48886d5a7422113f7c" target="_blank" rel="noopener noreferrer">e4cdcce</a>)</li>
+<li><strong>config:</strong> outdated config list after auth (<a href="https://github.com/ts-factory/bublik-ui/commit/41c7b74fcc9e8379d0769ed7028378dd703a3641" target="_blank" rel="noopener noreferrer">41c7b74</a>)</li>
+<li><strong>config:</strong> overlapping editor line numbers (<a href="https://github.com/ts-factory/bublik-ui/commit/4366ff12c67a8c7e75e37ea120deff9154a7ebb8" target="_blank" rel="noopener noreferrer">4366ff1</a>)</li>
+<li><strong>dashboard:</strong> missing project name for selected project (<a href="https://github.com/ts-factory/bublik-ui/commit/534485d827d1087b5e7525e1352db13f41c53c63" target="_blank" rel="noopener noreferrer">534485d</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring">​</a></h4>
+<ul>
+<li><strong>config:</strong> [list] show all project cards by default (<a href="https://github.com/ts-factory/bublik-ui/commit/e6e89e091ae87ab8f3701de494739fca998ee0ea" target="_blank" rel="noopener noreferrer">e6e89e0</a>)</li>
+<li><strong>config:</strong> disable/hide admin only actions (<a href="https://github.com/ts-factory/bublik-ui/commit/2c0f7da5828b2592e6da87cd470ff680f179f631" target="_blank" rel="noopener noreferrer">2c0f7da</a>)</li>
+<li><strong>config:</strong> improve error handling for config create/update forms (<a href="https://github.com/ts-factory/bublik-ui/commit/e01691b031fd04f88a265d22aec777c54a66c076" target="_blank" rel="noopener noreferrer">e01691b</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
+<ul>
+<li><strong>config:</strong> remove redundant code (<a href="https://github.com/ts-factory/bublik-ui/commit/8509e01c9bfae956f97e4c9a39de8a78521cfd21" target="_blank" rel="noopener noreferrer">8509e01</a>)</li>
+<li><strong>run:</strong> [results] change order of result table columns (<a href="https://github.com/ts-factory/bublik-ui/commit/18f0ff6711bb62eb47f4dde03dbf17033dc92b83" target="_blank" rel="noopener noreferrer">18f0ff6</a>)</li>
+<li><strong>run:</strong> [results] swap <code>prefilled</code> and <code>direct</code> order (<a href="https://github.com/ts-factory/bublik-ui/commit/52e0ddf6ff76baac425c9f6163f8cbde75148da9" target="_blank" rel="noopener noreferrer">52e0ddf</a>)</li>
+<li><strong>run:</strong> change default link to direct to history (<a href="https://github.com/ts-factory/bublik-ui/commit/4dd7997716c3e09efa3223ff8dcf73164e531555" target="_blank" rel="noopener noreferrer">4dd7997</a>)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix-1">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-bug-fix-1" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
+<ul>
+<li><strong>urls:</strong> fix short URLs to work with multi-segment project names (<a href="https://github.com/ts-factory/bublik/commit/19bfad3884e38ca9d32a2056d087243c2e1e76f2" target="_blank" rel="noopener noreferrer">19bfad3</a>)</li>
+<li><strong>history:</strong> fix filtering by parameters (<a href="https://github.com/ts-factory/bublik/commit/99507f9306c216c130ea080c60844060cfb0cfba" target="_blank" rel="noopener noreferrer">99507f9</a>)</li>
+<li><strong>importruns:</strong> fix JSON log retrieval (<a href="https://github.com/ts-factory/bublik/commit/27af54e9adac6fcb3f1821c769a37582493b3109" target="_blank" rel="noopener noreferrer">27af54e</a>)</li>
+<li><strong>importruns:</strong> fix added tags count logging and redundant lookup (<a href="https://github.com/ts-factory/bublik/commit/3c75a932035e1c5466278b91ce7913170b574e5f" target="_blank" rel="noopener noreferrer">3c75a93</a>)</li>
+<li><strong>importruns:</strong> ensure runs are linked to projects in live import (<a href="https://github.com/ts-factory/bublik/commit/818833bfe07c721ff890241c4e7fbeee10e0faf6" target="_blank" rel="noopener noreferrer">818833b</a>)</li>
+<li><strong>management:</strong> ensure project configs migrate if missing (<a href="https://github.com/ts-factory/bublik/commit/8271c83fb66860cfa883fbca2ef34d3e42d2c7e6" target="_blank" rel="noopener noreferrer">8271c83</a>)</li>
+<li><strong>management:</strong> fix retired project recreation during config setup (<a href="https://github.com/ts-factory/bublik/commit/b1cdf530384ddd3640109f03fbbd28f290651e23" target="_blank" rel="noopener noreferrer">b1cdf53</a>)</li>
+<li><strong>management:</strong> prevent redundant validation errors in config reformatting (<a href="https://github.com/ts-factory/bublik/commit/0c2d59e703847b0635535fa20b9f2493f5912ea6" target="_blank" rel="noopener noreferrer">0c2d59e</a>)</li>
+<li><strong>management:</strong> ensure unique config content after reformatting (<a href="https://github.com/ts-factory/bublik/commit/6417dc907397268933f192781ee69af1c38d6ac9" target="_blank" rel="noopener noreferrer">6417dc9</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
+<ul>
+<li><strong>importruns:</strong> prioritize project name from import argument over meta (<a href="https://github.com/ts-factory/bublik/commit/e872219b4f9a9fa6aa0b941f111c178a38b51ae5" target="_blank" rel="noopener noreferrer">e872219</a>)</li>
+<li><strong>config:</strong> relax configuration content uniqueness (<a href="https://github.com/ts-factory/bublik/commit/c68f040140a46e930e0f2cbf1bac1f23e5977fd5" target="_blank" rel="noopener noreferrer">c68f040</a>)</li>
+<li><strong>management:</strong> improve access to full project meta categories (<a href="https://github.com/ts-factory/bublik/commit/c615ae719c56274ef42dc48e7dd2fd1f0b38a9c4" target="_blank" rel="noopener noreferrer">c615ae7</a>)</li>
+<li><strong>settings:</strong> enable colored output for console messages (<a href="https://github.com/ts-factory/bublik/commit/0c2c84fe0ac581115edac59a243ccc59ec0e6b1d" target="_blank" rel="noopener noreferrer">0c2c84f</a>)</li>
+<li><strong>config:</strong> improve meta config content (<a href="https://github.com/ts-factory/bublik/commit/1e7edfc74933a0bc0ef839ad351f337c82585377" target="_blank" rel="noopener noreferrer">1e7edfc</a>)</li>
+<li><strong>config:</strong> standardize selected meta categories (<a href="https://github.com/ts-factory/bublik/commit/9ace6ca60d0437d0c06bb10aebfcbc036096ffb1" target="_blank" rel="noopener noreferrer">9ace6ca</a>)</li>
+<li><strong>config:</strong> include meta config in initialized configs (<a href="https://github.com/ts-factory/bublik/commit/8eda6de18cc5e3a539f6e34bf47af30db5616264" target="_blank" rel="noopener noreferrer">8eda6de</a>)</li>
+<li><strong>config:</strong> enable dashboard navigation by default (<a href="https://github.com/ts-factory/bublik/commit/a60b03cb119fc468d77ec5e793237370786d918b" target="_blank" rel="noopener noreferrer">a60b03c</a>)</li>
+<li><strong>config:</strong> enforce project filters and permissions in queryset (<a href="https://github.com/ts-factory/bublik/commit/b9cb5776452fe8339edf743f660738f095c2c203" target="_blank" rel="noopener noreferrer">b9cb577</a>)</li>
+<li><strong>run data:</strong> add configuration to run details (<a href="https://github.com/ts-factory/bublik/commit/68173181bde7f349e8c471566fe3137605dd01a9" target="_blank" rel="noopener noreferrer">6817318</a>), closes <a href="https://github.com/ts-factory/bublik/issues/205" target="_blank" rel="noopener noreferrer">#205</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="️-code-refactoring">♻️ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#%EF%B8%8F-code-refactoring" class="hash-link" aria-label="Direct link to ♻️ Code Refactoring" title="Direct link to ♻️ Code Refactoring">​</a></h4>
+<ul>
+<li><strong>importruns:</strong> unify error logging (<a href="https://github.com/ts-factory/bublik/commit/9a712afdbf220b6e55bd0959aab7c79066c807fe" target="_blank" rel="noopener noreferrer">9a712af</a>)</li>
+<li><strong>config:</strong> ensure consistent activation on deletion (<a href="https://github.com/ts-factory/bublik/commit/ce626243c567cfd272afabf039e6db905e41a13e" target="_blank" rel="noopener noreferrer">ce62624</a>)</li>
+<li><strong>config:</strong> strengthen data integrity for active configs (<a href="https://github.com/ts-factory/bublik/commit/d5901cc1d7c485c7c84aa0669a48ce5d204e7ebe" target="_blank" rel="noopener noreferrer">d5901cc</a>)</li>
+<li><strong>config:</strong> ensure valid created value (<a href="https://github.com/ts-factory/bublik/commit/bd3dc1eeaf9306d506b5cce895100b111f86e97e" target="_blank" rel="noopener noreferrer">bd3dc1e</a>)</li>
+<li><strong>config:</strong> ensure clean and reliable version assignment (<a href="https://github.com/ts-factory/bublik/commit/2757a2afa63fa53f8f941a3a9acc3c8d22038323" target="_blank" rel="noopener noreferrer">2757a2a</a>)</li>
+<li><strong>config:</strong> ensure clean serialization and API (<a href="https://github.com/ts-factory/bublik/commit/9c00b76deec9fc51b3fb933d666c89affde378f0" target="_blank" rel="noopener noreferrer">9c00b76</a>)</li>
+<li><strong>management:</strong> remove misleading config names arg from meta categorization (<a href="https://github.com/ts-factory/bublik/commit/615582c34bb46f17916360bb3764b127c6dc16f3" target="_blank" rel="noopener noreferrer">615582c</a>)</li>
+<li><strong>config:</strong> remove redundant permission check (<a href="https://github.com/ts-factory/bublik/commit/b752268be03096d37a699aa8791dc5cc87f91f1f" target="_blank" rel="noopener noreferrer">b752268</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-chores-1">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-chores-1" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
+<ul>
+<li><strong>requirements:</strong> update packages versions to pick up bug fixes (<a href="https://github.com/ts-factory/bublik/commit/411aacd2cdb4fc7c7656b1f8648fa4aa8ba63451" target="_blank" rel="noopener noreferrer">411aacd</a>)</li>
+<li><strong>managemant:</strong> log config source directory in config migration command (<a href="https://github.com/ts-factory/bublik/commit/077bfc7243e0870c1083aa99777e0fdd873cbb81" target="_blank" rel="noopener noreferrer">077bfc7</a>)</li>
+<li><strong>management:</strong> clarify meta categorization project-specific logs (<a href="https://github.com/ts-factory/bublik/commit/e45a7eb865cbe2b0cc0ae05a729ca014a37a4c5e" target="_blank" rel="noopener noreferrer">e45a7eb</a>)</li>
+<li><strong>management:</strong> clarify the reformatting config label (<a href="https://github.com/ts-factory/bublik/commit/5656bde3762e93552318ac3bec840583e146eb08" target="_blank" rel="noopener noreferrer">5656bde</a>)</li>
+<li><strong>management:</strong> simplify reformatting log analysis by sorting configs (<a href="https://github.com/ts-factory/bublik/commit/a299f978d8f01f60655e914f700dae0bc4daf563" target="_blank" rel="noopener noreferrer">a299f97</a>)</li>
+<li><strong>management:</strong> improve readability of config reformatting logs (<a href="https://github.com/ts-factory/bublik/commit/403ceb44cefb119c88b4c00252371151a8175a24" target="_blank" rel="noopener noreferrer">403ceb4</a>)</li>
+<li><strong>config:</strong> annotate meta config JSON schema for clarity (<a href="https://github.com/ts-factory/bublik/commit/6e40f93c08e7a6ac8b0f47846f7e2f22d066cd98" target="_blank" rel="noopener noreferrer">6e40f93</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-cleanup">🧹 Cleanup<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.2.0#-cleanup" class="hash-link" aria-label="Direct link to 🧹 Cleanup" title="Direct link to 🧹 Cleanup">​</a></h4>
+<ul>
+<li><strong>run data:</strong> fix variable shadowing in metadata grouping (<a href="https://github.com/ts-factory/bublik/commit/68d92d17e6820367e8c3a37e2941622aeec8632f" target="_blank" rel="noopener noreferrer">68d92d1</a>)</li>
+</ul>]]></content>
+        <author>
+            <name>Kostromin Danil</name>
+            <uri>https://github.com/okt-limonikas</uri>
+        </author>
+        <author>
+            <name>Rybchenko Natalia</name>
+            <uri>https://github.com/ol-nata</uri>
+        </author>
+        <category label="release" term="release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Release v2.1.0]]></title>
         <id>https://ts-factory.github.io/bublik-release/blog/release-v2.1.0</id>
@@ -2242,28 +2410,6 @@ We also added common args for not processed points table to the report page.</p>
 </ul>
 <h4 class="anchor anchorWithStickyNavbar_TZsy" id="-reverts">🔄 Reverts<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.5#-reverts" class="hash-link" aria-label="Direct link to 🔄 Reverts" title="Direct link to 🔄 Reverts">​</a></h4>
 <p>Revert "chore(log,run): changed option to show full run details by default" (<a href="https://github.com/ts-factory/bublik-ui/commit/264849e9635746dea6a9bd541b73830875e75c6a" target="_blank" rel="noopener noreferrer">264849e</a>)</p>]]></content>
-        <author>
-            <name>Kostromin Danil</name>
-            <uri>https://github.com/okt-limonikas</uri>
-        </author>
-        <category label="release" term="release"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Release v0.3.4]]></title>
-        <id>https://ts-factory.github.io/bublik-release/blog/release-v0.3.4</id>
-        <link href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.4"/>
-        <updated>2024-08-16T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[We are happy to announce Bublik v0.3.4.]]></summary>
-        <content type="html"><![CDATA[<p>We are happy to announce <strong>Bublik v0.3.4</strong>.</p>
-<p>This minor release addresses a critical bug in the report page functionality.
-Previously, reports were not displaying all available data, potentially leading to incomplete analysis.</p>
-<p>We have resolved this issue, ensuring that all relevant information is now properly presented in the reports.</p>
-<h2 class="anchor anchorWithStickyNavbar_TZsy" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.4#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.4#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.4#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
-<ul>
-<li><strong>report:</strong> ensure all test blocks are displayed in the report (<a href="https://github.com/ts-factory/bublik-ui/commit/658540b28cd65d25c7cfa90d5003831905ec467e" target="_blank" rel="noopener noreferrer">658540b</a>)</li>
-</ul>]]></content>
         <author>
             <name>Kostromin Danil</name>
             <uri>https://github.com/okt-limonikas</uri>
