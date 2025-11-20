@@ -1,11 +1,11 @@
 ---
-title: Release v2.4.0
+title: Release v2.4.1
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.4.0
+slug: release-v2.4.1
 ---
 
-We’re pleased to announce Bublik v2.4.0. In this release, we improved overall performance, in particular for charts with large datasets, enhanced the import UI, and added run comments. We also fixed issues in deployment, live import, reports, and history, and made configurations more reliable by automatically filling missing required attributes from defaults to prevent errors during runtime.
+We’re pleased to announce Bublik v2.4.1. In this release, we improved overall performance, in particular for charts with large datasets, enhanced the import UI, and added run comments. We also fixed issues in deployment, live import, reports, and history, and made configurations more reliable by automatically filling missing required attributes from defaults to prevent errors during runtime.
 
 ### What's New
 
@@ -59,7 +59,7 @@ Added support for comments on run details page
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.4.0`
+3. `git checkout v2.4.1`
 4. `./scripts/deploy --steps pip_requirements run_services`
 
 ### Frontend Update
@@ -68,7 +68,7 @@ Added support for comments on run details page
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.4.0`
+5. `git checkout v2.4.1`
 
 ### Documentation Update
 
@@ -76,12 +76,12 @@ Added support for comments on run details page
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.4.0`
+5. `git checkout v2.4.1`
 
 ### Docker Instance Update
 
 1. `task backup:create`
-2. Open your `.env` file and change `IMAGE_TAG` to `2.4.0`
+2. Open your `.env` file and change `IMAGE_TAG` to `2.4.1`
 5. `task pull`
 6. `task up`
 
