@@ -4,10 +4,113 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/blog</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Mon, 08 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 18 Dec 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v2.6.0]]></title>
+            <link>https://ts-factory.github.io/bublik-release/blog/release-v2.6.0</link>
+            <guid>https://ts-factory.github.io/bublik-release/blog/release-v2.6.0</guid>
+            <pubDate>Thu, 18 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Bublik v2.6.0 introduces new capabilities in run reports, including stacked chart mode for overlaying multiple charts for easier comparison and analysis, as well as multi-argument chart overlays. It also fixes several issues related to argument display.]]></description>
+            <content:encoded><![CDATA[<p>Bublik v2.6.0 introduces new capabilities in run reports, including stacked chart mode for overlaying multiple charts for easier comparison and analysis, as well as multi-argument chart overlays. It also fixes several issues related to argument display.</p>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="whats-new">What's New<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New">​</a></h3>
+<p><strong>Multi-Argument Chart Overlays in Reports</strong> <br>
+Specify multiple overlay arguments in the configuration to display corresponding data series on the same axes for easier comparison.</p>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="report-multi-argument-chart-overlays">Report Multi-Argument Chart Overlays<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#report-multi-argument-chart-overlays" class="hash-link" aria-label="Direct link to Report Multi-Argument Chart Overlays" title="Direct link to Report Multi-Argument Chart Overlays">​</a></h3>
+<p>The report configuration now supports grouping data within a single record series across multiple arguments.</p>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="overlay-configuration">Overlay Configuration<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#overlay-configuration" class="hash-link" aria-label="Direct link to Overlay Configuration" title="Direct link to Overlay Configuration">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Overlayed Charts" src="https://ts-factory.github.io/bublik-release/assets/images/stacked-4-a7f535c413c13c7d7488cf92c1a1d1e4.webp" width="3346" height="2084" class="img_oIyv"></p>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="overlayed-charts">Overlayed Charts<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#overlayed-charts" class="hash-link" aria-label="Direct link to Overlayed Charts" title="Direct link to Overlayed Charts">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Overlay Config" src="https://ts-factory.github.io/bublik-release/assets/images/stacked-3-204dcd8c036f0fe6455562a6e0f3a95e.webp" width="2882" height="1358" class="img_oIyv"></p>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="stacked-charts">Stacked Charts<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#stacked-charts" class="hash-link" aria-label="Direct link to Stacked Charts" title="Direct link to Stacked Charts">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="how-to-use">How to use:<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#how-to-use" class="hash-link" aria-label="Direct link to How to use:" title="Direct link to How to use:">​</a></h4>
+<ul>
+<li>Click the <strong>plus</strong> button to select additional charts for stacking</li>
+<li>Selected charts appear in the bottom right corner</li>
+<li>All stacked charts display together on a unified plot</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="button-to-add-for-stacked-charts">Button to add for stacked charts<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#button-to-add-for-stacked-charts" class="hash-link" aria-label="Direct link to Button to add for stacked charts" title="Direct link to Button to add for stacked charts">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Stacked Chart Mode Button" src="https://ts-factory.github.io/bublik-release/assets/images/stacked-1-b4f3b53418b4387f6d242d30d746b48e.webp" width="3358" height="2084" class="img_oIyv"></p>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="stacked-charts-1">Stacked Charts<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#stacked-charts-1" class="hash-link" aria-label="Direct link to Stacked Charts" title="Direct link to Stacked Charts">​</a></h4>
+<p><img decoding="async" loading="lazy" alt="Stacked Chart Mode" src="https://ts-factory.github.io/bublik-release/assets/images/stacked-2-0efa47693a51109a10d55dc6f0c04ef2.webp" width="3358" height="2084" class="img_oIyv"></p>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_BWK7 alert alert--success"><div class="admonitionHeading_Jem6"><span class="admonitionIcon_DNfu"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_jszF"><p>Before starting the update, create a database backup to ensure data safety in case of any unexpected issues during the process.</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update">​</a></h3>
+<ol>
+<li><code>cd bublik</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v2.6.0</code></li>
+<li><code>./scripts/deploy --steps per_project_conf run_services</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update">​</a></h3>
+<ol>
+<li>Trigger the workflow in your frontend repository</li>
+<li>Synchronize the mirrors</li>
+<li><code>cd bublik-ui</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v2.6.0</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update">​</a></h3>
+<ol>
+<li>Trigger the workflow in your frontend repository</li>
+<li>Synchronize the mirrors</li>
+<li><code>cd bublik-docs</code></li>
+<li><code>git remote update</code></li>
+<li><code>git checkout v2.6.0</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update">​</a></h3>
+<ol>
+<li><code>task backup:create</code></li>
+<li>Open your <code>.env</code> file and change <code>IMAGE_TAG</code> to <code>2.6.0</code></li>
+<li><code>task pull</code></li>
+<li><code>task up</code></li>
+<li><code>task shell</code> - to enter django container</li>
+<li><code>python manage.py reformat_configs</code></li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
+<ul>
+<li><strong>report:</strong> [chart] add stacked charts support for report (<a href="https://github.com/ts-factory/bublik-ui/commit/e4f4cc82bb91059ba200ded89164c960fb6b39c5" target="_blank" rel="noopener noreferrer">e4f4cc8</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish">​</a></h4>
+<ul>
+<li><strong>run:</strong> [result-table] fix history split button icon being on top of header (<a href="https://github.com/ts-factory/bublik-ui/commit/d47cd2e88996021d2c07c81264366209d3e7f5fe" target="_blank" rel="noopener noreferrer">d47cd2e</a>)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
+<ul>
+<li><strong>report:</strong> fix sequences argument move (<a href="https://github.com/ts-factory/bublik/commit/e42db0e66247619477409eea4f126ccebb932f9c" target="_blank" rel="noopener noreferrer">e42db0e</a>)</li>
+<li><strong>report:</strong> ensure consistent argument display (<a href="https://github.com/ts-factory/bublik/commit/19fc68dcb62c71e6a6e24c5e226970dd0c5ee869" target="_blank" rel="noopener noreferrer">19fc68d</a>)</li>
+<li><strong>report:</strong> fix iteration vs common test argument duplication (<a href="https://github.com/ts-factory/bublik/commit/2f98ea5c8735384d581d65c81c807904bf2ff2cd" target="_blank" rel="noopener noreferrer">2f98ea5</a>)</li>
+<li><strong>config:</strong> disallow extra keys in report config to avoid confusion (<a href="https://github.com/ts-factory/bublik/commit/36c5e4dc03de7a9b05bd64b861e91eb08dc67587" target="_blank" rel="noopener noreferrer">36c5e4d</a>)</li>
+<li><strong>report:</strong> fix overlay settings retrieval for new config format (<a href="https://github.com/ts-factory/bublik/commit/d2b1619aa325aaa3e509b274f157e9a9694713ed" target="_blank" rel="noopener noreferrer">d2b1619</a>)</li>
+<li><strong>config:</strong> ensure uniqueness of base series in test report (<a href="https://github.com/ts-factory/bublik/commit/3de9af1e0531a7d9637def89c5ceaaadd79b92d3" target="_blank" rel="noopener noreferrer">3de9af1</a>)</li>
+<li><strong>config:</strong> validate report configs for overlay argument conflicts (<a href="https://github.com/ts-factory/bublik/commit/2982a55145024e923f9e4ba9cf7cc7dd97721ed2" target="_blank" rel="noopener noreferrer">2982a55</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
+<ul>
+<li><strong>config:</strong> enable overlay charts by multiple args (<a href="https://github.com/ts-factory/bublik/commit/fe4841c4735df9d906af597a09551a9143cec6f1" target="_blank" rel="noopener noreferrer">fe4841c</a>)</li>
+<li><strong>report:</strong> extend overlay processing for multi-argument overlays (<a href="https://github.com/ts-factory/bublik/commit/e89f4cb630c50ebe64519ef7e2638510aba872c0" target="_blank" rel="noopener noreferrer">e89f4cb</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="️-code-refactoring">♻️ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#%EF%B8%8F-code-refactoring" class="hash-link" aria-label="Direct link to ♻️ Code Refactoring" title="Direct link to ♻️ Code Refactoring">​</a></h4>
+<ul>
+<li><strong>report:</strong> clean up test config access (<a href="https://github.com/ts-factory/bublik/commit/c21e8527f7021b4c6ccb63f721ae02e9f75b6546" target="_blank" rel="noopener noreferrer">c21e852</a>)</li>
+<li><strong>config:</strong> rename overlaying settings key in report config (<a href="https://github.com/ts-factory/bublik/commit/ab8b0fb8103f0909fd186653726669026de5a178" target="_blank" rel="noopener noreferrer">ab8b0fb</a>)</li>
+<li><strong>report:</strong> standardize terminology for data series (<a href="https://github.com/ts-factory/bublik/commit/6db786cceaf9a950ffd63a01f3b9dc2313c2c7f6" target="_blank" rel="noopener noreferrer">6db786c</a>)</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.6.0#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
+<ul>
+<li><strong>config:</strong> clarify report sequences settings descriptions (<a href="https://github.com/ts-factory/bublik/commit/3f13075da825948e60f85f1ac101044394fcdf16" target="_blank" rel="noopener noreferrer">3f13075</a>)</li>
+<li><strong>management:</strong> enable reformat to rename overlay settings key in report configs (<a href="https://github.com/ts-factory/bublik/commit/990225ebcae3ec9fa7a6cada09d7fd5b58610ba0" target="_blank" rel="noopener noreferrer">990225e</a>)</li>
+<li><strong>management:</strong> enable report configs reformat to overlay charts by multiple args (<a href="https://github.com/ts-factory/bublik/commit/9f37dd67261bb590cf1ae59f89e4d982a6527d9c" target="_blank" rel="noopener noreferrer">9f37dd6</a>)</li>
+</ul>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v2.5.0]]></title>
             <link>https://ts-factory.github.io/bublik-release/blog/release-v2.5.0</link>
@@ -2515,27 +2618,6 @@ We’ve also introduced a more flexible report system with detailed configuratio
 <li><strong>cleanup:</strong> fix reprs of models objects using f-strings (<a href="https://github.com/ts-factory/bublik/commit/6ddf4d8f3bf64e385943c19b6f219522ee83659a" target="_blank" rel="noopener noreferrer">6ddf4d8</a>)</li>
 <li><strong>cleanup:</strong> add typing of class variables (<a href="https://github.com/ts-factory/bublik/commit/7ddbcb31808e0d285586ca76e929e57fc72dd7eb" target="_blank" rel="noopener noreferrer">7ddbcb3</a>)</li>
 <li><strong>report:</strong> fix f-string quotes error (<a href="https://github.com/ts-factory/bublik/commit/0c20433a93ad4c902d94c3b054e1c043ea87955c" target="_blank" rel="noopener noreferrer">0c20433</a>)</li>
-</ul>]]></content:encoded>
-            <category>release</category>
-        </item>
-        <item>
-            <title><![CDATA[Release v0.3.7]]></title>
-            <link>https://ts-factory.github.io/bublik-release/blog/release-v0.3.7</link>
-            <guid>https://ts-factory.github.io/bublik-release/blog/release-v0.3.7</guid>
-            <pubDate>Tue, 10 Sep 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[We are happy to announce Bublik v0.3.7.]]></description>
-            <content:encoded><![CDATA[<p>We are happy to announce <strong>Bublik v0.3.7</strong>.</p>
-<p>In this release we've fixed small bug with markdown preview overflowing modal.
-Also we've added more meta information for creating new bugs on log page such as hash, CMD, link to full log and link to saved location if you clicked on log line number.</p>
-<h2 class="anchor anchorWithStickyNavbar_TZsy" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.7#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.7#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.7#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h3>
-<ul>
-<li><strong>run,log:</strong> fix text overflow in new bug preview modal (<a href="https://github.com/ts-factory/bublik-ui/commit/bb556e4284dad76f006a631dd64195d1eeb18b47" target="_blank" rel="noopener noreferrer">bb556e4</a>)</li>
-</ul>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v0.3.7#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h3>
-<ul>
-<li><strong>log:</strong> added new field to markdown from te-log-meta (<a href="https://github.com/ts-factory/bublik-ui/commit/cb3692f3c72f148540623f9bc176c0d9dc28fa14" target="_blank" rel="noopener noreferrer">cb3692f</a>)</li>
 </ul>]]></content:encoded>
             <category>release</category>
         </item>
