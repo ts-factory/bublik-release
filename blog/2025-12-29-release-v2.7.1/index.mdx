@@ -1,11 +1,11 @@
 ---
-title: Release v2.7.0
+title: Release v2.7.1
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.7.0
+slug: release-v2.7.1
 ---
 
-We’re excited to announce Bublik v2.7.0! In this release, we’ve fixed incorrect tag display, added filtering to history measurement series charts, and introduced quick access to reports directly from the dashboard.
+We’re excited to announce Bublik v2.7.1! In this release, we’ve fixed incorrect tag display, added filtering to history measurement series charts, and introduced quick access to reports directly from the dashboard.
 
 ### What's New
 
@@ -39,7 +39,7 @@ To enable navigation to the most recent report from the dashboard, set `go_repor
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.7.0`
+3. `git checkout v2.7.1`
 4. `./scripts/deploy --steps django_settings run_services`
 5. Activate the virtual environment: `source .env/bin/activate`
 6. Create project cache: `python manage.py project_cache create`
@@ -50,7 +50,7 @@ To enable navigation to the most recent report from the dashboard, set `go_repor
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.7.0`
+5. `git checkout v2.7.1`
 
 ### Documentation Update
 
@@ -58,12 +58,12 @@ To enable navigation to the most recent report from the dashboard, set `go_repor
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.7.0`
+5. `git checkout v2.7.1`
 
 ### Docker Instance Update
 
 1. `task backup:create`
-2. Open your `.env` file and change `IMAGE_TAG` to `2.7.0`
+2. Open your `.env` file and change `IMAGE_TAG` to `2.7.1`
 3. `task pull`
 4. `task up`
 5. `task shell`
@@ -83,6 +83,12 @@ To enable navigation to the most recent report from the dashboard, set `go_repor
 - **measurements:** add y-axis label to chart name ([6022ccb](https://github.com/ts-factory/bublik-ui/commit/6022ccb2ccb80399f155f525235c225a4b09a89b))
 - **report:** improve scrolling to item when clickin on TOC item ([1162833](https://github.com/ts-factory/bublik-ui/commit/116283354d70245d5a4e74cd50ee15e0fe8cb9d3))
 - **version:** crash on safari for `NaN` date ([b06a215](https://github.com/ts-factory/bublik-ui/commit/b06a2158fea89b7f8cb36f42b274f0432208100b))
+- **report:** [chart] mismatch between legend and line colors ([939158f](https://github.com/ts-factory/bublik-ui/commit/939158f0a46bb51adf533b80f31b34007fb51489))
+- **report:** circular imports for cause by report args and warning hover card ([1bb733f](https://github.com/ts-factory/bublik-ui/commit/1bb733f3d9ceca61e7a1c59c8580a7bacd36aa04))
+
+#### 💅 Polish
+
+- **ui:** fix ";" symbol at the end of run report ([22c0009](https://github.com/ts-factory/bublik-ui/commit/22c00091d838f3d837ea4a832594f7b5e4a34fc9))
 
 
 #### ♻️ Code Refactoring
