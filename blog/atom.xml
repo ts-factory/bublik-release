@@ -8,64 +8,64 @@
     <subtitle>Bublik Blog</subtitle>
     <icon>https://ts-factory.github.io/bublik-release/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[Release v2.9.0]]></title>
-        <id>https://ts-factory.github.io/bublik-release/blog/release-v2.9.0</id>
-        <link href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0"/>
+        <title type="html"><![CDATA[Release v2.9.1]]></title>
+        <id>https://ts-factory.github.io/bublik-release/blog/release-v2.9.1</id>
+        <link href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1"/>
         <updated>2026-02-10T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[We're excited to announce Bublik v2.9.0!]]></summary>
-        <content type="html"><![CDATA[<p>We're excited to announce Bublik v2.9.0!
+        <summary type="html"><![CDATA[We're excited to announce Bublik v2.9.1!]]></summary>
+        <content type="html"><![CDATA[<p>We're excited to announce Bublik v2.9.1!
 This release focuses on frontend usability and clarity, with faster run navigation, better chart readability, and clearer time context in the UI. We also unified error handling across the backend to ensure consistent response formats, enabling a uniform error experience in the UI, enhanced the security of user-facing error data, and improved initial load performance.</p>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="whats-new">What's New<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="whats-new">What's New<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New">​</a></h3>
 <p><strong>Clickable Run ID Copy</strong> <br>
 Run IDs can now be copied directly from a clickable value, making it faster to grab the ID you need.</p>
 <p><strong>Clearer Chart Colors</strong> <br>
 Improved color contrast makes charts easier to read at a glance.</p>
-<h2 class="anchor anchorWithStickyNavbar_TZsy" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="clickable-run-id-copy">Clickable Run ID Copy<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#clickable-run-id-copy" class="hash-link" aria-label="Direct link to Clickable Run ID Copy" title="Direct link to Clickable Run ID Copy">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="clickable-run-id-copy">Clickable Run ID Copy<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#clickable-run-id-copy" class="hash-link" aria-label="Direct link to Clickable Run ID Copy" title="Direct link to Clickable Run ID Copy">​</a></h3>
 <p><img decoding="async" loading="lazy" alt="Clickable Run ID Copy" src="https://ts-factory.github.io/bublik-release/assets/images/copy-e86ed60f251d7334d382b80a9cba9821.webp" width="596" height="302" class="img_oIyv"></p>
-<h2 class="anchor anchorWithStickyNavbar_TZsy" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update">​</a></h3>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update">​</a></h3>
 <ol>
 <li><code>cd bublik</code></li>
 <li><code>git remote update</code></li>
-<li><code>git checkout v2.9.0</code></li>
+<li><code>git checkout v2.9.1</code></li>
 <li><code>./scripts/deploy --steps pip_requirements django_settings run_services</code></li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update">​</a></h3>
 <ol>
 <li>Trigger the workflow in your frontend repository</li>
 <li>Synchronize the mirrors</li>
 <li><code>cd bublik-ui</code></li>
 <li><code>git remote update</code></li>
-<li><code>git checkout v2.9.0</code></li>
+<li><code>git checkout v2.9.1</code></li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update">​</a></h3>
 <ol>
 <li>Trigger the workflow in your frontend repository</li>
 <li>Synchronize the mirrors</li>
 <li><code>cd bublik-docs</code></li>
 <li><code>git remote update</code></li>
-<li><code>git checkout v2.9.0</code></li>
+<li><code>git checkout v2.9.1</code></li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update">​</a></h3>
 <ol>
 <li><code>task backup:create</code></li>
-<li>Open your <code>.env</code> file and change <code>IMAGE_TAG</code> to <code>2.9.0</code></li>
+<li>Open your <code>.env</code> file and change <code>IMAGE_TAG</code> to <code>2.9.1</code></li>
 <li><code>task pull</code></li>
 <li><code>task up</code></li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_TZsy" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
+<h2 class="anchor anchorWithStickyNavbar_TZsy" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
 <ul>
 <li><strong>run:</strong> change run ID copy method to clickable value (<a href="https://github.com/ts-factory/bublik-ui/commit/49820853cd282e9b88253b06b749a56aae6f7b32" target="_blank" rel="noopener noreferrer">4982085</a>), closes <a href="https://github.com/ts-factory/bublik-ui/issues/486" target="_blank" rel="noopener noreferrer">#486</a></li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish">​</a></h4>
 <ul>
 <li><strong>report:</strong> improve color contrast for charts (<a href="https://github.com/ts-factory/bublik-ui/commit/9164a0d30feb355216de35591b94eb7e6d6c06d3" target="_blank" rel="noopener noreferrer">9164a0d</a>)</li>
 <li><strong>run:</strong> replace "id" with "ID" in Compare Runs form instruction (<a href="https://github.com/ts-factory/bublik-ui/commit/f338115fdbca47802b510614238295ebe45ffa04" target="_blank" rel="noopener noreferrer">f338115</a>), closes <a href="https://github.com/ts-factory/bublik-ui/issues/497" target="_blank" rel="noopener noreferrer">#497</a></li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
 <ul>
 <li><strong>log:</strong> [preview] fix history link dropdown not visible (<a href="https://github.com/ts-factory/bublik-ui/commit/847d541c47d122609d3eee9dd8ecd2a7a7a5cb93" target="_blank" rel="noopener noreferrer">847d541</a>)</li>
 <li><strong>run:</strong> [details] not showing skeleton while details loading (<a href="https://github.com/ts-factory/bublik-ui/commit/492e72eccfa7eec6e772be584764fa1353b914a8" target="_blank" rel="noopener noreferrer">492e72e</a>)</li>
@@ -74,8 +74,9 @@ Improved color contrast makes charts easier to read at a glance.</p>
 <li><strong>runs:</strong> filter runs by clicked conclusion in bar chart modal (<a href="https://github.com/ts-factory/bublik-ui/commit/489dfb06ac43119aa950923ec6ef3c6eeea7fe8c" target="_blank" rel="noopener noreferrer">489dfb0</a>)</li>
 <li><strong>run:</strong> show timezone offset in GMT format for dates column header (<a href="https://github.com/ts-factory/bublik-ui/commit/80cd57605c5a021cc5c3405ac4b580b3097e81d8" target="_blank" rel="noopener noreferrer">80cd576</a>)</li>
 <li><strong>types:</strong> update component types for React 19 compatibility and fix lint issues (<a href="https://github.com/ts-factory/bublik-ui/commit/6429c60fe47a90d8c4f915837362440e8674259b" target="_blank" rel="noopener noreferrer">6429c60</a>)</li>
+<li><strong>result:</strong> crash caused by incorrect import from react-router (<a href="https://github.com/ts-factory/bublik-ui/commit/a9ce75c20836134db1af29b765f33dcee609f4b5" target="_blank" rel="noopener noreferrer">a9ce75c</a>)</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring">​</a></h4>
 <ul>
 <li><strong>api:</strong> add support for backend unified error format (<a href="https://github.com/ts-factory/bublik-ui/commit/5dbd1a735122147240648b709b1adf91c79615aa" target="_blank" rel="noopener noreferrer">5dbd1a7</a>)</li>
 <li><strong>form:</strong> update <code>setErrorsOnForm</code> to handle new API error format (<a href="https://github.com/ts-factory/bublik-ui/commit/ae3d6d1c0693961a3e7e6c4a8984086f253ab440" target="_blank" rel="noopener noreferrer">ae3d6d1</a>)</li>
@@ -85,7 +86,7 @@ Improved color contrast makes charts easier to read at a glance.</p>
 <li><strong>form:</strong> use <code>setErrorsOnForm</code> in update-config-form (<a href="https://github.com/ts-factory/bublik-ui/commit/ed5f1fa398f0d9029872b337650596740e862f0f" target="_blank" rel="noopener noreferrer">ed5f1fa</a>)</li>
 <li><strong>form:</strong> use <code>setErrorsOnForm</code> in update-project-modal (<a href="https://github.com/ts-factory/bublik-ui/commit/2cd40cc0a6e3985105ac0516caecd3d9c0eff728" target="_blank" rel="noopener noreferrer">2cd40cc</a>)</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
 <ul>
 <li>add github issue and feature request templates (<a href="https://github.com/ts-factory/bublik-ui/commit/ebeadd192fe271e4fe87e0cddf116ac261bb5a0a" target="_blank" rel="noopener noreferrer">ebeadd1</a>)</li>
 <li><strong>build:</strong> remove deprecated cacheDir from vite configurations (<a href="https://github.com/ts-factory/bublik-ui/commit/699528fda69da0b47a6076c892bb8ab71b2e84fa" target="_blank" rel="noopener noreferrer">699528f</a>)</li>
@@ -95,18 +96,18 @@ Improved color contrast makes charts easier to read at a glance.</p>
 <li><strong>run:</strong> [details] remove unused import (<a href="https://github.com/ts-factory/bublik-ui/commit/e8c659837b41e8d6e6eaa8e1b4cd27b932d3c3c2" target="_blank" rel="noopener noreferrer">e8c6598</a>)</li>
 <li><strong>storybook:</strong> remove storybook configuration and all story files (<a href="https://github.com/ts-factory/bublik-ui/commit/557ae8a9fdd96cfb766101036cd1b17683cb2faa" target="_blank" rel="noopener noreferrer">557ae8a</a>)</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-performance-improvements">⚡ Performance Improvements<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-performance-improvements" class="hash-link" aria-label="Direct link to ⚡ Performance Improvements" title="Direct link to ⚡ Performance Improvements">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-performance-improvements">⚡ Performance Improvements<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-performance-improvements" class="hash-link" aria-label="Direct link to ⚡ Performance Improvements" title="Direct link to ⚡ Performance Improvements">​</a></h4>
 <ul>
 <li>improve initial loading for application (<a href="https://github.com/ts-factory/bublik-ui/commit/bfdc78fc1145dff218e6c5fc624d39485135387d" target="_blank" rel="noopener noreferrer">bfdc78f</a>)</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-tests">✅ Tests<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-tests" class="hash-link" aria-label="Direct link to ✅ Tests" title="Direct link to ✅ Tests">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-tests">✅ Tests<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-tests" class="hash-link" aria-label="Direct link to ✅ Tests" title="Direct link to ✅ Tests">​</a></h4>
 <ul>
 <li><strong>deps:</strong> upgrade tests for compatability with nx 22 (<a href="https://github.com/ts-factory/bublik-ui/commit/904549f0dbaee9f3a411a572ba40b764e9f60f32" target="_blank" rel="noopener noreferrer">904549f</a>)</li>
 <li><strong>form:</strong> add comprehensive tests for setErrorsOnForm (<a href="https://github.com/ts-factory/bublik-ui/commit/e16c63e09a885a2568a29045f97f2d010b6a9773" target="_blank" rel="noopener noreferrer">e16c63e</a>)</li>
 </ul>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix-1">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-bug-fix-1" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
+<h3 class="anchor anchorWithStickyNavbar_TZsy" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-bug-fix-1">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-bug-fix-1" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix">​</a></h4>
 <ul>
 <li><strong>auth:</strong> ensure consistent error handling and secure system exception logging (<a href="https://github.com/ts-factory/bublik/commit/68b6e2a627f5586dce1b453fb014caef64d28c90" target="_blank" rel="noopener noreferrer">68b6e2a</a>)</li>
 <li><strong>log:</strong> ensure consistent error handling and secure system exception logging (<a href="https://github.com/ts-factory/bublik/commit/a3c3fd838c97046a44ec3fb66c30c89e52cca9d8" target="_blank" rel="noopener noreferrer">a3c3fd8</a>)</li>
@@ -114,11 +115,11 @@ Improved color contrast makes charts easier to read at a glance.</p>
 <li><strong>results:</strong> ensure consistent error handling and secure system exception logging (<a href="https://github.com/ts-factory/bublik/commit/bcd62c8a9ca72f07e345cbf368367315f89edf3f" target="_blank" rel="noopener noreferrer">bcd62c8</a>)</li>
 <li><strong>tasks:</strong> make importruns error logs safer (<a href="https://github.com/ts-factory/bublik/commit/716c5ff5f6c6f8f05b653f1a0ea700f396fda2c0" target="_blank" rel="noopener noreferrer">716c5ff</a>)</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature">​</a></h4>
 <ul>
 <li><strong>events:</strong> add endpoint to fetch run by Celery task ID (<a href="https://github.com/ts-factory/bublik/commit/a2d440888afea6aeadaca186b2a1547d9276f2ec" target="_blank" rel="noopener noreferrer">a2d4408</a>), related to <a href="https://github.com/ts-factory/bublik/issues/272" target="_blank" rel="noopener noreferrer">#272</a></li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-chores-1">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-chores-1" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-chores-1">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-chores-1" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores">​</a></h4>
 <ul>
 <li><strong>requirements:</strong> update <code>python-dateutil</code> to fix deprecation warnings (<a href="https://github.com/ts-factory/bublik/commit/133d486a86aa60e507b01c94b2c69c0902f12947" target="_blank" rel="noopener noreferrer">133d486</a>)</li>
 <li><strong>requirements:</strong> update Django version to pick up bug fixes (<a href="https://github.com/ts-factory/bublik/commit/dd0fd34c9d8e70dce0c7248d06fa5d13a5837be5" target="_blank" rel="noopener noreferrer">dd0fd34</a>)</li>
@@ -127,7 +128,7 @@ Improved color contrast makes charts easier to read at a glance.</p>
 <li><strong>settings:</strong> redirect error logs to separate file for easier debugging (<a href="https://github.com/ts-factory/bublik/commit/a05642be11f6de5360da754ad8b77c899ab23725" target="_blank" rel="noopener noreferrer">a05642b</a>)</li>
 <li><strong>logging:</strong> redirect Celery errors to error.log for consolidated tracking (<a href="https://github.com/ts-factory/bublik/commit/83d05667eeb28e90b165caf7f6da62a6d71ccd43" target="_blank" rel="noopener noreferrer">83d0566</a>)</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="️-code-refactoring">♻️ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#%EF%B8%8F-code-refactoring" class="hash-link" aria-label="Direct link to ♻️ Code Refactoring" title="Direct link to ♻️ Code Refactoring">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="️-code-refactoring">♻️ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#%EF%B8%8F-code-refactoring" class="hash-link" aria-label="Direct link to ♻️ Code Refactoring" title="Direct link to ♻️ Code Refactoring">​</a></h4>
 <ul>
 <li><strong>exceptions:</strong> improve handling and normalize error responses (<a href="https://github.com/ts-factory/bublik/commit/97b9eddbad60ff0998647ed67d314b3ee2f60d60" target="_blank" rel="noopener noreferrer">97b9edd</a>)</li>
 <li><strong>exceptions:</strong> add custom error hierarchy to unify and typify error handling (<a href="https://github.com/ts-factory/bublik/commit/7011502877315a555f3b76e1904ec2789023b187" target="_blank" rel="noopener noreferrer">7011502</a>)</li>
@@ -173,7 +174,7 @@ Improved color contrast makes charts easier to read at a glance.</p>
 <li><strong>importruns:</strong> improve error handling for duplicate test iteration results (<a href="https://github.com/ts-factory/bublik/commit/29465076c5f0f66eb6fde34e20fb28e4dff7ddf8" target="_blank" rel="noopener noreferrer">2946507</a>)</li>
 <li><strong>importruns:</strong> improve error handling for unsupported view types (<a href="https://github.com/ts-factory/bublik/commit/90cfe1f624e3b10922ad9837b5efff3fbc1476cc" target="_blank" rel="noopener noreferrer">90cfe1f</a>)</li>
 </ul>
-<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-cleanup">🧹 Cleanup<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.0#-cleanup" class="hash-link" aria-label="Direct link to 🧹 Cleanup" title="Direct link to 🧹 Cleanup">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_TZsy" id="-cleanup">🧹 Cleanup<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.9.1#-cleanup" class="hash-link" aria-label="Direct link to 🧹 Cleanup" title="Direct link to 🧹 Cleanup">​</a></h4>
 <ul>
 <li><strong>importruns:</strong> clean up unused handling of existing MI artifacts (<a href="https://github.com/ts-factory/bublik/commit/a7cbcdfc4266b58663a8db0645da0d334a9d88ef" target="_blank" rel="noopener noreferrer">a7cbcdf</a>)</li>
 </ul>]]></content>
