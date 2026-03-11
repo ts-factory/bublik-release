@@ -1,11 +1,11 @@
 ---
-title: Release v2.10.1
+title: Release v2.10.2
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.10.1
+slug: release-v2.10.2
 ---
 
-We're excited to announce Bublik v2.10.1! <br />
+We're excited to announce Bublik v2.10.2! <br />
 This release introduces powerful new AI integration features and an enhanced global search form in History. We also fixed full test path search in History, made VCS tags visible in the revisions list in run details, and improved dashboard navigation.
 
 ### What's New
@@ -81,7 +81,7 @@ The `nginx_conf` deploy step requires root rights. If you don't have root, you m
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.10.1`
+3. `git checkout v2.10.2`
 4. Set path for user systemd services:
 ```bash
 export USER_SERVICES_PATH="${HOME}/.config/systemd/user"
@@ -109,7 +109,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.10.1`
+5. `git checkout v2.10.2`
 
 ### Documentation Update
 
@@ -117,7 +117,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.10.1`
+5. `git checkout v2.10.2`
 
 ### Docker Instance Update
 
@@ -167,6 +167,9 @@ redis-cli FLUSHALL
 * **runs:** [charts] align day charts to daily aggregates ([55ae3dc](https://github.com/ts-factory/bublik-ui/commit/55ae3dc2510b132eacfa20e1b393651453eb7c99))
 * **runs:** [charts] guard pass rate against zero totals ([8d85479](https://github.com/ts-factory/bublik-ui/commit/8d854794d686e984e8df93c90b8835ecd30a0a99))
 * **runs:** rename metadata filter label from 'Tags' to 'Metas' ([8160813](https://github.com/ts-factory/bublik-ui/commit/816081352be73733fe68d12093f5d46f813f9629)), closes [#505](https://github.com/ts-factory/bublik-ui/issues/505)
+* **dashboard:** incorrect prefetch without project filters ([bc7595a](https://github.com/ts-factory/bublik-ui/commit/bc7595adb29397d3ef2ccf7e7ddacd57a5c6c3c0))
+* **dashboard:** prevent empty-state flicker when changing project filter ([15d297e](https://github.com/ts-factory/bublik-ui/commit/15d297ee142f0cde5193b9a892f22b4cdc9ae9cb))
+
 
 
 #### ♻️ Code Refactoring
