@@ -1,11 +1,11 @@
 ---
-title: Release v2.10.0
+title: Release v2.10.1
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.10.0
+slug: release-v2.10.1
 ---
 
-We're excited to announce Bublik v2.10.0! <br />
+We're excited to announce Bublik v2.10.1! <br />
 This release introduces powerful new AI integration features and an enhanced global search form in History. We also fixed full test path search in History, made VCS tags visible in the revisions list in run details, and improved dashboard navigation.
 
 ### What's New
@@ -81,7 +81,7 @@ The `nginx_conf` deploy step requires root rights. If you don't have root, you m
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.10.0`
+3. `git checkout v2.10.1`
 4. Set path for user systemd services:
 ```bash
 export USER_SERVICES_PATH="${HOME}/.config/systemd/user"
@@ -109,7 +109,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.10.0`
+5. `git checkout v2.10.1`
 
 ### Documentation Update
 
@@ -117,7 +117,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.10.0`
+5. `git checkout v2.10.1`
 
 ### Docker Instance Update
 
@@ -147,6 +147,7 @@ redis-cli FLUSHALL
 
 * **dashboard:** remove line wrap for run progress nok/ok results ([063be18](https://github.com/ts-factory/bublik-ui/commit/063be18160a21f9119bbd969f0f5d49c948225f6))
 * **dashboard:** separate refresh button from clock widget ([a829cee](https://github.com/ts-factory/bublik-ui/commit/a829ceea46624908de9f0364160f08ef01456c31))
+* **dashboard:** [header] align header items gap with the rest of the app style ([cfdf357](https://github.com/ts-factory/bublik-ui/commit/cfdf3578801cf103891064cd17c8ca512f68d208))
 * **form:** change gray color for input placeholders and app labels ([e596185](https://github.com/ts-factory/bublik-ui/commit/e596185f3748b85157a1a4e2cca8f642b131fa16))
 * **history:** capitalize labels for history legend items ([eb8978e](https://github.com/ts-factory/bublik-ui/commit/eb8978efd7c6110a52237514308664fe6db58ec8))
 * **history:** don't display placeholder for empty legend items ([8867bfa](https://github.com/ts-factory/bublik-ui/commit/8867bfa31dd7bba53dba88a6f0d282f2afba4d90))
@@ -200,6 +201,9 @@ redis-cli FLUSHALL
 - **metadata:** fix false positive LSP error ([a063081](https://github.com/ts-factory/bublik/commit/a0630818d967856162c00a1395fa87f36cb82ba5))
 - **history:** fix full test path parsing during history search ([276d0f2](https://github.com/ts-factory/bublik/commit/276d0f240deee5d78f22f1ae862c84b92f459835))
 - **history:** fix test retrieval by full path by removing legacy session traversal ([72a79d8](https://github.com/ts-factory/bublik/commit/72a79d8da04e0a38c7c69334f8760c7bdc2474f5)), closes [#277](https://github.com/ts-factory/bublik/issues/277)
+- **dashboard:** fix formatting validation to ignore default 'progress' ([6c32c3b](https://github.com/ts-factory/bublik/commit/6c32c3b743519b443807e4378021e4e67e662cf4))
+- **dashboard:** prevent shared state between payload instances ([7446414](https://github.com/ts-factory/bublik/commit/744641464daba283d01643e7a1bb89518160fb36))
+- **runs:** ensure project parameter is correctly typed ([affd42c](https://github.com/ts-factory/bublik/commit/affd42c5c5ac38ccc8f3e5bf339d322283c3e306))
 
 #### 🚀 New Feature
 
@@ -211,10 +215,18 @@ redis-cli FLUSHALL
 - **deploy:** add MCP service deployment ([401ec32](https://github.com/ts-factory/bublik/commit/401ec32de1a21c978f8a19f8ac21e0d78a2328c0))
 - **nginx:** add Nginx proxy for MCP service ([80111cb](https://github.com/ts-factory/bublik/commit/80111cbe71d482046142af3ec921dc4a9535fcf6))
 
+#### ⚡ Performance Improvements
+
+- **dashboard:** improve performance when applying payload to rows ([b215b01](https://github.com/ts-factory/bublik/commit/b215b01e0725d698c7936ddbf5cb8b87e3372645))
+- **dashboard:** improve performance when building dashboard rows ([8c1989d](https://github.com/ts-factory/bublik/commit/8c1989df0a893818d120549bc3ce730b678dd9cc))
+- **runs:** fix lazy evaluation to prevent extra queries for run IDs ([3ee9753](https://github.com/ts-factory/bublik/commit/3ee9753ce063450bdfe7b400ff1b0a11099b4eca))
+
 #### 📦 Chores
 
 - **requirements:** update packages versions to pick up bug fixes ([76f2d17](https://github.com/ts-factory/bublik/commit/76f2d177be4286e35dccad9a3bccc10c3d1f8835))
 - **requirements:** add and upgrade required dependencies for MCP server integration ([fe5c982](https://github.com/ts-factory/bublik/commit/fe5c98274820409b340b435cb581d9dd97871ef4))
+- **requirements:** update Django version to pick up bug fixes ([a262442](https://github.com/ts-factory/bublik/commit/a262442f7cf6d62148dff601998e4538ec5d554c))
+
 
 #### ♻️ Code Refactoring
 
@@ -239,6 +251,8 @@ redis-cli FLUSHALL
 - **project:** adjust project API routes to use service layer ([2dae29f](https://github.com/ts-factory/bublik/commit/2dae29f312bef947b977377339c346bb60eb95a1))
 - **server:** extract server related operations for separation of concern ([d6c5adc](https://github.com/ts-factory/bublik/commit/d6c5adc99b87b26457899f8b75ca9dc92889333e))
 - **server:** adjust server API routes to use service layer ([192ce89](https://github.com/ts-factory/bublik/commit/192ce890f76045d630ad01a20da23fb4f3e3983a))
+- **dashboard:** simplify row preparation method ([98ccdad](https://github.com/ts-factory/bublik/commit/98ccdad333d1e518d05b7438bcbc9298d80a6e18))
+- **runs:** improve readability of queryset retrieval ([92b5a1c](https://github.com/ts-factory/bublik/commit/92b5a1c8ee564a2cc4c671fffb746e48a6e4a0a5))
 
 #### 💅 Polish
 
