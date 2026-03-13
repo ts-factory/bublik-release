@@ -1,11 +1,11 @@
 ---
-title: Release v2.10.2
+title: Release v2.10.3
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.10.2
+slug: release-v2.10.3
 ---
 
-We're excited to announce Bublik v2.10.2! <br />
+We're excited to announce Bublik v2.10.3! <br />
 This release introduces powerful new AI integration features and an enhanced global search form in History. We also fixed full test path search in History, made VCS tags visible in the revisions list in run details, and improved dashboard navigation.
 
 ### What's New
@@ -81,7 +81,7 @@ The `nginx_conf` deploy step requires root rights. If you don't have root, you m
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.10.2`
+3. `git checkout v2.10.3`
 4. Set path for user systemd services:
 ```bash
 export USER_SERVICES_PATH="${HOME}/.config/systemd/user"
@@ -109,7 +109,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.10.2`
+5. `git checkout v2.10.3`
 
 ### Documentation Update
 
@@ -117,7 +117,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.10.2`
+5. `git checkout v2.10.3`
 
 ### Docker Instance Update
 
@@ -169,6 +169,8 @@ redis-cli FLUSHALL
 * **runs:** rename metadata filter label from 'Tags' to 'Metas' ([8160813](https://github.com/ts-factory/bublik-ui/commit/816081352be73733fe68d12093f5d46f813f9629)), closes [#505](https://github.com/ts-factory/bublik-ui/issues/505)
 * **dashboard:** incorrect prefetch without project filters ([bc7595a](https://github.com/ts-factory/bublik-ui/commit/bc7595adb29397d3ef2ccf7e7ddacd57a5c6c3c0))
 * **dashboard:** prevent empty-state flicker when changing project filter ([15d297e](https://github.com/ts-factory/bublik-ui/commit/15d297ee142f0cde5193b9a892f22b4cdc9ae9cb))
+* **config:** sanitize persisted editor content ([9439acf](https://github.com/ts-factory/bublik-ui/commit/9439acfc6487d76fd0fa42e77f695d7a4efc6d01))
+* **dashboard:** display API errors for implicit-date resolution failures ([ebfb411](https://github.com/ts-factory/bublik-ui/commit/ebfb41175e42e75f57e503e5e0154a83d1a5abd4))
 
 
 
@@ -207,6 +209,7 @@ redis-cli FLUSHALL
 - **dashboard:** fix formatting validation to ignore default 'progress' ([6c32c3b](https://github.com/ts-factory/bublik/commit/6c32c3b743519b443807e4378021e4e67e662cf4))
 - **dashboard:** prevent shared state between payload instances ([7446414](https://github.com/ts-factory/bublik/commit/744641464daba283d01643e7a1bb89518160fb36))
 - **runs:** ensure project parameter is correctly typed ([affd42c](https://github.com/ts-factory/bublik/commit/affd42c5c5ac38ccc8f3e5bf339d322283c3e306))
+- **dashboard:** fix passing ignore parameter for formatting validation ([4363497](https://github.com/ts-factory/bublik/commit/4363497a96a28d125191b864e2c2697848042989))
 
 #### 🚀 New Feature
 
