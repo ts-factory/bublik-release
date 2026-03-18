@@ -1,11 +1,11 @@
 ---
-title: Release v2.10.3
+title: Release v2.10.4
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.10.3
+slug: release-v2.10.4
 ---
 
-We're excited to announce Bublik v2.10.3! <br />
+We're excited to announce Bublik v2.10.4! <br />
 This release introduces powerful new AI integration features and an enhanced global search form in History. We also fixed full test path search in History, made VCS tags visible in the revisions list in run details, and improved dashboard navigation.
 
 ### What's New
@@ -81,7 +81,7 @@ The `nginx_conf` deploy step requires root rights. If you don't have root, you m
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.10.3`
+3. `git checkout v2.10.4`
 4. Set path for user systemd services:
 ```bash
 export USER_SERVICES_PATH="${HOME}/.config/systemd/user"
@@ -109,7 +109,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.10.3`
+5. `git checkout v2.10.4`
 
 ### Documentation Update
 
@@ -117,7 +117,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.10.3`
+5. `git checkout v2.10.4`
 
 ### Docker Instance Update
 
@@ -171,7 +171,8 @@ redis-cli FLUSHALL
 * **dashboard:** prevent empty-state flicker when changing project filter ([15d297e](https://github.com/ts-factory/bublik-ui/commit/15d297ee142f0cde5193b9a892f22b4cdc9ae9cb))
 * **config:** sanitize persisted editor content ([9439acf](https://github.com/ts-factory/bublik-ui/commit/9439acfc6487d76fd0fa42e77f695d7a4efc6d01))
 * **dashboard:** display API errors for implicit-date resolution failures ([ebfb411](https://github.com/ts-factory/bublik-ui/commit/ebfb41175e42e75f57e503e5e0154a83d1a5abd4))
-
+* **dashboard:** don't show stale data in case of error ([0718788](https://github.com/ts-factory/bublik-ui/commit/07187885a5d601b0430bbba7a51ec3bf2831af32))
+* **dashboard:** validation error when dashboard contains report links ([238cfd3](https://github.com/ts-factory/bublik-ui/commit/238cfd39e80d9fc9fa36333e1a8bbce22a15db09))
 
 
 #### ♻️ Code Refactoring
