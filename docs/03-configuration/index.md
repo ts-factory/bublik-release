@@ -10,6 +10,7 @@ title: Configuration
 - [Report Configuration](#report-configuration)
   - [Key Features](#key-features)
   - [Main Configuration Areas](#main-configuration-areas)
+- [MCP Configuration](#mcp-configuration)
 - [Configuration Files](#configuration-files)
 <!--toc:end-->
 
@@ -48,6 +49,10 @@ The [Report Configuration](./02-report-config/index.md) documentation details ho
 - **Test Configuration**: Define how tests are displayed and analyzed
 - **Data Presentation**: Control data visualization and organization
 - **Example Implementation**: Complete DPDK example with explanations
+
+## MCP Configuration
+
+The [MCP](./04-mcp.md) documentation explains how to expose Bublik through Model Context Protocol and connect supported AI clients such as OpenCode and Claude.
 
 ## Configuration Files
 
