@@ -1,11 +1,11 @@
 ---
-title: Release v2.10.4
+title: Release v2.10.5
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.10.4
+slug: release-v2.10.5
 ---
 
-We're excited to announce Bublik v2.10.4! <br />
+We're excited to announce Bublik v2.10.5! <br />
 This release introduces powerful new AI integration features and an enhanced global search form in History. We also fixed full test path search in History, made VCS tags visible in the revisions list in run details, and improved dashboard navigation.
 
 ### What's New
@@ -76,12 +76,12 @@ Dashboard tooltips now display the navigation target rather than repeating the v
 ### Backend Update
 
 :::warning
-The `nginx_conf` deploy step requires root rights. If you don't have root, you must manually update the Nginx config using `bublik/templates/nginx.bublik.template`.
+The `nginx_conf` and `run_side_servers` deployment steps require root rights. If you don't have root access, you must manually update the Nginx configuration using `bublik/templates/nginx.bublik.template` and reload Nginx.
 :::
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.10.4`
+3. `git checkout v2.10.5`
 4. Set path for user systemd services:
 ```bash
 export USER_SERVICES_PATH="${HOME}/.config/systemd/user"
@@ -96,7 +96,7 @@ mkdir -p $USER_SERVICES_PATH
 ```
 7. Run deploy script with steps:
 ```bash
-./scripts/deploy --steps pip_requirements django_settings mcp_service nginx_conf run_services
+./scripts/deploy --steps general_conf pip_requirements django_settings mcp_service nginx_conf run_side_servers run_services
 ```
 8. Clear all Redis caches to remove old data due to changing the caching backend:
 ```bash
@@ -109,7 +109,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.10.4`
+5. `git checkout v2.10.5`
 
 ### Documentation Update
 
@@ -117,7 +117,7 @@ redis-cli FLUSHALL
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.10.4`
+5. `git checkout v2.10.5`
 
 ### Docker Instance Update
 
@@ -173,6 +173,7 @@ redis-cli FLUSHALL
 * **dashboard:** display API errors for implicit-date resolution failures ([ebfb411](https://github.com/ts-factory/bublik-ui/commit/ebfb41175e42e75f57e503e5e0154a83d1a5abd4))
 * **dashboard:** don't show stale data in case of error ([0718788](https://github.com/ts-factory/bublik-ui/commit/07187885a5d601b0430bbba7a51ec3bf2831af32))
 * **dashboard:** validation error when dashboard contains report links ([238cfd3](https://github.com/ts-factory/bublik-ui/commit/238cfd39e80d9fc9fa36333e1a8bbce22a15db09))
+* * **dashboard:** show empty dashboard in case of no data from API ([9fbdfad](https://github.com/ts-factory/bublik-ui/commit/9fbdfad9432d2273f0a742345e5db92e00e0618b))
 
 
 #### ♻️ Code Refactoring
@@ -211,6 +212,8 @@ redis-cli FLUSHALL
 - **dashboard:** prevent shared state between payload instances ([7446414](https://github.com/ts-factory/bublik/commit/744641464daba283d01643e7a1bb89518160fb36))
 - **runs:** ensure project parameter is correctly typed ([affd42c](https://github.com/ts-factory/bublik/commit/affd42c5c5ac38ccc8f3e5bf339d322283c3e306))
 - **dashboard:** fix passing ignore parameter for formatting validation ([4363497](https://github.com/ts-factory/bublik/commit/4363497a96a28d125191b864e2c2697848042989))
+- **requirements:** fix Python 3.12+ incompatibility by dropping XStatic-Treeview ([bbca812](https://github.com/ts-factory/bublik/commit/bbca8120f05460b3fba00e39ccd9bb0c9055c7a6))
+- **nginx:** fix hardcoded URL prefix in MCP location ([fd405a0](https://github.com/ts-factory/bublik/commit/fd405a0048fcb22547097fe7932fe17650afc735))
 
 #### 🚀 New Feature
 
@@ -233,7 +236,7 @@ redis-cli FLUSHALL
 - **requirements:** update packages versions to pick up bug fixes ([76f2d17](https://github.com/ts-factory/bublik/commit/76f2d177be4286e35dccad9a3bccc10c3d1f8835))
 - **requirements:** add and upgrade required dependencies for MCP server integration ([fe5c982](https://github.com/ts-factory/bublik/commit/fe5c98274820409b340b435cb581d9dd97871ef4))
 - **requirements:** update Django version to pick up bug fixes ([a262442](https://github.com/ts-factory/bublik/commit/a262442f7cf6d62148dff601998e4538ec5d554c))
-
+- **deploy:** make MCP port configurable ([b731730](https://github.com/ts-factory/bublik/commit/b731730e8d83ac548459074af9fb1e21afb69ffa))
 
 #### ♻️ Code Refactoring
 
