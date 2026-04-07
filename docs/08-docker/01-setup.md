@@ -12,12 +12,42 @@ For production deployments, please refer to the official installation guides.
 ## Prerequisites
 
 - Ubuntu 24.04 LTS
+- A non-root user with `sudo` access created before starting the setup
 
 ### Required Software
 
 - jq (JSON processor)
 - curl
 - [Task (taskfile)](https://taskfile.dev/installation/)
+
+### Create a user before setup
+
+If you are provisioning a fresh VM or server, create the user you plan to use for the installation before continuing.
+
+```bash
+# Create a new user
+sudo adduser bublik
+
+# Add the user to sudo group
+sudo usermod -aG sudo bublik
+```
+
+Then switch to that user and continue the setup from that account:
+
+```bash
+su - bublik
+```
+
+:::warning
+Do not run the whole setup as `root`.
+:::
+
+:::danger
+Do not install Docker via `snap`.
+
+Snap-based Docker installations are not supported for this setup and commonly cause permission, socket, and service-management issues.
+If Docker is required on this machine, install it using Docker's official APT repository or another standard package-based installation method instead.
+:::
 
 ## 1. Install system dependencies
 
