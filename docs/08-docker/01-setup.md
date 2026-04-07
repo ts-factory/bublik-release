@@ -107,6 +107,31 @@ exit
 task setup
 ```
 
+### Verify host user/group settings in `.env`
+
+After `task setup` generates the `.env` file, check these values:
+
+```dotenv
+# Host user/group settings for container permissions
+UMASK=022
+HOST_UID=501
+HOST_GID=70
+```
+
+`HOST_UID` must match the user account you are using to run Bublik, and `HOST_GID` must match the `www-data` group on the host.
+
+Use these commands to verify the correct values:
+
+```bash
+# Current user UID
+id -u
+
+# www-data group GID
+getent group www-data
+```
+
+If the values in `.env` do not match your system, update them before continuing.
+
 ## 4. Configure Environment
 
 After setup you can customize your installation via editing generated `.env` file at the root of cloned repository
