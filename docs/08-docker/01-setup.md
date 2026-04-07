@@ -12,12 +12,42 @@ For production deployments, please refer to the official installation guides.
 ## Prerequisites
 
 - Ubuntu 24.04 LTS
+- A non-root user with `sudo` access created before starting the setup
 
 ### Required Software
 
 - jq (JSON processor)
 - curl
 - [Task (taskfile)](https://taskfile.dev/installation/)
+
+### Create a user before setup
+
+If you are provisioning a fresh VM or server, create the user you plan to use for the installation before continuing.
+
+```bash
+# Create a new user
+sudo adduser bublik
+
+# Add the user to sudo group
+sudo usermod -aG sudo bublik
+```
+
+Then switch to that user and continue the setup from that account:
+
+```bash
+su - bublik
+```
+
+:::warning
+Do not run the whole setup as `root`.
+:::
+
+:::danger
+Do not install Docker via `snap`.
+
+Snap-based Docker installations are not supported for this setup and commonly cause permission, socket, and service-management issues.
+If Docker is required on this machine, install it using Docker's official APT repository or another standard package-based installation method instead.
+:::
 
 ## 1. Install system dependencies
 
@@ -76,6 +106,31 @@ exit
 ```bash
 task setup
 ```
+
+### Verify host user/group settings in `.env`
+
+After `task setup` generates the `.env` file, check these values:
+
+```dotenv
+# Host user/group settings for container permissions
+UMASK=022
+HOST_UID=501
+HOST_GID=70
+```
+
+`HOST_UID` must match the user account you are using to run Bublik, and `HOST_GID` must match the `www-data` group on the host.
+
+Use these commands to verify the correct values:
+
+```bash
+# Current user UID
+id -u
+
+# www-data group GID
+getent group www-data
+```
+
+If the values in `.env` do not match your system, update them before continuing.
 
 ## 4. Configure Environment
 
@@ -257,25 +312,7 @@ This will generate following structure
 
 In this case logs should be put at `/srv/bublik-data/logs/logs` folder
 
-## 5. Bootstrap the Application
-
-:::warning
-**Bublik** may take up to **15 seconds** to fully start. <br />
-If a command fails with an error, please wait a moment and try again. <br />
-:::
-
-Initialize the application with:
-
-```bash
-task bootstrap
-```
-
-You will be prompted if you want to create initial project configs as a starting point <br />
-You can just create initial configs as a starting point
-
-Now you instance should be available at the specified `BUBLIK_FQDN`
-
-## 6. Accessing Instance
+## 5. Accessing Instance
 
 To access your Bublik instance, you need to set up an SSH tunnel that matches your configuration:
 
