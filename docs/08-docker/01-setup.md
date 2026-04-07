@@ -257,25 +257,7 @@ This will generate following structure
 
 In this case logs should be put at `/srv/bublik-data/logs/logs` folder
 
-## 5. Bootstrap the Application
-
-:::warning
-**Bublik** may take up to **15 seconds** to fully start. <br />
-If a command fails with an error, please wait a moment and try again. <br />
-:::
-
-Initialize the application with:
-
-```bash
-task bootstrap
-```
-
-You will be prompted if you want to create initial project configs as a starting point <br />
-You can just create initial configs as a starting point
-
-Now you instance should be available at the specified `BUBLIK_FQDN`
-
-## 6. Accessing Instance
+## 5. Accessing Instance
 
 To access your Bublik instance, you need to set up an SSH tunnel that matches your configuration:
 
