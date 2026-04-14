@@ -10,6 +10,7 @@ title: Configuration
 - [Report Configuration](#report-configuration)
   - [Key Features](#key-features)
   - [Main Configuration Areas](#main-configuration-areas)
+- [Analytics Configuration](#analytics-configuration)
 - [MCP Configuration](#mcp-configuration)
 - [Configuration Files](#configuration-files)
 <!--toc:end-->
@@ -49,6 +50,10 @@ The [Report Configuration](./02-report-config/index.md) documentation details ho
 - **Test Configuration**: Define how tests are displayed and analyzed
 - **Data Presentation**: Control data visualization and organization
 - **Example Implementation**: Complete DPDK example with explanations
+
+## Analytics Configuration
+
+The [Analytics](./05-analytics.md) documentation explains how to enable optional analytics for admin users on both simple and Docker deployments.
 
 ## MCP Configuration
 
