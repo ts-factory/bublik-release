@@ -26,6 +26,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      docusaurus-markdown-source-plugin:
+        specifier: ^2.2.4
+        version: 2.2.4(@docusaurus/core@3.10.0(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.5))(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       docusaurus-plugin-image-zoom:
         specifier: ^3.0.1
         version: 3.0.1(@docusaurus/theme-classic@3.10.0(@types/react@19.2.14)(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3))
@@ -3538,6 +3541,14 @@ packages:
   dns-packet@5.6.1:
     resolution: {integrity: sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==}
     engines: {node: '>=6'}
+
+  docusaurus-markdown-source-plugin@2.2.4:
+    resolution: {integrity: sha512-3GiURJ441ASUKbajJBi0LQfXpWkzUy0eTJlHoruk8dM16S0B1Qt4rgFCrgMd68Wr1RtkVWfog0gI2QC3xk6z1w==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@docusaurus/core': ^3.0.0
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
 
   docusaurus-plugin-image-zoom@3.0.1:
     resolution: {integrity: sha512-mQrqA99VpoMQJNbi02qkWAMVNC4+kwc6zLLMNzraHAJlwn+HrlUmZSEDcTwgn+H4herYNxHKxveE2WsYy73eGw==}
@@ -8959,7 +8970,7 @@ snapshots:
       '@docusaurus/logger': 3.10.0
       '@docusaurus/utils': 3.10.0(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       babel-plugin-dynamic-import-node: 2.3.3
-      fs-extra: 11.3.0
+      fs-extra: 11.3.4
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@swc/core'
@@ -8986,7 +8997,7 @@ snapshots:
       '@docusaurus/logger': 3.8.1
       '@docusaurus/utils': 3.8.1(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       babel-plugin-dynamic-import-node: 2.3.3
-      fs-extra: 11.3.0
+      fs-extra: 11.3.4
       tslib: 2.8.1
     transitivePeerDependencies:
       - '@swc/core'
@@ -9245,7 +9256,7 @@ snapshots:
       escape-html: 1.0.3
       estree-util-value-to-estree: 3.5.0
       file-loader: 6.2.0(webpack@5.101.0)
-      fs-extra: 11.3.0
+      fs-extra: 11.3.4
       image-size: 2.0.2
       mdast-util-mdx: 3.0.0
       mdast-util-to-string: 4.0.0
@@ -10008,7 +10019,7 @@ snapshots:
       '@docusaurus/logger': 3.10.0
       '@docusaurus/utils': 3.10.0(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       '@docusaurus/utils-common': 3.10.0(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
-      fs-extra: 11.3.0
+      fs-extra: 11.3.4
       joi: 17.13.3
       js-yaml: 4.1.1
       lodash: 4.17.21
@@ -10051,7 +10062,7 @@ snapshots:
       escape-string-regexp: 4.0.0
       execa: 5.1.1
       file-loader: 6.2.0(webpack@5.101.0)
-      fs-extra: 11.3.0
+      fs-extra: 11.3.4
       github-slugger: 1.5.0
       globby: 11.1.0
       gray-matter: 4.0.3
@@ -12331,6 +12342,13 @@ snapshots:
   dns-packet@5.6.1:
     dependencies:
       '@leichtgewicht/ip-codec': 2.0.5
+
+  docusaurus-markdown-source-plugin@2.2.4(@docusaurus/core@3.10.0(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.5))(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3))(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
+    dependencies:
+      '@docusaurus/core': 3.10.0(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.5))(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)
+      fs-extra: 11.3.4
+      react: 19.2.5
+      react-dom: 19.2.5(react@19.2.5)
 
   docusaurus-plugin-image-zoom@3.0.1(@docusaurus/theme-classic@3.10.0(@types/react@19.2.14)(acorn@8.16.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(typescript@5.9.3)):
     dependencies:

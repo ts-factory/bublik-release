@@ -118,7 +118,11 @@ const config = {
         },
       },
     }),
-  plugins: ['docusaurus-plugin-image-zoom', fixWsSocketPathDockerPlugin],
+  plugins: [
+    'docusaurus-plugin-image-zoom',
+    ['docusaurus-markdown-source-plugin', { docsPath: '/' }],
+    fixWsSocketPathDockerPlugin,
+  ],
   themes: [
     '@docusaurus/theme-mermaid',
     [
