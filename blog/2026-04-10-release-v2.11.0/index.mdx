@@ -82,7 +82,7 @@ Analytics is disabled by default. To enable it, follow these steps:
 1. Enable analytics in the configuration file *bublik/general.conf*: `ANALYTICS_ENABLE="True"`
 2. Apply updated Django settings and restart services: `./scripts/deploy --steps django_settings run_services`
 3. Activate the virtual environment: `source .env/bin/activate`
-4. Run analytics database migrations: `python manage.py migrate analytics`
+4. Run analytics database migrations: `python manage.py migrate analytics --database=analytics`
 
 ### Frontend Update
 
