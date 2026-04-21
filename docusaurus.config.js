@@ -56,6 +56,8 @@ const config = {
   // to replace "en" with "zh-Hans".
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
+  markdown: { mermaid: true },
+
   presets: [
     [
       'classic',
@@ -118,6 +120,7 @@ const config = {
     }),
   plugins: ['docusaurus-plugin-image-zoom', fixWsSocketPathDockerPlugin],
   themes: [
+    '@docusaurus/theme-mermaid',
     [
       localSearch,
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
