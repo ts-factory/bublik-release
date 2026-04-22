@@ -1,0 +1,526 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://ts-factory.io/schemas/bublik-json-schema.json",
+  "title": "Bublik source import run log",
+  "description": "Schema for bublik.json files consumed by the Bublik source importruns path.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["start_ts", "end_ts", "plan", "iters"],
+  "properties": {
+    "start_ts": {
+      "$ref": "#/definitions/timestamp"
+    },
+    "end_ts": {
+      "$ref": "#/definitions/nullableTimestamp"
+    },
+    "plan": {
+      "$ref": "#/definitions/planItem"
+    },
+    "iters": {
+      "type": "array",
+      "description": "Top-level iteration nodes. The source importer walks this tree recursively.",
+      "items": {
+        "$ref": "#/definitions/iteration"
+      }
+    },
+    "tags": {
+      "type": "object",
+      "description": "Optional run-level tags. The importer stores these separately from meta_data.json and does not use them for run identity, project selection, or run status.",
+      "additionalProperties": {
+        "$ref": "#/definitions/scalarOrNull"
+      }
+    }
+  },
+  "definitions": {
+    "timestamp": {
+      "description": "Timestamp accepted by Bublik's import date parsing. Existing examples use strings like '2026.03.30 07:16:52.706'.",
+      "oneOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "number"
+        }
+      ]
+    },
+    "nullableTimestamp": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/timestamp"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "scalar": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        }
+      ]
+    },
+    "scalarOrNull": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/scalar"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "resultStatus": {
+      "type": "string",
+      "description": "Known Bublik result statuses from bublik.data.models.result.ResultStatus and the UI RESULT_TYPE enum.",
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "KILLED",
+        "CORED",
+        "SKIPPED",
+        "FAKED",
+        "INCOMPLETE"
+      ]
+    },
+    "iterationType": {
+      "type": "string",
+      "description": "Iteration/test node type accepted by bublik.data.models.result.ResultType.",
+      "enum": ["test", "pkg", "session"]
+    },
+    "params": {
+      "type": "object",
+      "description": "Test arguments passed to add_iteration().",
+      "additionalProperties": {
+        "$ref": "#/definitions/scalarOrNull"
+      }
+    },
+    "planItem": {
+      "type": "object",
+      "description": "Execution plan node consumed by PlanItem. It is used to calculate expected item counts and prologue skip impact.",
+      "required": ["name", "type"],
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "description": "Usually 'pkg', 'test', 'session', or 'skipped'. PlanItem ignores children whose type is 'skipped'."
+        },
+        "prologue": {
+          "$ref": "#/definitions/planItem"
+        },
+        "epilogue": {
+          "$ref": "#/definitions/planItem"
+        },
+        "keepalive": {
+          "$ref": "#/definitions/planItem"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/planItem"
+          }
+        },
+        "iterations": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Repeat count for this plan child. The importer expands this in PlanItem."
+        }
+      }
+    },
+    "iteration": {
+      "type": "object",
+      "description": "Recursive source import iteration node. Required fields mirror keys accessed directly in handle_iteration().",
+      "required": [
+        "name",
+        "type",
+        "params",
+        "hash",
+        "start_ts",
+        "end_ts",
+        "tin",
+        "test_id",
+        "plan_id",
+        "objective",
+        "reqs",
+        "err",
+        "obtained",
+        "iters"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": ["string", "null"],
+          "description": "Test/package/session name. A null session name is normalized to 'session' by the importer."
+        },
+        "type": {
+          "$ref": "#/definitions/iterationType"
+        },
+        "params": {
+          "$ref": "#/definitions/params"
+        },
+        "hash": {
+          "type": ["string", "null"],
+          "description": "Iteration hash. Test nodes normally use a stable non-empty hash; package nodes often use an empty string."
+        },
+        "start_ts": {
+          "$ref": "#/definitions/timestamp"
+        },
+        "end_ts": {
+          "$ref": "#/definitions/nullableTimestamp"
+        },
+        "tin": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Test iteration number. Existing package nodes commonly use -1."
+        },
+        "test_id": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "description": "Execution sequence identifier, unique within a run."
+        },
+        "plan_id": {
+          "type": "integer"
+        },
+        "objective": {
+          "type": ["string", "null"]
+        },
+        "reqs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "err": {
+          "type": ["string", "null"],
+          "description": "Unexpected/error text passed to add_obtained_result(). Non-empty values make unexpected results visible in imported data."
+        },
+        "obtained": {
+          "$ref": "#/definitions/obtained"
+        },
+        "expected": {
+          "$ref": "#/definitions/expected",
+          "description": "Optional expected result set. If omitted, the importer treats the obtained result as expected."
+        },
+        "measurements": {
+          "type": "array",
+          "description": "Parsed MI measurement objects passed to HandlerArtifacts.handle_mi_artifacts().",
+          "items": {
+            "$ref": "#/definitions/measurement"
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "description": "Optional legacy/raw artifact list present in some bublik.json variants. The current source importer reads artifacts from obtained.result.artifacts.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "path": {
+          "type": "array",
+          "description": "Optional display path from real bublik.json examples.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "path_str": {
+          "type": "string",
+          "description": "Optional slash-separated display path from real bublik.json examples."
+        },
+        "iters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/iteration"
+          }
+        }
+      }
+    },
+    "obtained": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["result"],
+      "properties": {
+        "result": {
+          "$ref": "#/definitions/result"
+        },
+        "tag_expression": {
+          "type": ["string", "null"],
+          "description": "Optional tag expression attached to expected result references."
+        },
+        "key": {
+          "type": ["string", "null"],
+          "description": "Accepted for compatibility with older/generated data; source importer reads key from obtained.result or expected."
+        },
+        "notes": {
+          "type": ["string", "null"],
+          "description": "Accepted for compatibility with older/generated data; source importer reads notes from obtained.result or expected."
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/resultStatus"
+        },
+        "verdicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "description": "Raw artifact strings imported as result artifact metas.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "key": {
+          "type": ["string", "null"]
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "expected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["results"],
+      "properties": {
+        "tag_expression": {
+          "type": ["string", "null"],
+          "description": "Optional tag expression present in real bublik.json examples (for example expected result references)."
+        },
+        "key": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "results": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/expectedResult"
+          }
+        }
+      }
+    },
+    "expectedResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "$ref": "#/definitions/resultStatus"
+        },
+        "verdicts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "key": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "description": "MI measurement object. HandlerArtifacts requires type=measurement, version=1, results[], and only allows tool/type/version/keys/comments after results/views are popped.",
+      "additionalProperties": false,
+      "required": ["type", "version", "results"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "measurement"
+        },
+        "version": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "const": 1
+            },
+            {
+              "type": "string",
+              "const": "1"
+            }
+          ]
+        },
+        "tool": {
+          "type": "string"
+        },
+        "keys": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/scalar"
+          }
+        },
+        "comments": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/scalar"
+          }
+        },
+        "results": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/measurementResult"
+          }
+        },
+        "views": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/measurementView"
+          }
+        }
+      }
+    },
+    "measurementResult": {
+      "type": "object",
+      "description": "Each non-entry key is converted to a measurement_subject meta.",
+      "required": ["entries"],
+      "additionalProperties": {
+        "$ref": "#/definitions/scalar"
+      },
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/measurementEntry"
+          }
+        }
+      }
+    },
+    "measurementEntry": {
+      "type": "object",
+      "description": "Entries are grouped internally by aggr/base_units/multiplier, so these fields should be present for reliable import.",
+      "required": ["value", "aggr", "base_units", "multiplier"],
+      "additionalProperties": {
+        "$ref": "#/definitions/scalar"
+      },
+      "properties": {
+        "value": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "aggr": {
+          "$ref": "#/definitions/scalar"
+        },
+        "base_units": {
+          "$ref": "#/definitions/scalar"
+        },
+        "multiplier": {
+          "$ref": "#/definitions/scalar"
+        }
+      }
+    },
+    "measurementView": {
+      "type": "object",
+      "description": "Optional visualization definition. Importer supports point and line-graph views.",
+      "required": ["type"],
+      "additionalProperties": {
+        "$ref": "#/definitions/scalar"
+      },
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["point", "line-graph"]
+        },
+        "value": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/scalar"
+          }
+        },
+        "axis_x": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/scalar"
+              }
+            }
+          ]
+        },
+        "axis_y": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "additionalProperties": {
+                  "$ref": "#/definitions/scalar"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

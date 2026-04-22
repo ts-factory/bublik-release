@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbublik_release=self.webpackChunkbublik_release||[]).push([[61],{20061:(e,s,a)=>{a.d(s,{createInfoServices:()=>b.v});var b=a(76435);a(9495)}}]);

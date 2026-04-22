@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbublik_release=self.webpackChunkbublik_release||[]).push([[5384],{35384:(e,s,a)=>{a.d(s,{createPieServices:()=>b.f});var b=a(20342);a(9495)}}]);

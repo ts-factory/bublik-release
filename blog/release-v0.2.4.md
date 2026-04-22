@@ -1,0 +1,15 @@
+We are happy to announce **Bublik v0.2.4**.
+
+<!--truncate-->
+
+The release, a small incremental update, prioritizes performance improvements by optimizing log tree representation.
+This involves refining the structure of the tree to enhance efficiency,
+making operations within the backend system more streamlined and faster.
+
+## Changelog
+
+### Backend
+
+#### ⚡ Performance
+
+- **tree:** optimize tree representation ([0cd05c6](https://github.com/ts-factory/bublik/commit/0cd05c64bb275ec949d0aeddd0f89a46a7735be4))

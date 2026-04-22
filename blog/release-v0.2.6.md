@@ -1,0 +1,48 @@
+We are happy to announce **Bublik v0.2.6**.
+
+<!--truncate-->
+
+This release introduces a series of small, incremental changes aimed at enhancing user experience and addressing various issues.
+It includes fixes for parameter-related crashes and fixes issue with parameter diff on run page.
+Additionally, constraints for minimum and maximum values have been added to charts.
+Now when clicking on test in log tree log frame will be scrolled to the top to reset, We also added stacked chart mode for measurements page.
+Overall, these updates contribute to a smoother and more refined user interface.
+
+Backend improvements include fixing issues with importruns.
+
+> **Note!**
+> After upgrading to this version, it is necessary to clean up the databases of projects using live import:
+> it is necessary to find and re-import runs for which TestIterationResult objects with the same `exec_seqno` exist in the database. 
+
+
+## Changelog
+
+### Frontend
+
+#### 📦 Chores
+
+- fix run library test config ([4f3df15](https://github.com/ts-factory/bublik-ui/commit/4f3df15d2c95896a609e6c0bc4d79aefc77d335e))
+
+#### 💅 Polish
+
+- **log:** [chart] add constraints for min/max values ([88b5262](https://github.com/ts-factory/bublik-ui/commit/88b52621ab4324d1313dc3ee1f5d5d67e98fb98c))
+
+#### 🐛 Bug Fix
+
+- **charts:** correct tooltip message for zoom button ([aeaa1ea](https://github.com/ts-factory/bublik-ui/commit/aeaa1ea162e43c6a037dca948f9a9522b65a26e3))
+- **run:** result parameters diff crashing on some results ([d196c74](https://github.com/ts-factory/bublik-ui/commit/d196c74f093fa8dbe8c6adbce99de907bac9b34b))
+
+#### 👷‍ Build System
+
+- enable sourcemaps ([976756c](https://github.com/ts-factory/bublik-ui/commit/976756ce1bda98d6d5c2549a5c7f724c5534d268))
+
+#### 🚀 New Feature
+
+- **log:** scroll to top of log on test click ([e6cfda2](https://github.com/ts-factory/bublik-ui/commit/e6cfda2d8f940f52452630fd7fb270ee7de97c42))
+- **measurements:** add stacked chart mode ([5ad0f20](https://github.com/ts-factory/bublik-ui/commit/5ad0f20e614435ac30c19ae1542e1bc2bee1c7d4))
+
+### Backend
+
+#### 🔨 Issue Fix
+
+- Update during importruns error [#29](https://github.com/ts-factory/bublik/issues/29)

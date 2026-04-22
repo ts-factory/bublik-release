@@ -1,0 +1,152 @@
+🎉 **Exciting Updates in the Latest Release!** 🎉
+
+This release introduces key improvements, including enhanced report visualization, bug fixes, and optimizations for a smoother experience. It also updates deployment and simplifies configuration management.
+
+## 🔍 What's New?
+
+### 🚀 New Feature
+
+- **Report Charts**: Failed results are now highlighted in red with a diamond symbol, making it easier to identify issues at a glance.
+- **Config Management**: Now, the configuration manager allows you to manage all configurations, including references, meta, and tags.
+- **Initial Deployment**: Now, Bublik can be deployed without specifying a configuration and creating a configuration directory.
+- **References Config**: The new configuration structure allows specifying multiple log databases.
+- **External Links**: Now, the latest URI from the corresponding log database in the references configuration is used for generating links.
+- **Log Preview**: Added button to preview log on the history page just like on the run page
+
+### 🐛 Bug Fixes
+
+- **Run Table**: Fixed an issue where column visibility was not properly retained in the URL state.
+- **Middleware**: A global issue has been resolved that occurred when attempting to retrieve dynamic settings from a missing main project configuration.
+- **Parameter Value Formatting**: improve parameter value formatting for different types of parameters (indentation for JSON-like structures and code)
+
+### 📦 Chores & Maintenance
+
+- Removed a redundant config migration check to streamline configuration handling.
+- As part of `per_project_conf` deployment step, a command has been implemented to migrate all existing configurations to the database, as well as to initialize the required configurations in the database, if they have not been migrated.
+
+These updates enhance usability, improve reliability, and ensure a more seamless experience. 🚀
+
+<!--truncate-->
+
+## Highlights
+
+### History Log Preview
+
+![History Log Preview](/bublik-release/blog/img/history-log-preview.webp)
+
+### New Config Types
+
+![New Config Types](/bublik-release/blog/img/config-new-types.webp)
+
+### Report Charts
+
+![Report Charts](/bublik-release/blog/img/report-chart.webp)
+
+## Admin Section
+
+### Backend Update
+
+1. `cd bublik`
+2. `git remote update`
+3. `git checkout v1.3.0`
+4. `./scripts/deploy --steps migrate_db per_project_conf django_settings run_services`
+
+### Frontend Update
+
+1. Trigger the workflow in your frontend repository.
+2. Synchronize the mirrors.
+3. `cd bublik-ui`
+4. `git remote update`
+5. `git checkout v1.3.0`
+
+---
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **report:** [chart] highlight failed results with red and symbol ([cf91f2c](https://github.com/ts-factory/bublik-ui/commit/cf91f2c8e9b97e4201e37f2aa6a2d5b7b9922d5a))
+- **build:** add check that json logs is buildable to CI ([7f5ffa8](https://github.com/ts-factory/bublik-ui/commit/7f5ffa8c5d5d7cf9f32536f8b3d6d1c109ab2c91))
+- **config:** add ability to create configs for references, meta, tags ([d1b5d23](https://github.com/ts-factory/bublik-ui/commit/d1b5d23af5f01ccc652ef5bc799f396e3070bbcc))
+- **history:** add shortcut to view log on linear history ([1ee797b](https://github.com/ts-factory/bublik-ui/commit/1ee797bf113a55cef4fd8f9371896a4ece72aa4f))
+- **log:** add application for local json logs ([6608e67](https://github.com/ts-factory/bublik-ui/commit/6608e67946e01dcf947f0df2bd9d80086fe32264))
+- **run:** [table] add help dialog with usage information ([33690f7](https://github.com/ts-factory/bublik-ui/commit/33690f7887a499a5132b46e452e674cbcd3dbc12))
+
+#### 🐛 Bug Fix
+
+- **docker:** disable check for prettier ([17a31ad](https://github.com/ts-factory/bublik-ui/commit/17a31adcb949c6e81fbf91c0f3acdbde2104f37c))
+- **docker:** fix corepack keyid mismatch issue ([31d4dc2](https://github.com/ts-factory/bublik-ui/commit/31d4dc203c031eea0d3588cde9df9d3b45a7101b))
+- **run:** [table] missing column visibility url state ([a63a725](https://github.com/ts-factory/bublik-ui/commit/a63a725f7bc1a97700e6b5d44ddae3a3f948e980))
+- **log:** don't camelize keys to improve compatability ([9c64f2e](https://github.com/ts-factory/bublik-ui/commit/9c64f2ec3dad33ca3e407b24a3bcc37239d995bf))
+- **log:** improve parameter value formatting in log meta block ([a6c2399](https://github.com/ts-factory/bublik-ui/commit/a6c2399c2003a821a6c7dd65701ed7a05b461e7d))
+- **run:** display missing link to result ([c7275ea](https://github.com/ts-factory/bublik-ui/commit/c7275eaaea3ca008bbc72070324f3048bbc8e23b))
+- **types:** fix typescript issues for tanstack react table ([1b8d911](https://github.com/ts-factory/bublik-ui/commit/1b8d911064afdba01d0c8ee228f0a891221b15eb))
+
+#### 📦 Chores
+
+- **config:** remove redundant config migration check ([e03016d](https://github.com/ts-factory/bublik-ui/commit/e03016d53b6a868b50fb26e52678526a9a70a200))
+- **log:** [preview] change order of links ([d37b6c9](https://github.com/ts-factory/bublik-ui/commit/d37b6c9499697ab190fcd7935a0b2ebb70c7e713))
+- remove redundant import ([2de7d60](https://github.com/ts-factory/bublik-ui/commit/2de7d60338f92d9e537a6ae94084eeb9a21bfa57))
+- **result:** rename links from "measure" to "result" ([d27d2b3](https://github.com/ts-factory/bublik-ui/commit/d27d2b3c789c9f8270bc9111fc1a6230a283a87f))
+- **types:** remove `test_name` from linear history data type ([3eb226e](https://github.com/ts-factory/bublik-ui/commit/3eb226ecffe606d3e344d248cc771ee79b2c50b5))
+- **ui:** move help dialog to shared lib ([ccaef6b](https://github.com/ts-factory/bublik-ui/commit/ccaef6b27ba879e4fab1cdee2466446e776c40ec))
+
+---
+
+### Backend
+
+#### 🐛 Bug Fix
+
+- **deploy:** fix DB deploy ([a830c78](https://github.com/ts-factory/bublik/commit/a830c784b6d93745d1dc77c2e6db9ee6a6c28c91)), closes [#135](https://github.com/ts-factory/bublik/issues/135)
+- **importruns:** fix objectives parsing ([aa1bb21](https://github.com/ts-factory/bublik/commit/aa1bb215665bcf9ede0a29477b0c3b647623f49e))
+- **middleware:** fix the retrieval of dynamic settings ([482af58](https://github.com/ts-factory/bublik/commit/482af58943a0673e4144d97feb6e1907835d39c8))
+- **references:** fix default value for issues ([89b8dd6](https://github.com/ts-factory/bublik/commit/89b8dd60b50441a58d3ba3556c4f1b59b1edb9d7))
+
+#### ⚡ Performance
+
+- **middleware:** improve performance ([ddd23f2](https://github.com/ts-factory/bublik/commit/ddd23f2f4a67207c2923e3ba0076d6cf778166d5))
+
+#### 🚀 New Feature
+
+- **report:** enhance point metadata with result type ([ec89a6f](https://github.com/ts-factory/bublik/commit/ec89a6f7969009cc5d9a3d8809f4f4203e933ab6)), closes [#108](https://github.com/ts-factory/bublik/issues/108)
+- **management:** add reformatting step to align config with schema ([dc1ae03](https://github.com/ts-factory/bublik/commit/dc1ae033ed92e662b36d928d5b65c498344d8d37))
+- **auth:** add system user support ([0e157b7](https://github.com/ts-factory/bublik/commit/0e157b788d81502700ca2e86580c8691a8de57bc))
+- **config:** add references config object support ([b5495db](https://github.com/ts-factory/bublik/commit/b5495db6f93af8405fb7092fe67d85e94f31fbbf))
+- **config:** add references config content validation ([3cabf8e](https://github.com/ts-factory/bublik/commit/3cabf8e2d3fda8b97dd377d40564e0940271e9a6))
+- **management:** make it possible to migrate references config ([82594b2](https://github.com/ts-factory/bublik/commit/82594b2c16098340135522e68b6d80280b1b3aed))
+- **config:** improve references content structure ([b285be7](https://github.com/ts-factory/bublik/commit/b285be7cc0cbb4e7466d2c0d6177ba42fd7280ff))
+- **management:** add references content reformatting step ([576aae0](https://github.com/ts-factory/bublik/commit/576aae090aa13f7381bb441c778f4d38856a0e82))
+- **config:** add meta and tags config objects support ([9d74fa0](https://github.com/ts-factory/bublik/commit/9d74fa06ea88d05d9d5679abe107ac3de332b4ff))
+- **config:** add meta and tags config content validation ([e66af99](https://github.com/ts-factory/bublik/commit/e66af99e1809fd249b7bc16945df71491fe7f551))
+- **management:** make it possible to migrate meta and tags configs ([2a906f7](https://github.com/ts-factory/bublik/commit/2a906f72760cc2167f4d8ba64aae3e03159ac2ee))
+- **deploy:** update deployment to initialize configs in the DB ([56dfec2](https://github.com/ts-factory/bublik/commit/56dfec2863ba3c7a0ff709f25f7383e328b962c1))
+- **config:** make meta and tags configs optional ([c6bbf94](https://github.com/ts-factory/bublik/commit/c6bbf9463bfdb8c18f4b16c6b37c92d5ffae31c4))
+- **deploy:** make config directory creation optional ([faabb97](https://github.com/ts-factory/bublik/commit/faabb974569fbceeb2835bb58509f490377279c8))
+- **deploy:** make config specification optional ([9d179ad](https://github.com/ts-factory/bublik/commit/9d179adbd87db5e28bb383e7157153b1119dcc43))
+- **urls:** make external links configurable ([f166395](https://github.com/ts-factory/bublik/commit/f1663959735b8780828bb2254c98f58f43f2afeb)
+
+#### ♻️ Code Refactoring
+
+- **config:** improve maintainability of config management ([458304a](https://github.com/ts-factory/bublik/commit/458304a65a1531d3b29272644d91ca6ff0d422a4))
+- **config:** simplify config retrieval function names ([d61b2b0](https://github.com/ts-factory/bublik/commit/d61b2b0522c1a25ab21fee9f93f55eeee0c4224c))
+- **config:** improve global config retrieval reusability ([04d33fa](https://github.com/ts-factory/bublik/commit/04d33fa6280e11cbb48daa74e1def1fdb0a86571))
+- **config:** centralize and improve config services ([7772de7](https://github.com/ts-factory/bublik/commit/7772de7263917acbd303472fae00c8c43971ffeb))
+- **settings:** make simple logger format more readable ([dbc6734](https://github.com/ts-factory/bublik/commit/dbc6734219f18985d970b16cffa4208725835751))
+- **management:** simplify configs reformatting analysis ([f9b0c21](https://github.com/ts-factory/bublik/commit/f9b0c21eff58df09bf7146c05fa9eea042a88b8c))
+- **management:** make config reformating more scalable ([075f1d8](https://github.com/ts-factory/bublik/commit/075f1d80717ab517d539d60e4aabc5bfdcdf5d5a))
+- **config:** improve config handling encapsulation ([ad1b2a4](https://github.com/ts-factory/bublik/commit/ad1b2a438d88fb20bd6ceb78b1c4f650812dd416))
+- **config:** encapsulate config initialization logic ([fa6fb50](https://github.com/ts-factory/bublik/commit/fa6fb50785786efdc082b0ae13294b82d442a641))
+- **config/management:** simplify and make config migration extensible ([00841c4](https://github.com/ts-factory/bublik/commit/00841c486dc506dd12c934d97fa7ba95f4b9fb8c))
+- **management:** centralize config descriptions for migration ([9731299](https://github.com/ts-factory/bublik/commit/973129968ac4e94420f4080532d8851f015536d1))
+- **config:** align attr retrieval with references config source ([8cda71a](https://github.com/ts-factory/bublik/commit/8cda71a84de7a9c4f8e6fd50ce5d6c4057ab29c2))
+- **utils:** refactor possible int conversion ([4d0f485](https://github.com/ts-factory/bublik/commit/4d0f48592b2b62b18d6eba8872bf04fd0729a6b4))
+- **config:** align attr retrieval with meta and tags configs source ([bb19465](https://github.com/ts-factory/bublik/commit/bb1946529cb2fc39f2081f241308490588ba076b)), closes [#118](https://github.com/ts-factory/bublik/issues/118)
+
+#### 🧹 Cleanup
+
+- **cleanup:** improve code style and maintainability ([8cbfc58](https://github.com/ts-factory/bublik/commit/8cbfc58d01d1e7ff5790b22279fd1fcf39c727a5))
+- **settings:** remove retrieval of unused modules ([3880756](https://github.com/ts-factory/bublik/commit/3880756b15436efbb241cae0c9032206f97637d2))
+- **management:** make function name more accurate ([488d9bb](https://github.com/ts-factory/bublik/commit/488d9bbb99024247dfe2f8412c182b9d5e806983))
+- **management:** ensure consistent output style ([e0bf4d5](https://github.com/ts-factory/bublik/commit/e0bf4d50647750c575d78c92b9628381e1e6d9e8))

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbublik_release=self.webpackChunkbublik_release||[]).push([[365],{20365:(e,s,a)=>{a.d(s,{createPacketServices:()=>k.$});var k=a(89832);a(9495)}}]);

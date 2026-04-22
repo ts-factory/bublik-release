@@ -1,0 +1,123 @@
+We are happy to announce **Bublik v0.5.0**.
+
+In this release we've added **sticky stacked headers** for reports and fixed some bugs for configs also added config font size settings. We also made the report record headers more readable, made the x-axis and sequence group argument labels configurable, and made it possible to change the order of the dashboard columns. For administrators, added a command to reformat configurations.
+
+<!--truncate-->
+
+## Highlights
+
+### Sticky Stacked Headers
+
+<video controls width="100%" height="100%">
+  <source src={video} />
+</video>
+
+### Small UI Improvements
+
+![Small UI Improvements](/bublik-release/blog/img/reports.webp)
+
+### Config Font Size
+
+![Font Size](/bublik-release/blog/img/font-size.webp)
+
+### Config Exists
+
+![Config Exists](/bublik-release/blog/img/exists_config.webp)
+
+### Updated Record Config Header
+
+![Config Header](/bublik-release/blog/img/report-label.webp)
+
+### Change Dashboard Headers Order
+
+![Change Dashboard Headers Order](/bublik-release/blog/img/config-header.webp)
+
+### Add Report Argument Labels
+
+![Args](/bublik-release/blog/img/seq.webp)
+
+## Admin Section
+
+### Update Steps
+
+Deployment: `./scripts/deploy --steps django_settings run_services`
+
+
+  <br />
+  <b>Follow these steps:</b>
+  <ul>
+    <li>
+      Activate the virtual environment: <code>source .env/bin/activate</code>
+    </li>
+    <li>
+      Call the configuration reformatting command:{' '}
+      <code>python manage.py reformat_configs</code>
+    </li>
+  </ul>
+</Admonition>
+
+### Important Info
+
+:::warning
+
+Configurations whose automatic formatting has failed will not be supported by Bublik. Either reformat them manually or delete.
+
+:::
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **configs:** [editor] added setting to change font size ([53ef50e](https://github.com/ts-factory/bublik-ui/commit/53ef50e029270879fc73d9010998d17b51e0af06)), closes [#145](https://github.com/ts-factory/bublik-ui/issues/145)
+- **configs:** added shortcut to trigger autocomplete in editor `ctrl+\` ([e5f6078](https://github.com/ts-factory/bublik-ui/commit/e5f6078a60f0b6ee38e1e36bd7da3a634e058ade)), closes [#144](https://github.com/ts-factory/bublik-ui/issues/144)
+- **report:** added button to copy link for currently open report ([83f5c63](https://github.com/ts-factory/bublik-ui/commit/83f5c6337f21a48d515c57959d926205b7c45c8a)), closes [#152](https://github.com/ts-factory/bublik-ui/issues/152)
+- **report:** added link to config used for generation current report ([3f606cc](https://github.com/ts-factory/bublik-ui/commit/3f606cc063c7305fdb9648542781d3e407c86cb3)), closes [#151](https://github.com/ts-factory/bublik-ui/issues/151)
+- **report:** added sticky-stacked headers for all levels ([f0ce3af](https://github.com/ts-factory/bublik-ui/commit/f0ce3af9ac834a547591ddcdaeec76eed27145be)), closes [#147](https://github.com/ts-factory/bublik-ui/issues/147)
+
+#### 💅 Polish
+
+- **history:** [plots] moved links for plot point to modal header ([38d8221](https://github.com/ts-factory/bublik-ui/commit/38d822197ba8cc2c0bc751214680f14a0de9c9e2))
+- **log:** fixed button for log filters being shown on top of the new bug modal ([8fd958b](https://github.com/ts-factory/bublik-ui/commit/8fd958bd10515163c8eb9d2c6acb76d05b0a74ed))
+- **report:** fixed missing border in case `multiple_sequences` is `false` ([46d2b14](https://github.com/ts-factory/bublik-ui/commit/46d2b14bb6934787cf16913bd7af56fe42f9559a))
+
+#### 🐛 Bug Fix
+
+- **configs:** added modal to show "navigate to existing config" if it exists ([4639f21](https://github.com/ts-factory/bublik-ui/commit/4639f2127d6963406cb54d134c626b5c43bd3ad4))
+- **configs:** allowed partial updates for config ([7b8150d](https://github.com/ts-factory/bublik-ui/commit/7b8150d76f9724b8191a76e99487eb27ba42dd9e))
+- **log,run:** fixed parameters incorrectly cutting off "=" ([b6d2032](https://github.com/ts-factory/bublik-ui/commit/b6d2032255ae3c8918f93891d0d055a95d674583)), closes [#137](https://github.com/ts-factory/bublik-ui/issues/137)
+
+#### ♻ Code Refactoring
+
+- **build:** adjusted release config to sort sections ([9d1affc](https://github.com/ts-factory/bublik-ui/commit/9d1affc83e4e5ba6374c227db3da7c50bf62f6bc)), closes [#138](https://github.com/ts-factory/bublik-ui/issues/138)
+- **configs:** extracted all components to improve readability ([df9cbc3](https://github.com/ts-factory/bublik-ui/commit/df9cbc3c7b92d04d5c37d69dffdcfaac2555d220))
+
+#### 📦 Chores
+
+- **sidebar:** moved history and measurements links to the bottom ([b480074](https://github.com/ts-factory/bublik-ui/commit/b48007433f5679d642eab3884abb47d3d4f3315d)), closes [#139](https://github.com/ts-factory/bublik-ui/issues/139)
+
+### Backend
+
+#### 🚀 New Feature
+
+- **management:** add ability to reformat configs ([38b8435](https://github.com/ts-factory/bublik/commit/38b843519a76a9e8384b02270134cd6422f35e8b))
+- **management:** update reformat configs command ([000c27f](https://github.com/ts-factory/bublik/commit/000c27f0d5b8a26fff9a4fad669fa257cb6dfb2d))
+- **dashboard:** make it possible to sort columns ([e837f0e](https://github.com/ts-factory/bublik/commit/e837f0ebbb9b04450f4d79c7c8ffc35a5950e1db))
+- **management:** update reformat configs command ([0a9b06e](https://github.com/ts-factory/bublik/commit/0a9b06e19caae735c8228a089027356386adda3e))
+- **config:** format the main config during migration ([74f10a7](https://github.com/ts-factory/bublik/commit/74f10a7110fb80ef713b0343a1cb005204a7dea3))
+
+#### 💅 Polish
+
+- **report:** make measurement chart label more readable ([546ad90](https://github.com/ts-factory/bublik/commit/546ad9053ba2465bbef9c7d6c6b8b2870e25a9a7))
+- **report:** make headers more readable ([063a325](https://github.com/ts-factory/bublik/commit/063a325b39c9675c3c03018bf2d6c9d6aaed5729))
+
+#### 📦 Chores
+
+- **settings:** increase the access token lifetime ([4dbf1b0](https://github.com/ts-factory/bublik/commit/4dbf1b0bbfb3978ba59193470989d3ca32e02eee))
+
+#### ♻ Code Refactoring
+
+- **cleanup:** apply linter to report services ([6610fac](https://github.com/ts-factory/bublik/commit/6610fac7223627cae4863847fa3c696c6173684a))
+- **report:** apply linter to report components ([06ba32c](https://github.com/ts-factory/bublik/commit/06ba32c087974e61baab2c29d89fe871d32c37d5))
+- **config:** refactor the main config migration ([0dc8df5](https://github.com/ts-factory/bublik/commit/0dc8df50390f15857c39b7b79d8195d490bce88f))

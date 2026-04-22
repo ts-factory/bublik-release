@@ -1,0 +1,63 @@
+We are happy to announce **Bublik v0.3.1**.
+
+<!--truncate-->
+
+In the latest release of our app, we've introduced several new features and improvements. Notably, we've enhanced the history search form with a new `labels` field.
+The reports section now supports more detailed filtering by measurements, the use of partially suitable configurations, formatters to display "%" signs, handles API errors more gracefully, and added table titles. We've also fixed various bugs, including default values in the history search form. Additionally, we polished the UI with background overlays in the command menu.
+
+## Highlights
+
+### Run Reports
+Now, when building a run report, you can specify the measurements, the results of which will be contained in the report, not only by specifying the names of these measurements, but also by specifying aggregation and keys. This information must be specified in the report configuration. An example can be found in [doc/wiki/report\_config.json](https://github.com/ts-factory/bublik/blob/main/doc/wiki/report_config.json).
+
+> **Note!**
+> Due to the above changes, **the configuration format has been changed**. See the example at the link above.
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **history:** added labels field to history global search form ([5fc9e7b](https://github.com/ts-factory/bublik-ui/commit/5fc9e7b0418843fefa78ae7c744d1fb341b8f441))
+- **history:** added scroll to top of the page on page change ([634934f](https://github.com/ts-factory/bublik-ui/commit/634934fce95fc155a0955056f984fe15ba67945f))
+- **reports:** added formatters support to show "%" sign ([5e55703](https://github.com/ts-factory/bublik-ui/commit/5e55703929e931e864c5ac0806770bf8c77cef3f))
+- **reports:** added handling for API errors for report page ([323d7ba](https://github.com/ts-factory/bublik-ui/commit/323d7bafbdcde44a074132dbc27034b5dc356b70))
+- **reports:** added table title from Y axis label ([c5d3498](https://github.com/ts-factory/bublik-ui/commit/c5d3498f51f1d5b2184eaef231af3bf27a71bed2))
+
+#### 🐛 Bug Fix
+
+- **history:** fixed missing default values for history global search form ([f096099](https://github.com/ts-factory/bublik-ui/commit/f09609984044c74193441d909ef6334aff83b385))
+- **history:** made field names consistent in search form ([6f569af](https://github.com/ts-factory/bublik-ui/commit/6f569afd25428e4640b2d13b37790fa131def6d6))
+- **log:** added option to contain label inside canvas container ([5c07946](https://github.com/ts-factory/bublik-ui/commit/5c079461bb1a8c04168f19b7bab6009f96197ccc))
+- **reports:** fixed axis label overflow inside canvas container ([79b5416](https://github.com/ts-factory/bublik-ui/commit/79b541646f429c2d14bfb7b62e3854a0180643bb))
+- **reports:** fixed unstable key for report header list item ([a6ac058](https://github.com/ts-factory/bublik-ui/commit/a6ac058b7e85caf3f7704027a895b74c0a425289))
+- **run:** fixed copying revision metadata without key ([eefdf45](https://github.com/ts-factory/bublik-ui/commit/eefdf45f9d8eeb2b206a1678048db72d835b5482))
+- **runs:** [form] fixed crash when opening tags input ([90e3df6](https://github.com/ts-factory/bublik-ui/commit/90e3df62602eb510344649eb9e8f0f0bd0e101c9))
+- **ui:** [combobox] fixed selection change callback type ([9d16f19](https://github.com/ts-factory/bublik-ui/commit/9d16f197c3078560c944739fef630646fd551773))
+
+#### 💅 Polish
+
+- **command:** added background overlay to command menu ([08bf23e](https://github.com/ts-factory/bublik-ui/commit/08bf23e6b43d0c1c45d7cf2921c852eabd9b9767))
+- **run:** [reports] added gap between exit icon and report label ([de2dd4d](https://github.com/ts-factory/bublik-ui/commit/de2dd4dd698e8864bc250a7ea0ec6ca60668ecf5))
+
+### Backend
+
+#### 🐛 Bug Fix
+
+- **report:** fix filtering by measurements ([54431c4](https://github.com/ts-factory/bublik/commit/54431c434afe8279598b7824f38e9773f54cfe0d))
+- **report:** support unequal measurement sequences ([97ec69a](https://github.com/ts-factory/bublik/commit/97ec69a72650153782c6e58f958ffc67ded18f64))
+- **report:** fix calculation of percentages ([e306157](https://github.com/ts-factory/bublik/commit/e306157f60abe7f77b4fe7d3c76487a3e92b868a))
+
+#### 🚀 New Feature
+
+- **report:** add accounting for measurement keys and aggr ([ccd75a0](https://github.com/ts-factory/bublik/commit/ccd75a0c7cf805ba1223724659b92972f9946c87))
+- **report:** make the name of y axis more informative ([bd6a38f](https://github.com/ts-factory/bublik/commit/bd6a38f763105b3e8035a1754d265696df7ea5ac))
+- **report:** add formatters for table column values ([af1510f](https://github.com/ts-factory/bublik/commit/af1510f4c3289957eb13c7e334787a47d5ddf3a3))
+- **report:** make it possible to use partially suitable config ([51f29c7](https://github.com/ts-factory/bublik/commit/51f29c7ee392d96fc0ae52b8820c2b776a30b29a))
+
+#### 💅 Polish
+
+- **cleanup:** replace special Unicode characters ([81109f0](https://github.com/ts-factory/bublik/commit/81109f00243e041e8eeaea6efa9bf01f9ba70434))
+- **doc/wiki:** fix style in report config example ([db1a6e0](https://github.com/ts-factory/bublik/commit/db1a6e0c61335b8fd9b6bdb58ff3007570cbfbac))
+

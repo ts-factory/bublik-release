@@ -1,0 +1,112 @@
+We’re excited to announce Bublik v2.7.1! In this release, we’ve fixed incorrect tag display, added filtering to history measurement series charts, and introduced quick access to reports directly from the dashboard.
+
+### What's New
+
+**Parameters Filter for Measurement Series Charts** <br />
+Added a new filter to measurement series charts that allows you to filter data by specific series chart name and parameters, making it easier to analyze and compare results across different test configurations.
+
+**Quick Navigation from Dashboard to the Most Recent Report** <br />
+Added a new handler `go_report`. When set in DASHBOARD_PAYLOAD in the main project configuration as the value for a dashboard header key, it allows navigating to the most recent report by clicking the corresponding column value.
+
+<!--truncate-->
+
+## Highlights
+
+### Filters for Series Charts
+
+History measurements now include a parameters filter, enabling more precise data analysis by filtering series based on test parameters and names.
+
+![Parameters Filter](/bublik-release/blog/img/series-1.webp)
+
+### Go to the Most Recent Report from Dashboard
+
+To enable navigation to the most recent report from the dashboard, set `go_report` as the value for a dashboard header key in the main project configuration. Clicking the corresponding column value will then take you directly to the most recent report.
+
+![Go to Report](/bublik-release/blog/img/config-1.webp)
+
+![Go to Report](/bublik-release/blog/img/dashboard-1.webp)
+
+## Admin Section
+
+### Backend Update
+
+1. `cd bublik`
+2. `git remote update`
+3. `git checkout v2.7.1`
+4. `./scripts/deploy --steps django_settings run_services`
+5. Activate the virtual environment: `source .env/bin/activate`
+6. Create project cache: `python manage.py project_cache create`
+
+### Frontend Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-ui`
+4. `git remote update`
+5. `git checkout v2.7.1`
+
+### Documentation Update
+
+1. Trigger the workflow in your frontend repository
+2. Synchronize the mirrors
+3. `cd bublik-docs`
+4. `git remote update`
+5. `git checkout v2.7.1`
+
+### Docker Instance Update
+
+1. `task backup:create`
+2. Open your `.env` file and change `IMAGE_TAG` to `2.7.1`
+3. `task pull`
+4. `task up`
+5. `task shell`
+6. Create project cache: `python manage.py project_cache create`
+
+## Changelog
+
+### Frontend
+
+#### 🚀 New Feature
+
+- **history:** [measurements] add parameters filter to series charts ([9180fc5](https://github.com/ts-factory/bublik-ui/commit/9180fc59fd08e0e0fc495c071fa8c7e01500e0da))
+
+#### 🐛 Bug Fix
+
+- **history:** restore selected charts from URL ([d9c1d60](https://github.com/ts-factory/bublik-ui/commit/d9c1d60ed59bf104104a4cbf59eb87d04635a295))
+- **measurements:** add y-axis label to chart name ([6022ccb](https://github.com/ts-factory/bublik-ui/commit/6022ccb2ccb80399f155f525235c225a4b09a89b))
+- **report:** improve scrolling to item when clickin on TOC item ([1162833](https://github.com/ts-factory/bublik-ui/commit/116283354d70245d5a4e74cd50ee15e0fe8cb9d3))
+- **version:** crash on safari for `NaN` date ([b06a215](https://github.com/ts-factory/bublik-ui/commit/b06a2158fea89b7f8cb36f42b274f0432208100b))
+- **report:** [chart] mismatch between legend and line colors ([939158f](https://github.com/ts-factory/bublik-ui/commit/939158f0a46bb51adf533b80f31b34007fb51489))
+- **report:** circular imports for cause by report args and warning hover card ([1bb733f](https://github.com/ts-factory/bublik-ui/commit/1bb733f3d9ceca61e7a1c59c8580a7bacd36aa04))
+
+#### 💅 Polish
+
+- **ui:** fix ";" symbol at the end of run report ([22c0009](https://github.com/ts-factory/bublik-ui/commit/22c00091d838f3d837ea4a832594f7b5e4a34fc9))
+
+
+#### ♻️ Code Refactoring
+
+- **history:** [measurements] generate unique names for series ([5b9baae](https://github.com/ts-factory/bublik-ui/commit/5b9baae52d6fd2f920dd95bfd6c8850a6a118489))
+- **history:** [measurements] merge y-axises with the same name ([c3682ce](https://github.com/ts-factory/bublik-ui/commit/c3682ce06452c8704e2a3cec00bfbae99ebb78db))
+- **measurements:** remove green circles to highlight expected results ([8df10a4](https://github.com/ts-factory/bublik-ui/commit/8df10a4384e34fe2273e94a79842b529e1e791d5))
+
+---
+
+### Backend
+
+#### 🐛 Bug Fix
+- **cache:** fix tags caching to be project-specific ([90349e5](https://github.com/ts-factory/bublik/commit/90349e549b160d4588063b0da13c49b3bbb6a50f))
+- **url:** fix source run URL construction by using the latest log entry ([cb4f906](https://github.com/ts-factory/bublik/commit/cb4f9064bbc2fba41e3e0eabbc01cdf2acc46100))
+- **importruns:** ensure single log entry per run on re-import ([bb6660a](https://github.com/ts-factory/bublik/commit/bb6660a575d9345083cb555eb583fdc1346785db))
+- **run data:** fix runs tags retrieval ([c060931](https://github.com/ts-factory/bublik/commit/c060931a7496ed99b781ed1dbd6997a020dd2ccb))
+- **config:** prevent unsupported handlers in dashboard payload ([e9e3c93](https://github.com/ts-factory/bublik/commit/e9e3c93d7a39bb8180a6086b151ced37b4e5a67e))
+
+#### 🚀 New Feature
+- **dashboard:** enable navigation to the most recent report from dashboard ([5ede84c](https://github.com/ts-factory/bublik/commit/5ede84c16650a7e3f5b293d193a78beeaeba384f))
+
+#### ♻️ Code Refactoring
+- **cache:** unify project-level caching to improve scalability ([2607121](https://github.com/ts-factory/bublik/commit/260712172198e72875b634f504cf88c5f95ac222))
+- **report:** enable reuse of applicable report configuration retrieval ([1f586c1](https://github.com/ts-factory/bublik/commit/1f586c1bf8daa399e75fb8e1189bb31760ca504f))
+
+#### ⚡ Performance
+- **config:** prevent repeated database queries when global config is missing ([bc76a4b](https://github.com/ts-factory/bublik/commit/bc76a4b6667aa542bffe8baf8f5a26b8d2a7ed66))

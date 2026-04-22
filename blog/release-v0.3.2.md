@@ -1,0 +1,41 @@
+We are happy to announce **Bublik v0.3.2**.
+
+<!--truncate-->
+
+In the latest release, we've implemented several updates and improvements. We've reordered buttons and links on run page. A new feature has been added to display aggregated values min/max in the logs. Bug fixes include modifying the log display to show only entries with aggr of "single" on the chart, sorting points by x-axis value on a chart in reports, making report configs and building charts in reports more flexible, making datasets for charts and tables optional in reports, and removing the "%" sign for values that are "-" or "na" in reports.
+
+## Changelog
+
+### Frontend
+
+#### 📦 Chores
+
+- **build:** upgraded pnpm setup action to latest version ([290ad77](https://github.com/ts-factory/bublik-ui/commit/290ad7757b9f588412c24138a45fd2d38d695ae0))
+- **run:** [details] changed order of buttons and links ([fe9b024](https://github.com/ts-factory/bublik-ui/commit/fe9b0244ccf323f1278fac908e7bbe11f0724553))
+
+#### 🚀 New Feature
+
+- **log:** [mi] added display for aggregated values min/max ([f476678](https://github.com/ts-factory/bublik-ui/commit/f476678ca34370d6a39e2b84f099e84eb22fb138))
+
+#### 🐛 Bug Fix
+
+- **log:** [mi] display only entries with `aggr` of "single" on chart ([e391d2a](https://github.com/ts-factory/bublik-ui/commit/e391d2aa6a78dfed7139e6d48783641eb8b6be84))
+- **reports:** made datasets for chart/table optional ([ff7d724](https://github.com/ts-factory/bublik-ui/commit/ff7d724b37885c0f1fe00c2026c7dccf2f302027))
+- **reports:** removed `%` for values that are "-" or "na" ([88e7416](https://github.com/ts-factory/bublik-ui/commit/88e74167b337f2518bab036c2a0882d5cb9a9318))
+
+### Backend
+
+#### 🐛 Bug Fix
+
+- **report:** fix incorrect measurement results order in datasets ([2636d9e](https://github.com/ts-factory/bublik/commit/2636d9ea9d54e41ebf0518867bbb83eea4f09019))
+- **reports:** fix generation of record IDs ([bba7bcf](https://github.com/ts-factory/bublik/commit/bba7bcf351c138a3494fd7dcaac2815272cac88f))
+
+#### 🚀 New Feature
+
+- **report:** allow extra args in 'records\_order' in config ([0301ce1](https://github.com/ts-factory/bublik/commit/0301ce1a5d98198508d1f44869451368bfeb278c))
+- **report:** change handling of non-numeric values of x-axis arg ([af65dac](https://github.com/ts-factory/bublik/commit/af65dac3645a9ef9ba195c127cba5187ae3393e5))
+
+#### 📦 Chores
+
+- **report:** make measurement units more readable ([803c9a8](https://github.com/ts-factory/bublik/commit/803c9a849756455ac2eb1ba1511e8c9b45492ee9))
+- **cleanup:** apply linter to reports related code ([840543c](https://github.com/ts-factory/bublik/commit/840543cb6d2e9ccb75b9bcec179b11d56a4e98aa))

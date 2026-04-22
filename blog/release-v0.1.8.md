@@ -1,0 +1,82 @@
+We are happy to announce **Bublik v0.1.8**.
+In this release we focused mainly on improving charts usability.
+
+<!--truncate-->
+
+# Highlights
+
+### Ability to open charts in fullscreen mode
+
+You can now open most of the charts in fullscreen mode
+
+![Fullscreen chart button](/bublik-release/blog/img/fullscreen-chart-1.webp)
+
+![Fullscreen chart](/bublik-release/blog/img/fullscreen-chart-2.webp)
+
+### Ability to compose multiple charts onto one plot
+
+:::info
+We are considering moving this view to separate page to allow URL sharing
+:::
+
+![Fullscreen chart](/bublik-release/blog/img/charts-combined-1.webp)
+
+![Fullscreen chart](/bublik-release/blog/img/charts-combined-2.webp)
+
+### New runs badge input
+
+We have added new badge input to runs page that should be working better then before.
+We are currently looking at changing history badge input and moving it to separate modal with input looking like on the runs page.
+
+![Badge input button](/bublik-release/blog/img/badge-1.webp)
+
+![Badge input](/bublik-release/blog/img/badge-2.webp)
+
+### Time delta
+
+:::warning
+This is not final design and UI improvements would be made regarding colors
+:::
+
+![Delta](/bublik-release/blog/img/delta-1.webp)
+
+## Changelog
+
+### Frontend
+
+#### 🐛 Bug Fix
+
+- **log:** time delta not working correctly with timestamps
+- **ui:** [tags-box-input] removing selected items
+
+#### ♻ Code Refactoring
+
+- **ui:** [chart] replace chart toolbar with updated
+
+#### 💅 Polish
+
+- **history:** [plot-list] add shadow to header when sticky
+- **history:** [refresh] fix animation origin
+- **measurements:** improve measurements chart layout
+- **ui:** [button] don't allow click when loading
+- **ui:** [chart] add more space in fullscreen mode
+- **ui:** [export-button] fix icon and styles
+- **ui:** [link] missing animation when loading
+
+#### 📦 Chores
+
+- **log:** add timestamp mock
+- **measurements:** [chart] remove plot with series
+- **ui:** [chart] adjust icon sizes
+- **ui:** [chart] improve voice over labels
+
+#### 🚀 New Feature
+
+- **history, measuremensts:** add fullscreen chart
+- **history:** [chart] add ability to view charts with multiple Y axises
+- **ui:** [toolbar] add toolbar component
+- **log:** add timestamp delta with anchor
+
+#### ✅ Tests
+
+- **history, import:** update snapshot tests

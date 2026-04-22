@@ -1,0 +1,22 @@
+We are happy to announce **Bublik v0.3.8**.
+
+In this small incremental release we've fixed test parameters env breaking markdown table.
+We also wrapped full test path in backticks for better readability.
+
+<!--truncate-->
+
+## Changelog
+
+### Frontend
+
+#### 💅 Polish
+
+- **log,run:** [new-bug] wrapped path to test with backticks ([0f3ca9e](https://github.com/ts-factory/bublik-ui/commit/0f3ca9efe17ec9077d6be7610b46b4f380b92369))
+
+#### 🚀 New Feature
+
+- **log,run:** [new-bug] added ability to display cells as code block ([94e7b59](https://github.com/ts-factory/bublik-ui/commit/94e7b59b48a6322195ccda521c23762f531baafe))
+
+#### 🐛 Bug Fix
+
+- **run,log:** [new-bug] fixed env breaking markdown table ([7f9acee](https://github.com/ts-factory/bublik-ui/commit/7f9acee3fcef6e5bbee4e7642a24b7a8c146e270))

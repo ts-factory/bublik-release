@@ -1,0 +1,18 @@
+We are happy to announce **Bublik v0.3.7**.
+
+In this release we've fixed small bug with markdown preview overflowing modal.
+Also we've added more meta information for creating new bugs on log page such as hash, CMD, link to full log and link to saved location if you clicked on log line number.
+
+<!--truncate-->
+
+## Changelog
+
+### Frontend
+
+### 🐛 Bug Fix
+
+- **run,log:** fix text overflow in new bug preview modal ([bb556e4](https://github.com/ts-factory/bublik-ui/commit/bb556e4284dad76f006a631dd64195d1eeb18b47))
+
+### 🚀 New Feature
+
+- **log:** added new field to markdown from te-log-meta ([cb3692f](https://github.com/ts-factory/bublik-ui/commit/cb3692f3c72f148540623f9bc176c0d9dc28fa14))
