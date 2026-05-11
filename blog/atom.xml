@@ -60,7 +60,7 @@ At the same time, the refreshed badge input with grouping labels makes filter co
 <li class="">Enable analytics in the configuration file <em>bublik/general.conf</em>: <code>ANALYTICS_ENABLE="True"</code></li>
 <li class="">Apply updated Django settings and restart services: <code>./scripts/deploy --steps django_settings run_services</code></li>
 <li class="">Activate the virtual environment: <code>source .env/bin/activate</code></li>
-<li class="">Run analytics database migrations: <code>python manage.py migrate analytics</code></li>
+<li class="">Run analytics database migrations: <code>python manage.py migrate analytics --database=analytics</code></li>
 </ol>
 <h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.11.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update" translate="no">​</a></h3>
 <ol>
