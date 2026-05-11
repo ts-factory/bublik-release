@@ -8,12 +8,42 @@ For production deployments, please refer to the official installation guides.
 ## Prerequisites
 
 - Ubuntu 24.04 LTS
+- A non-root user with `sudo` access created before starting the setup
 
 ### Required Software
 
 - jq (JSON processor)
 - curl
 - [Task (taskfile)](https://taskfile.dev/installation/)
+
+### Create a user before setup
+
+If you are provisioning a fresh VM or server, create the user you plan to use for the installation before continuing.
+
+```bash
+# Create a new user
+sudo adduser bublik
+
+# Add the user to sudo group
+sudo usermod -aG sudo bublik
+```
+
+Then switch to that user and continue the setup from that account:
+
+```bash
+su - bublik
+```
+
+:::warning
+Do not run the whole setup as `root`.
+:::
+
+:::danger
+Do not install Docker via `snap`.
+
+Snap-based Docker installations are not supported for this setup and commonly cause permission, socket, and service-management issues.
+If Docker is required on this machine, install it using Docker's official APT repository or another standard package-based installation method instead.
+:::
 
 ## 1. Install system dependencies
 
@@ -72,6 +102,31 @@ exit
 ```bash
 task setup
 ```
+
+### Verify host user/group settings in `.env`
+
+After `task setup` generates the `.env` file, check these values:
+
+```dotenv
+# Host user/group settings for container permissions
+UMASK=022
+HOST_UID=501
+HOST_GID=70
+```
+
+`HOST_UID` must match the user account you are using to run Bublik, and `HOST_GID` must match the `www-data` group on the host.
+
+Use these commands to verify the correct values:
+
+```bash
+# Current user UID
+id -u
+
+# www-data group GID
+getent group www-data
+```
+
+If the values in `.env` do not match your system, update them before continuing.
 
 ## 4. Configure Environment
 
@@ -210,22 +265,50 @@ You don't need to manually assign permissions to `www-data` or any other user.
 The storage location will contain the following structure:
 
 ```
-
-If a command fails with an error, please wait a moment and try again. <br />
-:::
-
-Initialize the application with:
-
-```bash
-task bootstrap
+<BUBLIK_DOCKER_DATA_DIR>/
+├── django-logs/           # Application logs
+│   ├── bublik-management-commands/
+│   ├── bublik-rest.access.log
+│   ├── bublik-rest.log
+│   └── debug.log
+└── logs/                # Test logs storage
+    ├── bad/             # Failed imports
+    ├── incoming/        # Temporary storage for logs waiting to be published
+    └── logs/            # Put your logs in this folder
+        └── ...          # Your test logs
 ```
 
-You will be prompted if you want to create initial project configs as a starting point <br />
-You can just create initial configs as a starting point
+:::important
+The `<BUBLIK_DOCKER_DATA_DIR>/logs/logs/` directory is where your published test logs will be stored. When configuring your test environment to publish logs:
 
-Now you instance should be available at the specified `BUBLIK_FQDN`
+1. Configure your test system to place logs in this directory
+2. If you're migrating from a previous setup, move your existing logs to this location
+3. The directory can have any internal structure - Bublik doesn't enforce any specific organization inside it
+   :::
 
-## 6. Accessing Instance
+##### Example
+
+Let's say you set your `BUBLIK_DOCKER_DATA_DIR` in `.env` file to `/srv/bublik-data`
+
+This will generate following structure
+
+```
+/srv/bublik-data/
+├── django-logs/           # Application logs
+│   ├── bublik-management-commands/
+│   ├── bublik-rest.access.log
+│   ├── bublik-rest.log
+│   └── debug.log
+└── logs/                # Test logs storage
+    ├── bad/             # Failed imports
+    ├── incoming/        # Temporary storage for logs waiting to be published
+    └── logs/            # Put your logs in this folder
+        └── ...          # Your test logs
+```
+
+In this case logs should be put at `/srv/bublik-data/logs/logs` folder
+
+## 5. Accessing Instance
 
 To access your Bublik instance, you need to set up an SSH tunnel that matches your configuration:
 
