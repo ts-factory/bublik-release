@@ -1,4 +1,4 @@
-We're excited to announce Bublik v2.12.1! <br />
+We're excited to announce Bublik v2.12.2! <br />
 This release brings live project status badges you can embed in READMEs and dashboards, autocomplete for the "Test Path" field in the history search form, and an improved dashboard column configuration structure in the per-project config. The import workflow has been significantly reworked: runs imports are now tracked as structured jobs with run-specific tasks, making it possible to monitor execution status per job. We also fixed a bug where filtering by test name could return mixed results from different test groups and normalized stacked chart y-axes for multi-axis plots.
 
 ### What's New
@@ -56,7 +56,7 @@ The `go_tree` payload value is renamed to `go_log`.
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.12.1`
+3. `git checkout v2.12.2`
 4. `./scripts/deploy --steps pip_requirements migrate_db per_project_conf run_services`
 
 The run statistics data structure has been updated. Therefore, the run statistics cache must be cleared so that the statistics are rebuilt accordingly:
@@ -70,7 +70,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.12.1`
+5. `git checkout v2.12.2`
 
 ### Documentation Update
 
@@ -78,7 +78,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.12.1`
+5. `git checkout v2.12.2`
 
 ### Docker Instance Update
 
@@ -87,7 +87,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.12.1/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.12.2/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -119,18 +119,30 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 
 * **history:** preserve verdict lookup type when clicking reset verdict button ([09d78f9](https://github.com/ts-factory/bublik-ui/commit/09d78f9e706fe3ea1615bc232741b9da138c6f1b))
 * **history:** support quoted badge values containing commas ([200e2a6](https://github.com/ts-factory/bublik-ui/commit/200e2a6d1e26b877f74a346d405cb982c38df02b))
-
+* **dashboard:** fix analytics dashboard page view tracking ([94d7f42](https://github.com/ts-factory/bublik-ui/commit/94d7f429d1425986080415ee2d88ab3e2ba4ef1f))
+* **import:** remove duplicated root prefix in import run requests ([27dd360](https://github.com/ts-factory/bublik-ui/commit/27dd360f13ec9bf9033e02703b8517f82d383322))
 
 #### ♻️ Code Refactoring
 
 * **import:** adapt import table to new API changes ([ba7d169](https://github.com/ts-factory/bublik-ui/commit/ba7d169153c8a6629aef7a6ae03014c867963124))
 * **run:** adapt for new api changes ([139001e](https://github.com/ts-factory/bublik-ui/commit/139001ef3b35bf9a7ff1beea617d7aace699a31a))
+* **dashboard:** move analytics route tracker for better organization ([f11e5fe](https://github.com/ts-factory/bublik-ui/commit/f11e5fe62f2a9eed15040eaea44ebea506a0f8ac))
+* **history:** [form] improve test path input with proper path handling ([dcb9fe1](https://github.com/ts-factory/bublik-ui/commit/dcb9fe1ce9166fbcf5828aea7b9f9caf6d3ad1f2))
+* **import:** [form] display loading state in import form properly ([f80906a](https://github.com/ts-factory/bublik-ui/commit/f80906a29cc33de27fee70e1679ef7e8c62ce4a3))
+* **log:** deprecate `formatted` field in JSON log ([2f25dce](https://github.com/ts-factory/bublik-ui/commit/2f25dcefae2a1c85e1cef8225ff6ad9ddaf6a2f7))
 
 
 #### 📦 Chores
 
 * **measurements:** normalize stacked chart y-axes for multi-axis plots ([8933fd8](https://github.com/ts-factory/bublik-ui/commit/8933fd83ce450fd7608d23b9431bb01558659763)), closes [#532](https://github.com/ts-factory/bublik-ui/issues/532)
 * **run:** make "Objective" column visible by default ([e1b1285](https://github.com/ts-factory/bublik-ui/commit/e1b1285548d20bf3c94d0e734e6fab0134ae1c81))
+* **analytics:** remove logging of all events from client side ([dfb738c](https://github.com/ts-factory/bublik-ui/commit/dfb738c2f981e4a959e4cbac0cc2c31f74035659))
+
+
+### 💅 Polish
+
+* **history:** [form] align close button horizontally ([defe631](https://github.com/ts-factory/bublik-ui/commit/defe6319d0ba6e6cc0b70367989c8a8251265132))
+* **import:** improve import events table layout ([ba0507f](https://github.com/ts-factory/bublik-ui/commit/ba0507fb629563aadec8ce61044dd3c621aed340))
 
 ---
 
@@ -144,6 +156,9 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 - **results:** fix same-name test results retrieval via start result ID filter ([abfa3c4](https://github.com/ts-factory/bublik/commit/abfa3c423a987fb4eb0e293c1131f8b2aa640817))
 - **run:** fix missing run stats test comments ([895069e](https://github.com/ts-factory/bublik/commit/895069ee3794aacd6fb97019365d65b96c67116d))
 - **results:** fix broken `result`, `result_properties`, `requirements` filters ([facfc8e](https://github.com/ts-factory/bublik/commit/facfc8e2a5e46cccefa26a3b649f7bd5fef40b82))
+- **management:** management: fix per_conf migration when dashboard keys are missing ([f8a8221](https://github.com/ts-factory/bublik/commit/f8a82213b62b4b1c0df4c4a88a51835a6b79d61b))
+- **management:** sync dashboard sort keys with column keys during per_conf migration ([b1465f4](https://github.com/ts-factory/bublik/commit/b1465f419a7acffa433c9fdd5c0da93b9a64bb13))
+- **serializers:** remove access to non-existent attribute ([8fa13de](https://github.com/ts-factory/bublik/commit/fa32b5c82136cca25b7abe515738a45ea616e9a1))
 
 #### 🚀 New Feature
 - **api:** add project badges to see the pipe status externally ([3bd4ea9](https://github.com/ts-factory/bublik/commit/3bd4ea9f49b84fbf75594403aaa896e8800c15b4))
@@ -159,6 +174,8 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 - **jobtasks:** align OpenAPI schema with actual runtime responses ([73c188d](https://github.com/ts-factory/bublik/commit/73c188d7e66f12cf4a4533fa0aeba15925a68227))
 - **run stats:** improve clarity and consistency of run stats data fields ([d1a8254](https://github.com/ts-factory/bublik/commit/d1a82541357e326c636a92458805d0475c7d41cd))
 - **requirements:** update packages versions to pick up bug fixes ([7f3eaa9](https://github.com/ts-factory/bublik/commit/7f3eaa98003a280610346410af43ad0ea3a7589d))
+- **management:** document dashboard settings merge reformat step ([a5df64f](https://github.com/ts-factory/bublik/commit/a5df64f298c4b9dc3b8cd090358db9447308621b))
+- **requirements:** update packages versions to pick up bug fixes ([fa32b5c](https://github.com/ts-factory/bublik/commit/fa32b5c82136cca25b7abe515738a45ea616e9a1))
 
 #### ♻️ Code Refactoring
 - **config:** improve dashboard column configuration by consolidating settings ([5a8946e](https://github.com/ts-factory/bublik/commit/5a8946e2690ba232046b871db775a3eb7d1ebae0))
