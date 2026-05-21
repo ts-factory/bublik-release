@@ -1,4 +1,4 @@
-We're excited to announce Bublik v2.12.2! <br />
+We're excited to announce Bublik v2.12.3! <br />
 This release brings live project status badges you can embed in READMEs and dashboards, autocomplete for the "Test Path" field in the history search form, and an improved dashboard column configuration structure in the per-project config. The import workflow has been significantly reworked: runs imports are now tracked as structured jobs with run-specific tasks, making it possible to monitor execution status per job. We also fixed a bug where filtering by test name could return mixed results from different test groups and normalized stacked chart y-axes for multi-axis plots.
 
 ### What's New
@@ -56,7 +56,7 @@ The `go_tree` payload value is renamed to `go_log`.
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.12.2`
+3. `git checkout v2.12.3`
 4. `./scripts/deploy --steps pip_requirements migrate_db per_project_conf run_services`
 
 The run statistics data structure has been updated. Therefore, the run statistics cache must be cleared so that the statistics are rebuilt accordingly:
@@ -70,7 +70,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.12.2`
+5. `git checkout v2.12.3`
 
 ### Documentation Update
 
@@ -78,7 +78,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.12.2`
+5. `git checkout v2.12.3`
 
 ### Docker Instance Update
 
@@ -87,7 +87,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.12.2/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.12.3/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -121,6 +121,9 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 * **history:** support quoted badge values containing commas ([200e2a6](https://github.com/ts-factory/bublik-ui/commit/200e2a6d1e26b877f74a346d405cb982c38df02b))
 * **dashboard:** fix analytics dashboard page view tracking ([94d7f42](https://github.com/ts-factory/bublik-ui/commit/94d7f429d1425986080415ee2d88ab3e2ba4ef1f))
 * **import:** remove duplicated root prefix in import run requests ([27dd360](https://github.com/ts-factory/bublik-ui/commit/27dd360f13ec9bf9033e02703b8517f82d383322))
+* **import:** [form] show validation errors from API ([58025d4](https://github.com/ts-factory/bublik-ui/commit/58025d43ab7d7b2acb829167af940623c4dab0da))
+* **import:** show error properly for "Try Again" action ([dcb7bc5](https://github.com/ts-factory/bublik-ui/commit/dcb7bc5357b4f30dfc8dc6f1aa8bbb6a3f0a1272))
+* **log:** fix duplicate log JSON requests ([36990bd](https://github.com/ts-factory/bublik-ui/commit/36990bd0aafcaeac269c6ec1ccebf15e210d6a0b))
 
 #### ♻️ Code Refactoring
 
@@ -143,6 +146,8 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 
 * **history:** [form] align close button horizontally ([defe631](https://github.com/ts-factory/bublik-ui/commit/defe6319d0ba6e6cc0b70367989c8a8251265132))
 * **import:** improve import events table layout ([ba0507f](https://github.com/ts-factory/bublik-ui/commit/ba0507fb629563aadec8ce61044dd3c621aed340))
+* **import:** [table] fix "Runtime" and "Job Id" column layout ([98213f9](https://github.com/ts-factory/bublik-ui/commit/98213f9412aa9c695379fa51f5ee676bd64f4245))
+* **import:** move job id in line with status for better readability ([3c3d57b](https://github.com/ts-factory/bublik-ui/commit/3c3d57b1018b8143232cc36eb687ca29f8c271dc))
 
 ---
 
@@ -156,9 +161,10 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 - **results:** fix same-name test results retrieval via start result ID filter ([abfa3c4](https://github.com/ts-factory/bublik/commit/abfa3c423a987fb4eb0e293c1131f8b2aa640817))
 - **run:** fix missing run stats test comments ([895069e](https://github.com/ts-factory/bublik/commit/895069ee3794aacd6fb97019365d65b96c67116d))
 - **results:** fix broken `result`, `result_properties`, `requirements` filters ([facfc8e](https://github.com/ts-factory/bublik/commit/facfc8e2a5e46cccefa26a3b649f7bd5fef40b82))
-- **management:** management: fix per_conf migration when dashboard keys are missing ([f8a8221](https://github.com/ts-factory/bublik/commit/f8a82213b62b4b1c0df4c4a88a51835a6b79d61b))
+- **management:** fix per_conf migration when dashboard keys are missing ([f8a8221](https://github.com/ts-factory/bublik/commit/f8a82213b62b4b1c0df4c4a88a51835a6b79d61b))
 - **management:** sync dashboard sort keys with column keys during per_conf migration ([b1465f4](https://github.com/ts-factory/bublik/commit/b1465f419a7acffa433c9fdd5c0da93b9a64bb13))
-- **serializers:** remove access to non-existent attribute ([8fa13de](https://github.com/ts-factory/bublik/commit/fa32b5c82136cca25b7abe515738a45ea616e9a1))
+- **serializers:** remove access to non-existent attribute ([8fa13de](https://github.com/ts-factory/bublik/commit/8fa13de39f10143aeb38b9fe9b53eed40991a387))
+- **importruns:** fix possible hanging when an arbitrary URL is provided ([ac0ef64](https://github.com/ts-factory/bublik/commit/ac0ef6409267b35bfc6cf89c9f1d2fe952ddfad6))
 
 #### 🚀 New Feature
 - **api:** add project badges to see the pipe status externally ([3bd4ea9](https://github.com/ts-factory/bublik/commit/3bd4ea9f49b84fbf75594403aaa896e8800c15b4))
@@ -176,6 +182,7 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 - **requirements:** update packages versions to pick up bug fixes ([7f3eaa9](https://github.com/ts-factory/bublik/commit/7f3eaa98003a280610346410af43ad0ea3a7589d))
 - **management:** document dashboard settings merge reformat step ([a5df64f](https://github.com/ts-factory/bublik/commit/a5df64f298c4b9dc3b8cd090358db9447308621b))
 - **requirements:** update packages versions to pick up bug fixes ([fa32b5c](https://github.com/ts-factory/bublik/commit/fa32b5c82136cca25b7abe515738a45ea616e9a1))
+- **exceptions:** stop hiding additional error context from logs ([6fba90d](https://github.com/ts-factory/bublik/commit/6fba90d49b704126147febe5913b36708c6982f3))
 
 #### ♻️ Code Refactoring
 - **config:** improve dashboard column configuration by consolidating settings ([5a8946e](https://github.com/ts-factory/bublik/commit/5a8946e2690ba232046b871db775a3eb7d1ebae0))
@@ -195,6 +202,7 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 - **importruns:** integrate job and task entities into import workflow ([9b7513a](https://github.com/ts-factory/bublik/commit/9b7513a897bc77caead9360b7198e1e70e028489))
 - **jobtasks:** add task execution service for separation of concerns ([dbe5f0c](https://github.com/ts-factory/bublik/commit/dbe5f0c43daf3f89e6989119abfb161637add753))
 - **jobtasks:** improve session import tracking using job/task models ([3c5682f](https://github.com/ts-factory/bublik/commit/3c5682fd0e5f2696f3be94463b8bf966b72b53f6))
+- **importruns:** improve parameter validation by introducing a serializer ([777e47c](https://github.com/ts-factory/bublik/commit/777e47c24add3260dcb63e71bde8fc4efd3717e2))
 
 #### 🧹 Cleanup
 - **utils:** remove unused argument to avoid variable shadowing ([d956755](https://github.com/ts-factory/bublik/commit/d956755e3ddf3f2d9901ba1da99e588077455ed9))
@@ -208,3 +216,4 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 - **importruns:** unify import exception handling ([09ce9d5](https://github.com/ts-factory/bublik/commit/09ce9d533b5eabcdc883b90fb03bd6269fb8405a))
 - **importruns:** improve run source URL naming to reduce confusion ([17589f4](https://github.com/ts-factory/bublik/commit/17589f449a5864c071a5c7867e2fd24215641714))
 - **logging:** remove error logging duplicated by exception handler ([7d051fe](https://github.com/ts-factory/bublik/commit/7d051fe4180fb5815ee8b3510968686a30e48cfb))
+- **importruns:** remove unnecessary intermediate variable ([190d8cf](https://github.com/ts-factory/bublik/commit/190d8cf41a0d4a1d397b323a968574317c9fc804))
