@@ -1,11 +1,11 @@
 ---
-title: Release v2.12.3
+title: Release v2.12.4
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.12.3
+slug: release-v2.12.4
 ---
 
-We're excited to announce Bublik v2.12.3! <br />
+We're excited to announce Bublik v2.12.4! <br />
 This release brings live project status badges you can embed in READMEs and dashboards, autocomplete for the "Test Path" field in the history search form, and an improved dashboard column configuration structure in the per-project config. The import workflow has been significantly reworked: runs imports are now tracked as structured jobs with run-specific tasks, making it possible to monitor execution status per job. We also fixed a bug where filtering by test name could return mixed results from different test groups and normalized stacked chart y-axes for multi-axis plots.
 
 ### What's New
@@ -63,8 +63,8 @@ The `go_tree` payload value is renamed to `go_log`.
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.12.3`
-4. `./scripts/deploy --steps pip_requirements migrate_db per_project_conf run_services`
+3. `git checkout v2.12.4`
+4. `./scripts/deploy --steps pip_requirements setup_gunicorn migrate_db per_project_conf run_services`
 
 The run statistics data structure has been updated. Therefore, the run statistics cache must be cleared so that the statistics are rebuilt accordingly:
 
@@ -77,7 +77,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.12.3`
+5. `git checkout v2.12.4`
 
 ### Documentation Update
 
@@ -85,7 +85,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.12.3`
+5. `git checkout v2.12.4`
 
 ### Docker Instance Update
 
@@ -94,7 +94,7 @@ The run statistics data structure has been updated. Therefore, the run statistic
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.12.3/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.12.4/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -120,6 +120,10 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 
 * **history:** add autocomplete to "Test Path" global search form field ([ae3d3d8](https://github.com/ts-factory/bublik-ui/commit/ae3d3d8c351be852e0b737d3b49024137a9491d6))
 * **router:** send current URL information to parent window ([5eab15d](https://github.com/ts-factory/bublik-ui/commit/5eab15d2b25dd5a9604904d1ca37a54671191862))
+* **hooks:** add hotkey hook to handle different locales ([d873865](https://github.com/ts-factory/bublik-ui/commit/d8738655b1f54f24d0dd1de5cd9c332d3fa81fcf))
+* **import:** add reload indicator to the header ([e87e112](https://github.com/ts-factory/bublik-ui/commit/e87e1122adb81d3d75b739d09c1510a62d0bcba5))
+* **report:** add button shorcuts for report navigation ([075f008](https://github.com/ts-factory/bublik-ui/commit/075f008059e9d954a229f9f02dcf3df03f5c67b2))
+* **ui:** add kdb ui component for hinting users about shortcuts ([33c1d1a](https://github.com/ts-factory/bublik-ui/commit/33c1d1a98b3130c66458e00c0d306c2fd57ee094))
 
 
 #### 🐛 Bug Fix
@@ -131,6 +135,7 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 * **import:** [form] show validation errors from API ([58025d4](https://github.com/ts-factory/bublik-ui/commit/58025d43ab7d7b2acb829167af940623c4dab0da))
 * **import:** show error properly for "Try Again" action ([dcb7bc5](https://github.com/ts-factory/bublik-ui/commit/dcb7bc5357b4f30dfc8dc6f1aa8bbb6a3f0a1272))
 * **log:** fix duplicate log JSON requests ([36990bd](https://github.com/ts-factory/bublik-ui/commit/36990bd0aafcaeac269c6ec1ccebf15e210d6a0b))
+* **run:** update run results API filtering to use `exec_seqno` ([19a373c](https://github.com/ts-factory/bublik-ui/commit/19a373cf8ba63bd36ced9f30e3ced96b551b65da))
 
 #### ♻️ Code Refactoring
 
@@ -155,6 +160,9 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 * **import:** improve import events table layout ([ba0507f](https://github.com/ts-factory/bublik-ui/commit/ba0507fb629563aadec8ce61044dd3c621aed340))
 * **import:** [table] fix "Runtime" and "Job Id" column layout ([98213f9](https://github.com/ts-factory/bublik-ui/commit/98213f9412aa9c695379fa51f5ee676bd64f4245))
 * **import:** move job id in line with status for better readability ([3c3d57b](https://github.com/ts-factory/bublik-ui/commit/3c3d57b1018b8143232cc36eb687ca29f8c271dc))
+* **import:** [table] display pagination at the bottom always visible ([2c7ba99](https://github.com/ts-factory/bublik-ui/commit/2c7ba9978a17ee328970dd53dce80545ae56babf))
+* **report:** add arrow for "Reports" dropdown menu ([46d397b](https://github.com/ts-factory/bublik-ui/commit/46d397b09e62ffae6cbbe90c2039790d326be11a))
+* **ui:** [pagination] add new style with bordered button ([5505a83](https://github.com/ts-factory/bublik-ui/commit/5505a83b82d78dfe57e9be8a87ab48a167221915))
 
 ---
 
@@ -172,12 +180,17 @@ python manage.py run_cache delete -f 2017.01.01 -d stats -d stats_reqs
 - **management:** sync dashboard sort keys with column keys during per_conf migration ([b1465f4](https://github.com/ts-factory/bublik/commit/b1465f419a7acffa433c9fdd5c0da93b9a64bb13))
 - **serializers:** remove access to non-existent attribute ([8fa13de](https://github.com/ts-factory/bublik/commit/8fa13de39f10143aeb38b9fe9b53eed40991a387))
 - **importruns:** fix possible hanging when an arbitrary URL is provided ([ac0ef64](https://github.com/ts-factory/bublik/commit/ac0ef6409267b35bfc6cf89c9f1d2fe952ddfad6))
+- **importruns:** fix authentication failures when accessing the logs server ([9a04cc5](https://github.com/ts-factory/bublik/commit/9a04cc50361d4264c7a033fed65c467b3ef5abd9))
+- **run stats:** fix incorrect filtering when retrieving test iteration results ([9a46e1a](https://github.com/ts-factory/bublik/commit/9a46e1a7c03d679f7c66725e39b1828052e504fc))
 
 #### 🚀 New Feature
 - **api:** add project badges to see the pipe status externally ([3bd4ea9](https://github.com/ts-factory/bublik/commit/3bd4ea9f49b84fbf75594403aaa896e8800c15b4))
 - **history:** add test search options endpoint ([841b553](https://github.com/ts-factory/bublik/commit/841b553d1e7cbb30e87a0ed13740ce63269778af))
 - **cache:** add tests cache ([46235ed](https://github.com/ts-factory/bublik/commit/46235ed9398b1373011e7e1fe8837de13a905f21))
 - **importruns:** add job and task models with relations to track executions ([2140465](https://github.com/ts-factory/bublik/commit/2140465026b234c1af684dd96733d685e3d41032))
+
+#### ⚡ Performance Improvements
+- **models:** speed up results filtering by execution sequence number ([863068e](https://github.com/ts-factory/bublik/commit/863068e14097a710efec54523b7f722f5017e067))
 
 #### 📦 Chores
 - **management:** enable reformat to merge dashboard column settings ([858c32a](https://github.com/ts-factory/bublik/commit/858c32a12e69099c589b1a1e731f7e98b02b681c))
