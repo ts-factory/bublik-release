@@ -1,4 +1,4 @@
-We're excited to announce Bublik v2.13.0! <br />
+We're excited to announce Bublik v2.13.1! <br />
 In this release we've added a button to navigate to the latest run report from history page. We also fixed timestamp corruption in imported test iteration results, including timezone offset issues and midnight-crossing errors, and added automatic repair during imports to prevent future inconsistencies. Expected result generation was fixed to preserve keys and notes from obtained data, while avoiding duplicate expectations on force imports.
 
 ### What's New
@@ -28,7 +28,7 @@ Before starting the update, create a database backup to ensure data safety in ca
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.13.0`
+3. `git checkout v2.13.1`
 4. `./scripts/deploy --steps run_services`
 
 Runs imported before Bublik v2.13.0 from logs generated before TE v1.68.0 may contain two classes of timestamp corruption in iteration results: midnight-crossing date errors and timezone offset errors. These stem from incorrect timezone handling during import (fixed in Bublik v2.13.0) and incorrect calendar date assignment during log-to-JSON parsing (fixed in TE v1.68.0). To repair the affected data:
@@ -46,7 +46,7 @@ Since repairing iteration result timestamps may take a long time, use `tmux` or 
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.13.0`
+5. `git checkout v2.13.1`
 
 ### Documentation Update
 
@@ -54,7 +54,7 @@ Since repairing iteration result timestamps may take a long time, use `tmux` or 
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.13.0`
+5. `git checkout v2.13.1`
 
 ### Docker Instance Update
 
@@ -67,7 +67,7 @@ TE has been upgraded from version v1.47.1 to v1.69.0
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.13.0/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.13.1/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -114,6 +114,7 @@ python manage.py fix_result_timestamps -f 2017.01.01
 - **mcp:** fix wrong name for run metadata filter in `list_runs` tool ([08940c6](https://github.com/ts-factory/bublik/commit/08940c6e01da279f6a46f955924c7da79c32f777))
 - **mcp:** fix `list_runs_today` not matching project today dashboard ([0c90db2](https://github.com/ts-factory/bublik/commit/0c90db26c9deca5c2d056fcfda7a3a5e4129d8d4))
 - **mcp:** accept numeric JSON log timestamps ([17fa4f8](https://github.com/ts-factory/bublik/commit/17fa4f870c7f2cc892425cd0bfe8f34d4f7833ee))
+- **importruns:** fix crash when importing runs with non-UTC timezone offset ([029cc23](https://github.com/ts-factory/bublik/commit/029cc23e85fd4dd6c09c55c229a79c435eb740b7))
 
 #### 🚀 New Feature
 
