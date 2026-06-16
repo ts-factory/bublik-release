@@ -44,7 +44,7 @@ We've added a button to navigate to the latest run report from history page</p>
 <li class="">Synchronize the mirrors</li>
 <li class=""><code>cd bublik-ui</code></li>
 <li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v2.13.1</code></li>
+<li class=""><code>git checkout v2.13.0</code></li>
 </ol>
 <h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.13.1#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update" translate="no">​</a></h3>
 <ol>

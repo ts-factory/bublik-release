@@ -46,7 +46,7 @@ Since repairing iteration result timestamps may take a long time, use `tmux` or 
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.13.1`
+5. `git checkout v2.13.0`
 
 ### Documentation Update
 
