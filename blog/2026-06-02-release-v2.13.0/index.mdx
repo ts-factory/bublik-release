@@ -49,6 +49,12 @@ Since repairing iteration result timestamps may take a long time, use `tmux` or 
 
 ### Frontend Update
 
+:::danger
+If you hit error `ERROR: packages field missing or empty` when trying to build it means that you use outdated pnpm version in github workflow. <br />
+
+To fix this you can cherry pick following commit: [68d6a09](https://github.com/ts-factory/bublik-frontend/commit/68d6a095f3f309b8e61c3fcca9305dcca7cb70da)
+:::
+
 1. Trigger the workflow in your frontend repository
 2. Synchronize the mirrors
 3. `cd bublik-ui`
