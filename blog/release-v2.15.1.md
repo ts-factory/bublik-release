@@ -1,4 +1,4 @@
-We're excited to announce Bublik v2.15.0! <br />
+We're excited to announce Bublik v2.15.1! <br />
 This release introduces a new **Runs Progress** mode that adds a dedicated table view, navigation entry, and mode picker option for tracking how runs progress over time, backed by new runs-progress API endpoints. We've also made the config editor more reliable, false MODIFIED badges are gone, and stale drafts no longer shadow the server config after edits.
 
 ### What's New
@@ -25,7 +25,7 @@ A new **Runs Progress** mode joins the existing run views. It adds a progress en
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.15.0`
+3. `git checkout v2.15.1`
 4. `./scripts/deploy --steps run_services`
 
 ### Frontend Update
@@ -34,7 +34,7 @@ A new **Runs Progress** mode joins the existing run views. It adds a progress en
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.15.0`
+5. `git checkout v2.15.1`
 
 ### Documentation Update
 
@@ -42,7 +42,7 @@ A new **Runs Progress** mode joins the existing run views. It adds a progress en
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.15.0`
+5. `git checkout v2.15.1`
 
 ### Docker Instance Update
 
@@ -51,7 +51,7 @@ A new **Runs Progress** mode joins the existing run views. It adds a progress en
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.15.0/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.15.1/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -79,7 +79,12 @@ task up
 * **runs:** add new progress mode into nav and mode picker ([c5ab0fb](https://github.com/ts-factory/bublik-ui/commit/c5ab0fbe2389ba8a237bd41fe4c13684ff62735d))
 * **runs:** add runs progress table mode ([1d6793d](https://github.com/ts-factory/bublik-ui/commit/1d6793dcfd9c7f80325f3a3a47f26fa1a6d1ca98))
 * **ui:** support column checkmark and expander-less tree node ([9060be6](https://github.com/ts-factory/bublik-ui/commit/9060be6eb27cd92aa8955c04a336b75ae3c5a04c))
+* **runs:** focus single test suite in runs progress ([ec5e44b](https://github.com/ts-factory/bublik-ui/commit/ec5e44bdb337766b8bb38b1625e11fe3edf9d304))
+* **ui:** add shared ColumnsVisibility dropdown ([2dde173](https://github.com/ts-factory/bublik-ui/commit/2dde1738824606568a677603fe4ad9be33928cd2))
 
 #### ♻ Code Refactoring
 
+* **run:** [diff] use shared `ColumnsVisibility` dropdown ([6d22c51](https://github.com/ts-factory/bublik-ui/commit/6d22c512fdb883ff227cd2efbc58c635cc723181))
+* **run:** [run-table] use shared `ColumnsVisibility` in run table toolbar ([69f9444](https://github.com/ts-factory/bublik-ui/commit/69f9444901c1c9416904f107abd7458dfb4d6812))
+* **runs:** [progress] use shared `ColumnsVisibility` in runs progress ([c41100c](https://github.com/ts-factory/bublik-ui/commit/c41100cdb628d42b3766a03aff398dd9b291c308))
 * **configs:** tidy draft-persistence effects in the editor ([851e312](https://github.com/ts-factory/bublik-ui/commit/851e31239a3a2d6b45b853bc3985b112f193f37c))
