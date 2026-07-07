@@ -4,10 +4,77 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/blog</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Fri, 24 Jul 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 Aug 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v2.16.0-rc.0]]></title>
+            <link>https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0</link>
+            <guid>https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0</guid>
+            <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[We're excited to announce Bublik v2.16.0-rc.0!]]></description>
+            <content:encoded><![CDATA[<p>We're excited to announce Bublik v2.16.0-rc.0! <br>
+This release brings an <strong>improved sidebar</strong> built on a new sidebar-nav library, with per-feature navigation items, guides and dialogs, and sidebar URL state that persists per feature. We've also changed the default key-value <strong>delimiter to ": "</strong> instead of "=", and wired the configured delimiter consistently into global search and run queries.</p>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="whats-new">What's New<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New" translate="no">​</a></h3>
+<p><strong>Improved Sidebar</strong> <br>
+The app sidebar is now built from per-feature navigation items on top of a new sidebar-nav library and primitives. It gains guides and remembers its URL state per feature.</p>
+<p><strong>":" as Default Delimiter</strong> <br>
+The default key-value delimiter is now ": " instead of "=". The configured delimiter is applied consistently across global search badge fields and run data queries.</p>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="improved-sidebar">Improved Sidebar<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#improved-sidebar" class="hash-link" aria-label="Direct link to Improved Sidebar" title="Direct link to Improved Sidebar" translate="no">​</a></h3>
+<p>The app sidebar has been rebuilt on a new <strong>sidebar-nav</strong> library and primitives. Each feature now contributes its own navigation items, the sidebar hosts guides and dialogs, and its URL state is persisted per feature — so returning to a section brings you back to where you left off.</p>
+<p><img decoding="async" loading="lazy" alt="Sidebar" src="https://ts-factory.github.io/bublik-release/assets/images/sidebar-1-ec48f5898d46c2f1815a34ef01c66a00.webp" width="3350" height="2086" class="img_kwGz"></p>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update" translate="no">​</a></h3>
+<ol>
+<li class=""><code>cd bublik</code></li>
+<li class=""><code>git remote update</code></li>
+<li class=""><code>git checkout v2.15.1</code></li>
+<li class=""><code>./scripts/deploy --steps run_services</code></li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update" translate="no">​</a></h3>
+<ol>
+<li class="">Trigger the workflow in your frontend repository</li>
+<li class="">Synchronize the mirrors</li>
+<li class=""><code>cd bublik-ui</code></li>
+<li class=""><code>git remote update</code></li>
+<li class=""><code>git checkout v2.16.0-rc.0</code></li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update" translate="no">​</a></h3>
+<ol>
+<li class="">Trigger the workflow in your frontend repository</li>
+<li class="">Synchronize the mirrors</li>
+<li class=""><code>cd bublik-docs</code></li>
+<li class=""><code>git remote update</code></li>
+<li class=""><code>git checkout v2.16.0-rc.0</code></li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_b6R5 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_he_m"><pre tabindex="0" class="prism-code language-bash codeBlock_p1Hz thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_iZdR"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 1. Backup the current db</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task backup:create</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 2. Update the image tag in the .env file</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">sed</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-i</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"s/^IMAGE_TAG=.*/IMAGE_TAG=2.16.0-rc.0/"</span><span class="token plain"> .env</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 3. Pull the latest docker image</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task pull</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 4. Start the docker container</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task up</span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>sidebar:</strong> add sidebar-nav library and primitives (<a href="https://github.com/ts-factory/bublik-ui/commit/d3af38e03ff073a4c8882d40ac37739fd939a174" target="_blank" rel="noopener noreferrer" class="">d3af38e</a>)</li>
+<li class=""><strong>sidebar:</strong> persist per-feature sidebar URL state (<a href="https://github.com/ts-factory/bublik-ui/commit/210feea0ccee03ded234e8e12d2aecb8fb50da39" target="_blank" rel="noopener noreferrer" class="">210feea</a>)</li>
+<li class=""><strong>sidebar:</strong> sidebar guides and dialogs (<a href="https://github.com/ts-factory/bublik-ui/commit/c2682d66908aaf48773d4a37702a3c0f94ee7927" target="_blank" rel="noopener noreferrer" class="">c2682d6</a>)</li>
+<li class=""><strong>ui:</strong> shared selection popover (<a href="https://github.com/ts-factory/bublik-ui/commit/f13b0b38238925a5011db2e9f60f376f8e5a7c3a" target="_blank" rel="noopener noreferrer" class="">f13b0b3</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish" translate="no">​</a></h4>
+<ul>
+<li class="">change default delimeter to be ": " instead of "=" (<a href="https://github.com/ts-factory/bublik-ui/commit/90f54f6d04f39b86ead22bbb881c7edb9b5a957c" target="_blank" rel="noopener noreferrer" class="">90f54f6</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>history:</strong> wire key-value delimiters into global search BadgeFields (<a href="https://github.com/ts-factory/bublik-ui/commit/9a7cbb6679730ae2eb1136599bdfaa57f8a7d5a4" target="_blank" rel="noopener noreferrer" class="">9a7cbb6</a>)</li>
+<li class=""><strong>runs:</strong> use config.queryDelimiter for runData query split/join (<a href="https://github.com/ts-factory/bublik-ui/commit/893daa44dd15d5ac31ffed58c43718e6d26be8aa" target="_blank" rel="noopener noreferrer" class="">893daa4</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.16.0-rc.0#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>sidebar:</strong> build app sidebar from per-feature nav items (<a href="https://github.com/ts-factory/bublik-ui/commit/2f278f597ace30c8a9b13c3326b89fdd7abc9589" target="_blank" rel="noopener noreferrer" class="">2f278f5</a>)</li>
+</ul>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v2.15.1]]></title>
             <link>https://ts-factory.github.io/bublik-release/blog/release-v2.15.1</link>
@@ -2691,76 +2758,6 @@ Added new config option to allow reading configs without admin permissions.</p>
 <li class=""><strong>ci:</strong> fix deprecation warning for ruff (<a href="https://github.com/ts-factory/bublik/commit/19ef6e24270903cbe45b004fc4e720e193122a0c" target="_blank" rel="noopener noreferrer" class="">19ef6e2</a>), closes <a href="https://github.com/ts-factory/bublik/issues/125" target="_blank" rel="noopener noreferrer" class="">#125</a></li>
 <li class=""><strong>ci:</strong> add code quality check workflow (<a href="https://github.com/ts-factory/bublik/commit/d4658134b59642b731b21c8c80d5b60700bb213d" target="_blank" rel="noopener noreferrer" class="">d465813</a>)</li>
 <li class=""><strong>config:</strong> clarify main config expectations in schema (<a href="https://github.com/ts-factory/bublik/commit/b74636bc45dedb5a701217c34aab71bafed7f021" target="_blank" rel="noopener noreferrer" class="">b74636b</a>)</li>
-</ul>]]></content:encoded>
-            <category>release</category>
-        </item>
-        <item>
-            <title><![CDATA[Release v1.7.0]]></title>
-            <link>https://ts-factory.github.io/bublik-release/blog/release-v1.7.0</link>
-            <guid>https://ts-factory.github.io/bublik-release/blog/release-v1.7.0</guid>
-            <pubDate>Fri, 18 Apr 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[This release introduces numerous improvements to URL handling, deployment configurations, and log management.]]></description>
-            <content:encoded><![CDATA[<p>This release introduces numerous improvements to URL handling, deployment configurations, and log management. <br>
-Key updates include fixes for URL syntax and construction, and improved deployment processes with integrated documentation support. <br>
-A notable addition is the new Docker-based deployment option, offering a streamlined way to set up Bublik instances.</p>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="-whats-new">🔍 What's New?<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#-whats-new" class="hash-link" aria-label="Direct link to 🔍 What's New?" title="Direct link to 🔍 What's New?" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="docker-deploy">Docker Deploy<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#docker-deploy" class="hash-link" aria-label="Direct link to Docker Deploy" title="Direct link to Docker Deploy" translate="no">​</a></h4>
-<p>We've implemented Docker container support for simplified <strong>Bublik</strong> deployment and setup.<br>
-For detailed instructions on setting up a Bublik instance with Docker, please refer to our <a class="" href="https://ts-factory.github.io/bublik-release/docker/setup">documentation</a></p>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update" translate="no">​</a></h3>
-<ol>
-<li class=""><code>cd bublik</code></li>
-<li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v1.7.0</code></li>
-<li class=""><code>./scripts/deploy --steps general_conf</code></li>
-<li class="">Update the value of <code>BUBLIK_DOCS_DIST</code> in <code>bublik/general.conf</code> to match the name of the distribution you are using, if necessary</li>
-<li class=""><code>./scripts/deploy --steps django_settings run_services</code></li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update" translate="no">​</a></h3>
-<ol>
-<li class="">Trigger the workflow in your frontend repository</li>
-<li class="">Synchronize the mirrors</li>
-<li class=""><code>cd bublik-ui</code></li>
-<li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v1.7.0</code></li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update" translate="no">​</a></h3>
-<ol>
-<li class="">Trigger the workflow in your frontend repository</li>
-<li class="">Synchronize the mirrors</li>
-<li class=""><code>cd bublik-docs</code></li>
-<li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v1.7.0</code></li>
-</ol>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend" translate="no">​</a></h3>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring" translate="no">​</a></h3>
-<ul>
-<li class=""><strong>logs:</strong> rename 'Artifacts' to 'Attachments' (<a href="https://github.com/ts-factory/bublik-ui/commit/07d566768c125b8d4976d9e7cb54b5a7779721c8" target="_blank" rel="noopener noreferrer" class="">07d5667</a>)</li>
-</ul>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
-<ul>
-<li class=""><strong>urls:</strong> fix syntax warning (<a href="https://github.com/ts-factory/bublik/commit/342e605c96953070c369ce90171c2781cb825763" target="_blank" rel="noopener noreferrer" class="">342e605</a>)</li>
-<li class=""><strong>urls:</strong> fix absolute URL construction (<a href="https://github.com/ts-factory/bublik/commit/a54eee44b32d39ead53758128ddad96808007152" target="_blank" rel="noopener noreferrer" class="">a54eee4</a>)</li>
-<li class=""><strong>urls:</strong> fix URL prefix construction (<a href="https://github.com/ts-factory/bublik/commit/c648492dcfe8a1d5af7e2d27ff1fa4bff9d63a91" target="_blank" rel="noopener noreferrer" class="">c648492</a>)</li>
-<li class=""><strong>log:</strong> add proxy logic for JSON logs to fix CORS issues (<a href="https://github.com/ts-factory/bublik/commit/32e35dcf4871f97bd19f7220879d898d2e1eb488" target="_blank" rel="noopener noreferrer" class="">32e35dc</a>)</li>
-</ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
-<ul>
-<li class=""><strong>log:</strong> add proxy endpoint to resolve CORS issues with remote logs (<a href="https://github.com/ts-factory/bublik/commit/add49cfbcf6c9b3f836547ec1560e6a2824be05f" target="_blank" rel="noopener noreferrer" class="">add49cf</a>)</li>
-</ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.7.0#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores" translate="no">​</a></h4>
-<ul>
-<li class=""><strong>deploy:</strong> specify path to the static docs (<a href="https://github.com/ts-factory/bublik/commit/391ddb4ff38f8465fc1f117c06d8f24d3d3f4537" target="_blank" rel="noopener noreferrer" class="">391ddb4</a>)</li>
-<li class=""><strong>importruns:</strong> normalize response data dict keys (<a href="https://github.com/ts-factory/bublik/commit/2f8e1fe8991c5a789f0e50c1a165d90433497ad7" target="_blank" rel="noopener noreferrer" class="">2f8e1fe</a>)</li>
-<li class=""><strong>log:</strong> rename 'artifacts' to 'attachments' in log API (<a href="https://github.com/ts-factory/bublik/commit/e17b52d0f8372a2b6da9ebd3eac5f41382d8c5e9" target="_blank" rel="noopener noreferrer" class="">e17b52d</a>)</li>
-<li class=""><strong>deploy:</strong> fix Bublik UI static location (<a href="https://github.com/ts-factory/bublik/commit/4f4b3e0a95cb86a6bb32f57a7ff3066f45336f03" target="_blank" rel="noopener noreferrer" class="">4f4b3e0</a>)</li>
-<li class=""><strong>deploy:</strong> integrate Bublik docs into initial deployment (<a href="https://github.com/ts-factory/bublik/commit/9d94b960ed7b22f5e769e8eea4045086a699057b" target="_blank" rel="noopener noreferrer" class="">9d94b96</a>)</li>
 </ul>]]></content:encoded>
             <category>release</category>
         </item>
