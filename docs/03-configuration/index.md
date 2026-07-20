@@ -12,6 +12,7 @@ title: Configuration
   - [Main Configuration Areas](#main-configuration-areas)
 - [Analytics Configuration](#analytics-configuration)
 - [MCP Configuration](#mcp-configuration)
+- [AI Chat Configuration](#ai-chat-configuration)
 - [Configuration Files](#configuration-files)
 <!--toc:end-->
 
@@ -58,6 +59,10 @@ The [Analytics](./05-analytics.md) documentation explains how to enable optional
 ## MCP Configuration
 
 The [MCP](./04-mcp.md) documentation explains how to expose Bublik through Model Context Protocol and connect supported AI clients such as OpenCode and Claude.
+
+## AI Chat Configuration
+
+The [AI Chat](./06-chat/index.md) documentation covers the built-in assistant: a step-by-step [setup guide](./06-chat/01-setup.md) for both Docker and `scripts/deploy` installations, and a [reference](./06-chat/02-reference.md) for the `ai` configuration, provider recipes, generated-file storage and troubleshooting.
 
 ## Configuration Files
 
