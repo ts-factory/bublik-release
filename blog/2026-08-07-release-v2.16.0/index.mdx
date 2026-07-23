@@ -1,11 +1,11 @@
 ---
-title: Release v2.16.0-rc.0
+title: Release v2.16.0
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.16.0-rc.0
+slug: release-v2.16.0
 ---
 
-We're excited to announce Bublik v2.16.0-rc.0! <br />
+We're excited to announce Bublik v2.16.0! <br />
 This release brings an **improved sidebar** built on a new sidebar-nav library, with per-feature navigation items, guides and dialogs, and sidebar URL state that persists per feature. We've also changed the default key-value **delimiter to ": "** instead of "=", and wired the configured delimiter consistently into global search and run queries.
 
 ### What's New
@@ -41,7 +41,7 @@ The app sidebar has been rebuilt on a new **sidebar-nav** library and primitives
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.16.0-rc.0`
+5. `git checkout v2.16.0`
 
 ### Documentation Update
 
@@ -49,7 +49,7 @@ The app sidebar has been rebuilt on a new **sidebar-nav** library and primitives
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.16.0-rc.0`
+5. `git checkout v2.16.0`
 
 ### Docker Instance Update
 
@@ -58,7 +58,7 @@ The app sidebar has been rebuilt on a new **sidebar-nav** library and primitives
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.16.0-rc.0/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.16.0/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -88,6 +88,7 @@ task up
 
 * **history:** wire key-value delimiters into global search BadgeFields ([9a7cbb6](https://github.com/ts-factory/bublik-ui/commit/9a7cbb6679730ae2eb1136599bdfaa57f8a7d5a4))
 * **runs:** use config.queryDelimiter for runData query split/join ([893daa4](https://github.com/ts-factory/bublik-ui/commit/893daa44dd15d5ac31ffed58c43718e6d26be8aa))
+* **sidebar:** prevent guide lines misalignment when using zoom levels ([9f47d0a](https://github.com/ts-factory/bublik-ui/commit/9f47d0aaef7af8ccc496311de14696a48b502e4a))
 
 
 #### ♻ Code Refactoring
