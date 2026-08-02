@@ -1,5 +1,5 @@
-We're excited to announce Bublik v2.17.0! <br />
-This release adds **drag-and-drop column reordering** to run tables, improves progress loading by fetching runs in batches as needed, and extends MI log charts with support for the new series aggregation type. We also made history form labels and placeholders clearer, significantly sped up report generation, and fixed broken short URLs, report generation bugs, and incorrect tag caching.
+We're excited to announce Bublik v2.17.1! <br />
+This release adds **drag-and-drop column reordering** to run tables, improves progress loading by fetching runs in batches as needed, and extends MI log charts with support for the new series aggregation type. We also made history form labels and placeholders clearer, significantly sped up report generation, introduced data contracts for run logs and run metadata with validation during import, and fixed broken short URLs, report generation bugs, and incorrect tag caching.
 
 ### What's New
 
@@ -28,7 +28,7 @@ Run table columns can now be reordered directly from their headers. Drag an indi
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.17.0`
+3. `git checkout v2.17.1`
 4. `./scripts/deploy --steps per_project_conf run_services`
 `_TagsCache` was replaced with `_MetasCache` — the cache now also stores branches, revisions, and labels, plus the population logic was fixed. Existing caches need to be rebuilt to match the new structure.
 1. Activate the virtual environment: `source .env/bin/activate`
@@ -40,7 +40,7 @@ Run table columns can now be reordered directly from their headers. Drag an indi
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.17.0`
+5. `git checkout v2.17.1`
 
 ### Documentation Update
 
@@ -48,7 +48,7 @@ Run table columns can now be reordered directly from their headers. Drag an indi
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.17.0`
+5. `git checkout v2.17.1`
 
 ### Docker Instance Update
 
@@ -57,7 +57,7 @@ Run table columns can now be reordered directly from their headers. Drag an indi
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.17.0/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.17.1/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -83,11 +83,14 @@ python manage.py initialize_configs
 
 * **dashboard:** manual refresh not updating run statuses ([0502759](https://github.com/ts-factory/bublik-ui/commit/0502759633f7f1599d1a4661c3adbdf1d7f42233))
 * **log:** render new series aggregation on auto-seqno MI charts ([9152b0a](https://github.com/ts-factory/bublik-ui/commit/9152b0a46755aa6d7d89a6a863d091d81bebd422))
+* **log:** keep pagination available in all-pages mode ([18b227a](https://github.com/ts-factory/bublik-ui/commit/18b227a61d9174e314f5bb4c1f0a9c6dadfdf79e))
 * **sidebar:** hide horizontal overflow when collapsed ([85c45d9](https://github.com/ts-factory/bublik-ui/commit/85c45d9151fd8a4afd08bd3357396ae37541479a))
+* **report:** preserve deep-link anchors scroll ([76dd5b6](https://github.com/ts-factory/bublik-ui/commit/76dd5b6a65e57d3d5b05776ed674ec81eeca22c5))
 
 #### 🚀 New Feature
 
 * **log:** support new aggregation type in MI logs ([996f0e9](https://github.com/ts-factory/bublik-ui/commit/996f0e9b27442e0dce9b50318a174b1f8f34fc01))
+* **log:** add setting to remember all-pages selection ([1cfccbd](https://github.com/ts-factory/bublik-ui/commit/1cfccbd08bc3fd433dca854c75d66b29419a5d71))
 * **run:** [table] add ability to reorder columns by dragging them ([60b2655](https://github.com/ts-factory/bublik-ui/commit/60b26557c7328c8cbf2ee6a7d54968ef6e23613a))
 * **runs:** [progress] lazy load progress runs in batches of 50 ([2616efa](https://github.com/ts-factory/bublik-ui/commit/2616efaeead85edf8b92eb790e920dcbda71241b))
 
@@ -111,6 +114,8 @@ python manage.py initialize_configs
 - **config:** align schema with the only supported UI version ([f412662](https://github.com/ts-factory/bublik/commit/f4126625ab87a129600659289e99cc8145144672)), related to [#341](https://github.com/ts-factory/bublik/issues/341)
 - **report:** fix report configuration applicability detection ([ddec067](https://github.com/ts-factory/bublik/commit/ddec0672422b77956f5b9887caddfeef99f4dcd2))
 - **config:** prevent broken reports caused by empty y-axis values ([5395bbd](https://github.com/ts-factory/bublik/commit/5395bbda1177c6366835942257ccc26ee3b3b59e))
+- **importruns:** fix import failure caused by invalid meta data schema ([c0b30ed](https://github.com/ts-factory/bublik/commit/c0b30ed99d59c02f1fe55dae3892774b9fed7367))
+- **results:** support EMPTY status reported by TE ([f0e691d](https://github.com/ts-factory/bublik/commit/f0e691d818dcaec78b47a00a04a5da714aee15fe))
 
 #### 🚀 New Feature
 
@@ -141,3 +146,4 @@ python manage.py initialize_configs
 - **result:** align OpenAPI schemas with actual API responses ([b35e417](https://github.com/ts-factory/bublik/commit/b35e417db0cc659891353452a1c9dc5631282c9d))
 - **management:** enable reformat to ensure supported UI version ([af7b667](https://github.com/ts-factory/bublik/commit/af7b6676e38c2b81e1d67d1302810e66ffb2babf)), closes [#341](https://github.com/ts-factory/bublik/issues/341)
 - **management:** enable reformat to clean up empty y-axis config entries ([04a2f8b](https://github.com/ts-factory/bublik/commit/04a2f8bdac7c0072af899d7318d45cd791d2d1da))
+- **requirements:** update packages versions to pick up bug fixes ([5bf204f](https://github.com/ts-factory/bublik/commit/5bf204f4eec0e83526436479c9b2792464b72c32))
