@@ -4,10 +4,222 @@
         <title>Bublik Blog</title>
         <link>https://ts-factory.github.io/bublik-release/blog</link>
         <description>Bublik Blog</description>
-        <lastBuildDate>Fri, 24 Jul 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Sep 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release v2.18.1]]></title>
+            <link>https://ts-factory.github.io/bublik-release/blog/release-v2.18.1</link>
+            <guid>https://ts-factory.github.io/bublik-release/blog/release-v2.18.1</guid>
+            <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[We're excited to announce Bublik v2.18.1!]]></description>
+            <content:encoded><![CDATA[<p>We're excited to announce Bublik v2.18.1! <br>
+The headline of this release is the <strong>AI assistant</strong> — a chat built into Bublik
+that can investigate runs, results, logs, history and dashboards for you, with
+model selection, streaming responses, persistent threads and downloadable
+generated files.</p>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="whats-new">What's New<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New" translate="no">​</a></h3>
+<p><strong>AI Chat</strong> <br>
+A new Chat page talks to the model provider you configure, calls Bublik's own
+tools to answer questions about your test data, and keeps each conversation as a
+thread you can come back to. Disabled by default — an administrator turns it on.</p>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="ai-chat">AI Chat<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#ai-chat" class="hash-link" aria-label="Direct link to AI Chat" title="Direct link to AI Chat" translate="no">​</a></h3>
+<p>Bublik now ships an AI assistant. It answers questions about runs, results,
+logs, history, dashboards, projects and reports by calling the same data
+services as Bublik's MCP server — in-process, so the standalone <code>mcp</code> service
+does not need to be running.</p>
+<p>What it does:</p>
+<ul>
+<li class=""><strong>Model selection.</strong> Configure one or more providers — OpenAI, Anthropic,
+Google, a gateway, or a local runtime such as Ollama or LM Studio — and pick a
+model per conversation.</li>
+<li class=""><strong>Streaming responses</strong>, with reasoning and tool calls rendered as they
+arrive.</li>
+<li class=""><strong>Generated files.</strong> Ask for a PDF, DOCX, XLSX, CSV, Markdown, HTML, JSON or
+text file and download it from the thread.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Chat Config" src="https://ts-factory.github.io/bublik-release/assets/images/chat-1-6d29036bee446b9c2e42d4ad02d46394.webp" width="3376" height="2024" class="img_kwGz"></p>
+<p><img decoding="async" loading="lazy" alt="Chat" src="https://ts-factory.github.io/bublik-release/assets/images/chat-2-c4ab5e314488c2893d7fa20963d9a34a.webp" width="3376" height="2018" class="img_kwGz"></p>
+<p>Chat is <strong>disabled by default</strong>. See the <a class="" href="https://ts-factory.github.io/bublik-release/configuration/chat">AI Chat documentation</a>
+for what it is, and <a class="" href="https://ts-factory.github.io/bublik-release/configuration/chat/setup">AI Chat Setup</a> for the
+step-by-step procedure on both Docker and <code>scripts/deploy</code> installations.</p>
+<div class="theme-admonition theme-admonition-note admonition_XaGX alert alert--secondary"><div class="admonitionHeading_wjTz"><span class="admonitionIcon_jHo2"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>Your test data reaches the model provider</div><div class="admonitionContent_wnH1"><p>Prompts, model responses, tool arguments and tool results — which include test
+logs and metadata — are sent to whichever provider you configure. Review the
+provider's privacy and retention terms before enabling chat for sensitive data.</p></div></div>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="smaller-improvements">Smaller Improvements<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#smaller-improvements" class="hash-link" aria-label="Direct link to Smaller Improvements" title="Direct link to Smaller Improvements" translate="no">​</a></h3>
+<ul>
+<li class="">The <strong>report header</strong> with links to Run, Log and Source is now sticky.</li>
+<li class="">The collapsed <strong>run header</strong> shows the run duration.</li>
+<li class="">The <strong>sidebar</strong> displays version information next to the "Bublik" label.</li>
+<li class=""><strong>History</strong> now defaults to the latest three months.</li>
+<li class="">Truncated dashboard text cells show a native tooltip.</li>
+<li class="">Runs support the <code>UNSPEC</code> and <code>EMPTY</code> result statuses, and run diff propagates
+deep child changes up to parent packages.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update" translate="no">​</a></h3>
+<div class="theme-admonition theme-admonition-warning admonition_XaGX alert alert--warning"><div class="admonitionHeading_wjTz"><span class="admonitionIcon_jHo2"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_wnH1"><p>The <code>nginx_conf</code> and <code>run_side_servers</code> deployment steps require root rights. If you don't have root access, you must manually update the Nginx configuration using <code>bublik/templates/nginx.bublik.template</code> and reload Nginx.</p></div></div>
+<ol>
+<li class=""><code>cd bublik</code></li>
+<li class=""><code>git remote update</code></li>
+<li class=""><code>git checkout v2.18.1</code></li>
+<li class=""><code>./scripts/deploy --steps general_conf pip_requirements django_settings celery_service flower_service mcp_service setup_gunicorn nginx_conf migrate_db run_side_servers run_services</code></li>
+</ol>
+<p>AI Chat is disabled by default. For instructions on enabling and configuring it, see <a class="" href="https://ts-factory.github.io/bublik-release/configuration/chat/setup">Setting Up AI Chat</a>.</p>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update" translate="no">​</a></h3>
+<ol>
+<li class="">Trigger the workflow in your frontend repository</li>
+<li class="">Synchronize the mirrors</li>
+<li class=""><code>cd bublik-ui</code></li>
+<li class=""><code>git remote update</code></li>
+<li class=""><code>git checkout v2.18.1</code></li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update" translate="no">​</a></h3>
+<ol>
+<li class="">Trigger the workflow in your frontend repository</li>
+<li class="">Synchronize the mirrors</li>
+<li class=""><code>cd bublik-docs</code></li>
+<li class=""><code>git remote update</code></li>
+<li class=""><code>git checkout v2.18.1</code></li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_b6R5 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_he_m"><pre tabindex="0" class="prism-code language-bash codeBlock_p1Hz thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_iZdR"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 1. Backup the current db</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task backup:create</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 2. Update the image tag in the .env file</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">sed</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-i</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"s/^IMAGE_TAG=.*/IMAGE_TAG=2.18.1/"</span><span class="token plain"> .env</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 3. Pull the latest docker image</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task pull</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 4. Start the docker container</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task up</span><br></div></code></pre></div></div>
+<p>To enable AI chat on Docker, add <code>AI_CHAT_ENABLED=true</code> and your provider key to
+the deployment <code>.env</code>, then <code>task up</code>. Object storage is already the default
+there — compose ships SeaweedFS. See
+<a class="" href="https://ts-factory.github.io/bublik-release/configuration/chat/setup">AI Chat Setup</a> for the full procedure.</p>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>chat:</strong> add AI assistant with model selection and persistent threads (<a href="https://github.com/ts-factory/bublik-ui/commit/3ff9c3b88e7f5e6c1b043fac38f5259d0e36b7f8" target="_blank" rel="noopener noreferrer" class="">3ff9c3b</a>)</li>
+<li class=""><strong>chat:</strong> add streaming and rich response rendering (<a href="https://github.com/ts-factory/bublik-ui/commit/f28f4e4bafd9e8a2cf193d86e832f3e50be64149" target="_blank" rel="noopener noreferrer" class="">f28f4e4</a>)</li>
+<li class=""><strong>chat:</strong> align AI models, reasoning, and generated files (<a href="https://github.com/ts-factory/bublik-ui/commit/422685ca8a3d1bbf8079cebab75f5ed482cfcfd0" target="_blank" rel="noopener noreferrer" class="">422685c</a>)</li>
+<li class=""><strong>chat:</strong> gate sidebar navigation (<a href="https://github.com/ts-factory/bublik-ui/commit/81a72cebd6b0cfde6ec924db573599c108faca2c" target="_blank" rel="noopener noreferrer" class="">81a72ce</a>)</li>
+<li class=""><strong>chat:</strong> support cancellation and context compaction (<a href="https://github.com/ts-factory/bublik-ui/commit/99e2784a3b89bbdd405847a784bef8f3866db037" target="_blank" rel="noopener noreferrer" class="">99e2784</a>)</li>
+<li class=""><strong>dashboard:</strong> show native tooltip on truncated text cells (<a href="https://github.com/ts-factory/bublik-ui/commit/e48853779de4cc2456e83e4e5ba48a48f6893bf3" target="_blank" rel="noopener noreferrer" class="">e488537</a>)</li>
+<li class=""><strong>log:</strong> render scenario step outline in test meta (<a href="https://github.com/ts-factory/bublik-ui/commit/cf6b24a3b97fc7b68a13e28cbbbd8b1e4917c417" target="_blank" rel="noopener noreferrer" class="">cf6b24a</a>)</li>
+<li class=""><strong>log:</strong> show test parameter descriptions in parameters table (<a href="https://github.com/ts-factory/bublik-ui/commit/d74290338cdd68d8fc7718c2ccb3d85cad2289a1" target="_blank" rel="noopener noreferrer" class="">d742903</a>)</li>
+<li class=""><strong>report:</strong> make header with links to Run, Log, Source sticky (<a href="https://github.com/ts-factory/bublik-ui/commit/34c9eb3037e93c521ba4058578b4f9d6d46a3d1c" target="_blank" rel="noopener noreferrer" class="">34c9eb3</a>)</li>
+<li class=""><strong>run-details:</strong> show duration in collapsed run header (<a href="https://github.com/ts-factory/bublik-ui/commit/561a80886a605e3f11c6354c9a4f0ebf13adc1fd" target="_blank" rel="noopener noreferrer" class="">561a808</a>)</li>
+<li class=""><strong>sidebar:</strong> display version information next to "Bublik" label (<a href="https://github.com/ts-factory/bublik-ui/commit/ad8b14eb3064d4055c3a1a7758fbca65332e75c5" target="_blank" rel="noopener noreferrer" class="">ad8b14e</a>)</li>
+<li class=""><strong>ui:</strong> add reusable Markdown component (<a href="https://github.com/ts-factory/bublik-ui/commit/d00c14a0264708258d57c0a771fa57d2732566b6" target="_blank" rel="noopener noreferrer" class="">d00c14a</a>)</li>
+<li class=""><strong>ui:</strong> expose test hooks for e2e selectors (<a href="https://github.com/ts-factory/bublik-ui/commit/0170b9d4f617efac8e274d2a0389bb9fe1f12f6c" target="_blank" rel="noopener noreferrer" class="">0170b9d</a>)</li>
+<li class=""><strong>ui:</strong> float text area label like text input (<a href="https://github.com/ts-factory/bublik-ui/commit/e35d1426e81c001d643404186085d324ee0aca83" target="_blank" rel="noopener noreferrer" class="">e35d142</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>run:</strong> make gap between items smaller for consistency (<a href="https://github.com/ts-factory/bublik-ui/commit/97b9fea29049a5264b6fde20b1fd7a96b928f194" target="_blank" rel="noopener noreferrer" class="">97b9fea</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>api:</strong> refetch config-derived data when a config changes (<a href="https://github.com/ts-factory/bublik-ui/commit/1bc9ef94abf6ff0fa47e214af267b9471320bf0a" target="_blank" rel="noopener noreferrer" class="">1bc9ef9</a>)</li>
+<li class=""><strong>api:</strong> register the chat tag with RTK Query (<a href="https://github.com/ts-factory/bublik-ui/commit/1c6abc5e16614243ed63265b3c39be5779687f8f" target="_blank" rel="noopener noreferrer" class="">1c6abc5</a>)</li>
+<li class=""><strong>auth:</strong> refresh the session for the <code>me</code> query and share one refresh (<a href="https://github.com/ts-factory/bublik-ui/commit/882f4ca05e137ed57bf4b3713b3bcf9f3a7e45c5" target="_blank" rel="noopener noreferrer" class="">882f4ca</a>)</li>
+<li class=""><strong>chat:</strong> harden thread state and background run recovery (<a href="https://github.com/ts-factory/bublik-ui/commit/c7c4ffeb302cb0c851dcf710d5c12c919851cf9f" target="_blank" rel="noopener noreferrer" class="">c7c4ffe</a>)</li>
+<li class=""><strong>chat:</strong> preserve markdown, reasoning, and tool rendering (<a href="https://github.com/ts-factory/bublik-ui/commit/fd6ec17424a0848f46c13f974a890db14fdc0497" target="_blank" rel="noopener noreferrer" class="">fd6ec17</a>)</li>
+<li class=""><strong>config:</strong> lock AI configuration to default project (<a href="https://github.com/ts-factory/bublik-ui/commit/0a8cf847a3bb05eb1af52f72faaad3a542554c3a" target="_blank" rel="noopener noreferrer" class="">0a8cf84</a>)</li>
+<li class=""><strong>configs:</strong> fall back to the form value when the editor has none (<a href="https://github.com/ts-factory/bublik-ui/commit/9c102fb865bd6f3835d3a292cf28d8adfc8a1c0c" target="_blank" rel="noopener noreferrer" class="">9c102fb</a>)</li>
+<li class=""><strong>deploy-info:</strong> tolerate unpopulated server version data (<a href="https://github.com/ts-factory/bublik-ui/commit/923431815c0693c9d609a5e615dedb627f9f63dd" target="_blank" rel="noopener noreferrer" class="">9234318</a>)</li>
+<li class=""><strong>history:</strong> default to latest three months (<a href="https://github.com/ts-factory/bublik-ui/commit/a5aecdf4161a3df8e7a28302697b6808773ad4c3" target="_blank" rel="noopener noreferrer" class="">a5aecdf</a>)</li>
+<li class=""><strong>history:</strong> drop the debug logging from the filter refresh (<a href="https://github.com/ts-factory/bublik-ui/commit/a0a07713cda99e86570bf6d22b37cc31cad8de92" target="_blank" rel="noopener noreferrer" class="">a0a0771</a>)</li>
+<li class=""><strong>lint:</strong> scope the playwright rules to the e2e suite (<a href="https://github.com/ts-factory/bublik-ui/commit/3a376603d939217a380c4cee9cca5a8f6a011e9a" target="_blank" rel="noopener noreferrer" class="">3a37660</a>)</li>
+<li class=""><strong>log:</strong> [tree] keep the ancestor chain when filtering to errors only (<a href="https://github.com/ts-factory/bublik-ui/commit/925330cbb70e76994335f883fd2d55360e371eb7" target="_blank" rel="noopener noreferrer" class="">925330c</a>)</li>
+<li class=""><strong>log:</strong> disable New Bug when its data fails to load (<a href="https://github.com/ts-factory/bublik-ui/commit/25bf979e0827a8c6a0f99005215afb1a389ab915" target="_blank" rel="noopener noreferrer" class="">25bf979</a>)</li>
+<li class=""><strong>log:</strong> retry transient JSON generation failures (<a href="https://github.com/ts-factory/bublik-ui/commit/694eca11430262b41658fa182c7c1b3655d5c514" target="_blank" rel="noopener noreferrer" class="">694eca1</a>), closes <a href="https://github.com/ts-factory/bublik-ui/issues/573" target="_blank" rel="noopener noreferrer" class="">#573</a></li>
+<li class=""><strong>log:</strong> stop getChunks emitting an empty chunk between skipped items (<a href="https://github.com/ts-factory/bublik-ui/commit/aafa05d44a9cf7ff9deffd4d60e9170d98d178ee" target="_blank" rel="noopener noreferrer" class="">aafa05d</a>)</li>
+<li class=""><strong>log:</strong> stop the all-pages pager racing the cache for its page count (<a href="https://github.com/ts-factory/bublik-ui/commit/308c1be7e6b2eebf140cd694b0848f5dd9279891" target="_blank" rel="noopener noreferrer" class="">308c1be</a>)</li>
+<li class=""><strong>run-diff:</strong> propagate deep child changes to parent packages (<a href="https://github.com/ts-factory/bublik-ui/commit/c24d4c826f316124e93d5c661a5ec38d0b9c40ee" target="_blank" rel="noopener noreferrer" class="">c24d4c8</a>), closes <a href="https://github.com/ts-factory/bublik-ui/issues/3" target="_blank" rel="noopener noreferrer" class="">#3</a></li>
+<li class=""><strong>run:</strong> [result-table] stop the results filter rejecting UNSPEC (<a href="https://github.com/ts-factory/bublik-ui/commit/2549c9e681e17aa3569ab2c6b23d3140399555b6" target="_blank" rel="noopener noreferrer" class="">2549c9e</a>)</li>
+<li class=""><strong>runs:</strong> [form] preserve dirty filter values without remounting (<a href="https://github.com/ts-factory/bublik-ui/commit/9ee95710b41778e120a9d9e2a7a8eed307786cd0" target="_blank" rel="noopener noreferrer" class="">9ee9571</a>)</li>
+<li class=""><strong>runs:</strong> drop the redundant fragment wrapper (<a href="https://github.com/ts-factory/bublik-ui/commit/8958d7e6ec5384b840cef56438d605d2d29c06f3" target="_blank" rel="noopener noreferrer" class="">8958d7e</a>)</li>
+<li class=""><strong>run:</strong> support UNSPEC and EMPTY result statuses (<a href="https://github.com/ts-factory/bublik-ui/commit/1131ce74bcc2cd41339effaf17e8ee09469cc9b2" target="_blank" rel="noopener noreferrer" class="">1131ce7</a>)</li>
+<li class=""><strong>ui:</strong> use font-medium for floating field labels (<a href="https://github.com/ts-factory/bublik-ui/commit/e1f50c2779f41cdf7193c4702b68cbfc3fe709d1" target="_blank" rel="noopener noreferrer" class="">e1f50c2</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-continuous-integration--ci">🔧 Continuous Integration | CI<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-continuous-integration--ci" class="hash-link" aria-label="Direct link to 🔧 Continuous Integration | CI" title="Direct link to 🔧 Continuous Integration | CI" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>e2e:</strong> add a cross-repository playwright workflow (<a href="https://github.com/ts-factory/bublik-ui/commit/2ee45941a85d18a5f09680fb8263bab67dd4766e" target="_blank" rel="noopener noreferrer" class="">2ee4594</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-documentation">📝 Documentation<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-documentation" class="hash-link" aria-label="Direct link to 📝 Documentation" title="Direct link to 📝 Documentation" translate="no">​</a></h4>
+<ul>
+<li class="">add CONTRIBUTING.md (<a href="https://github.com/ts-factory/bublik-ui/commit/f16135284752520abd1db0fe9f86bbf9f76dd73d" target="_blank" rel="noopener noreferrer" class="">f161352</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-tests">✅ Tests<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-tests" class="hash-link" aria-label="Direct link to ✅ Tests" title="Direct link to ✅ Tests" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>config:</strong> stub TextArea and InputLabel in the tailwind-ui mock (<a href="https://github.com/ts-factory/bublik-ui/commit/67c7d9d05520765252316133796e4738d60985d2" target="_blank" rel="noopener noreferrer" class="">67c7d9d</a>)</li>
+<li class=""><strong>e2e:</strong> add the page objects shared across pages (<a href="https://github.com/ts-factory/bublik-ui/commit/c15f7259fe2baa2a4700bfb0900152bc2d2344e5" target="_blank" rel="noopener noreferrer" class="">c15f725</a>)</li>
+<li class=""><strong>e2e:</strong> cover auth, help, tools and navigation with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/a53b59c9d71e9ad38a8227fb2facdf208be5cbbb" target="_blank" rel="noopener noreferrer" class="">a53b59c</a>)</li>
+<li class=""><strong>e2e:</strong> cover the admin pages with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/11e86c0baaa733bd18b326dc383a077f0d6a96ed" target="_blank" rel="noopener noreferrer" class="">11e86c0</a>)</li>
+<li class=""><strong>e2e:</strong> cover the compare and multiple pages with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/1eacd531c3415f3f9100418499ca921eb5738f14" target="_blank" rel="noopener noreferrer" class="">1eacd53</a>)</li>
+<li class=""><strong>e2e:</strong> cover the dashboard with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/c4c0626c36c71d1f3dcf2ed3b263eca9a807ba2b" target="_blank" rel="noopener noreferrer" class="">c4c0626</a>)</li>
+<li class=""><strong>e2e:</strong> cover the history page with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/51692f924216b2dcd6775704057127f40b888e4f" target="_blank" rel="noopener noreferrer" class="">51692f9</a>)</li>
+<li class=""><strong>e2e:</strong> cover the log page with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/49e5af8d9d363b1fad51760e9fc1f2a1e5ef2df3" target="_blank" rel="noopener noreferrer" class="">49e5af8</a>)</li>
+<li class=""><strong>e2e:</strong> cover the report and measurements pages with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/f79b769b3d6ef1ed3739669e647b9c3e7f3349be" target="_blank" rel="noopener noreferrer" class="">f79b769</a>)</li>
+<li class=""><strong>e2e:</strong> cover the run details page with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/5ef5ad2a6c46f4c5d73cd77aa928dc9953f68c8f" target="_blank" rel="noopener noreferrer" class="">5ef5ad2</a>)</li>
+<li class=""><strong>e2e:</strong> cover the runs page with gherkin scenarios (<a href="https://github.com/ts-factory/bublik-ui/commit/2e996397db56f9a0cce643307d37b028d831cf5f" target="_blank" rel="noopener noreferrer" class="">2e99639</a>)</li>
+<li class=""><strong>e2e:</strong> describe the fixture data with a generated manifest (<a href="https://github.com/ts-factory/bublik-ui/commit/b5be2c81922511d4005b39aba49493c772b1c0f1" target="_blank" rel="noopener noreferrer" class="">b5be2c8</a>)</li>
+<li class=""><strong>e2e:</strong> scaffold the playwright harness (<a href="https://github.com/ts-factory/bublik-ui/commit/d63332b41dc84fc763fa19765d7a216e8ddbaa9f" target="_blank" rel="noopener noreferrer" class="">d63332b</a>)</li>
+<li class=""><strong>e2e:</strong> sign in and import the fixture bundles before the suite runs (<a href="https://github.com/ts-factory/bublik-ui/commit/cbd3322192c748615e08a5ccb1d17240b11efb75" target="_blank" rel="noopener noreferrer" class="">cbd3322</a>)</li>
+</ul>
+<hr>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix-1">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-bug-fix-1" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>report:</strong> return a clear error for invalid config ID (<a href="https://github.com/ts-factory/bublik/commit/0c8c2511fd4dd60089eab48e74d01a231a8f5d23" target="_blank" rel="noopener noreferrer" class="">0c8c251</a>)</li>
+<li class=""><strong>measurements:</strong> return a clear error for invalid measurement ID (<a href="https://github.com/ts-factory/bublik/commit/0ca28694125a9a48e46c5c7c3e1e62fa2f204d5b" target="_blank" rel="noopener noreferrer" class="">0ca2869</a>)</li>
+<li class=""><strong>config:</strong> prevent silent meta categorization failures on invalid patterns (<a href="https://github.com/ts-factory/bublik/commit/4cd33641c647ae8a7ce1da1db913d3ddd77caae6" target="_blank" rel="noopener noreferrer" class="">4cd3364</a>), related to <a href="https://github.com/ts-factory/bublik/issues/259" target="_blank" rel="noopener noreferrer" class="">#259</a></li>
+<li class=""><strong>config:</strong> prevent empty log bases in references config (<a href="https://github.com/ts-factory/bublik/commit/7c24544ccd51d8a7f5485bde463029b671283cf7" target="_blank" rel="noopener noreferrer" class="">7c24544</a>)</li>
+<li class=""><strong>config:</strong> prevent broken reference links caused by invalid URIs (<a href="https://github.com/ts-factory/bublik/commit/d72b3e48836542b916e63f1c61053cf2f2052d1f" target="_blank" rel="noopener noreferrer" class="">d72b3e4</a>), closes <a href="https://github.com/ts-factory/bublik/issues/259" target="_blank" rel="noopener noreferrer" class="">#259</a></li>
+<li class=""><strong>importruns:</strong> fix import failure caused by missing values key in schema (<a href="https://github.com/ts-factory/bublik/commit/cdec80dc49cd2ab4c779ebc1e9a676b26075b26a" target="_blank" rel="noopener noreferrer" class="">cdec80d</a>)</li>
+<li class=""><strong>result:</strong> accept UNSPEC expected result status in run log import (<a href="https://github.com/ts-factory/bublik/commit/3f05a8782fc65cda4db7adb04cff582b3799e75a" target="_blank" rel="noopener noreferrer" class="">3f05a87</a>)</li>
+<li class=""><strong>management:</strong> fix categories with no patterns not being assigned any metas (<a href="https://github.com/ts-factory/bublik/commit/2d89ca41853d70888cda8a8ea1cb6386243d55f0" target="_blank" rel="noopener noreferrer" class="">2d89ca4</a>)</li>
+<li class=""><strong>results:</strong> avoid 500 when a result has no iteration (<a href="https://github.com/ts-factory/bublik/commit/08791d32742b267585c719aba4900ed9d4383ce4" target="_blank" rel="noopener noreferrer" class="">08791d3</a>)</li>
+<li class=""><strong>configs:</strong> initialize the ai config when chat is enabled (<a href="https://github.com/ts-factory/bublik/commit/8f93f8f729547d6021976635c800e7ceef2ac46a" target="_blank" rel="noopener noreferrer" class="">8f93f8f</a>)</li>
+<li class=""><strong>deploy:</strong> fix the MCP service path and silent config install failures (<a href="https://github.com/ts-factory/bublik/commit/3b409c3e7103394bb753c015eae7d12182bdcdc6" target="_blank" rel="noopener noreferrer" class="">3b409c3</a>)</li>
+<li class=""><strong>auth:</strong> fix access/refresh cookies expiring with browser session (<a href="https://github.com/ts-factory/bublik/commit/120701d00e96152ab949201cce106afb72ecb2e3" target="_blank" rel="noopener noreferrer" class="">120701d</a>)</li>
+<li class=""><strong>chat:</strong> require an explicit api_url for every provider (<a href="https://github.com/ts-factory/bublik/commit/e26037d678a5ead9395a0b6f4bfae0806c1b1f72" target="_blank" rel="noopener noreferrer" class="">e26037d</a>)</li>
+<li class=""><strong>mcp:</strong> fix crash in <code>get_run_overview</code> tool (<a href="https://github.com/ts-factory/bublik/commit/23434e6e338ff9466e23b09aa1c0c05ace0fec0b" target="_blank" rel="noopener noreferrer" class="">23434e6</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>mcp:</strong> expose tools for in-process clients (<a href="https://github.com/ts-factory/bublik/commit/7bee6f04cf2d20289ec030e571bb09441759fb2c" target="_blank" rel="noopener noreferrer" class="">7bee6f0</a>)</li>
+<li class=""><strong>mcp:</strong> improve tool output for AI clients (<a href="https://github.com/ts-factory/bublik/commit/1308e02a952d105c0e6913da7c5fc3670ed8fc8b" target="_blank" rel="noopener noreferrer" class="">1308e02</a>)</li>
+<li class=""><strong>importruns:</strong> accept param_docs and scenario in the run log schema (<a href="https://github.com/ts-factory/bublik/commit/78556715b1054b313b1d5c09ca16e22cba186271" target="_blank" rel="noopener noreferrer" class="">7855671</a>)</li>
+<li class=""><strong>chat:</strong> add secure global provider configuration (<a href="https://github.com/ts-factory/bublik/commit/5feaadc5f8365e0cab914b250c1bc9e5edf35e54" target="_blank" rel="noopener noreferrer" class="">5feaadc</a>)</li>
+<li class=""><strong>chat:</strong> persist user-owned conversation threads (<a href="https://github.com/ts-factory/bublik/commit/b9553d9b5d2fd02b39e52bd7f805ef058face733" target="_blank" rel="noopener noreferrer" class="">b9553d9</a>)</li>
+<li class=""><strong>chat:</strong> generate private downloadable files (<a href="https://github.com/ts-factory/bublik/commit/8d495d981ed6ea4e4ff86a55831e35df62cf8214" target="_blank" rel="noopener noreferrer" class="">8d495d9</a>)</li>
+<li class=""><strong>chat:</strong> construct agents from configured providers (<a href="https://github.com/ts-factory/bublik/commit/20c6fee61179e0a5f8918ac886e180cd05d2b880" target="_blank" rel="noopener noreferrer" class="">20c6fee</a>)</li>
+<li class=""><strong>chat:</strong> stream durable server-owned runs (<a href="https://github.com/ts-factory/bublik/commit/a8780193e42f257eafc0d064d391489b5b118674" target="_blank" rel="noopener noreferrer" class="">a878019</a>)</li>
+<li class=""><strong>chat:</strong> report model context usage (<a href="https://github.com/ts-factory/bublik/commit/d495bc2a057f859aa753e74a9adca3bbbf2bdc95" target="_blank" rel="noopener noreferrer" class="">d495bc2</a>)</li>
+<li class=""><strong>chat:</strong> compact long conversation histories (<a href="https://github.com/ts-factory/bublik/commit/69c410736a2bc35b133a69d7f9fa41fe624f15e4" target="_blank" rel="noopener noreferrer" class="">69c4107</a>)</li>
+<li class=""><strong>server:</strong> expose chat availability (<a href="https://github.com/ts-factory/bublik/commit/4c1e6f9676fc5718a9b705c05d251d7f68203a05" target="_blank" rel="noopener noreferrer" class="">4c1e6f9</a>)</li>
+<li class=""><strong>chat:</strong> send configurable per-provider request headers (<a href="https://github.com/ts-factory/bublik/commit/46241fa043afdbd9ef5dc08f85fa13e53fadf6cf" target="_blank" rel="noopener noreferrer" class="">46241fa</a>)</li>
+<li class=""><strong>deploy:</strong> add optional SeaweedFS object storage for chat files (<a href="https://github.com/ts-factory/bublik/commit/ce9abbb1fd681b8dac0a52cfd503dd5cd449523e" target="_blank" rel="noopener noreferrer" class="">ce9abbb</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="️-code-refactoring">♻️ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#%EF%B8%8F-code-refactoring" class="hash-link" aria-label="Direct link to ♻️ Code Refactoring" title="Direct link to ♻️ Code Refactoring" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>report:</strong> introduce DTO-based service contracts (<a href="https://github.com/ts-factory/bublik/commit/4c6eecd3ce85f6f9985e8f4f66597a4b9b2c7919" target="_blank" rel="noopener noreferrer" class="">4c6eecd</a>)</li>
+<li class=""><strong>measurements:</strong> introduce DTO-based service contracts (<a href="https://github.com/ts-factory/bublik/commit/7008ece6242df58439df76e4ac5a310c904ace83" target="_blank" rel="noopener noreferrer" class="">7008ece</a>)</li>
+<li class=""><strong>measurements:</strong> remove pagination from ViewSet for consistency (<a href="https://github.com/ts-factory/bublik/commit/2f399ce54b9e965ed00ecba18019d0a88af0bb95" target="_blank" rel="noopener noreferrer" class="">2f399ce</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>requirements:</strong> update packages versions to pick up bug fixes (<a href="https://github.com/ts-factory/bublik/commit/1582ed9849e75ac31dabe6782b90df1765c1e2a1" target="_blank" rel="noopener noreferrer" class="">1582ed9</a>)</li>
+<li class=""><strong>report:</strong> align OpenAPI schemas with actual API responses (<a href="https://github.com/ts-factory/bublik/commit/b0a731121a57d12e69762fd760642303169a1139" target="_blank" rel="noopener noreferrer" class="">b0a7311</a>)</li>
+<li class=""><strong>measurements:</strong> align OpenAPI schemas with actual API responses (<a href="https://github.com/ts-factory/bublik/commit/b83250d4443aee8e4792b2bcfb1180f766c6593b" target="_blank" rel="noopener noreferrer" class="">b83250d</a>)</li>
+<li class=""><strong>build:</strong> add AI chat runtime dependencies (<a href="https://github.com/ts-factory/bublik/commit/7ba7e536a61cd9dccd228bf56391144c933e1012" target="_blank" rel="noopener noreferrer" class="">7ba7e53</a>)</li>
+<li class=""><strong>deploy:</strong> serve chat streams over ASGI (<a href="https://github.com/ts-factory/bublik/commit/149f3749bd96d8728543034dbc208942d7c23d10" target="_blank" rel="noopener noreferrer" class="">149f374</a>)</li>
+<li class=""><strong>deploy:</strong> release chat settings and secrets to the services (<a href="https://github.com/ts-factory/bublik/commit/edd6df33d827010d8c9e6779a8eddb7b4e0d3abd" target="_blank" rel="noopener noreferrer" class="">edd6df3</a>)</li>
+<li class=""><strong>requirements:</strong> update packages versions to pick up bug fixes (<a href="https://github.com/ts-factory/bublik/commit/c29d5cb25d798d4198d6473548f89add9faafe61" target="_blank" rel="noopener noreferrer" class="">c29d5cb</a>)</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-cleanup">🧹 Cleanup<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.18.1#-cleanup" class="hash-link" aria-label="Direct link to 🧹 Cleanup" title="Direct link to 🧹 Cleanup" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>deploy:</strong> fix misaligned AI chat file storage directory step definition (<a href="https://github.com/ts-factory/bublik/commit/9e464a026f0b7e558bb8549e7381af67fc106633" target="_blank" rel="noopener noreferrer" class="">9e464a0</a>)</li>
+</ul>]]></content:encoded>
+            <category>release</category>
+        </item>
         <item>
             <title><![CDATA[Release v2.17.1]]></title>
             <link>https://ts-factory.github.io/bublik-release/blog/release-v2.17.1</link>
@@ -2701,63 +2913,6 @@ You can select charts and switch to stacked mode to display them on the same axi
 <h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-chores-1">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.10.1#-chores-1" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>importruns:</strong> improve traceability of downloaded logs (<a href="https://github.com/ts-factory/bublik/commit/68e93f350b3cc9cc80ec05e522b1b4b26ce03908" target="_blank" rel="noopener noreferrer" class="">68e93f3</a>)</li>
-</ul>]]></content:encoded>
-            <category>release</category>
-        </item>
-        <item>
-            <title><![CDATA[Release v1.9.0]]></title>
-            <link>https://ts-factory.github.io/bublik-release/blog/release-v1.9.0</link>
-            <guid>https://ts-factory.github.io/bublik-release/blog/release-v1.9.0</guid>
-            <pubDate>Thu, 19 Jun 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Bublik v1.9.0 is a small release that fixes a longstanding issue with database migrations.]]></description>
-            <content:encoded><![CDATA[<p>Bublik v1.9.0 is a small release that fixes a longstanding issue with database migrations.</p>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update" translate="no">​</a></h3>
-<ol>
-<li class="">Navigate to the backend directory: <code>cd bublik</code></li>
-<li class="">Fetch updates from all remote repositories: <code>git remote update</code></li>
-<li class="">Check out the latest stable release before the new one: <code>git checkout v1.8.0</code></li>
-<li class="">Ensure all migrations are created and applied: <code>./scripts/deploy --steps migrate_db</code></li>
-<li class="">⚠️ Backup the database to ensure rollback is possible in case of issues.</li>
-<li class="">⚠️ Backup the migrations folder (bublik/data/migrations/), in case they are needed for rollback or comparison.</li>
-<li class="">Delete all migration files from the migrations folder (except &nbsp;<em>__init__.py</em>): <code>find . -path "*/bublik/data/migrations/*.py" -not -name "__init__.py" -delete</code></li>
-<li class="">Check out this release: <code>git checkout v1.9.0</code>.</li>
-<li class="">Activate the virtual environment: <code>source .env/bin/activate</code></li>
-<li class="">Delete all migration records from the database: <code>python3 manage.py dbshell -- -c 'TRUNCATE "django_migrations";'</code>.</li>
-<li class="">Apply migrations without executing SQL (mark as applied): <code>python3 manage.py migrate --fake</code></li>
-<li class="">Restart the services: <code>./scripts/deploy --steps run_services</code></li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update" translate="no">​</a></h3>
-<ol>
-<li class="">Trigger the workflow in your frontend repository</li>
-<li class="">Synchronize the mirrors</li>
-<li class=""><code>cd bublik-ui</code></li>
-<li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v1.9.0</code></li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update" translate="no">​</a></h3>
-<ol>
-<li class="">Trigger the workflow in your frontend repository</li>
-<li class="">Synchronize the mirrors</li>
-<li class=""><code>cd bublik-docs</code></li>
-<li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v1.9.0</code></li>
-</ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="docker-instance-updatee">Docker Instance Updatee<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#docker-instance-updatee" class="hash-link" aria-label="Direct link to Docker Instance Updatee" title="Direct link to Docker Instance Updatee" translate="no">​</a></h3>
-<ol>
-<li class=""><code>task backup:create</code></li>
-<li class=""><code>task pull</code></li>
-<li class=""><code>task up</code></li>
-<li class=""><code>task migrations:transition_1.8.0_to_1.9.0</code></li>
-<li class=""><code>task up</code></li>
-</ol>
-<hr>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
-<hr>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v1.9.0#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores" translate="no">​</a></h4>
-<ul>
-<li class=""><strong>database:</strong> track and commit database migrations in Git (<a href="https://github.com/ts-factory/bublik/commit/c0a469906fd20b7675f4e1142849f41f59f3135c" target="_blank" rel="noopener noreferrer" class="">c0a4699</a>)</li>
 </ul>]]></content:encoded>
             <category>release</category>
         </item>
