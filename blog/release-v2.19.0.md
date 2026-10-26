@@ -309,6 +309,12 @@ The `server_packages` deployment step requires root rights. If you don't have ro
 
 ### Documentation Update
 
+:::danger
+If you hit error `ERROR: packages field missing or empty` when trying to build it means that you use outdated pnpm version in github workflow. <br />
+
+To fix this you can cherry pick following commit: [fb3fa55](https://github.com/ts-factory/bublik-docs/commit/fb3fa550db6e5a40335dc54e7fc21c8f58ddcc1c)
+:::
+
 1. Trigger the workflow in your frontend repository
 2. Synchronize the mirrors
 3. `cd bublik-docs`
