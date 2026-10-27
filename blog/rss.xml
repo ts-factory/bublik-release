@@ -9,18 +9,18 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Release v2.19.0]]></title>
-            <link>https://ts-factory.github.io/bublik-release/blog/release-v2.19.0</link>
-            <guid>https://ts-factory.github.io/bublik-release/blog/release-v2.19.0</guid>
+            <title><![CDATA[Release v2.19.1]]></title>
+            <link>https://ts-factory.github.io/bublik-release/blog/release-v2.19.1</link>
+            <guid>https://ts-factory.github.io/bublik-release/blog/release-v2.19.1</guid>
             <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[We're excited to announce Bublik v2.19.0!]]></description>
-            <content:encoded><![CDATA[<p>We're excited to announce Bublik v2.19.0! <br>
+            <description><![CDATA[We're excited to announce Bublik v2.19.1!]]></description>
+            <content:encoded><![CDATA[<p>We're excited to announce Bublik v2.19.1! <br>
 This release adds <strong>result classification</strong>. You can explain a failure once by
 attaching it to an issue, and Bublik matches the same failure in future runs.
 Sign-in now happens in a <strong>dialog</strong> on the page you're on, and the sidebar gets
 an <strong>account menu</strong> with a <strong>dark mode</strong> and <strong>Beta features</strong>. <strong>History</strong>
 search now runs on the server</p>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="whats-new">What's New<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="whats-new">What's New<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#whats-new" class="hash-link" aria-label="Direct link to What's New" title="Direct link to What's New" translate="no">​</a></h3>
 <p><strong>Result Classification</strong> <br>
 Select failed results, classify them under a new or existing issue, and decide
 whether they still count as unexpected. The rules carry the classification over
@@ -31,8 +31,8 @@ what you started. The sidebar's Settings item becomes an account menu.</p>
 <p><strong>Dark Mode and Beta Features</strong> <br>
 Choose System, Light or Dark in the account menu. Try experimental features
 from the new Beta menu.</p>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="result-classification">Result Classification<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#result-classification" class="hash-link" aria-label="Direct link to Result Classification" title="Direct link to Result Classification" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="highlights">Highlights<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="result-classification">Result Classification<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#result-classification" class="hash-link" aria-label="Direct link to Result Classification" title="Direct link to Result Classification" translate="no">​</a></h3>
 <p>A run often fails in ways the team already knows about: a known product bug, a flaky test. <br>
 Until now every run reported them again as unexpected. <br>
 With classification you explain a failure <strong>once</strong> and Bublik remembers it.</p>
@@ -52,7 +52,7 @@ when a run is imported, when you classify, or when you click <strong>Apply Rules
 Classifying results, applying rules and editing issues and rules require sign-in. <br>
 To allow this without sign-in, add <code>manage_issues</code> to the project's
 <code>NOT_PERMISSION_REQUIRED_ACTIONS</code>.</p></div></div>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="1-see-what-is-already-explained">1. See What Is Already Explained<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#1-see-what-is-already-explained" class="hash-link" aria-label="Direct link to 1. See What Is Already Explained" title="Direct link to 1. See What Is Already Explained" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="1-see-what-is-already-explained">1. See What Is Already Explained<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#1-see-what-is-already-explained" class="hash-link" aria-label="Direct link to 1. See What Is Already Explained" title="Direct link to 1. See What Is Already Explained" translate="no">​</a></h4>
 <p>Open a run and expand a test. <br>
 Every result that a rule matched shows its stamps under the verdicts: the issue key and the category.</p>
 <p><img decoding="async" loading="lazy" alt="Classification stamps in the run results" src="https://ts-factory.github.io/bublik-release/assets/images/run-stamps-bc63c75a6fc9221a77639a998b378d92.webp" width="3360" height="2100" class="img_kwGz"></p>
@@ -66,7 +66,7 @@ them as new problems.</li>
 <li class=""><strong>Classification filter.</strong> Show only untriaged results, or only results with
 a particular effect, to find what still needs attention.</li>
 </ol>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="2-classify-new-failures">2. Classify New Failures<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#2-classify-new-failures" class="hash-link" aria-label="Direct link to 2. Classify New Failures" title="Direct link to 2. Classify New Failures" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="2-classify-new-failures">2. Classify New Failures<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#2-classify-new-failures" class="hash-link" aria-label="Direct link to 2. Classify New Failures" title="Direct link to 2. Classify New Failures" translate="no">​</a></h4>
 <p>Click a failed result row to select it. Click more rows, even rows of other
 tests, to classify them together.</p>
 <p><img decoding="async" loading="lazy" alt="Selecting results to classify" src="https://ts-factory.github.io/bublik-release/assets/images/classify-select-ed2cd053111fe302d593a5b71879f728.webp" width="3360" height="2100" class="img_kwGz"></p>
@@ -76,6 +76,8 @@ tests, to classify them together.</p>
 <li class="">The <strong>selection pill</strong> stays at the bottom of the page while you scroll and
 reopens the list of selected results.</li>
 </ol>
+<p>The selection belongs to the run you made it in. It is still there when you
+come back from a result's log, but another run starts with nothing selected.</p>
 <p>The Classify drawer has three sections:</p>
 <p><img decoding="async" loading="lazy" alt="Classify drawer" src="https://ts-factory.github.io/bublik-release/assets/images/classify-drawer-f85e93234d4fc7ca2b5f67f64e38544f.webp" width="3360" height="2360" class="img_kwGz"></p>
 <ol>
@@ -97,7 +99,7 @@ to stop matching on it. <strong>How matching works</strong> explains each field.
 <div class="theme-admonition theme-admonition-tip admonition_XaGX alert alert--success"><div class="admonitionHeading_wjTz"><span class="admonitionIcon_jHo2"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_wnH1"><p>When you create a rule for future runs, Bublik stamps only the results you
 selected. To stamp the other matching results in the current run, click
 <strong>Apply Rules</strong> on the run page.</p></div></div>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="3-review-the-runs-issues">3. Review the Run's Issues<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#3-review-the-runs-issues" class="hash-link" aria-label="Direct link to 3. Review the Run's Issues" title="Direct link to 3. Review the Run's Issues" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="3-review-the-runs-issues">3. Review the Run's Issues<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#3-review-the-runs-issues" class="hash-link" aria-label="Direct link to 3. Review the Run's Issues" title="Direct link to 3. Review the Run's Issues" translate="no">​</a></h4>
 <p>Each run now has an <strong>Issues</strong> page. It lists every issue that stamped at
 least one of the run's results, together with the number of results it
 stamped.</p>
@@ -112,7 +114,7 @@ covers environment, flaky and known issues.</li>
 Use it after you add or edit rules. Inactive rules and rules of closed
 issues are skipped. Apply Rules is also on the log and measurements pages.</li>
 </ol>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="4-manage-issues-and-rules">4. Manage Issues and Rules<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#4-manage-issues-and-rules" class="hash-link" aria-label="Direct link to 4. Manage Issues and Rules" title="Direct link to 4. Manage Issues and Rules" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="4-manage-issues-and-rules">4. Manage Issues and Rules<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#4-manage-issues-and-rules" class="hash-link" aria-label="Direct link to 4. Manage Issues and Rules" title="Direct link to 4. Manage Issues and Rules" translate="no">​</a></h4>
 <p><strong>Issues</strong> is a new top-level sidebar section. It lists the issues of all
 projects, grouped by project.</p>
 <p><img decoding="async" loading="lazy" alt="Issues page" src="https://ts-factory.github.io/bublik-release/assets/images/issues-page-eb51d6ddafeddf2386d9c2ed6762be5c.webp" width="3360" height="2100" class="img_kwGz"></p>
@@ -143,7 +145,7 @@ links to the run, log and history.</li>
 disposition, parameters, verdicts or tags, or to deactivate it.</li>
 <li class=""><strong>New Rule</strong> adds a rule to this issue without classifying a result first.</li>
 </ol>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="5-follow-an-issue-in-history">5. Follow an Issue in History<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#5-follow-an-issue-in-history" class="hash-link" aria-label="Direct link to 5. Follow an Issue in History" title="Direct link to 5. Follow an Issue in History" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="5-follow-an-issue-in-history">5. Follow an Issue in History<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#5-follow-an-issue-in-history" class="hash-link" aria-label="Direct link to 5. Follow an Issue in History" title="Direct link to 5. Follow an Issue in History" translate="no">​</a></h4>
 <p>History can now filter by classification. Open <strong>Edit Search</strong> and scroll to
 the new <strong>Classification</strong> section:</p>
 <p><img decoding="async" loading="lazy" alt="Classification filters in History search" src="https://ts-factory.github.io/bublik-release/assets/images/history-form-69f484935c95a8321da6d06810277b91.webp" width="3360" height="2100" class="img_kwGz"></p>
@@ -161,7 +163,7 @@ the new <strong>Classification</strong> section:</p>
 </ol>
 <p>The search form's parameter, tag, label, branch and revision fields now suggest
 values that exist in the project.</p>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="sign-in-dialog-and-account-menu">Sign-In Dialog and Account Menu<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#sign-in-dialog-and-account-menu" class="hash-link" aria-label="Direct link to Sign-In Dialog and Account Menu" title="Direct link to Sign-In Dialog and Account Menu" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="sign-in-dialog-and-account-menu">Sign-In Dialog and Account Menu<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#sign-in-dialog-and-account-menu" class="hash-link" aria-label="Direct link to Sign-In Dialog and Account Menu" title="Direct link to Sign-In Dialog and Account Menu" translate="no">​</a></h3>
 <p>Signing in is now done in a dialog instead of on a separate page.</p>
 <ul>
 <li class=""><strong>Signing in.</strong> If your session is missing or has expired, Bublik shows a
@@ -185,7 +187,7 @@ on a public page, you stay on it.</li>
 clicked <strong>Classify</strong>. After signing in, Bublik continues with the
 classification.</li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="dark-mode-and-beta-features">Dark Mode and Beta Features<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#dark-mode-and-beta-features" class="hash-link" aria-label="Direct link to Dark Mode and Beta Features" title="Direct link to Dark Mode and Beta Features" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="dark-mode-and-beta-features">Dark Mode and Beta Features<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#dark-mode-and-beta-features" class="hash-link" aria-label="Direct link to Dark Mode and Beta Features" title="Direct link to Dark Mode and Beta Features" translate="no">​</a></h3>
 <p><img decoding="async" loading="lazy" alt="Account menu with Appearance and Beta" src="https://ts-factory.github.io/bublik-release/assets/images/account-beta-377a5d3432d0beeb8b95b40896e3bb07.webp" width="3360" height="2100" class="img_kwGz"></p>
 <ol>
 <li class=""><strong>Appearance.</strong> Switch between System, Light and Dark right in the account
@@ -199,7 +201,7 @@ are marked <strong>NEW</strong>. The same switches are under Settings → Beta.<
 <p>The first Beta feature is <strong>Dashboard Grid Layout</strong>. It lays out the dashboard
 table as a grid: numbers are right-aligned, short values are never cut off,
 and headers stay at the top while you scroll.</p>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="server-side-history-search">Server-Side History Search<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#server-side-history-search" class="hash-link" aria-label="Direct link to Server-Side History Search" title="Direct link to Server-Side History Search" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="server-side-history-search">Server-Side History Search<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#server-side-history-search" class="hash-link" aria-label="Direct link to Server-Side History Search" title="Direct link to Server-Side History Search" translate="no">​</a></h3>
 <p>The History substring filter used to match only the rows on the current page.
 Matches on other pages were missing, and counts and pagination ignored the
 filter. The search now runs on the server across all results:</p>
@@ -212,7 +214,7 @@ the result type. It is case-insensitive.</li>
 included when you share a link. <strong>Reset Filter</strong> clears it.</li>
 </ol>
 <p>Counts, pagination, measurements and the legend now reflect the search.</p>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="user-management">User Management<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#user-management" class="hash-link" aria-label="Direct link to User Management" title="Direct link to User Management" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="user-management">User Management<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#user-management" class="hash-link" aria-label="Direct link to User Management" title="Direct link to User Management" translate="no">​</a></h3>
 <p>Admin → Users shows each user's <strong>Status</strong> (Pending, Active or Deactivated)
 and the date they <strong>joined</strong>. Deactivated users can now be <strong>reactivated</strong>, so
 deactivation is no longer permanent. If a user action fails, the error message
@@ -230,7 +232,7 @@ user is no longer listed.</li>
 <li class="">If an email can't be sent, the error says so instead of reporting an
 unexpected server error.</li>
 </ul>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="smaller-improvements">Smaller Improvements<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#smaller-improvements" class="hash-link" aria-label="Direct link to Smaller Improvements" title="Direct link to Smaller Improvements" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="smaller-improvements">Smaller Improvements<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#smaller-improvements" class="hash-link" aria-label="Direct link to Smaller Improvements" title="Direct link to Smaller Improvements" translate="no">​</a></h3>
 <ul>
 <li class=""><strong>Sidebar.</strong> The Log entry moved under <strong>Run</strong>, next to Details, with
 buttons to switch the log layout. The Run entry shows the run ID, and the
@@ -251,38 +253,38 @@ page that was shortened.</li>
 <li class=""><strong>API.</strong> A JSON request body that repeats a key is now rejected with 400, and
 an invalid project ID returns a clear error instead of a server error.</li>
 </ul>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update" translate="no">​</a></h3>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="admin-section">Admin Section<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#admin-section" class="hash-link" aria-label="Direct link to Admin Section" title="Direct link to Admin Section" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend-update">Backend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#backend-update" class="hash-link" aria-label="Direct link to Backend Update" title="Direct link to Backend Update" translate="no">​</a></h3>
 <div class="theme-admonition theme-admonition-warning admonition_XaGX alert alert--warning"><div class="admonitionHeading_wjTz"><span class="admonitionIcon_jHo2"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_wnH1"><p>The <code>server_packages</code> deployment step requires root rights. If you don't have root access, you must manually install the <code>python3-venv</code> package, which is now used instead of <code>python3-virtualenv</code> to build the virtual environment. If <code>ENV_PYTHON</code> points to a non-default Python, install the matching <code>python3.X-venv</code> package instead.</p></div></div>
 <ol>
 <li class=""><code>cd bublik</code></li>
 <li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v2.19.0</code></li>
+<li class=""><code>git checkout v2.19.1</code></li>
 <li class=""><code>./scripts/deploy --steps server_packages general_conf pip_requirements django_settings migrate_db run_services</code></li>
 </ol>
 <div class="theme-admonition theme-admonition-warning admonition_XaGX alert alert--warning"><div class="admonitionHeading_wjTz"><span class="admonitionIcon_jHo2"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_wnH1"><p><code>EMAIL_USE_TLS</code> now defaults to <code>false</code>, but existing configurations may still contain <code>"EMAIL_USE_TLS": true</code>. Check it: use <code>false</code> for a local mail agent on <code>localhost</code> and <code>true</code> for an external SMTP server that requires STARTTLS.</p></div></div>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend-update">Frontend Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#frontend-update" class="hash-link" aria-label="Direct link to Frontend Update" title="Direct link to Frontend Update" translate="no">​</a></h3>
 <ol>
 <li class="">Trigger the workflow in your frontend repository</li>
 <li class="">Synchronize the mirrors</li>
 <li class=""><code>cd bublik-ui</code></li>
 <li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v2.19.0</code></li>
+<li class=""><code>git checkout v2.19.1</code></li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="documentation-update">Documentation Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#documentation-update" class="hash-link" aria-label="Direct link to Documentation Update" title="Direct link to Documentation Update" translate="no">​</a></h3>
 <div class="theme-admonition theme-admonition-danger admonition_XaGX alert alert--danger"><div class="admonitionHeading_wjTz"><span class="admonitionIcon_jHo2"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M5.05.31c.81 2.17.41 3.38-.52 4.31C3.55 5.67 1.98 6.45.9 7.98c-1.45 2.05-1.7 6.53 3.53 7.7-2.2-1.16-2.67-4.52-.3-6.61-.61 2.03.53 3.33 1.94 2.86 1.39-.47 2.3.53 2.27 1.67-.02.78-.31 1.44-1.13 1.81 3.42-.59 4.78-3.42 4.78-5.56 0-2.84-2.53-3.22-1.25-5.61-1.52.13-2.03 1.13-1.89 2.75.09 1.08-1.02 1.8-1.86 1.33-.67-.41-.66-1.19-.06-1.78C8.18 5.31 8.68 2.45 5.05.32L5.03.3l.02.01z"></path></svg></span>danger</div><div class="admonitionContent_wnH1"><p>If you hit error <code>ERROR: packages field missing or empty</code> when trying to build it means that you use outdated pnpm version in github workflow. <br></p><p>To fix this you can cherry pick following commit: <a href="https://github.com/ts-factory/bublik-docs/commit/fb3fa550db6e5a40335dc54e7fc21c8f58ddcc1c" target="_blank" rel="noopener noreferrer" class="">fb3fa55</a></p></div></div>
 <ol>
 <li class="">Trigger the workflow in your frontend repository</li>
 <li class="">Synchronize the mirrors</li>
 <li class=""><code>cd bublik-docs</code></li>
 <li class=""><code>git remote update</code></li>
-<li class=""><code>git checkout v2.19.0</code></li>
+<li class=""><code>git checkout v2.19.1</code></li>
 </ol>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update" translate="no">​</a></h3>
-<div class="language-bash codeBlockContainer_b6R5 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_he_m"><pre tabindex="0" class="prism-code language-bash codeBlock_p1Hz thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_iZdR"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 1. Backup the current db</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task backup:create</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 2. Update the image tag in the .env file</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">sed</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-i</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"s/^IMAGE_TAG=.*/IMAGE_TAG=2.19.0/"</span><span class="token plain"> .env</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 3. Pull the latest docker image</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task pull</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 4. Start the docker container</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task up</span><br></div></code></pre></div></div>
-<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="docker-instance-update">Docker Instance Update<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#docker-instance-update" class="hash-link" aria-label="Direct link to Docker Instance Update" title="Direct link to Docker Instance Update" translate="no">​</a></h3>
+<div class="language-bash codeBlockContainer_b6R5 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_he_m"><pre tabindex="0" class="prism-code language-bash codeBlock_p1Hz thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_iZdR"><div class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># 1. Backup the current db</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task backup:create</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 2. Update the image tag in the .env file</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token function" style="color:#d73a49">sed</span><span class="token plain"> </span><span class="token parameter variable" style="color:#36acaa">-i</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"s/^IMAGE_TAG=.*/IMAGE_TAG=2.19.1/"</span><span class="token plain"> .env</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 3. Pull the latest docker image</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task pull</span><br></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token comment" style="color:#999988;font-style:italic"># 4. Start the docker container</span><span class="token plain"></span><br></div><div class="token-line" style="color:#393A34"><span class="token plain">task up</span><br></div></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_vJ4H" id="changelog">Changelog<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#changelog" class="hash-link" aria-label="Direct link to Changelog" title="Direct link to Changelog" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="frontend">Frontend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#frontend" class="hash-link" aria-label="Direct link to Frontend" title="Direct link to Frontend" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-new-feature" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>admin:</strong> reactivate deactivated users (<a href="https://github.com/ts-factory/bublik-ui/commit/1ad296b1e67b03fc44657044173302334cf814e6" target="_blank" rel="noopener noreferrer" class="">1ad296b</a>)</li>
 <li class=""><strong>admin:</strong> show user status and joined date in the users table (<a href="https://github.com/ts-factory/bublik-ui/commit/ce06766592ce4644a731a21b55c825e385b4ee7d" target="_blank" rel="noopener noreferrer" class="">ce06766</a>), closes <a href="https://github.com/ts-factory/bublik/issues/384" target="_blank" rel="noopener noreferrer" class="">ts-factory/bublik#384</a></li>
@@ -313,13 +315,13 @@ an invalid project ID returns a clear error instead of a server error.</li>
 <li class=""><strong>ui:</strong> add shared UI for classification (<a href="https://github.com/ts-factory/bublik-ui/commit/8611bb2e2353688e22cd80c9fd22ab5ce8013e79" target="_blank" rel="noopener noreferrer" class="">8611bb2</a>)</li>
 <li class=""><strong>ui:</strong> replace EnvBadge with ParameterValue (<a href="https://github.com/ts-factory/bublik-ui/commit/0f893806ab2ca5efc9a90cd9db3a9e4c1008b987" target="_blank" rel="noopener noreferrer" class="">0f89380</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-polish">💅 Polish<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-polish" class="hash-link" aria-label="Direct link to 💅 Polish" title="Direct link to 💅 Polish" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>icons:</strong> centre the Bulb glyph in its viewBox (<a href="https://github.com/ts-factory/bublik-ui/commit/b1d0203fa6d346e05b06649507f65956d64de3e4" target="_blank" rel="noopener noreferrer" class="">b1d0203</a>)</li>
 <li class=""><strong>log:</strong> change icon for download attachment action (<a href="https://github.com/ts-factory/bublik-ui/commit/4c9fc0da5a54ef8cf764a2ace48193921cdac34d" target="_blank" rel="noopener noreferrer" class="">4c9fc0d</a>)</li>
 <li class=""><strong>ui:</strong> size avatars with size-* utilities (<a href="https://github.com/ts-factory/bublik-ui/commit/226c15fb7e8a2d2632eb80e755d2a8e148d77c33" target="_blank" rel="noopener noreferrer" class="">226c15f</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-bug-fix" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>admin:</strong> surface backend errors from user actions (<a href="https://github.com/ts-factory/bublik-ui/commit/ba22a450eb23a6c10f69a5dfe178421d53cf1553" target="_blank" rel="noopener noreferrer" class="">ba22a45</a>)</li>
 <li class=""><strong>auth:</strong> keep the sidebar state and project when signing out (<a href="https://github.com/ts-factory/bublik-ui/commit/1483a91f1cf3de18320d77b49b1234df2873c505" target="_blank" rel="noopener noreferrer" class="">1483a91</a>)</li>
@@ -334,13 +336,15 @@ an invalid project ID returns a clear error instead of a server error.</li>
 <li class=""><strong>run,history,run-diff:</strong> render preformatted parameters as blocks (<a href="https://github.com/ts-factory/bublik-ui/commit/493f4c647a177564e1de9197920b1826f9d0d1a0" target="_blank" rel="noopener noreferrer" class="">493f4c6</a>)</li>
 <li class=""><strong>run:</strong> keep Objective and Notes after the tree by default (<a href="https://github.com/ts-factory/bublik-ui/commit/dd894a0e58442f024cc7b9154f900b2118b33022" target="_blank" rel="noopener noreferrer" class="">dd894a0</a>)</li>
 <li class=""><strong>sidebar:</strong> size the submenu guide in rem so it follows the rows (<a href="https://github.com/ts-factory/bublik-ui/commit/a4720335e799c2ff573e4b81f98f4c8c2c67f880" target="_blank" rel="noopener noreferrer" class="">a472033</a>)</li>
+<li class=""><strong>issues:</strong> make the bug key optional for new issues (<a href="https://github.com/ts-factory/bublik-ui/commit/452a84778e48f4ccc4d5f7b948ee57de898d0b5c" target="_blank" rel="noopener noreferrer" class="">452a847</a>)</li>
+<li class=""><strong>classify:</strong> keep the result selection to the run it was made in (<a href="https://github.com/ts-factory/bublik-ui/commit/b728b826c9a7718a99c137fa2c52dd1b0ba9abbb" target="_blank" rel="noopener noreferrer" class="">b728b82</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-code-refactoring">♻ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-code-refactoring" class="hash-link" aria-label="Direct link to ♻ Code Refactoring" title="Direct link to ♻ Code Refactoring" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>sidebar:</strong> share the sidebar padding transition (<a href="https://github.com/ts-factory/bublik-ui/commit/f7ea8426d14078c222156888ba599bea439cbd7c" target="_blank" rel="noopener noreferrer" class="">f7ea842</a>)</li>
 <li class=""><strong>utils:</strong> extract parameter formatting into shared util (<a href="https://github.com/ts-factory/bublik-ui/commit/ea3a93a881a4ff4bb7cd4f5c918e90e197f3ef25" target="_blank" rel="noopener noreferrer" class="">ea3a93a</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-tests">✅ Tests<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-tests" class="hash-link" aria-label="Direct link to ✅ Tests" title="Direct link to ✅ Tests" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-tests">✅ Tests<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-tests" class="hash-link" aria-label="Direct link to ✅ Tests" title="Direct link to ✅ Tests" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>e2e:</strong> right-click parameter badges to open context menu (<a href="https://github.com/ts-factory/bublik-ui/commit/4579009d94f0ff7fe8b8cf0dfdaf7702bb71dbb5" target="_blank" rel="noopener noreferrer" class="">4579009</a>)</li>
 <li class=""><strong>e2e:</strong> add classification support helpers (<a href="https://github.com/ts-factory/bublik-ui/commit/765dcd7c437a7a2d0005f7b5f6438dc6b8988703" target="_blank" rel="noopener noreferrer" class="">765dcd7</a>)</li>
@@ -355,10 +359,12 @@ an invalid project ID returns a clear error instead of a server error.</li>
 <li class=""><strong>e2e:</strong> cover server-side history search (<a href="https://github.com/ts-factory/bublik-ui/commit/879fe337c333bd4c2c2794d8e59000e483eb499e" target="_blank" rel="noopener noreferrer" class="">879fe33</a>)</li>
 <li class=""><strong>e2e:</strong> cover sign-in, protected pages and the account menu (<a href="https://github.com/ts-factory/bublik-ui/commit/9e010cff1ab86b35dff75cccddde61cb1791f74d" target="_blank" rel="noopener noreferrer" class="">9e010cf</a>)</li>
 <li class=""><strong>e2e:</strong> cover the users table status and the self-deactivation guard (<a href="https://github.com/ts-factory/bublik-ui/commit/db521a03bed6339c5294e69c7e122af6b4cf7405" target="_blank" rel="noopener noreferrer" class="">db521a0</a>)</li>
+<li class=""><strong>e2e:</strong> find the search form's close button by its label (<a href="https://github.com/ts-factory/bublik-ui/commit/6d9d5a7f6332349ddef3e1a76bdba5c0b71218cf" target="_blank" rel="noopener noreferrer" class="">6d9d5a7</a>)</li>
+<li class=""><strong>e2e:</strong> check the result selection does not follow into another run (<a href="https://github.com/ts-factory/bublik-ui/commit/c582ce153d215bb33b3eefc0968be203c1e39522" target="_blank" rel="noopener noreferrer" class="">c582ce1</a>)</li>
 </ul>
 <hr>
-<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend" translate="no">​</a></h3>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix-1">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-bug-fix-1" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
+<h3 class="anchor anchorTargetStickyNavbar_vJ4H" id="backend">Backend<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#backend" class="hash-link" aria-label="Direct link to Backend" title="Direct link to Backend" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-bug-fix-1">🐛 Bug Fix<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-bug-fix-1" class="hash-link" aria-label="Direct link to 🐛 Bug Fix" title="Direct link to 🐛 Bug Fix" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>url:</strong> return a clear error for invalid project ID (<a href="https://github.com/ts-factory/bublik/commit/ae99b3e274eff471ab7ab4f36627086959a58247" target="_blank" rel="noopener noreferrer" class="">ae99b3e</a>)</li>
 <li class=""><strong>pagination:</strong> return DRF validation errors for invalid parameters (<a href="https://github.com/ts-factory/bublik/commit/51a7dc3eb4511c710c91a6d109f9101d95211e2d" target="_blank" rel="noopener noreferrer" class="">51a7dc3</a>)</li>
@@ -398,8 +404,9 @@ an invalid project ID returns a clear error instead of a server error.</li>
 <li class=""><strong>urls:</strong> fix server error on short URLs without a view (<a href="https://github.com/ts-factory/bublik/commit/6d5317c9b04f59103f32ccc3d9883ebf950a29b5" target="_blank" rel="noopener noreferrer" class="">6d5317c</a>)</li>
 <li class=""><strong>chat:</strong> fix failed tool calls shown as successful (<a href="https://github.com/ts-factory/bublik/commit/8aeae758b93f3f472e7473c8c45099dadbecdb18" target="_blank" rel="noopener noreferrer" class="">8aeae75</a>)</li>
 <li class=""><strong>chat:</strong> stop counting Moonshot AI as a fixed-endpoint provider (<a href="https://github.com/ts-factory/bublik/commit/9b93128772525cc34881b85d3be2a6d3ddd1c277" target="_blank" rel="noopener noreferrer" class="">9b93128</a>)</li>
+<li class=""><strong>importruns:</strong> fix duplicated expected results (<a href="https://github.com/ts-factory/bublik/commit/2d75ad5f83d077913ab5ee2e5944bc9365b76712" target="_blank" rel="noopener noreferrer" class="">2d75ad5</a>), related to <a href="https://github.com/ts-factory/bublik/issues/239" target="_blank" rel="noopener noreferrer" class="">#239</a></li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-new-feature-1">🚀 New Feature<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-new-feature-1" class="hash-link" aria-label="Direct link to 🚀 New Feature" title="Direct link to 🚀 New Feature" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>importruns:</strong> make unexpected import failure messages more informative (<a href="https://github.com/ts-factory/bublik/commit/d48a900450fd99d58a8454e930aaae7900750eed" target="_blank" rel="noopener noreferrer" class="">d48a900</a>), related to <a href="https://github.com/ts-factory/bublik/issues/262" target="_blank" rel="noopener noreferrer" class="">#262</a></li>
 <li class=""><strong>deploy:</strong> allow building virtual environment with non-default Python (<a href="https://github.com/ts-factory/bublik/commit/b49ab841e31a28142dab8615afeeb2fbe9911eff" target="_blank" rel="noopener noreferrer" class="">b49ab84</a>), closes <a href="https://github.com/ts-factory/bublik/issues/258" target="_blank" rel="noopener noreferrer" class="">#258</a></li>
@@ -436,14 +443,15 @@ an invalid project ID returns a clear error instead of a server error.</li>
 <li class=""><strong>issue:</strong> add endpoint to search and suggest tests for the rule form (<a href="https://github.com/ts-factory/bublik/commit/c04e14cf7d32d6fe3b27f541ace691a92dab1832" target="_blank" rel="noopener noreferrer" class="">c04e14c</a>)</li>
 <li class=""><strong>issue:</strong> add endpoint to page and filter an issue's results (<a href="https://github.com/ts-factory/bublik/commit/dd0b7a2467dfcaa9b8eb9617d605e568066fe15f" target="_blank" rel="noopener noreferrer" class="">dd0b7a2</a>)</li>
 <li class=""><strong>config:</strong> make issue management without authentication possible (<a href="https://github.com/ts-factory/bublik/commit/9305a74fdbb9cecbeed983a0ed0876ec9a5819a5" target="_blank" rel="noopener noreferrer" class="">9305a74</a>)</li>
+<li class=""><strong>results:</strong> expose notes of expected results (<a href="https://github.com/ts-factory/bublik/commit/2a960bd239643dab665d4915def63b775daaa19c" target="_blank" rel="noopener noreferrer" class="">2a960bd</a>), related to <a href="https://github.com/ts-factory/bublik/issues/239" target="_blank" rel="noopener noreferrer" class="">#239</a></li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-performance">⚡ Performance<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-performance" class="hash-link" aria-label="Direct link to ⚡ Performance" title="Direct link to ⚡ Performance" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-performance">⚡ Performance<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-performance" class="hash-link" aria-label="Direct link to ⚡ Performance" title="Direct link to ⚡ Performance" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>result:</strong> avoid an extra query per result when listing result details (<a href="https://github.com/ts-factory/bublik/commit/519c1c5c7fa92b85b42537fd23e286f37f93fcdd" target="_blank" rel="noopener noreferrer" class="">519c1c5</a>)</li>
 <li class=""><strong>result:</strong> avoid queries per expectation when listing result details (<a href="https://github.com/ts-factory/bublik/commit/70f9c5be5b66c94c9e1ee9bfac5dc8fb853d08dd" target="_blank" rel="noopener noreferrer" class="">70f9c5b</a>)</li>
 <li class=""><strong>pagination:</strong> avoid loading a whole queryset to page over it (<a href="https://github.com/ts-factory/bublik/commit/385bfca28c29312418bc639c3a3d61d5eaf4e405" target="_blank" rel="noopener noreferrer" class="">385bfca</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="️-code-refactoring">♻️ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#%EF%B8%8F-code-refactoring" class="hash-link" aria-label="Direct link to ♻️ Code Refactoring" title="Direct link to ♻️ Code Refactoring" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="️-code-refactoring">♻️ Code Refactoring<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#%EF%B8%8F-code-refactoring" class="hash-link" aria-label="Direct link to ♻️ Code Refactoring" title="Direct link to ♻️ Code Refactoring" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>project:</strong> introduce DTO-based service contracts (<a href="https://github.com/ts-factory/bublik/commit/9abf69f7acbe9a543b2832610ffb39acd9e378e8" target="_blank" rel="noopener noreferrer" class="">9abf69f</a>)</li>
 <li class=""><strong>project:</strong> remove pagination from ViewSet for consistency (<a href="https://github.com/ts-factory/bublik/commit/e066559fcf0ce4bd42e39f1be87267ac142e9a92" target="_blank" rel="noopener noreferrer" class="">e066559</a>)</li>
@@ -467,12 +475,12 @@ an invalid project ID returns a clear error instead of a server error.</li>
 <li class=""><strong>run:</strong> extract shared ref://TRACKER/KEY parsing helper (<a href="https://github.com/ts-factory/bublik/commit/6e652c7bb3d9b1ff8af44f9640bfbeffa76183b4" target="_blank" rel="noopener noreferrer" class="">6e652c7</a>)</li>
 <li class=""><strong>auth:</strong> make the user check usable outside decorators (<a href="https://github.com/ts-factory/bublik/commit/9285b77dea102ac25304d063f48acc31de9847e7" target="_blank" rel="noopener noreferrer" class="">9285b77</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-documentation">📝 Documentation<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-documentation" class="hash-link" aria-label="Direct link to 📝 Documentation" title="Direct link to 📝 Documentation" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-documentation">📝 Documentation<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-documentation" class="hash-link" aria-label="Direct link to 📝 Documentation" title="Direct link to 📝 Documentation" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>readme:</strong> update formatting and structure for better clarity (<a href="https://github.com/ts-factory/bublik/commit/04da480ca0f669df41c92d484ab0d40474ab2a25" target="_blank" rel="noopener noreferrer" class="">04da480</a>)</li>
 <li class=""><strong>readme:</strong> update installation instructions (<a href="https://github.com/ts-factory/bublik/commit/449d7df8fe3bb6df0725a69659ccc489e0fec1fb" target="_blank" rel="noopener noreferrer" class="">449d7df</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-chores">📦 Chores<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-chores" class="hash-link" aria-label="Direct link to 📦 Chores" title="Direct link to 📦 Chores" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>deploy:</strong> rename initial deployment script for clarity (<a href="https://github.com/ts-factory/bublik/commit/fbb94f640bd252a37851dc87031925557f67b978" target="_blank" rel="noopener noreferrer" class="">fbb94f6</a>)</li>
 <li class=""><strong>project:</strong> align OpenAPI schemas with actual API responses (<a href="https://github.com/ts-factory/bublik/commit/582f86e4cb9f77e27d5f2804e5220cadcfa2cbd9" target="_blank" rel="noopener noreferrer" class="">582f86e</a>)</li>
@@ -486,7 +494,7 @@ an invalid project ID returns a clear error instead of a server error.</li>
 <li class=""><strong>tree:</strong> align OpenAPI schemas with actual API responses (<a href="https://github.com/ts-factory/bublik/commit/2fabe0ef114f76cd590e8c36998b5c89ba1d7b6d" target="_blank" rel="noopener noreferrer" class="">2fabe0e</a>)</li>
 <li class=""><strong>requirements:</strong> update packages versions to pick up bug fixes (<a href="https://github.com/ts-factory/bublik/commit/a11cd2bda16a645e29521e9557e8291be819db2f" target="_blank" rel="noopener noreferrer" class="">a11cd2b</a>)</li>
 </ul>
-<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-cleanup">🧹 Cleanup<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.0#-cleanup" class="hash-link" aria-label="Direct link to 🧹 Cleanup" title="Direct link to 🧹 Cleanup" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_vJ4H" id="-cleanup">🧹 Cleanup<a href="https://ts-factory.github.io/bublik-release/blog/release-v2.19.1#-cleanup" class="hash-link" aria-label="Direct link to 🧹 Cleanup" title="Direct link to 🧹 Cleanup" translate="no">​</a></h4>
 <ul>
 <li class=""><strong>importruns:</strong> fix lint failure on the intentionally local import (<a href="https://github.com/ts-factory/bublik/commit/7b34d4fe6354c5c4fc1320618238e7d01be1ed74" target="_blank" rel="noopener noreferrer" class="">7b34d4f</a>)</li>
 </ul>]]></content:encoded>

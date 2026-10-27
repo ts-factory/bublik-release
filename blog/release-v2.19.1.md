@@ -1,4 +1,4 @@
-We're excited to announce Bublik v2.19.0! <br />
+We're excited to announce Bublik v2.19.1! <br />
 This release adds **result classification**. You can explain a failure once by
 attaching it to an issue, and Bublik matches the same failure in future runs.
 Sign-in now happens in a **dialog** on the page you're on, and the sidebar gets
@@ -85,6 +85,9 @@ tests, to classify them together.
 2. **Classify N** opens the Classify drawer for the selected results.
 3. The **selection pill** stays at the bottom of the page while you scroll and
    reopens the list of selected results.
+
+The selection belongs to the run you made it in. It is still there when you
+come back from a result's log, but another run starts with nothing selected.
 
 The Classify drawer has three sections:
 
@@ -292,7 +295,7 @@ The `server_packages` deployment step requires root rights. If you don't have ro
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.19.0`
+3. `git checkout v2.19.1`
 4. `./scripts/deploy --steps server_packages general_conf pip_requirements django_settings migrate_db run_services`
 
 :::warning
@@ -305,7 +308,7 @@ The `server_packages` deployment step requires root rights. If you don't have ro
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.19.0`
+5. `git checkout v2.19.1`
 
 ### Documentation Update
 
@@ -319,7 +322,7 @@ To fix this you can cherry pick following commit: [fb3fa55](https://github.com/t
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.19.0`
+5. `git checkout v2.19.1`
 
 ### Docker Instance Update
 
@@ -328,7 +331,7 @@ To fix this you can cherry pick following commit: [fb3fa55](https://github.com/t
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.19.0/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.19.1/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -395,6 +398,8 @@ task up
 * **run,history,run-diff:** render preformatted parameters as blocks ([493f4c6](https://github.com/ts-factory/bublik-ui/commit/493f4c647a177564e1de9197920b1826f9d0d1a0))
 * **run:** keep Objective and Notes after the tree by default ([dd894a0](https://github.com/ts-factory/bublik-ui/commit/dd894a0e58442f024cc7b9154f900b2118b33022))
 * **sidebar:** size the submenu guide in rem so it follows the rows ([a472033](https://github.com/ts-factory/bublik-ui/commit/a4720335e799c2ff573e4b81f98f4c8c2c67f880))
+* **issues:** make the bug key optional for new issues ([452a847](https://github.com/ts-factory/bublik-ui/commit/452a84778e48f4ccc4d5f7b948ee57de898d0b5c))
+* **classify:** keep the result selection to the run it was made in ([b728b82](https://github.com/ts-factory/bublik-ui/commit/b728b826c9a7718a99c137fa2c52dd1b0ba9abbb))
 
 
 #### ♻ Code Refactoring
@@ -417,6 +422,8 @@ task up
 * **e2e:** cover server-side history search ([879fe33](https://github.com/ts-factory/bublik-ui/commit/879fe337c333bd4c2c2794d8e59000e483eb499e))
 * **e2e:** cover sign-in, protected pages and the account menu ([9e010cf](https://github.com/ts-factory/bublik-ui/commit/9e010cff1ab86b35dff75cccddde61cb1791f74d))
 * **e2e:** cover the users table status and the self-deactivation guard ([db521a0](https://github.com/ts-factory/bublik-ui/commit/db521a03bed6339c5294e69c7e122af6b4cf7405))
+* **e2e:** find the search form's close button by its label ([6d9d5a7](https://github.com/ts-factory/bublik-ui/commit/6d9d5a7f6332349ddef3e1a76bdba5c0b71218cf))
+* **e2e:** check the result selection does not follow into another run ([c582ce1](https://github.com/ts-factory/bublik-ui/commit/c582ce153d215bb33b3eefc0968be203c1e39522))
 
 ---
 
@@ -462,6 +469,7 @@ task up
 - **urls:** fix server error on short URLs without a view ([6d5317c](https://github.com/ts-factory/bublik/commit/6d5317c9b04f59103f32ccc3d9883ebf950a29b5))
 - **chat:** fix failed tool calls shown as successful ([8aeae75](https://github.com/ts-factory/bublik/commit/8aeae758b93f3f472e7473c8c45099dadbecdb18))
 - **chat:** stop counting Moonshot AI as a fixed-endpoint provider ([9b93128](https://github.com/ts-factory/bublik/commit/9b93128772525cc34881b85d3be2a6d3ddd1c277))
+- **importruns:** fix duplicated expected results ([2d75ad5](https://github.com/ts-factory/bublik/commit/2d75ad5f83d077913ab5ee2e5944bc9365b76712)), related to [#239](https://github.com/ts-factory/bublik/issues/239)
 
 #### 🚀 New Feature
 
@@ -500,6 +508,7 @@ task up
 - **issue:** add endpoint to search and suggest tests for the rule form ([c04e14c](https://github.com/ts-factory/bublik/commit/c04e14cf7d32d6fe3b27f541ace691a92dab1832))
 - **issue:** add endpoint to page and filter an issue's results ([dd0b7a2](https://github.com/ts-factory/bublik/commit/dd0b7a2467dfcaa9b8eb9617d605e568066fe15f))
 - **config:** make issue management without authentication possible ([9305a74](https://github.com/ts-factory/bublik/commit/9305a74fdbb9cecbeed983a0ed0876ec9a5819a5))
+- **results:** expose notes of expected results ([2a960bd](https://github.com/ts-factory/bublik/commit/2a960bd239643dab665d4915def63b775daaa19c)), related to [#239](https://github.com/ts-factory/bublik/issues/239)
 
 #### ⚡ Performance
 
