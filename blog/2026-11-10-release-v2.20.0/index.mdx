@@ -1,11 +1,11 @@
 ---
-title: Release v2.20.0
+title: Release v2.20.1
 authors: [okt-limonikas, ol-nata]
 tags: [release]
-slug: release-v2.20.0
+slug: release-v2.20.1
 ---
 
-We're excited to announce Bublik v2.20.0! <br />
+We're excited to announce Bublik v2.20.1! <br />
 This release adds an **iteration matrix**, lets you **classify results** across
 several runs from History and the Multiple runs page, and introduces **access
 tokens** for agents and scripts. The **Runs charts** are redesigned, the
@@ -32,6 +32,10 @@ A searchable project list at the top of the sidebar that remembers your pick.
 
 **Values and Expressions in One Field** <br />
 Filter runs and history by values and expressions in the same field.
+
+**Run Comments** <br />
+Write run comments in markdown and see them on the Runs table and the
+dashboard.
 
 <!--truncate-->
 
@@ -172,6 +176,11 @@ The project picker is now a searchable list at the top of the sidebar.
 New tabs open with the last project you picked. Links with a project open as
 before.
 
+The list takes the height of the window. The menu above it orders the
+projects by **Custom Order**, **Name**, **Last Run** or **Newest First**. In
+Custom Order, drag a project by the handle that shows on hover, or move it
+with `Alt` and an arrow key. The order is kept in your browser.
+
 ### Values and Expressions in One Field
 
 Runs metas and the History filters (tags, labels, branches, revisions,
@@ -188,8 +197,8 @@ Old links open with the same filters.
 
 ### Import Tasks
 
-- **Revoke** unfinished imports in **Admin → Import**. They get the
-  **REVOKED** status and **Try Again**. A run revoked mid-import may miss
+- **Revoke** unfinished imports in **Admin → Import**, in the place of **Try
+  Again**. They get the **REVOKED** status and **Try Again**. A run revoked mid-import may miss
   post-processing such as categorization.
 - **Copy Log** copies time, level and module, not just messages.
 - XML log imports now match `rgt-bublik-json`: correct dates in every
@@ -206,6 +215,29 @@ Old links open with the same filters.
 - The import log no longer shows raw internal errors when a failure email
   can't be sent.
 - On bare metal, the Celery worker restarts after a failure.
+
+### Run Comments
+
+- **Run page.** The comment is written in **markdown** and shown like an
+  issue's description: a few lines, with the rest opening over them. Edit and
+  copy sit beside the label, and the comment is edited in a drawer with the
+  issue form's editor.
+- **Runs table.** A run's comment sits on the row's top border, over the
+  Metadata column. Click it to read the whole comment, open the run or edit
+  the comment. Hover a row without a comment to **Add comment**.
+- **Dashboard.** Show the comments in a column: add a category of the
+  `comment` type to the project's `meta` config,
+
+  ```json
+  "Notes": {
+    "type": "comment"
+  }
+  ```
+
+  then add `{ "key": "Notes", "label": "Notes" }` to `DASHBOARD_COLUMNS` in
+  `per_conf`. A long or multi-line comment opens whole on click. New and
+  edited comments join the category at once, existing ones when the config is
+  saved.
 
 ### Links From Run Metadata
 
@@ -266,6 +298,10 @@ docs, replacing the old help dialogs.
   from the page headers to the sidebar.
 - **Run table.** Totals sit next to the columns they sum, and counts are
   right-aligned.
+- **Dashboard.** Hover a badge cut by its column to see its whole value. NOK
+  badges take the run page's red, a `0` is outlined, and while the table has
+  a NOK column the other badge columns no longer take red. Executed
+  percentages line up.
 - **Rules.** Edit and Duplicate show the saved values, Duplicate keeps the
   disposition, and a new **Match only failures without any verdict** option.
 - **MCP.** New `search_docs`, `get_doc` and `list_docs` tools, and an
@@ -284,7 +320,7 @@ The `nginx_conf` and `run_side_servers` deployment steps require root rights. If
 
 1. `cd bublik`
 2. `git remote update`
-3. `git checkout v2.20.0`
+3. `git checkout v2.20.1`
 4. `./scripts/deploy --steps django_settings celery_service nginx_conf migrate_db run_side_servers run_services`
 
 ### Frontend Update
@@ -293,7 +329,7 @@ The `nginx_conf` and `run_side_servers` deployment steps require root rights. If
 2. Synchronize the mirrors
 3. `cd bublik-ui`
 4. `git remote update`
-5. `git checkout v2.20.0`
+5. `git checkout v2.20.1`
 
 ### Documentation Update
 
@@ -301,7 +337,7 @@ The `nginx_conf` and `run_side_servers` deployment steps require root rights. If
 2. Synchronize the mirrors
 3. `cd bublik-docs`
 4. `git remote update`
-5. `git checkout v2.20.0`
+5. `git checkout v2.20.1`
 
 ### Docker Instance Update
 
@@ -310,7 +346,7 @@ The `nginx_conf` and `run_side_servers` deployment steps require root rights. If
 task backup:create
 
 # 2. Update the image tag in the .env file
-sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.20.0/" .env
+sed -i "s/^IMAGE_TAG=.*/IMAGE_TAG=2.20.1/" .env
 
 # 3. Pull the latest docker image
 task pull
@@ -341,17 +377,20 @@ task up
 * **classification:** offer Select All in the selection popover ([8b2dfdc](https://github.com/ts-factory/bublik-ui/commit/8b2dfdcd68c84c8b22d8d2019a7be951152e8f0e))
 * **classification:** show the verdict chip without a Classify button ([291462f](https://github.com/ts-factory/bublik-ui/commit/291462fb447db8d29aa06c49444918e1a778fbdb))
 * **classification:** write rules as specific as the classified results ([f203345](https://github.com/ts-factory/bublik-ui/commit/f20334503b8dd0c407151a8d78bfcf94fafe868c))
+* **dashboard:** open cut text cells like an issue description ([a566221](https://github.com/ts-factory/bublik-ui/commit/a56622166a71eb0d42c55079bd8a697f733a9247))
 * **history:** pick linear rows to classify them ([7b996cc](https://github.com/ts-factory/bublik-ui/commit/7b996cccd83deea35237f9e3b0a3cccd8cfe62dd))
 * **history:** pick verdict groups to classify them ([a775563](https://github.com/ts-factory/bublik-ui/commit/a775563d77380d300579933b9d6fdb5a8348915d))
 * **history:** select all listed linear rows from the popover ([f368501](https://github.com/ts-factory/bublik-ui/commit/f3685017fa3d2a6149fbfe30222da540c2b2fab4))
 * **history:** show the classification chip on linear rows ([bd052ea](https://github.com/ts-factory/bublik-ui/commit/bd052ea8759ab416a0c6f2a7cc008db48cfe64b6))
 * **history:** take values and expressions in one field per filter ([76bb630](https://github.com/ts-factory/bublik-ui/commit/76bb6308836c44f8822f7422e58bdff04ef84578))
 * **import:** revoke unfinished import tasks ([45b0b5e](https://github.com/ts-factory/bublik-ui/commit/45b0b5eaf2e31b792a9aba06c99755f749587840))
+* **import:** move Revoke next to Try Again with a destructive fill ([0bad9f9](https://github.com/ts-factory/bublik-ui/commit/0bad9f93c8107f23667a2bd80a16037c2c7487b5))
 * **import:** show revoked import tasks ([117e467](https://github.com/ts-factory/bublik-ui/commit/117e46772f837f209716089c2076fd7a65a19298))
 * **layout:** let the page width be capped in a left or centered layout ([294d3e8](https://github.com/ts-factory/bublik-ui/commit/294d3e888df9f430e0e871d211c8e15eb1fe2998))
 * **log:** add a default log layout preference for in-app log links ([ad26084](https://github.com/ts-factory/bublik-ui/commit/ad260843d97d52301c1f1ebc925959c777f64bdf))
 * **log:** give Runs and History their own default log layouts ([d540964](https://github.com/ts-factory/bublik-ui/commit/d540964321cbde7b86ae057746c963f3ec4c5941))
 * **projects:** add New Project and Manage to the switcher ([ebd0e34](https://github.com/ts-factory/bublik-ui/commit/ebd0e34f089c3fd68644a8eb84f13b284e932ac8))
+* **projects:** reorder and sort the projects in the switcher ([3a5d30f](https://github.com/ts-factory/bublik-ui/commit/3a5d30f9aea4be8c1f0e974f136a999de5430985))
 * **projects:** switch projects from a searchable popover ([3cf90b3](https://github.com/ts-factory/bublik-ui/commit/3cf90b3c25da5adc0a3f159ce43ad1afa991ac1b))
 * **run:** add iteration matrix analysis module ([be2008e](https://github.com/ts-factory/bublik-ui/commit/be2008e694cee6e3a968e036c4b8f154f8bbfd1d))
 * **run:** add iteration matrix view component ([2753ece](https://github.com/ts-factory/bublik-ui/commit/2753ecedfb6227b3e31d056924277222d40f5ff4))
@@ -363,6 +402,7 @@ task up
 * **run:** right-align numbers in the run table ([93c240d](https://github.com/ts-factory/bublik-ui/commit/93c240d3400a966e49a33bd47b04fb8f5639669f))
 * **runs:** break the run conclusions down in the overview ([7b8e9de](https://github.com/ts-factory/bublik-ui/commit/7b8e9de692ddb37a51ed07df0807423c526ee4e5))
 * **run:** select results on the multiple runs page ([3098ef9](https://github.com/ts-factory/bublik-ui/commit/3098ef9fc42b1808aabf0005afc1c93092cf7567))
+* **run:** write the run comment in markdown, shown like an issue description ([1a19631](https://github.com/ts-factory/bublik-ui/commit/1a196312446aed6e5f9f0394f7d8e6fc70cc9c2e))
 * **runs:** fill the page height with the runs charts ([e25ca2f](https://github.com/ts-factory/bublik-ui/commit/e25ca2f1455dd979c4e0988ba41349463f03da22))
 * **runs:** filter runs by metas and expressions in one input ([112f6b4](https://github.com/ts-factory/bublik-ui/commit/112f6b42b230dbdf23d085965e7f5c45785e83a0))
 * **runs:** group the runs charts by day, week or month ([9e4fe14](https://github.com/ts-factory/bublik-ui/commit/9e4fe14c335e8fb5d60247325f11d26c7491a137))
@@ -370,6 +410,7 @@ task up
 * **runs:** label the charts period toggle and give each period an icon ([edba6a5](https://github.com/ts-factory/bublik-ui/commit/edba6a5a8550c5a5e622912542c00d311a2e999f))
 * **runs:** list a chart's runs in a drawer ([5fe0519](https://github.com/ts-factory/bublik-ui/commit/5fe05199b007bb48ac501bef836746688b9c4fa0))
 * **runs:** redesign the runs charts ([ede3669](https://github.com/ts-factory/bublik-ui/commit/ede366901f88b72185cb31a07242761a657bee01))
+* **runs:** show the run comment on the runs table ([1f79a27](https://github.com/ts-factory/bublik-ui/commit/1f79a2759fe0f64bba366d652b10c993679c54e7))
 * **runs:** zoom the runs charts' timelines together ([312357b](https://github.com/ts-factory/bublik-ui/commit/312357b52a37adce8ed67fb678341ea6db67b87b))
 * **settings:** show that the account row opens a menu ([3bd2b47](https://github.com/ts-factory/bublik-ui/commit/3bd2b479fb83800d4327ac0ea8f553d766bf3332))
 * **sidebar:** keep the project picker under the logo ([0b53868](https://github.com/ts-factory/bublik-ui/commit/0b53868c6042385508f0ec87062a6648a0f48f17))
@@ -394,6 +435,11 @@ task up
 * **classification:** keep a rule's "no verdicts" through Edit and Duplicate ([18deeab](https://github.com/ts-factory/bublik-ui/commit/18deeab19f15504e7d2b07ab3639b3f86da869b7))
 * **classification:** reset the rule form when the rule changes ([3ad3dcd](https://github.com/ts-factory/bublik-ui/commit/3ad3dcd4653156e152bddd5633f8757fcb2e05f1))
 * **classification:** right-align the Results counts in the issue tables ([39d623e](https://github.com/ts-factory/bublik-ui/commit/39d623e3f10241861f98e3365d05daed19f98375))
+* **dashboard:** colour failed run badges red ([462a90f](https://github.com/ts-factory/bublik-ui/commit/462a90fc9bc88e55795958f5daffb18acf9dacaa))
+* **dashboard:** fill NOK badges like the run page, outline a 0 ([0380bb5](https://github.com/ts-factory/bublik-ui/commit/0380bb55c855abd0da302f3b35c9ab52a33417be))
+* **dashboard:** keep red for the NOK column ([b0014c0](https://github.com/ts-factory/bublik-ui/commit/b0014c05d1b80edf5d4c0f8fd68c0865d51a0897))
+* **dashboard:** line up Executed percentages beside the progress icon ([d7eaf1e](https://github.com/ts-factory/bublik-ui/commit/d7eaf1ea20d4f14594740979473d79affafe8f63))
+* **dashboard:** show a cut cell whole in one card ([86166ea](https://github.com/ts-factory/bublik-ui/commit/86166ea409f26cc2bf4457618342a41a08a60010))
 * **history:** keep the result card's width and height steady ([626596c](https://github.com/ts-factory/bublik-ui/commit/626596cc1381a623b3b6ca115ada310dc445848d))
 * **import:** copy every column of the import log ([b5a15be](https://github.com/ts-factory/bublik-ui/commit/b5a15be2a46a99572858e8b276ab79977abc0dc3))
 * **log:** keep the layout of the legacy /log/:id/:old link ([e48c72a](https://github.com/ts-factory/bublik-ui/commit/e48c72a4665a5134bc25eebfa62345dab04c8e3d))
@@ -474,6 +520,7 @@ task up
 - **importruns:** fix lost DB connection taken for invalid MI log ([9691daf](https://github.com/ts-factory/bublik/commit/9691daf52feb76797f32a0f19a73de92aab13425))
 - **importruns:** fix run losing logs link on failed force import ([cc22999](https://github.com/ts-factory/bublik/commit/cc22999f0144119a065a66b27956008242fcff16))
 - **docs:** fix 404 for doc pages with dots in their name ([7bccbce](https://github.com/ts-factory/bublik/commit/7bccbce795a7efbbaaa1ec81dfea4f738c548ef4))
+- **core:** fix categories with no patterns not getting new metas ([29d85ea](https://github.com/ts-factory/bublik/commit/29d85eaebccc12eae5e23fdcbd8fff7b5810a204))
 
 #### 🚀 New Feature
 
